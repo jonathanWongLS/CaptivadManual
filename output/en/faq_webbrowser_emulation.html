@@ -61,20 +61,20 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=getting_started-->
-<h1 id="configuring_the_xibo_web_engine_to_use_a_specific_version_of_internet_explorer">Configuring the Xibo web engine to use a specific version of Internet Explorer <a href="#configuring_the_xibo_web_engine_to_use_a_specific_version_of_internet_explorer" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="configuring_the_xibo_web_engine_to_use_a_specific_version_of_internet_explorer">Configuring the Xibo web engine to use a specific version of Internet Explorer <a href="#configuring_the_xibo_web_engine_to_use_a_specific_version_of_internet_explorer" class="header-link"></a></h1>
 <p>The Xibo Windows Player uses Internet Explorer as its internal web engine by default. The version of Internet Explorer (IE) will depend on the Operating System and version of the .NET framework that has been installed on the PC. </p>
 <p>On early versions of Windows, the version of IE typically used will be an <strong>early</strong> version, which may not be desirable.</p>
-<h2 id="symptoms">Symptoms <a href="#symptoms" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="symptoms">Symptoms <a href="#symptoms" class="header-link"></a></h2>
 <p>You have added some web content such as embedded HTML or a web page item to your layout timeline, but the content looks very different on the player than it does in the Layout Designer or CMS Layout Preview.</p>
-<h2 id="explanation">Explanation <a href="#explanation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="explanation">Explanation <a href="#explanation" class="header-link"></a></h2>
 <p>The internal web engine used by Xibo is Internet Explorer by default. This is provided as part of the .NET framework in the <code>WebBrowserControl</code>. Xibo can be configured to use an experimental web engine called <code>CEF</code> by creating a Display Profile - this is beyond the scope of this article.</p>
-<h2 id="resolution">Resolution <a href="#resolution" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="resolution">Resolution <a href="#resolution" class="header-link"></a></h2>
 <p>A particular version of Internet Explorer can be selected by modifying the registry and restarting the Player application.</p>
 <pre><code class="language-registry">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_BROWSER_EMULATION]
 "XiboClient.exe"=dword:0000270f</code></pre>
 <p>The registry key may already exist (there may be entries within that folder), if that is the case then add a new String Value for <code>XiboClient.exe</code>.</p>
 <p>The example above is for IE9. Further values can be obtained from <a href="https://msdn.microsoft.com/en-us/library/ee330730#browser_emulation">here</a>.</p>
-<h2 id="further_reading">Further Reading <a href="#further_reading" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="further_reading">Further Reading <a href="#further_reading" class="header-link"></a></h2>
 <ul>
 <li><a href="https://msdn.microsoft.com/en-us/library/ee330730">Internet Feature Controls</a> by Microsoft.</li>
 <li><a href="https://msdn.microsoft.com/en-us/library/ee330730#browser_emulation">Browser Emulation</a> by Microsoft.</li>

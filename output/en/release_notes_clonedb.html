@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=getting_started-->
-<h1 id="cloning_the_database">Cloning the Database <a href="#cloning_the_database" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="cloning_the_database">Cloning the Database <a href="#cloning_the_database" class="header-link"></a></h1>
 <p>Xibo uses database constraints to enforce it's database schema. You can think of it as a second level of checking after the web interface to ensure that the database remains corruption-free.</p>
 <p>This means that when you try and restore a database &quot;dump&quot; the restore will fail. The restoration will fail due to the database constraints, unless the following steps are taken.</p>
 <p>The following placeholders are used in the below instructions, substitute these values for the real database details:</p>
@@ -70,7 +70,7 @@
 <li>MySQL Xibo User = Xibodbuser</li>
 <li>MySQL Database = Xibodb</li>
 </ul>
-<h2 id="method_1">Method 1 <a href="#method_1" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="method_1">Method 1 <a href="#method_1" class="header-link"></a></h2>
 <p>The easier of the two methods.</p>
 <ol>
 <li>
@@ -95,7 +95,7 @@ quit;
 </li>
 <li>Finally alter your settings.php file in your 1.1 install to use the new database name (Xibodb2 in this example).</li>
 </ol>
-<h2 id="method_2">Method 2 <a href="#method_2" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="method_2">Method 2 <a href="#method_2" class="header-link"></a></h2>
 <p>Before you backup your database, create a file &quot;Xibo.sql&quot; with the following contents:</p>
 <pre><code class="language-sql">SET FOREIGN_KEY_CHECKS=0;
 SET UNIQUE_CHECKS=0;</code></pre>

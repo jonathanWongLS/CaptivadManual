@@ -333,9 +333,9 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-p {
+/* p {
   margin: 0 0 10px;
-}
+} */
 .lead {
   margin-bottom: 20px;
   font-size: 16px;

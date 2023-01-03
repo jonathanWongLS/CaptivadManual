@@ -85,7 +85,7 @@
           <h1 id="command_functionality">
             Command Functionality
             <a href="#command_functionality" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h1>
           <p>
@@ -111,19 +111,19 @@
           <h2 id="creating_and_managing_commands">
             Creating and Managing Commands
             <a href="#creating_and_managing_commands" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
           <p></p>
           <p>Commands are created and managed by navigating to <strong>Commands</strong> under the <strong>Displays</strong> section of the main menu:</p>
           <ul>
-            <li>Use the Row Menu for existing Commands to Edit, Delete and set <a>Share</a> options.</li>
+            <li>Use the Row Menu for existing Commands to Edit, Delete and set <a class="user-manual-info" href="users_featuresandsharing.html">Share</a> options.</li>
           </ul>
 
           <h2 id="add_command">
             Add Command
             <a href="#add_command" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
           <p>
@@ -140,9 +140,6 @@
 
           <h2 id="command_command">
             Command
-            <a href="#command_command" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
-            </a>
           </h2>
           <p>Use the drop down to select from the following options and complete the presented fields:</p>
           <p></p>
@@ -162,10 +159,28 @@
             <li><strong>Android Intent</strong></li>
           </ul>
 
+          <h2 id="command_validation">
+            Validation
+          </h2>
+          <p>The Validation String is used as a comparison to the Command output and if it matches then the Command is considered
+            a success. This string can be a regular expression.</p>
+          <p>This could be useful for a network of mixed Windows and Android Players with a command called ‘Reboot’. The Command
+            String for ‘Reboot’ on Windows being <code>shutdown /r /t 0</code>, and on Android, it is <code>reboot</code>.</p>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              <strong>Command</strong> and <strong>Validation</strong> strings can be overridden using <a
+                href="displays_settings.html#setting_on_the_display">Display Profiles</a>. Click to <strong>Edit</strong> and use
+              the <strong>Command</strong> tab!
+          
+            </div>
+          </div>
+
           <h2 id="available_on">
             Available on
             <a href="#available_on" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
           <ul>
@@ -175,7 +190,7 @@
           <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
             <div class="manual-notes-card-info">
           
-              <strong>Command</strong> and <strong>Validation</strong> strings can be overridden using <a>Display Profiles</a>. Click to <strong>Edit</strong> and use
+              <strong>Command</strong> and <strong>Validation</strong> strings can be overridden using <a class="user-manual-info" href="displays_settings.html">Display Profiles</a>. Click to <strong>Edit</strong> and use
               the <strong>Command</strong> tab!
           
             </div>
@@ -185,7 +200,7 @@
           <h2 id="send_command">
             Send Command
             <a href="#send_command" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
           <p>
@@ -199,7 +214,7 @@
           <h2 id="scheduling_commands">
             Scheduling Commands
             <a href="#scheduling_commands" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
           <p>Commands can be Scheduled to execute on a specific date/time by using the <strong>Schedule</strong> Page.:</p>
@@ -208,7 +223,7 @@
                 data-processed="1"></figure>
           </div>
           <ul>
-            <li>Click the <strong>Add Event</strong> button and select the <a>Event Type</a> as <strong>Command</strong></li>
+            <li>Click the <strong>Add Event</strong> button and select the <a class="user-manual-info" href="scheduling_events.html">Event Type</a> as <strong>Command</strong></li>
             <li>Complete the form fields using the <strong>Command</strong> drop down menu to select the Command to schedule.</li>
           </ul>
           <p></p>
@@ -217,10 +232,10 @@
           <h2 id="shell_commands">
             Shell Commands
             <a href="#shell_commands" class="header-link">
-              <span class="glyphicon glyphicon-link"></span>
+              
             </a>
           </h2>
-          <p>The <a>Shell Command Widget</a> is used to run external Commands based on the Layouts activity.</p>
+          <p>The <a class="user-manual-info" href="media_module_shellcommand.html">Shell Command Widget</a> is used to run external Commands based on the Layouts activity.</p>
           <p>Commands can be selected by adding the <strong>Shell Command Widget</strong> to a Layout. Shell Commands with a Command as their
             source act in the same fashion as normal shell commands. The Command is executed when the Widget is shown on the
             Layout.</p>
@@ -246,7 +261,7 @@
             <h2 id="helpers">
               Helpers
               <a href="#helpers" class="header-link">
-                <span class="glyphicon glyphicon-link"></span>
+                
               </a>
             </h2>
             <p>
@@ -255,8 +270,8 @@
               on Android.
             </p> 
             <p>
-              Captivad for Android <a>Helper Command to change Time zone</a>
-            </p>
+              Captivad for Android <a class="user-manual-info" href="helper_command_to_change_time_zone.html">Helper Command to change Time zone</a>
+            </p> 
 
             <h3>RS232</h3>
             <p>
@@ -297,7 +312,7 @@
               <code>intent|&lt;type|activity,service,broadcast&gt;|&lt;activity&gt;|[&lt;extras&gt;]</code> .
             </p>
             <p>
-              <code>[&lt;extras&gt;]</code> is an optional parameter available from <strong>Android v2 R206</strong> used to provide
+              <code>[&lt;extras&gt;]</code> is an optional parameter used to provide
               additional data to the Intent. This must be a JSON formatted string containing an array with at least one object. The
               object format is below and must be on one line.
             </p>
@@ -329,7 +344,7 @@
             <h2 id="monitor_on_off">
               Monitor ON/OFF
               <a href="#monitor_on_off" class="header-link">
-                <span class="glyphicon glyphicon-link"></span>
+                
               </a>
             </h2>
             <h2>Serial/RS232</h2>
@@ -373,7 +388,7 @@
             <h2 id="philips_commercial_displays">
               Philips Commercial Displays
               <a href="#philips_commercial_displays" class="header-link">
-                <span class="glyphicon glyphicon-link"></span>
+                
               </a>
             </h2>
             <p>The following commands can be used to control LED’s located on the sides of some commercial Phillips Displays:</p>

@@ -61,18 +61,18 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=getting_started-->
-<h1 id="using_tickers_and_other_external_resources_over_https">Using Tickers and other external resources over HTTPS <a href="#using_tickers_and_other_external_resources_over_https" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="using_tickers_and_other_external_resources_over_https">Using Tickers and other external resources over HTTPS <a href="#using_tickers_and_other_external_resources_over_https" class="header-link"></a></h1>
 <p>It is easy to reference and use external sources in Xibo widgets such as Tickers, however special consideration may need to be taken when referencing resources provided over SSL (anything with HTTPS at the front of the Address).</p>
-<h2 id="symptoms">Symptoms <a href="#symptoms" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="symptoms">Symptoms <a href="#symptoms" class="header-link"></a></h2>
 <p>You have added a Ticker which references a feed served over HTTPS and nothing is shown. You have checked the logs and note a message similar to:</p>
 <pre><code>SSL certificate problem, verify that the CA cert is OK</code></pre>
 <p>The message originates from something called <code>curl</code>.</p>
-<h2 id="explanation">Explanation <a href="#explanation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="explanation">Explanation <a href="#explanation" class="header-link"></a></h2>
 <p><code>curl</code> is a PHP extension which allows the CMS to download resources from external sources like the Internet or a Local Network.</p>
 <p>Any time Xibo uses <code>curl</code> it makes sure that it &quot;Verifies the Peer&quot;. In basic terms this means it checks to ensure whomever supplies the data is who they say they are.</p>
 <p>Xibo does this because if something is served over HTTPS then it is reasonable to assume the returned information is sensitive and that it should be protected and verified.</p>
 <p>The certificate problem error occurs because <code>curl</code> uses a bundle of &quot;CA root certificates&quot; to perform the verification and these certificates are missing on some installations. For example, these certificates are almost always missing on Windows Installations.</p>
-<h2 id="resolution">Resolution <a href="#resolution" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="resolution">Resolution <a href="#resolution" class="header-link"></a></h2>
 <p>The web server that hosts the CMS needs to be updated with the latest CA root certificates. This may sound complicated, but is actually very easy.</p>
 <ol>
 <li>Download the latest CA root certificate from the <a href="http://curl.haxx.se/docs/caextract.html">curl website</a>.</li>
@@ -80,7 +80,7 @@
 <li>Restart the web server.</li>
 </ol>
 <p>If these steps still produce the same error, then the certificate signing the resource you have requested in invalid and you actually want the error to be thrown to protect your data.</p>
-<h2 id="further_reading">Further Reading <a href="#further_reading" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="further_reading">Further Reading <a href="#further_reading" class="header-link"></a></h2>
 <p>There are some excellent sources of further reading:</p>
 <ul>
 <li><a href="http://snippets.webaware.com.au/howto/stop-turning-off-curlopt_ssl_verifypeer-and-fix-your-php-config/">Stop turning off CURLOPT_SSL_VERIFYPEER and fix your PHP config</a> by Ross McKay</li>

@@ -64,17 +64,17 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=advanced-->
-<h1 id="events">Events <a href="#events" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="events">Events <a href="#events" class="header-link"></a></h1>
 <p>This section will discuss the CMS event dispatcher, which can be used in Custom
 Middleware / Modules to intercept various core events raised by the CMS.</p>
-<h2 id="event_dispatcher">Event Dispatcher <a href="#event_dispatcher" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="event_dispatcher">Event Dispatcher <a href="#event_dispatcher" class="header-link"></a></h2>
 <p>The CMS uses the Symfony event dispatcher by default.</p>
 <p>In order to execute code on an event the object you are listening from must have
 access to the <code>$container-&gt;dispatcher</code>, which is an object implementing the
 <code>EventDispatcherInterface</code>.</p>
 <p>This is registered in the DI Container by the <code>State</code> Middleware and automatically
 provided to all Widgets.</p>
-<h2 id="listening_for_an_event">Listening for an Event <a href="#listening_for_an_event" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="listening_for_an_event">Listening for an Event <a href="#listening_for_an_event" class="header-link"></a></h2>
 <p>Event listeners are adding to the event dispatcher for execution when a matching
 event is fired.</p>
 <p>The easiest way to add one is:</p>
@@ -84,7 +84,7 @@ $dispatcher-&gt;addListener('event.name', function(Event $event) {
 });</code></pre>
 <p>Each event holds an event object which exposes specific functionality that may be
 useful for that event.</p>
-<h2 id="supported_events">Supported Events <a href="#supported_events" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="supported_events">Supported Events <a href="#supported_events" class="header-link"></a></h2>
 <p>Below is a list of supported events:</p>
 <table>
 <thead>

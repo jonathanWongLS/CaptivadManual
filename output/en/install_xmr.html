@@ -55,15 +55,15 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=manual_install-->
-<h1 id="xibo_message_relay">Xibo Message Relay <a href="#xibo_message_relay" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="xibo_message_relay">Xibo Message Relay <a href="#xibo_message_relay" class="header-link"></a></h1>
 <p>XMR for short, the message relay is responsible for <strong>pushing</strong> messages from the CMS to the Players. XMR is used
 for any Player Actions that need to be taken immediately.</p>
-<h2 id="mile-high_overview">Mile-high Overview <a href="#mile-high_overview" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="mile-high_overview">Mile-high Overview <a href="#mile-high_overview" class="header-link"></a></h2>
 <p>XMR is a message queuing application and comes in two parts, one handles the CMS -&gt; XMR communication and the other the
 XMR -&gt; Player communication. Therefore it must listen on two ports.</p>
 <p>The CMS -&gt; XMR section is a request/response queue and the XMR -&gt; Player section is a publisher/subscriber queue.</p>
 <p>The communication protocol doesn't matter and you may choose - we recommend TCP.</p>
-<h2 id="installation">Installation <a href="#installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="installation">Installation <a href="#installation" class="header-link"></a></h2>
 <p><a href="install_docker.html">Docker installations</a> have XMR pre-installed and configured.</p>
 <p>Please make sure <a href="install_environment.html#zeroMQ">ZeroMQ</a> is installed and enabled.</p>
 <p>XMR is included in the <code>vendor/bin</code> folder of your CMS installation and requires a <code>config.json</code> file to be written
@@ -91,14 +91,14 @@ the &quot;Displays&quot; section of the Settings Page.</p>
 <li>XMR Public Address - this is the <code>pubOn</code> address for XMR -&gt; Player communication</li>
 </ul>
 <p>The XMR Public Address can be adjusted for Displays using the Display Settings Profile functionality.</p>
-<h2 id="security">Security <a href="#security" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="security">Security <a href="#security" class="header-link"></a></h2>
 <p>XMR only handles encrypted messages.</p>
 <p>When Players register with the CMS they generate a public / private key and send the public key to the CMS. All messages
 running through XMR are encrypted using the public key of the display the are intended to reach. This happens in the CMS
 and therefore XMR only receives encrypted messages.</p>
 <p>The CMS -&gt; XMR <code>listenOn</code> address should be private to your internal network.</p>
 <p>It is common to run the CMS and XMR on the same machine.</p>
-<h2 id="multiple_cms_installations">Multiple CMS installations <a href="#multiple_cms_installations" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="multiple_cms_installations">Multiple CMS installations <a href="#multiple_cms_installations" class="header-link"></a></h2>
 <p>XMR can service multiple CMS installations - it is CMS agnostic as the message encryption ensures that only the intended
 recipient of a message can read it.</p>
                 </div>

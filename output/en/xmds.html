@@ -63,10 +63,10 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=api-->
-<h1 id="xibo_media_distribution_service">Xibo Media Distribution Service <a href="#xibo_media_distribution_service" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="xibo_media_distribution_service">Xibo Media Distribution Service <a href="#xibo_media_distribution_service" class="header-link"></a></h1>
 <p>XMDS is a SOAP API published by the CMS and consumed by the Player applications. It is described by a WSDL which can be parsed by many IDEs and tools to produce <em>client methods</em> to call the API (for example you can set up a web reference in Visual Studio).</p>
 <p>The SOAP service is published over HTTP and HTTPS. HTTPS is the recommended end point.</p>
-<h2 id="information_exchange">Information Exchange <a href="#information_exchange" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="information_exchange">Information Exchange <a href="#information_exchange" class="header-link"></a></h2>
 <p>The following pieces of information are exchanged between the CMS and the Players at regular intervals. The exact interval is defined by the <code>collectionInterval</code> configured for the Display.</p>
 <ul>
 <li>Register</li>
@@ -84,9 +84,9 @@
 <li>Status *</li>
 </ul>
 <p>The starred services communicate outside the collection interval because they are driven be events that occur during normal running of the player.</p>
-<h2 id="security">Security <a href="#security" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="security">Security <a href="#security" class="header-link"></a></h2>
 <p>The CMS is configured with a <code>secret CMS key</code> which is a required parameter for all information exchange. The Player is assigned a <code>hardware key</code> which is used to identify the player as a <strong>Display</strong> in the CMS. <strong>HTTPS</strong> is recommended at all times to prevent the discovery of this information by a 3rd party.</p>
-<h2 id="versioning">Versioning <a href="#versioning" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="versioning">Versioning <a href="#versioning" class="header-link"></a></h2>
 <p>The API provides various schema versions:</p>
 <ul>
 <li>v3 - for use by players prior to 1.7</li>
@@ -95,9 +95,9 @@
 </ul>
 <p>A <code>v3</code> player will only be allowed to connect if it has already been registered to the CMS. This encourages new players
 to be commissioned with the latest versions. v5 will allow v4 registrations but will prevent access to <a href="xmr.html">XMR</a>.</p>
-<h1 id="methods">Methods <a href="#methods" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="methods">Methods <a href="#methods" class="header-link"></a></h1>
 <p>Information exchanged between the Player and CMS is driven by the Player connecting to the CMS and calling the appropriate method.</p>
-<h2 id="life_cycle">Life Cycle <a href="#life_cycle" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="life_cycle">Life Cycle <a href="#life_cycle" class="header-link"></a></h2>
 <p>It is the decision of the author to decide how the XMDS service is called, however the current players implement guidelines which produce a stable, reliable result.</p>
 <p>There are two types of calls, those that happen on the collection interval and those than happen at run time.</p>
 <h3>Collection Interval</h3>
@@ -127,7 +127,7 @@ to be commissioned with the latest versions. v5 will allow v4 registrations but 
 <p>The Player can submit a screen shot of the current output to the CMS.</p>
 <h4>Notify Status</h4>
 <p>The player should notify the status when the storage usage significantly changes and when a new layout is shown (if notify current layout is set).</p>
-<h2 id="definition_v4/v5">Definition v4/v5 <a href="#definition_v4/v5" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="definition_v4/v5">Definition v4/v5 <a href="#definition_v4/v5" class="header-link"></a></h2>
 <p>The definition of the SOAP service can be automatically consumed from the WSDL at <code>//xmds.php?v=4&amp;wsdl</code> or <code>//xmds.php?v=5&amp;wsdl</code>.</p>
 <p>There are 2 common parameters to all Method calls:</p>
 <ul>

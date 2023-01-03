@@ -55,13 +55,13 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=manual_install-->
-<h1 id="prepare_your_environment">Prepare your Environment <a href="#prepare_your_environment" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="prepare_your_environment">Prepare your Environment <a href="#prepare_your_environment" class="header-link"></a></h1>
 <p>To run without Docker it is necessary to ensure that the environment is configured in a way
 that will run Xibo. There are several things to take into consideration, such as
 where to put the files, which web server to run, etc.</p>
 <p>This manual cannot cover every possible environment consideration, but it does address some
 common issues in the following sections.</p>
-<h2 id="placing_cms_files">Placing CMS Files <a href="#placing_cms_files" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="placing_cms_files">Placing CMS Files <a href="#placing_cms_files" class="header-link"></a></h2>
 <p>Secure by design, the CMS has a folder structure which intends for only the
 <code>web</code> folder to be in a location served by the web server. This means the web
 server / hosting must allow files to be placed outside the web location.</p>
@@ -100,7 +100,7 @@ the <code>.htaccess</code> file is sufficient.</p>
     Allow from all
     Require all granted
 &lt;/Directory&gt;</code></pre>
-<h2 id="url_rewriting">URL Rewriting <a href="#url_rewriting" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="url_rewriting">URL Rewriting <a href="#url_rewriting" class="header-link"></a></h2>
 <p>The CMS should be run on a web server that supports URL rewriting. If this is not possible you
 will need to access the application by specifying <code>index.php</code> in the URL.</p>
 <h3>Apache</h3>
@@ -188,7 +188,7 @@ received.</p>
     &lt;/rewrite&gt;
 &lt;/system.webServer&gt;</code></pre>
 <p><a id="zeroMQ"></a></p>
-<h2 id="zeromq">ZeroMQ <a href="#zeromq" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="zeromq">ZeroMQ <a href="#zeromq" class="header-link"></a></h2>
 <p><a href="http://zeromq.org/">ZeroMQ</a> is a low level library used by Xibo to
 manage push messaging between the CMS and Players. The ZeroMQ PHP bindings are
 required for this to function. XMR will not run without ZeroMQ installed.</p>

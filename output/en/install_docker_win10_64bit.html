@@ -59,11 +59,11 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=cms_installation-->
-<h1 id="docker_on_windows_10_64_bit">Docker on Windows 10 64 bit <a href="#docker_on_windows_10_64_bit" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="docker_on_windows_10_64_bit">Docker on Windows 10 64 bit <a href="#docker_on_windows_10_64_bit" class="header-link"></a></h1>
 <p><a href="https://docker.com/">Docker</a> is an application to package and run any
 application in a pre-configured container making it much easier to deploy
 a Xibo CMS with recommended configuration.</p>
-<h2 id="install_docker">Install Docker <a href="#install_docker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="install_docker">Install Docker <a href="#install_docker" class="header-link"></a></h2>
 <p>There are 2 Docker products for 64 bit Windows, &quot;Docker for Windows&quot; and
 &quot;Docker Toolbox&quot;. If you have Windows 10 Professional 64 bit, then Docker for
 Windows is the version of Docker you should install.</p>
@@ -80,14 +80,14 @@ Windows system tray, right click on it, and select <code>Settings</code>.</p>
 <p>Click on the <code>Shared Drives</code> tab, and then put a tick against the local drive on
 which you will install the CMS. Click <code>Apply</code> to save your changes.</p>
 <p>For the rest of this guide, you will need to use the Windows PowerShell.</p>
-<h2 id="download_and_extract_the_xibo_docker_archive">Download and extract the Xibo Docker archive <a href="#download_and_extract_the_xibo_docker_archive" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="download_and_extract_the_xibo_docker_archive">Download and extract the Xibo Docker archive <a href="#download_and_extract_the_xibo_docker_archive" class="header-link"></a></h2>
 <p>The latest Xibo Docker installation files can be <a href="https://github.com/xibosignage/xibo-cms/releases/download/1.8.4/xibo-docker.zip">downloaded
 from our website</a>.</p>
 <p>The archive should be extracted in a suitable location on your host machine we'd
 suggest <code>c:\Xibo</code>. Your library content and database will be written under this
 folder.</p>
 <p>Please note that the archive already contains a sub-folder called Xibo-docker, which is best practice for archives! For the subsequent instructions please make sure you are <em>inside</em> the sub-folder contained in the archive.</p>
-<h2 id="check_and_edit_configuration">Check and edit configuration <a href="#check_and_edit_configuration" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="check_and_edit_configuration">Check and edit configuration <a href="#check_and_edit_configuration" class="header-link"></a></h2>
 <p>The first time Xibo is installed a configuration file is needed to
 tell Docker how the environment is configured. This file is called <code>config.env</code>.
 This file covers where you want files to be stored, email config, etc.</p>
@@ -156,7 +156,7 @@ NameVirtualHost *:443
 <p>A worked example for setting up an Apache reverse proxy for SSL with LetsEncrypt
 SSL certificates can be found
 <a href="https://community.xibo.org.uk/t/xibo-1-8-0-with-docker-on-ubuntu-16-04/9392">here</a>.</p>
-<h2 id="installing_the_cms_containers">Installing the CMS containers <a href="#installing_the_cms_containers" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="installing_the_cms_containers">Installing the CMS containers <a href="#installing_the_cms_containers" class="header-link"></a></h2>
 <p>Once you've made your changes to <code>config.env</code> and have saved the file, Open a
 terminal/command window in the folder where you extracted the archive. As a user
 who has permissions to run the <code>docker</code> command, simply run the following
@@ -171,7 +171,7 @@ account.</p>
 <p>You can log on to the CMS at <code>http://localhost</code>. If you configured an
 alternative port number then be sure to add that to the URL, for example
 <code>http://localhost:8080</code>.</p>
-<h2 id="configuration_adjustments">Configuration adjustments <a href="#configuration_adjustments" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="configuration_adjustments">Configuration adjustments <a href="#configuration_adjustments" class="header-link"></a></h2>
 <p>If you are running a the Windows or a 3rd party firewall on your computer you
 will need to allow the ports you've configured the CMS to run on inbound. If you
 haven't specifically configured alternative ports, then the following is
@@ -192,14 +192,14 @@ tab.</p>
 <pre><code>tcp://&lt;ip_address&gt;:&lt;port&gt;</code></pre>
 <p>The default <code>&lt;port&gt;</code> is 9505 and should be set to that unless you have specified
 a custom port in your docker-compose configuration.</p>
-<h2 id="starting_and_stopping_xibo">Starting and Stopping Xibo <a href="#starting_and_stopping_xibo" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="starting_and_stopping_xibo">Starting and Stopping Xibo <a href="#starting_and_stopping_xibo" class="header-link"></a></h2>
 <p>Once the CMS containers have been initialised with <code>docker-compose up -d</code>, it
 is possible to start and stop them without removing the underlying container.</p>
 <p>The <code>stop</code> command will stop the Xibo CMS services running. If you
 want to start them up again, issue the <code>start</code> command.</p>
 <pre><code>docker-compose stop
 docker-compose start</code></pre>
-<h2 id="uninstalling_/_removing">Uninstalling / removing <a href="#uninstalling_/_removing" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="uninstalling_/_removing">Uninstalling / removing <a href="#uninstalling_/_removing" class="header-link"></a></h2>
 <p>The CMS installation and its associated containers can be completely removed by
 issuing the <code>down</code> command.</p>
 <p><strong> Before running docker-compose down</strong>, please be sure that your media and
@@ -211,7 +211,7 @@ hours. If either of those checks fail, please do not run <code>docker-compose do
 <p>If your intention is to remove all traces of Xibo you may delete
 the <code>c:\Xibo</code> folder <strong>after</strong> running the <code>down</code> command.</p>
 <pre><code>docker-compose down</code></pre>
-<h2 id="special_considerations">Special considerations <a href="#special_considerations" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="special_considerations">Special considerations <a href="#special_considerations" class="header-link"></a></h2>
 <p>At the time of writing, there is a bug with Docker for Windows which means that
 when your Windows computer is restarted, the CMS will appear to lose all your
 Media, Layouts and Configuration.</p>

@@ -63,14 +63,14 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=api-->
-<h1 id="cms_api">CMS API <a href="#cms_api" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="cms_api">CMS API <a href="#cms_api" class="header-link"></a></h1>
 <p>The CMS API is a full featured restful API which allows for advanced integrations with other applications and
 automation of CMS functionality.</p>
 <p>The API enables exciting opportunities to integrate Xibo with other systems. Imagine an integration
 with a point of sale system which pushed complimentary products to the signage when a customer purchased something.</p>
 <p>Any party connecting to the CMS is considered to be an &quot;application&quot; and is granted credentials according to the
 Applications page in the CMS.</p>
-<h2 id="authentication">Authentication <a href="#authentication" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="authentication">Authentication <a href="#authentication" class="header-link"></a></h2>
 <p>Securing the CMS is of utmost importance and the API is secured behind an oAuth resource server which requires
 a valid <code>access_token</code> to be provided before access will be granted.</p>
 <p>An <code>access_token</code> can be obtained from the CMS Authorization Server.</p>
@@ -99,16 +99,16 @@ authorization server supports two methods:</p>
 <li><code>/api/authorize/</code> initiate the <code>access_code</code> grant</li>
 <li><code>/api/authorize/access_token</code> obtain a token</li>
 </ul>
-<h2 id="methods">Methods <a href="#methods" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="methods">Methods <a href="#methods" class="header-link"></a></h2>
 <p>The Xibo API is <a href="http://swagger.io/">OpenAPI Compliant</a> and the documentation is presented using Swagger-UI
 in this manual.  You may also point a Swagger-UI installation to the <code>/swagger.json</code> resource in your CMS instance.</p>
 <p><a href="../api/">View the API documentation</a></p>
-<h2 id="php_client_implementation">PHP client implementation <a href="#php_client_implementation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="php_client_implementation">PHP client implementation <a href="#php_client_implementation" class="header-link"></a></h2>
 <p>A PHP oAuth client implementation has been provided for ease of authentication with the API. It can be found here:
 <a href="https://github.com/xibosignage/oauth2-xibo-cms">https://github.com/xibosignage/oauth2-xibo-cms</a>.</p>
-<h2 id="enveloping">Enveloping <a href="#enveloping" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="enveloping">Enveloping <a href="#enveloping" class="header-link"></a></h2>
 <p>All requests can be enveloped by adding <code>envelope=1</code> as a query parameter.</p>
-<h2 id="errors">Errors <a href="#errors" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="errors">Errors <a href="#errors" class="header-link"></a></h2>
 <p>API errors are reported via the 4xx and 5xx HTTP response codes, the most common of which are:</p>
 <ul>
 <li>404 Not Found (the resource could not be found)</li>
@@ -129,7 +129,7 @@ error message is presented, the HTTP status code and a data block indicating fur
 }</code></pre>
 <p>5xx errors indicate an issue with the CMS environment and extra information will be available
 in the CMS logs.</p>
-<h2 id="grid_data_-_lists_of_records">Grid Data - lists of records <a href="#grid_data_-_lists_of_records" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="grid_data_-_lists_of_records">Grid Data - lists of records <a href="#grid_data_-_lists_of_records" class="header-link"></a></h2>
 <p>Lists of records, henceforth referred to as grids, are paged by default, with a default page size of 10 records. They
 also have a default sort order applied to them, which is appropriate for that record type.</p>
 <h3>Paging</h3>

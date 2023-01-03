@@ -63,33 +63,33 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=api-->
-<h1 id="xibo_message_relay">Xibo Message Relay <a href="#xibo_message_relay" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="xibo_message_relay">Xibo Message Relay <a href="#xibo_message_relay" class="header-link"></a></h1>
 <p>XMR is the push messaging technology used in Xibo. More introductory
 information can be found <a href="xmr.html">here</a>.</p>
 <p>XMR consists of a private REQ/RESP and a public PUB/SUB message queue using ZeroMQ. This document will
 focus on the public side, which represents the messages flowing from XMR to the Player.</p>
 <p>The Private side represents messages flowing from the CMS to XMR. A complete message lifecycle is CMS -&gt;
 XMR -&gt; Player.</p>
-<h2 id="configuration">Configuration <a href="#configuration" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="configuration">Configuration <a href="#configuration" class="header-link"></a></h2>
 <p>Each Player must identify itself with the CMS by providing an XMR channel and public key to the
 <code>RegisterDisplay</code> XMDS call.</p>
 <p>The Channel must be a unique key and it is recommended to generate that from the CMS Address, CMS Key
 and Hardware Key.</p>
 <p>The XMR Public Key should be the public key of a Public/Private key RSA key. The private key
 remains secret and should be stored appropriately by the player.</p>
-<h2 id="security">Security <a href="#security" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="security">Security <a href="#security" class="header-link"></a></h2>
 <p>The PUB/SUB ZeroMQ used by XMR is transferred over TCP and is therefore unencrypted. Although the
 message content is benign, the Player must be able to ensure the validity of the message source. Therefore
 all messages are encrypted using a RSA key pair.</p>
 <p>The Player sends the public key to the CMS, and the CMS will encrypt all messages destined for the
 players Channel with the public key provided.</p>
-<h2 id="player_subscription">Player Subscription <a href="#player_subscription" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="player_subscription">Player Subscription <a href="#player_subscription" class="header-link"></a></h2>
 <p>Players should connect to the XMR Public Address supplied in the <code>RegisterDisplay</code> return XML using
 a ZeroMQ library and the PUB/SUB subscriber socket. Players should subscribe to the channel they
 provided to the CMS in <code>RegisterDisplay</code> and optionally a heartbeat channel called &quot;H&quot;.</p>
 <p>The heartbeat channel can be used to determine if the connection is still active and should receive
 data every 5 minutes.</p>
-<h2 id="receiving_messages">Receiving Messages <a href="#receiving_messages" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="receiving_messages">Receiving Messages <a href="#receiving_messages" class="header-link"></a></h2>
 <p>Messages sent from XMR are multipart messages, consisting of 3 components (in order):</p>
 <ul>
 <li>Channel</li>
@@ -108,7 +108,7 @@ operation and the private key stored securely by the Player.</p>
 <p>The TTL should be tested against the created date of the message to ensure it has arrived in a
 timely fashion. Expired messages should be discarded.</p>
 <p>Each message can also have action specific properties.</p>
-<h2 id="actions">Actions <a href="#actions" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="actions">Actions <a href="#actions" class="header-link"></a></h2>
 <p>A range of actions are supported by the CMS:</p>
 <table>
 <thead>

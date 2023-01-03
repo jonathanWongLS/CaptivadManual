@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="displays">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <p></p>
+                    <li class="active"><a href="displays_commands.html" data-toc-name="command_functionality">Go Back to Previous Page</a></li>
+                    <p></p>
+                </ul> 
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=displays-->
+                <h1>Helper Command to change Time zone</h1>
+                <p>When using Captivad for Android, there is a built in Helper Command for
+                    changing the time zone without the need for a device restart to apply.</p>
+                <blockquote>
+                    <p>This has been tested on Android 6 and 7 devices, as well as the DSCS9</p>
+                </blockquote>
+                <blockquote>
+                    <p>If you are using the DSCS9X please use the <strong>Alternative Command</strong> below.</p>
+                </blockquote>
+                <p>Use command <code>timezone|&lt;ID&gt;</code> where <code>&lt;ID&gt;</code> would be the database name
+                    for the time zone you wish to switch to.</p>
+                <p><a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List of time zone database
+                        names for Android</a></p>
+                <p>In the event that the above command is not supported on the device, there is an alternative command
+                    that can be used on rooted devices.</p>
+                <h2>
+                    <a name="alternative-command-for-rooted-devices-only-1" class="anchor"
+                        href="#alternative-command-for-rooted-devices-only-1"></a>Alternative command, for rooted
+                    devices only
+                </h2>
+                <blockquote>
+                    <p>Use this command if you are using the DSCS9X</p>
+                </blockquote>
+                <p>The following command can be used for rooted devices only, but time zone changes will not be applied
+                    to any running apps (including the Captivad Player), until the device has been restarted.</p>
+                <p>Use the following command which includes a reboot, so will only need running once:<br>
+                    <code>setprop persist.sys.timezone "&lt;Timezone ID&gt;"; reboot</code>
+                </p>
+                <blockquote>
+                    <p>E.g. <code>setprop persist.sys.timezone "Europe/London"; reboot</code></p>
+                </blockquote>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a>
+                for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+                .
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">
+                    GNU Affero General Public License v3 or later
+                </a>
+                , documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">
+                    Creative Commons Licence
+                </a>
+                .
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a>
+                |
+                <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

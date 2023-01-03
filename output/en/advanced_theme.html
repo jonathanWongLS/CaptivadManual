@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=advanced-->
-<h1 id="themes">Themes <a href="#themes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="themes">Themes <a href="#themes" class="header-link"></a></h1>
 <p>The CMS has a theme system which allows a developer to customise the look and feel of the application by creating
 a theme and adding it to the <code>web/theme/custom</code> folder. The theme engine has been designed with the
 principle of inheritance in mind, meaning that any resource requested by the CMS is passed through the currently active
@@ -89,13 +89,13 @@ $config = array(
 <p>The current CMS theme is activated in the General CMS Settings and is called <code>Xibo Default Theme</code>. This
 list is automatically generated when a valid <code>config.php</code> file exists for a folder in <code>/theme/custom</code>.</p>
 <p><img src="img/advanced_theme_selector.png" alt="Theme Selector" /></p>
-<h2 id="basic_changes">Basic Changes <a href="#basic_changes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="basic_changes">Basic Changes <a href="#basic_changes" class="header-link"></a></h2>
 <p>Basic theme changes, such as minor modifications to the CSS can be achieved by providing an <code>override.css</code> file in your
 themes <code>/web/theme/custom/&lt;theme&gt;/css</code> folder. This CSS file is included as the <strong>last</strong> CSS include on
 all pages and can be used to override the CSS. The default version of this file is empty.</p>
 <p>You may also include a <code>client.css</code> file which will be applied to all Widgets that render in HTML (such as embedded,
 ticker, etc). This is useful for applying global branding to all of your Displays.</p>
-<h2 id="advanced_changes">Advanced Changes <a href="#advanced_changes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="advanced_changes">Advanced Changes <a href="#advanced_changes" class="header-link"></a></h2>
 <p>It is possible to change almost any part of the CMS's visual user interface.</p>
 <p>The CMS uses the <strong>Twig</strong> engine for its view layer, with all of its views contained in the <code>/views</code> root folder. Each
 Twig view can be overridden by providing an alternative <code>view_path</code> setting in the theme <code>config.php</code> file. For example:</p>
@@ -117,11 +117,11 @@ either of these files is the place to start customising the HTML/CSS of the CMS.
 <h3>Forms</h3>
 <p>Forms in Xibo are served over XHR and rendered by JavaScript in the browser. Each form extends the
 <code>form_base.twig</code> file.</p>
-<h1 id="docker">Docker <a href="#docker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="docker">Docker <a href="#docker" class="header-link"></a></h1>
 <p>The Docker containers ship with volumes pre-mounted for all of the <code>/custom</code> folder locations mentioned above. Adding
 your files to these volumes will make those available to Xibo.</p>
-<h1 id="examples">Examples <a href="#examples" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
-<h2 id="changing_the_logo">Changing the logo <a href="#changing_the_logo" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h1 id="examples">Examples <a href="#examples" class="header-link"></a></h1>
+<h2 id="changing_the_logo">Changing the logo <a href="#changing_the_logo" class="header-link"></a></h2>
 <p>A typical use case is to change the logo shown in the header. This
 example assumes that you do not have a theme yet. Create the following structure:</p>
 <ul>
@@ -144,7 +144,7 @@ $config = array(
 This means that we can drop a replacement logo into the theme and it will render that instead.</p>
 <p>The default logo is stored in <code>/web/theme/default/img/xibologo.png</code> - take a copy of it and save it in
 <code>/web/theme/custom/mytheme/img/xibologo.png</code> and modify it according to your requirements.</p>
-<h2 id="adding_a_new_link">Adding a new link <a href="#adding_a_new_link" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="adding_a_new_link">Adding a new link <a href="#adding_a_new_link" class="header-link"></a></h2>
 <p>A common example is to add a new link to the menu which directs the user to an external web page. This
 example assumes that you have created the theme shown in the &quot;Changing the logo&quot; example.</p>
 <p>To provide a new link it is necessary to override one of the Twig views the CMS uses to render its

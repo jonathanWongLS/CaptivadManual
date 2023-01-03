@@ -1,10 +1,40 @@
+.user-manual-info a {
+  font-size: 20px;
+  letter-spacing: .56px;
+  text-decoration: underline;
+  color: #0e70f6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0e70f6 !important; 
+  font-weight: bold !important;
+  margin: 20px 0 20px 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  font-family: "Open Sans",sans-serif !important;  
+}
+
 h1 {
-  font-size: 34px;
-  line-height: 42px;
+  margin-top: 20px !important; 
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+}
+
+
+strong {
+  color: #0e70f6;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+ul li, ol li {
+  line-height: 22px;
+  margin-bottom: 8px;
+  position: relative;
 }
 
 pre {
@@ -19,8 +49,14 @@ pre {
   letter-spacing: .56px;
 }
 
-.manual-notes-primary {
-  border: 1.8px solid #0e70f6;
+.manual-notes-card {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 1.8px solid #40547c;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgb(0 0 0 / 8%);
 }
 
 @media (max-width: 991px) {
@@ -37,6 +73,28 @@ pre {
   border: 1.8px solid #40547c;
   background-color: #fff;
   box-shadow: 0px 10px 20px rgb(0 0 0 / 8%);
+}
+
+.manual-notes-primary {
+  border: 1.8px solid #0e70f6;
+}
+
+.manual-notes-secondary {
+  border: 1.8px solid #eb7857 !important;
+}  
+
+.tab {
+  margin-left: 25px; 
+}
+
+code {
+  font-size: .875em;
+  color: #d63384;
+  word-wrap: break-word;
+}
+
+.manual-notes-secondary strong {
+  color: #eb7857;
 }
 
 .pb-24 {
@@ -116,6 +174,9 @@ pre {
 body { 
   background-image: url(./img/background.svg);
   padding-top: 40px; 
+  -webkit-font-smoothing: antialiased;
+  line-height: 22px;
+  font-weight: 400;
 } 
 
 .img-thumbnail {
@@ -189,3 +250,4 @@ ul#side-nav ul > li.active span.you-are-here-arrow {
   width: 300px;
   height: 50px; 
 }
+ 

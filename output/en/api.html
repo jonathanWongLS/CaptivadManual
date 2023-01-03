@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-9" role="main">
                     <!--toc=api-->
-<h1 id="xibo_api">Xibo API <a href="#xibo_api" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h1 id="xibo_api">Xibo API <a href="#xibo_api" class="header-link"></a></h1>
 <p>Welcome to the Xibo API documentation. This is an advanced topic for developers who want to integrate Xibo with another application.</p>
 <p>The API is split into 2 separate sections:</p>
 <ul>
@@ -71,13 +71,13 @@
 <li>Player API (XMDS)</li>
 </ul>
 <p>This split ensures that the Players can consume a simple, reliable, dedicated API which is easier to maintain and version between application versions. It also increases the flexibility of the Player API implementation.</p>
-<h2 id="player_api">Player API <a href="#player_api" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="player_api">Player API <a href="#player_api" class="header-link"></a></h2>
 <p>The Player API is referred to as XMDS, which stands for Xibo media distribution service. XMDS is a SOAP service with a set of end points defined by a WSDL.</p>
 <p>The XMDS WSDL can be consumed at <code>//yoururl/xmds.php?wsdl&amp;v=5</code>.</p>
 <p>The Player API version can be requested with <code>xmds.php?v=X</code> where X is the version requested. The latest version is version 5.</p>
 <h3>XLF</h3>
 <p>Layouts are provided by XMDS in their XLF format (Xibo Layout Format). This is an XML file which represents the Layout presentation and content.</p>
-<h2 id="cms_api">CMS API <a href="#cms_api" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h2 id="cms_api">CMS API <a href="#cms_api" class="header-link"></a></h2>
 <p>The CMS API is a RESTful API protected by oAuth. It can be consumed at <code>//yoururl/api</code> and exposes routes for all CMS operations.</p>
 <p>If developing a CMS extension for use within the existing web portal (for example an extension to be used in a theme file), the API can be consumed directly from <code>//yoururl/</code>.</p>
 <p>The Xibo API is <a href="http://swagger.io/">OpenAPI Compliant</a> and the documentation is presented using Swagger-UI in this manual.
