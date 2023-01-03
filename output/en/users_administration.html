@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="users">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users.html">Introduction</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="users_administration.html">Users</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_groups.html">User Groups</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_library_quota.html">User Library
+                                Quota</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_featuresandsharing.html">Features
+                                and Sharing</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0"
+                                href="users_notifications.html">Notifications</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=users-->
+                <h1 id="user_administration">
+                    User Administration
+                    <a href="#user_administration" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    Users are administered in the CMS by clicking on <strong>Users</strong> under the <strong>Administration</strong> section on the main menu. The Users <a>Grid</a>
+                    will open for you to add new and manage existing Users.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_admin_grid.png" data-processed="1">
+                    </figure>
+                </div>
+
+                <h2 id="adding_users">
+                    Adding Users
+                    <a href="#adding_users" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Click on the <strong>Add User</strong> button.
+                </p>
+                <p>
+                    There are two ways in which Users can be added, via an onboarding wizard using pre-configured User Groups or information
+                    manually added.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_user_admin_add.png" data-processed="1">
+                    </figure>
+                </div>
+                <p>
+                    Select from one of the pre-configured <strong>Groups</strong> to go through the <strong>Onboarding Wizard</strong> or select the last option to <strong>Manually
+                    create a user</strong> to be taken to the <strong>Add User</strong> form:
+                </p>
+
+
+                <h2 id="onboarding_wizard">
+                    Onboarding Wizard
+                    <a href="#onboarding_wizard" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <ul>
+                    <li>
+                        <p>Select a Group and click <strong>Next</strong></p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                <a>Features</a> are pre-configured for the groups common
+                                functions and can be modified to suit by Editing the User record!
+                
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_user_admin_user_credentials.png"
+                                    data-processed="1"></figure>
+                        </div>
+                        <p></p>
+                    </li>
+                    <li>
+                        <p>Create a <strong>User Name</strong> and <strong>Password</strong> which will be used as their login and to
+                            identify the User within the CMS.</p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                The password must contain at least 8 characters and include upper and lower case letters as well as at
+                                least one number or special character!
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Complete the Email address for this user, click <strong>Next</strong></p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                A user can complete/edit their email address after login from the <a>User
+                                    Profile!</a>
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Select from available <a>Folders</a> to share objects with the new User.</p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                All objects contained or moved into a Folder will inherit the View, Edit, Delete <a>Share</a> options that have been enabled for Users/User
+                                Groups!
+                
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_new_folders.png"
+                                    data-processed="1"></figure>
+                        </div>
+                        <p></p>
+                    </li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When allowing Users, (such as a Group Admin) to add Users using the Onboarding Wizard, ensure that Folders is
+                        enabled in <a>Features</a> if they are required to Share Folders with the
+                        User for viewing and editing!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    <strong>Home Folders</strong> can be set by right clicking a Folder and selecting the <strong>Set as Home</strong> option:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/users_set_home_folder.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>Further information can be found <a>here</a></p>
+                <ul>
+                    <li><strong>Save</strong></li>
+                    <p>The newly created User will be added and can be viewed in the Grid.</p>
+                </ul>
+
+                <h2 id="add_user_form">
+                    Add User form
+                    <a href="#add_user_form" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_add_user_form.png"
+                            data-processed="1" naptha_cursor="region"></figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        To always show the manual Add User form when adding new user’s to the system instead of the onboarding wizard,
+                        use the option available in <strong>Preferences</strong> from the <a href="tour_user_profile.html">User
+                            Profile</a>!
+                
+                    </div>
+                </div>
+                <p></p>
+                <h4>Details</h4>
+                <ul>
+                    <li>
+                        <p>Create a <strong>User Name</strong> and <strong>Password</strong> which will be used as their login and to
+                            identify the User within the CMS.</p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                The password must contain at least 8 characters and include upper and lower case letters as well as at
+                                least one number or special character!
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Complete the Email address for this user, click <strong>Next</strong></p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                A user can complete/edit their email address after login from the <a>User Profile!</a>
+                
+                            </div>                         
+                        </div>
+                    </li>
+                    <li>
+                        <p>Use the drop down to select from the three available <a>User Types</a></p>
+                    </li>
+                    <li>
+                        <p>Assign the maximum amount of content allowed to be uploaded to the Library for this User. Enter 0 for no
+                            quota to be applied.</p>
+                    </li>
+                    <li>
+                        <p>Select which <a>User Group</a> this User should belong to so that they can access
+                            the relevant parts of the system as required.</p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                Use <strong>System Notifications</strong> as the Initial User Group for Users that do not require
+                                permission to anything within the CMS but need notification emails when there are system issues as
+                                System Administrators!
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Use the drop down to select from the choice of <a>Dashboards</a> for the
+                            Users ‘Homepage’ which the User will be taken to after login.</p>
+                    </li>
+                </ul>
+
+                <h4>Home Folder</h4>
+                <p>
+                    A Home Folder can be set for the User. Select from the available Folders or right click to create a new Folder. See the <a>Folders</a> page for further information.
+                </p> 
+
+                <h4>Reference</h4>
+                <p>
+                    Use this tab to optionally complete information to be used as a reference to view and organise your Users.
+                </p>
+                <h4>Notifications</h4>
+                <ul>
+                    <li>Choose if the User should receive <strong>System</strong> or <strong>Display</strong> Notifications by ticking the checkboxes.</li>
+                </ul>
+                <h4>Options</h4>
+                <p>Further options can be applied for the User as required:</p>
+                <ul>
+                    <li>Hide the side navigational bar.</li>
+                    <li>Hide the New User guide when they log in.</li>
+                    <li>Force a User to change their password the next time they log in.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Captivad doesn’t place any limits on the number of Users that can be added.
+                
+                    </div>
+                </div>
+                <p></p>
+                <h2 id="editing_users">
+                    Editing Users
+                    <a href="#editing_users" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Use the Row Menu for a User to make changes by selecting from the options available:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_row_menu.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Manage <a>User Group</a> membership, <a>Home Folders</a> as well as <a>Features</a> from this menu!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    Click on <strong>Edit</strong> to open the <strong>Edit User</strong> form so that changes can be made to the User record as required.
+                </p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_edit_form.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+
+                <h2 id="reset_two_factor_authentication">
+                    Reset Two Factor Authentication
+                    <a href="#reset_two_factor_authentication" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    If a User loses access to their email or Google Authenticator app and has no access to any saved recovery codes, use the
+                    check box and tick to <strong>Reset Two Factor Authentication</strong>.
+                </p>
+                <p>
+                    Once ticked the Two Factor Authentication will be set to ‘Off’ for this <strong>User Profile</strong> with any stored secret codes
+                    cleared. The User can now set up <a>Two Factor Authentication</a> from the User Profile as before.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Add the <strong>Two Factor</strong> column to the Users grid using the <strong>Column visibility</strong>
+                        button. This will give you an overview of what Users have set with regards to Two Factor authorisation.
+                        (Disabled / Email / Google Authenticator)
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img src="./img/user_administration_2fa_column.png"
+                                    data-processed="1"></figure>
+                        </div>
+                        <p></p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        If you cannot access the CMS then run the following sql directly in the database to clear 2FA data for a
+                        specified User <code>{yourUserId}</code> , userId can be found in the User table.
+                        <pre>
+                            <code>
+UPDATE `user` SET `twoFactorSecret` = NULL,
+`twoFactorTypeId` = 0,
+`twoFactorRecoveryCodes` = NULL
+WHERE userId = {yourUserId}
+                            </code>
+                        </pre>
+                        <p></p>
+                    </div>
+                </div>
+
+                <h2 id="force_password_change">
+                    Force Password Change
+                    <a href="#force_password_change" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Use this function to ensure that ‘new’ Users change the password first given to them to access the system or if a User
+                    account password has been reset. Click on the <strong>Options</strong> tab and tick the box <strong>Force Password Change</strong>, Save.
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/users_edit_options.png" data-processed="1"
+                            naptha_cursor="region"></figure>
+                </div>
+                <p></p>
+                <p>
+                    Users will be redirected to a page to reset their password, the next time they log in.
+                </p>
+
+                <h2 id="deleting_users">
+                    Deleting Users
+                    <a href="#deleting_users" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Remove a User from the Row Menu, <strong>Delete</strong> option. A confirmation form will open up and give you further options regarding
+                    the items currently owned by that User.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Deleting a User is irreversible and will remove all their owned items including; Media, Layouts and Schedules,
+                        even if these items are being used by other Users in the system. <strong>Reassign items</strong> to another User
+                        using the selector to make them the new owner of all the items currently owned by the User you wish to delete.
+                        Alternatively, use the <strong>Retired</strong> checkbox at the bottom of the Edit User form so that the items
+                        remain in use in the system with the User unable to log in.
+                
+                    </div>
+                </div>
+
+                <h2 id="my_applications">
+                    My Applications
+                    <a href="#my_applications" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Captivad contains an API that allows 3rd party applications to connect and consume its data.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Add Applications</strong> and <strong>Add DOOH Applications</strong> and configure from
+                        <strong>Applications</strong> under the <strong>Administration</strong> section of the main menu.
+                
+                    </div>
+                </div>
+                <p>
+                    Before using an <strong>Application</strong> each User must authorise the application to act on their behalf within the CMS. Once
+                    authorised it can be viewed by clicking on the <strong>My Applications</strong> button to open a current list.
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/users_my_applications_button.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        At the current time the CMS does not provide individual Users with a method of revoking access to an
+                        application, however, an admin can remove an application completely.
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a> for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative
+                    Commons Licence</a>.
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

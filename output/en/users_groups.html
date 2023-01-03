@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="users">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users.html">Introduction</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_administration.html">Users</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="users_groups.html">User Groups</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_library_quota.html">User Library
+                                Quota</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_featuresandsharing.html">Features
+                                and Sharing</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0"
+                                href="users_notifications.html">Notifications</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=users-->
+                <h1 id="user_groups">
+                    User Groups
+                    <a href="#user_groups" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    User Groups allow for a set of <a>Features and Share</a> options to be applied to all Users within a specified Group.
+                </p>
+                <p>
+                    Captivad comes with a set of pre-configured User Groups for common functions for new installations.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_user_groups_preconfigured.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>
+                    These Groups already have the required Features enabled to allow Users to carry out the chosen role, and can be modified
+                    if necessary.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Using User Groups makes it easier to onboard new Users and manage system access. Users will inherit the <a>Features and
+                            Sharing</a> enabled for the User Group!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    Create new and manage existing by clicking on <strong>User Groups</strong> under the <strong>Administration</strong> section of the menu.
+                </p> 
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        User Groups that you create can be enabled to be shown for the <a href="users_administration.html">New User</a>
+                        onboarding wizard!
+                
+                    </div>
+                
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_user_group_add.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p>
+                    Create a new Group by clicking on the <strong>Add User Group</strong> button to open the form:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_group_add_form.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <h2 id="general">
+                    General
+                    <a href="#general" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <ul>
+                    <li>Use this tab to give your User Group an identifiable <strong>Name</strong>
+                    </li>
+                    <li>Assign a <a>Library Quota</a> to the group to determine the maximum amount of
+                        content allowed to be uploaded to the Library. Enter 0 if no quota should be applied.</li>
+                    <li>Enable the <strong>Notification</strong> options if required for the Group.</li>
+                </ul>
+
+
+                <h2 id="description">
+                    Description
+                    <a href="#description" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Provide optional text to describe the created Group.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        If enabled, this description will be shown for onboarding new Users and so should describe the Groups role to
+                        make it clear for selection!
+                
+                    </div>
+                
+                </div> 
+
+                <h2 id="onboarding_settings">
+                    Onboarding Settings
+                    <a href="#onboarding_settings" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    This tab controls the options for onboarding new Users.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_onboarding_settings.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the checkbox to include this User Group for selection when using the onboarding wizard for new User’s.</li>
+                    <li>Use the dropdown to select a <a>Dashboard</a> to be used as a homepage for Users created with the Group.</li>
+                </ul>
+                <p>Once all tabs have been created click to <strong>Save</strong>.</p>
+
+                <h2 id="group_members">
+                    Group Members
+                    <a href="#group_members" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Once created, Users can be assigned to the Group using the <strong>Row Menu</strong> and clicking on
+                    <strong>Members</strong>:
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/user_group_manage_membership.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the checkboxes to assign <strong>Users</strong> to the <strong>Group</strong>, and click to Save.</li>
+                </ul>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Users can be assigned to one or more <strong>User Groups</strong> for ease of sharing and collaboration!
+                
+                    </div>
+                </div>
+                <p></p> 
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        User Membership can also be controlled from the User Grid using the Row Menu. Click on <strong>User Groups</strong> to
+                        open the <strong>Manage Membership</strong> form!
+                
+                    </div>
+                </div>
+
+                <h2 id="features">
+                    Features
+                    <a href="#features" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Click on <strong>Features</strong> from the <strong>Row Menu</strong> to control the required access for the User Group:
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_features.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p>
+                    For further information see the following page: <a>Features and Sharing</a>
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use <strong>Copy</strong> from the row menu of a User Group to easily make adjustments and create new Groups to suit your needs!
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a> for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative
+                    Commons Licence</a>.
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

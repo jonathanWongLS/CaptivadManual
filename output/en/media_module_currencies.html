@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Currencies<a id="content-currencies" href="#content-currencies" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display retrieved exchange rates for currency pairs on Layouts</p>
+                
+                <p></p>
+                <h2>Installation<a id="content-installation" href="#content-installation" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>The Currencies Widget relies in part on the <a href="https://www.alphavantage.co/">Alpha Vantage
+                        API</a> to retrieve exchange rates.</p>
+                <p>Prior to installation you will need an API key. Please visit <a
+                        href="https://www.alphavantage.co/support/#api-key">Alpha Vantage</a> to create an account and
+                    obtain a key.</p>
+                <p>The Currencies Module is installed from the <strong>Modules</strong> page, under the
+                    <strong>Administration</strong> section of the main CMS menu.</p>
+                <ul>
+                    <li>Click on the <strong>Install Module</strong> button and select the Currencies Module to install.
+                    </li>
+                </ul>
+                <p>Once installed:</p>
+                <ul>
+                    <li>Select the Currencies Module from the grid and use the row menu to select <strong>Edit</strong>.
+                    </li>
+                    <li>Complete the form fields and include the <strong>API key</strong> and specify
+                        <strong>Cache</strong> settings.</li>
+                </ul>
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Currencies</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and
+                    click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p></p>
+                
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                    <li>Select whether the duration is to be per item or leave unticked to set the duration per feed.
+                    </li>
+                </ul>
+                <h2>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_currencies_configuration.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Define currencies using their <strong>acronym/abbreviation</strong> (symbols or written text
+                        will not be recognised).</li>
+                    <li>Include a <strong>Base</strong> currency.</li>
+                    <li>Select <strong>Reverse conversion</strong> if you would like to use your base currency as the
+                        comparison.</li>
+                </ul>
+                <h3>Appearance<a id="content-appearance" href="#content-appearance" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Optionally add a <strong>Background Colour</strong>.</li>
+                    <li>Include a PHP <strong>Date Format</strong> to apply to returned results, (see the bottom of the
+                        page for date formats).</li>
+                    <li>Select an optional <strong>Effect</strong> and <strong>Speed</strong> to be used to transition
+                        between items.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        NOTE: Users can set <strong>Horizontal</strong> and <strong>Vertical</strong>
+                        alignment options for this Widget!
+
+                    </div>
+                </div>
+                <h3>Templates<a id="content-templates" href="#content-templates" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Select from the available Templates:</p>
+                <ul>
+                    <li>
+                        <p><strong>Preset</strong> - use the drop down to select one of the preset templates:</p>
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img
+                                    src="./img/v3.1_media_currencies_preset_templates.png" data-processed="1">
+                            </figure>
+                        </div>
+                        <p></p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+
+                                <p>Click to Override the selected template if required.</p>
+                                <p>Please see the section on Editing Preset Templates below for further information.
+
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>No Records Message</strong> provide a message to display when there are no records
+                            returned.</p>
+                    </li>
+                </ul>
+                <h3>Editing Preset Templates<a id="content-editing-preset-templates"
+                        href="#content-editing-preset-templates" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Templates can be edited by selecting a Template using the drop-down and clicking in the
+                    <strong>Override the template</strong> checkbox.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The template will be automatically scaled and should be designed for the intended output
+                        resolution. The following guidelines should be considered when editing templates:
+                        <ul>
+                            <li>Templates must be designed at a fixed size</li>
+                            <li>All elements must use absolute sizing in px, including fonts, margins, widths, heights,
+                                etc</li>
+                            <li>If positioning is used, it must be from top,left</li>
+                            <li>Templates can use bootstrap</li>
+                            <li>The aspect ratio will be fixed by Captivad and sized to fit the Region</li>
+                            <li>Templates are treated the same as a static image
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>Once override has been selected, click back on the <strong>Templates tab</strong> to select templates
+                    to edit:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_currencies_override_templates.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p>**Main ** - Toggle <strong>On</strong> the Visual editor to access the inline editor to enter text
+                    and formatting or provide text/HTML in the box provided.</p>
+                <p></p>
+                
+                <p>**Item ** - Enter a Template to be applied to each item, use the Visual editor or provide text/HTML
+                    in the box provided.</p>
+                <p><strong>Optional Stylesheet</strong> - This is the CSS to apply to the template structure.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        This optional template is intended for advanced users to ‘tweak’ the CMS generated output!
+
+                    </div>
+                </div>
+                <h3>Caching<a id="content-caching" href="#content-caching" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Include a suitable time for the Update Interval in minutes, keeping it as high as possible.</p>
+                <h3>Results<a id="content-results" href="#content-results" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Get results at anytime to see what data is returned. Any field is available as a substitute to use in
+                    a template by simply entering the field name between square brackets [].</p>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Currencies Widget from the <strong>Actions</strong> tab
+                    in the properties panel. Please see the <a href="layouts_interactive_actions.html">Interactive
+                        Actions</a> page for more information.</p>
+                <h2>Additional Information<a id="content-additional-information" href="#content-additional-information"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Captivad should accept any date format that is in a correct PHP date format, the following characters are
+                    recognised and can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)
+                            </td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)
+                            </td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO
+                                week number (W) belongs to the previous or next year, that year is used instead. (added
+                                in PHP 5.1.0)</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

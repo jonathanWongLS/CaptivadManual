@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="cms_upgrade">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="cms_upgrade">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="upgrade.html">Upgrading</a></li>
+<li class="active"><a href="upgrade_docker.html">Upgrade Xibo for Docker<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="upgrade_switch_to_docker.html">Switching to Docker</a></li>
+<li><a href="upgrade_custom.html">Upgrade Custom installation</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=cms_upgrade-->
+<h1 id="upgrade_with_docker">Upgrade with Docker <a href="#upgrade_with_docker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p><strong> Before attempting an upgrade</strong>, please be sure that your media and database
+files are being correctly written to the <code>shared</code> directory. This is
+particularly important if you are running on a Windows computer. To do so,
+upload for example an image in to the CMS, and check that the same image
+appears in the <code>shared/cms/library</code> directory. Another good check is to make
+sure that <code>shared/backup/db/latest.tar.gz</code> was created within the last 24
+hours. If either of those checks fail, please do not proceed with the upgrade as
+this will lead to data loss. Seek support to recover the situation.</p>
+<p>Before starting the upgrade, it's strongly recommended to take a full backup of
+your Xibo system. So <code>stop</code> your CMS by issuing the command</p>
+<pre><code>docker-compose stop</code></pre>
+<p>and then, backup <code>config.env</code>, your docker-compose files, and <code>shared</code> directory
+and keep them somewhere safe. On a Linux system, you will need to be the <code>root</code>
+user, or use <code>sudo</code> to make a copy of the shared directory.</p>
+<p>If you're upgrading from an earlier 1.8.0 pre-release, you may have previously
+used <code>launcher</code>. <code>launcher</code> was used for 1.8.0-alpha, beta, rc1 and rc2, but
+since then we have switched to Docker Compose. Further details are available in
+the <a href="release_notes_1.8.0-rc3.html#requirements">1.8.0-rc3 release notes</a>.</p>
+<p>Once you have a suitable backup of your CMS files, you can proceed with the
+upgrade process.</p>
+<p>Download the <a href="https://github.com/xibosignage/xibo-docker/releases">appropriate version of the Docker Compose
+files</a> for the version of
+Xibo you want to upgrade to. Extract the Docker Compose files over
+the top of your existing installation, replacing any existing files.</p>
+<p>If you are running the CMS on Custom Ports, then you will need to repeat the
+initial steps in the CMS installation process where you copied the template
+<code>cms_custom-ports.yml.template</code> file to <code>cms_custom-ports.yml</code> and make the
+appropriate modifications for the ports you want to use.</p>
+<p>If you made any other changes to the docker-compose files, you will need to make
+those modifications again. <code>config.env</code> will have been preserved, so you should
+not need to make any changes there. Specifically, do not change the MySQL
+password in that file.</p>
+<p>To perform the upgrade, run</p>
+<pre><code>docker-compose down
+docker-compose up -d</code></pre>
+<p>substituting the second command there for the appropriate <code>up</code> command if you're
+using custom ports, or a remote MySQL server.</p>
+<p>The CMS containers will be destroyed, and rebuilt with the newer Xibo
+version.</p>
+<p>A database backup will be automatically run for you as part of this process.</p>
+<p>Please be patient. The upgrade process can take a few minutes to complete. In
+the interim, the CMS will be unavailable. If the upgrade is fully successful,
+you should not see the upgrade wizard at all when you go to log in to the CMS.</p>
+<p>If you do see the upgrade wizard, you can attempt to work through it, however
+please be wary of skipping upgrade steps unless you have a detailed knowledge
+that it is safe to do so.</p>
+<p>The upgrade should now be complete for you.</p>
+<p>If you need to roll back to the older Xibo version for some reason,
+you can do so by running</p>
+<pre><code>docker-compose down</code></pre>
+<p>restoring your original copy of <code>config.env</code>, the Docker Compose files and the
+<code>shared</code> directory, and finally running</p>
+<pre><code>docker-compose up -d</code></pre>
+<p>The original version of the CMS will be restored for you.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

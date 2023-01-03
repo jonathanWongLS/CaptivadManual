@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="advanced">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="advanced.html">Overview</a></li>
+<li><a href="advanced_contributing.html">Contributing</a></li>
+<li><a href="xtr.html">XTR - Routine Tasks</a></li>
+<li><a href="xmr.html">XMR - Push Messaging</a></li>
+<li><a href="api.html">API</a></li>
+<li class="active"><a href="advanced_theme.html">Themes<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="advanced_extending.html">Extending</a></li>
+<li><a href="advanced_modules.html">Modules</a></li>
+<li><a href="advanced_events.html">Events</a></li>
+<li><a href="advanced_dateFormat.html">Date Format</a></li>
+<li><a href="advanced_logging.html">Logging</a></li>
+</ul></body></html>
+
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=advanced-->
+<h1 id="themes">Themes <a href="#themes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The CMS has a theme system which allows a developer to customise the look and feel of the application by creating
+a theme and adding it to the <code>web/theme/custom</code> folder. The theme engine has been designed with the
+principle of inheritance in mind, meaning that any resource requested by the CMS is passed through the currently active
+theme and if that theme does not contain the resource, the default theme resource is served. This means that each theme
+<strong>need only adjust the items required</strong> and it is not necessary to take a whole copy of the default theme.</p>
+<p>Themes are modelled as sub-folders under the <code>/theme/custom</code> folder. The theme folder is contained in the <code>/web</code> CMS
+installation folder. The default theme exists in a folder called &quot;default&quot;.</p>
+<p>The structure of the default theme is shown below:</p>
+<p><img src="img/advanced_theme_folder_structure.png" alt="Theme folder structure" /></p>
+<p>Each theme has a simple config file called <code>config.php</code> which sets the title for the theme and some other meta data,
+for example the default theme <code>config.php</code> is:</p>
+<pre><code>&lt;?php
+$config = array(
+    'theme_name' =&gt; 'Xibo Default Theme',
+    'theme_title' =&gt; 'Xibo Digital Signage',
+    'app_name' =&gt; 'Xibo',
+    'theme_url' =&gt; 'http://xibo.org.uk',
+    'cms_source_url' =&gt; 'https://github.com/xibosignage/xibo/',
+    'cms_install_url' =&gt; 'http://xibo.org.uk/manual/en/install_windows_client.html',
+    'cms_release_notes_url' =&gt; 'http://xibo.org.uk/manual/en/release_notes.html'
+);</code></pre>
+<p>The current CMS theme is activated in the General CMS Settings and is called <code>Xibo Default Theme</code>. This
+list is automatically generated when a valid <code>config.php</code> file exists for a folder in <code>/theme/custom</code>.</p>
+<p><img src="img/advanced_theme_selector.png" alt="Theme Selector" /></p>
+<h2 id="basic_changes">Basic Changes <a href="#basic_changes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Basic theme changes, such as minor modifications to the CSS can be achieved by providing an <code>override.css</code> file in your
+themes <code>/web/theme/custom/&lt;theme&gt;/css</code> folder. This CSS file is included as the <strong>last</strong> CSS include on
+all pages and can be used to override the CSS. The default version of this file is empty.</p>
+<p>You may also include a <code>client.css</code> file which will be applied to all Widgets that render in HTML (such as embedded,
+ticker, etc). This is useful for applying global branding to all of your Displays.</p>
+<h2 id="advanced_changes">Advanced Changes <a href="#advanced_changes" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>It is possible to change almost any part of the CMS's visual user interface.</p>
+<p>The CMS uses the <strong>Twig</strong> engine for its view layer, with all of its views contained in the <code>/views</code> root folder. Each
+Twig view can be overridden by providing an alternative <code>view_path</code> setting in the theme <code>config.php</code> file. For example:</p>
+<pre><code class="language-php">$config['view_path'] = PROJECT_ROOT . '/custom/&lt;theme&gt;/views/';</code></pre>
+<p>You may store your custom views in the theme folder itself if you prefer - if you do this they will be accessible
+over the web. You must use the <code>PROJECT_ROOT</code> global constant which refers to the root of the Xibo
+installation.</p>
+<blockquote>
+<p>While it is possible to do this, we recommend treating the below as useful information for extending the CMS
+rather than modifying it. Overriding the core navigation/pages and forms means that you cannot cleanly upgrade
+to new versions of the software.</p>
+</blockquote>
+<h3>Navigation</h3>
+<p>The CMS navigation bar is defined in <code>authed-sidebar.twig</code> and included in <code>authed.twig</code>. In versions prior to 1.8.3
+the navigation bar was contained entirely in <code>authed.twig</code>.</p>
+<h3>Pages</h3>
+<p>All pages in the CMS extend the <code>authed.twig</code> file, which in turn extends the <code>base.twig</code> file. Supplying an override to
+either of these files is the place to start customising the HTML/CSS of the CMS.</p>
+<h3>Forms</h3>
+<p>Forms in Xibo are served over XHR and rendered by JavaScript in the browser. Each form extends the
+<code>form_base.twig</code> file.</p>
+<h1 id="docker">Docker <a href="#docker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The Docker containers ship with volumes pre-mounted for all of the <code>/custom</code> folder locations mentioned above. Adding
+your files to these volumes will make those available to Xibo.</p>
+<h1 id="examples">Examples <a href="#examples" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h2 id="changing_the_logo">Changing the logo <a href="#changing_the_logo" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>A typical use case is to change the logo shown in the header. This
+example assumes that you do not have a theme yet. Create the following structure:</p>
+<ul>
+<li>Create the <code>/web/theme/custom</code> folder if it does not exist</li>
+<li>Create a sub-folder for your theme, for example <code>/web/theme/custom/mytheme</code></li>
+</ul>
+<p>Next you need to provide a config file for your theme at <code>/web/theme/custom/mytheme/config.php</code></p>
+<pre><code>&lt;?php
+$config = array(
+    'theme_name' =&gt; 'My Theme',
+    'theme_title' =&gt; 'My Theme',
+    'app_name' =&gt; 'Xibo',
+    'theme_url' =&gt; 'http://xibo.org.uk',
+    'cms_source_url' =&gt; 'https://github.com/xibosignage/xibo/',
+    'cms_install_url' =&gt; 'http://xibo.org.uk/manual/en/install_windows_client.html',
+    'cms_release_notes_url' =&gt; 'http://xibo.org.uk/manual/en/release_notes.html'
+);</code></pre>
+<p>The new theme can be activated in CMS settings under the Configuration tab. Do that now.</p>
+<p>The CMS will now be checking your theme folder for all resources, including images, CSS and JavaScript.
+This means that we can drop a replacement logo into the theme and it will render that instead.</p>
+<p>The default logo is stored in <code>/web/theme/default/img/xibologo.png</code> - take a copy of it and save it in
+<code>/web/theme/custom/mytheme/img/xibologo.png</code> and modify it according to your requirements.</p>
+<h2 id="adding_a_new_link">Adding a new link <a href="#adding_a_new_link" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>A common example is to add a new link to the menu which directs the user to an external web page. This
+example assumes that you have created the theme shown in the &quot;Changing the logo&quot; example.</p>
+<p>To provide a new link it is necessary to override one of the Twig views the CMS uses to render its
+content.</p>
+<p>Add a custom view path to your <code>config.php</code> file in the <code>$config</code> array :</p>
+<pre><code>$config['view_path'] =&gt; PROJECT_ROOT . '/web/theme/custom/mytheme/views',</code></pre>
+<p>You can then add Twig views to override the default views provided by the CMS, for example
+take a copy of <code>/views/authed-sidebar.twig</code>, save it in your <code>view_path</code> and add a new link at the
+appropriate place in the html.</p>
+<p>You may want to develop a custom page within the CMS itself - more information can be found in the
+<a href="advanced_extending.html">extending</a> section.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

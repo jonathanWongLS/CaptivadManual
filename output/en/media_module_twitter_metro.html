@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Twitter Metro<a id="content-twitter-metro" href="#content-twitter-metro" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display metro tiles of Twitter feeds on Layouts.</p>
+                
+                <p>The Twitter Metro Module provides access to the <a
+                        href="https://dev.twitter.com/rest/public/search">Twitter Search API</a>. Granted access is to
+                    <strong>read data</strong> only!</p>
+                <p></p>
+                <h2>Installation<a id="content-installation" href="#content-installation" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Access to the Twitter API is protected and so users must register for an <strong>API key</strong>
+                    which is then entered into the Twitter Metro Module in the Captivad CMS.</p>
+                <h3>Connecting to Twitter<a id="content-connecting-to-twitter" href="#content-connecting-to-twitter"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Obtain an <strong>API key</strong> and <strong>API secret</strong> from <a
+                            href="https://apps.twitter.com">Twitter</a> and then log in to your Twitter account.</li>
+                </ul>
+                <p><strong>Please note:</strong> You will need to apply for a <strong>Twitter developer account</strong>
+                    if you are not already approved, using the above Twitter link.</p>
+                <ul>
+                    <li>Complete the required fields and accept the Terms of Service.</li>
+                    <li>Solve the CAPTCHA and submit the form.</li>
+                    <li>Make a note of the generated consumer key (API key) and consumer secret (API secret).</li>
+                </ul>
+                <h3>Twitter Metro Module Installation<a id="content-twitter-metro-module-installation"
+                        href="#content-twitter-metro-module-installation" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <ul>
+                    <li>Select the <strong>Modules</strong> page under the Administration section and install the
+                        Twitter Metro Module.</li>
+                    <li>Once installed click on the row menu for the Twitter Metro Module and click
+                        <strong>Edit</strong>.</li>
+                    <li>Enter the generated <strong>API key</strong> and <strong>API secret</strong>.</li>
+                    <li>Optionally adjust the <strong>Cache Period</strong> to determine how long to cache a results set
+                        for each Twitter search.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Setting a low value can cause your access to the Twitter API to be disabled for generating too
+                        many requests.
+
+                    </div>
+                </div>
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Twitter Metro</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and
+                    click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The Twitter Metro Widget will automatically size portrait/landscape based on the size of the
+                        Region that it is added to. It will resize as if it were an image for best consistency across
+                        all display resolutions.
+
+                    </div>
+                </div>
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Provide a <strong>Search Term</strong> to return applicable Tweets</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Check to make sure your search term is valid before entering here by using the twitter.com
+                        search box!
+
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        To return Tweets from a specific account rather than all Tweets that contain the accounts @
+                        handle, use <code>from:</code> before the name of the account in the <strong>Search
+                            Term</strong> field.
+
+                    </div>
+                </div>
+                <ul>
+                    <li>Select the <strong>Language</strong> to use</li>
+                    <li>Use the drop down to select the <strong>Type</strong> of Tweets to be returned; based on
+                        popularity, most recent or a mixed.</li>
+                    <li>Select the <strong>Distance</strong> in miles, away from your location Tweets should be returned
+                        from. 0 has no restrictions.</li>
+                    <li>Enter the number of Tweets to return. Left blank the default number is 60.</li>
+                    <li>Select the Content Type of the Tweets to return using the drop down menu. Select from All
+                        Tweets/Tweets with Text only/Tweets with Text and Images.</li>
+                    <li>Use the tick box if <strong>Mentions</strong> (@someone) should be removed from the returned
+                        Tweet text.</li>
+                    <li>Use the tick box if <strong>Hashtags</strong> (#something) should be removed from the returned
+                        Tweet text.</li>
+                    <li>Use the tick box to remove <strong>URLs</strong> from returned Tweet Text.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Most URL’s do not compliment Digital Signage!
+
+                    </div>
+                </div>
+                <h3>Appearance<a id="content-appearance" href="#content-appearance" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Use the <strong>Appearance</strong> tab to edit the <strong>Main</strong> template, apply
+                    <strong>Colours</strong> and select <strong>Effects</strong> to be used to transition between
+                    Tweets.</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_twitter_metro_appearance.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h4>Main<a id="content-main" href="#content-main" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <ul>
+                    <li>Optionally add a <strong>Background Colour</strong>.</li>
+                    <li>Provide a <strong>No Tweets</strong> message to display when there are no Tweets to return,
+                        based on the search query.</li>
+                    <li>Apply the <strong>Date Format</strong> to use for returned results (see Additional Information
+                        at the bottom of page).</li>
+                </ul>
+                <h4>Colours<a id="content-colours" href="#content-colours" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_twitter_metro_colours.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the drop down menu to select the colour palette to be applied.</li>
+                    <li>Select the Override the template box to define alternative colouring.</li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_twitter_metro_override.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click in a colour bars to re-select using the colour picker.</li>
+                    <li>Remove selections completely by clicking <code>-</code> or add additional using <code>+</code>
+                    </li>
+                    <li>Ensure that you <strong>Save</strong> your changes.</li>
+                </ul>
+                <h4>Effect<a id="content-effect" href="#content-effect" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <ul>
+                    <li>Select an optional <strong>Effect</strong> and <strong>Speed</strong> to be used to transition
+                        between Tweets, to apply to each tile.</li>
+                </ul>
+                <h3>Caching<a id="content-caching" href="#content-caching" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Include a suitable time for the Update Interval in minutes, keeping it as high as possible. This
+                    determines how often the Module will request data from your feed.</p>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Twitter Metro Widget from the <strong>Actions</strong>
+                    tab. Please see the <a href="layouts_interactive_actions.html">Interactive Actions</a> page for more
+                    information.</p>
+                <h3>Date Format - PHP<a id="content-date-format---php" href="#content-date-format---php"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p>Captivad should accept any date format that is in a correct PHP date format, the following characters are
+                    recognised and can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)
+                            </td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)
+                            </td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO
+                                week number (W) belongs to the previous or next year, that year is used instead. (added
+                                in PHP 5.1.0)</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td align="left">Lowercase Ante meridiem and Post meridiem</td>
+                            <td>am or pm</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td align="left">Uppercase Ante meridiem and Post meridiem</td>
+                            <td>AM or PM</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td align="left">Swatch Internet time</td>
+                            <td>000 through 999</td>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td align="left">12-hour format of an hour without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td align="left">24-hour format of an hour without leading zeros</td>
+                            <td>0 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td align="left">12-hour format of an hour with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td align="left">24-hour format of an hour with leading zeros</td>
+                            <td>00 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td align="left">Minutes with leading zeros</td>
+                            <td>00 to 59</td>
+                        </tr>
+                        <tr>
+                            <td>s</td>
+                            <td align="left">Seconds, with leading zeros</td>
+                            <td>00 through 59</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td align="left">Microseconds (added in PHP 5.2.2). Note that date() will always generate
+                                000000 since it takes an integer parameter, whereas DateTime::format() does support
+                                microseconds if DateTime was created with microseconds.</td>
+                            <td>654321</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Timezone</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td align="left">Timezone identifier (added in PHP 5.1.0)</td>
+                            <td>UTC, GMT, Atlantic/Azores</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td align="left">(capital i) Whether or not the date is in daylight saving time</td>
+                            <td>1 if Daylight Saving Time, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td align="left">Difference to Greenwich time (GMT) in hours</td>
+                            <td>+0200</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td align="left">Difference to Greenwich time (GMT) with colon between hours and minutes
+                                (added in PHP 5.1.3)</td>
+                            <td>+02:00</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td align="left">Timezone abbreviation</td>
+                            <td>EST, MDT …</td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td align="left">Timezone offset in seconds. The offset for timezones west of UTC is always
+                                negative, and for those east of UTC is always positive.</td>
+                            <td>-43200 through 50400</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Full Date/Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>c</td>
+                            <td align="left">ISO 8601 date (added in PHP 5)</td>
+                            <td>2004-02-12T15:19:21+00:00</td>
+                        </tr>
+                        <tr>
+                            <td>r</td>
+                            <td align="left">» RFC 2822 formatted date</td>
+                            <td>Thu, 21 Dec 2000 16:01:0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

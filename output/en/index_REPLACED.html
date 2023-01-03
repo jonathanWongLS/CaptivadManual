@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Xibo Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="getting_started">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">Xibo Documentation</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="ss-navbar">
+                <ul class="nav navbar-nav">
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul>
+                            <!-- <li class="active"><a href="index.html">Introduction<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li> -->
+                            <!-- <li><a href="release_notes.html">Release Notes</a></li> -->
+                            <!-- <li><a href="install_cms.html">CMS Installation</a></li> -->
+                            <!-- <li><a href="upgrade.html">Upgrading</a></li> -->
+                            <!-- <li><a href="install_windows_client.html">Windows Player Installation</a></li> -->
+                            <li><a href="cms_settings.html">CMS Settings</a></li>
+                            <!-- <li><a href="troubleshooting.html">Troubleshooting</a></li> -->
+                            <!-- <li><a href="licence_information.html">Licenses</a></li> -->
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=getting_started-->
+                <h1 id="xibo_documentation">Xibo Documentation <a href="#xibo_documentation" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h1>
+                <p>Welcome to the user manual for Xibo - this documentation applies to Xibo Version 1.8.4. We would like
+                    to take this opportunity to thank you for using Xibo.</p>
+                <p>Xibo is a powerful Digital Signage content management system and suite of signage players. According
+                    to Wikipedia, Digital Signage is:</p>
+                <blockquote>
+                    <p>Digital signage is a form of electronic display that shows information, advertising and other
+                        messages. Digital signs (such as LCD, LED, plasma displays, or projected images) can be found in
+                        public and private environments, such as retail stores and corporate buildings</p>
+                    <p><em>Various authors from Wikipedia</em></p>
+                </blockquote>
+                <p>Xibo is a digital signage solution and is a suite of applications, including a:</p>
+                <ul>
+                    <li>Content Management System (CMS)</li>
+                    <li>Windows Signage Player</li>
+                    <li>Push Messaging - Xibo Message Relay (XMR - bundled with the CMS)</li>
+                    <li>Android Signage Player *</li>
+                    <li>webOS Signage Player *</li>
+                </ul>
+                <p>With Xibo your content is designed from anywhere using a web browser on the internet accessible CMS,
+                    scheduled to your Players, which we call Displays, and then downloaded automatically when
+                    appropriate. This manual will guide you through the application from installation to
+                    troubleshooting, from the CMS to the Displays.</p>
+                <p>*Commercial software provided by the project sponsors.</p>
+                <h3>Open Source</h3>
+                <p>The heart of the software is open source and has been for many years! We're committed to keeping it
+                    that way and everything you need to run your digital signage network with Xibo is Open Source and
+                    will always be Open Source.</p>
+                <p>Open Source is great, but it can sometimes be a little daunting to tackle a new piece of software all
+                    alone. The project offers some commercial products and services designed to help you on your
+                    journey, all of which are completely optional.</p>
+                <p>By choosing any of our commercial services, you are enabling the ongoing development and maintenance
+                    of the project by enabling us to employ great developers, support staff and infrastructure.</p>
+                <h2 id="getting_help">Getting Help <a href="#getting_help" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>We understand that using complicated software like Xibo is not always straight forward and that this
+                    manual may not always be sufficient. Therefore we have a <a
+                        href="https://community.xibo.org.uk/c/faq">FAQ</a> and a <a
+                        href="https://community.xibo.org.uk/">question &amp; answer community forum</a> to help.</p>
+                <p>If you would like any further help with the information contained in this document, or the software
+                    package in general, please visit: <a
+                        href="https://community.xibo.org.uk/">https://community.xibo.org.uk/</a> and ask us a question!
+                </p>
+                <h2 id="xibo_signage_player">Xibo Signage Player <a href="#xibo_signage_player"
+                        class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>The Signage Player is software that runs on the device connected to your physical display hardware,
+                    be that a monitor, projector, LED wall, etc. Xibo supports devices running on Windows, Android or a
+                    system-on-chip solution (webOS). We have software packages for each of these environments:</p>
+                <ul>
+                    <li>Xibo for Windows (open source, AGPLv3 licenced)</li>
+                    <li>Xibo for Android (commercially licenced)</li>
+                    <li>Xibo for webOS (commercially licenced)</li>
+                </ul>
+                <h2 id="getting_started">Getting Started <a href="#getting_started" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p><strong>What next?</strong></p>
+                <p>Like the sound of Xibo and want to learn more? Or already have a CMS installation running? Skip
+                    straight to our <a href="index.html">Tour</a> to learn more about Xibo.</p>
+                <p>Ready to install Xibo on your own infrastructure? Start by installing the CMS, <a
+                        href="install_cms.html">proceed to the Installation Instructions</a>.</p>
+                <p>If you'd like to find out more about how we can help you to get started take a look at <a
+                        href="https://xibo.org.uk">our website</a></p>
+                <h2 id="closing_thoughts">Closing thoughts <a href="#closing_thoughts" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p><strong>Think about your target audience...</strong></p>
+                <p>Digital signs are there to service a need for information. People will only look at a digital sign if
+                    there is some information being shown that they need, or are interested in. It's important then to
+                    ensure a good mix of information and targeted advertising (if desired) to meet the business's goals.
+                    For example, combine a list of upcoming events with a list of sports results, a news feed or bus
+                    times to draw attention.</p>
+                <p>Xibo can schedule different items to be shown at different times of the day. Be sure to target
+                    content to the times when your target audience are in the building (eg advertise events for young
+                    children when parents are arriving to drop of or collect children for an existing event).</p>
+                <p>People need to be able to read what is on the sign. Be sure to take a look at your completed work and
+                    make sure it's possible to read it in the time that it appears on the screen, and that the font size
+                    is large enough etc.</p>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a
+                    href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+            <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or
+                    later</a>, documentation under <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons
+                    Licence</a>.</p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

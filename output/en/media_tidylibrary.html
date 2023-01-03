@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                            Overview
+                          </a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_tidylibrary.html">Tidy Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+                          </li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+                          <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+                        </ul>
+                      </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=media-->
+                <h1 id="tidy_library">
+                    Tidy Library <a href="#tidy_library" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    As the CMS is used and Layouts/Media are added, over time the Library can become cluttered with old content that is no longer in use.
+                </p>
+                <p>The Library can be tidied by a User or Super Administrator so that it is kept clean and small. <strong>Actions cannot be reversed so this must be used with caution.</strong>
+                    
+                <p>There are two places where the Library can be tidied:</p>
+                <ol>
+                    <li><strong>Settings</strong> page - available to all Super Administrators</li>
+                    <li><strong>Library</strong> page - enabled for All Users of the CMS</li>
+                </ol>
+                
+                <h2 id="tidy_from_settings">Tidy from Settings <a href="#tidy_from_settings" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>
+                    Super Administrators can initiate a system-wide Library tidy operation by navigating to the Settings page under the
+                    Administration section on the Menu. Click on the General tab and click on the <strong>Tidy Library</strong> button.
+                </p>
+                
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_settings_tidylibrary.png" data-processed="1">
+                    </figure>
+                </div>
+
+                <p>As this functionality is system-wide and therefore operates on <strong>ALL</strong> User files, confirmation is required to remove
+                    unused and old revisions.</p>
+                 
+                <p>This option is more comprehensive and removes:</p>
+                <ul>
+                    <li>Temporary files</li>
+                    <li>Orphaned files</li>
+                    <li>Thumbnails</li>
+                    <li>Media revisions that aren't used anywhere</li>
+                    <li>Media that isn't used anywhere (on any Layouts / Display Groups / Displays)</li>
+                    <li>Generic files uploaded to the CMS</li>
+                </ul>
+
+                <h2 id="orphaned_files">Orphaned files<a href="#orphaned_files" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>Orphaned files are a rare occurrence where a file stored on disk in the Library folder is not deleted when the Media
+                    item is deleted from the Library. This means that the file exists but the CMS doesn’t know anything about it.</p>
+                
+                
+                <h2 id="tidy_from_the_library">Tidy from the Library <a href="#tidy_from_the_library"
+                        class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>
+                    Allow <strong>ANY</strong> User to initiate a Library tidy from the Library page by enabling the functionality in <strong>Settings</strong> under the Administration section of the main menu.
+                </p> 
+                <ul>
+                    <li>Click on the General tab and use the checkbox for <strong>Enable Library Tidy</strong>.</li>
+                </ul>
+                <p>The form presented will show the number of files that will be deleted as a result
+                    of the tidy operation and how much space those files take up.</p>
+                <p>This will only delete files that are no-longer in use on a Layout or Assigned to
+                    a Display Group/Display. It will only assess files owned by the logged in User.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_settings_enable_librarytidy.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>Once enabled Users can click on a <strong>Tidy Library</strong> button located at the top of the Library page.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_library_tidylibrary.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <p>The form will show the number of files that will be deleted and how much space those files take up.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        This will only delete files that are owned by the logged in User which are no longer in use on a Layout or
+                        Assigned to a Display Group/Display.
+                
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

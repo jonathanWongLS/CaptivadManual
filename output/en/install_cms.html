@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="cms_installation">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="cms_installation">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li class="active"><a href="install_cms.html">CMS Installation<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="install_docker_linux.html">Docker on Linux</a></li>
+<li><a href="install_docker_win10_64bit.html">Docker on Windows 10 64bit</a></li>
+<li><a href="install_docker_winother_64bit.html">Docker on other Windows 64bit</a></li>
+<li><a href="install_docker_without_compose.html">Docker on an existing Docker cluster</a></li>
+<li><a href="manual_install.html">On a Web server</a></li>
+<li><a href="install_custom_content.html">Custom scripts and pages</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=cms_installation-->
+<h1 id="cms_installation">CMS Installation <a href="#cms_installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The Xibo CMS is a web application run through Docker or a web server
+supporting PHP/MySQL.</p>
+<p>Please select the installation instructions appropriate to your environment from
+the below list. Not sure what to use? Read on for more details.</p>
+<ul>
+<li><a href="install_docker_linux.html">Xibo for Docker on Linux</a></li>
+<li><a href="install_docker_win10_64bit.html">Xibo for Docker on Windows 10 64bit</a></li>
+<li><a href="install_docker_winother_64bit.html">Xibo for Docker on other Windows 64bit</a></li>
+<li><a href="install_docker_without_compose.html">Xibo for Docker on an existing Docker cluster</a></li>
+<li><a href="manual_install.html">Xibo on a Web server</a></li>
+</ul>
+<p><strong>Docker for Windows Server 2016 (for Windows Containers) is not suitable as it is only capable of running
+Windows containers.</strong></p>
+<p>Alternatively there are a number of service providers that will install Xibo for
+you, or even run Xibo on their architecture. If you are unfamiliar
+with Docker or web servers and just want to use the application, then a service provider
+solution may be preferable.</p>
+<p>Should you want to install and run Xibo yourself then we strongly
+encourage you to use a <a href="install_docker.html">Docker</a> environment.</p>
+<h2 id="docker_or_not?">Docker or not? <a href="#docker_or_not?" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Starting with 1.8 series we have packed Xibo with Docker. Docker is
+a technology that can be compared to Virtual Machines, but without the overhead
+of running Virtual Machines.</p>
+<p>Essentially this means that you can have a fully isolated environment running
+on a host machine, running our recommended configuration, which is the same
+as the configuration we use to develop and test the software.</p>
+<p>This reduces the chance of encountering a bug with the software and allows
+for in place upgrades of the software.</p>
+<p>The disadvantage of Docker is that you have to install Docker, which is a software
+product from a third party. The installation of Docker is not always straightforward,
+but we have tried to provide full instructions for each host operating system.</p>
+<p>Xibo can still be installed without Docker - Docker is a recommendation
+and not a requirement. To install without Docker a working knowledge of how to
+install, configure and maintain a web server is recommended. There are extra
+considerations in 1.8 compared to 1.7 series regarding the &quot;web root&quot; and
+&quot;URL rewriting&quot;.</p>
+<p><strong>Please note</strong> that while every effort will be made to assist with custom
+installations, Docker is the supported method of running Xibo and it
+may not be possible to help with your custom installation without opening a paid
+support incident from a company offering commercial support.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

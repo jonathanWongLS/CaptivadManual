@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="media">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="media.html">Overview</a></li>
+<li><a href="media_library.html">Library</a></li>
+<li><a href="media_datasets.html">DataSets</a></li>
+<li><a href="media_modules.html">Modules</a></li>
+<li class="active"><a href="media_tidylibrary.html">Tidy Library<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+</ul></body></html>
+<li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=media-->
+<h1 id="tidy_library">Tidy Library <a href="#tidy_library" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>As the CMS is used and Layouts/Media are added, over time the library can become
+cluttered with old content that is no longer in use.</p>
+<p>The Library can be <em>tidied</em> by a user or super administrator so that it is kept
+clean and small. This might be of particular interest if the CMS is installed on
+a web server that has quotas or if users have been assigned their own quotas.</p>
+<p>There are two places where the library can be tidied:</p>
+<ol>
+<li>Library page</li>
+<li>Settings page</li>
+</ol>
+<h3>Enabling</h3>
+<p>Tidy library functionality might be disabled on the whole CMS via a checkbox in
+the General tab called &quot;Enable library tidy?&quot;.</p>
+<h2 id="tidy_from_the_library">Tidy from the Library <a href="#tidy_from_the_library" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Any user is able to initiate a &quot;Tidy Library&quot; from the Library page using the menu
+item in the action bar.</p>
+<p><img src="../en/img/media_librarytidy_fromlibrary.png" alt="Library Tidy from Library" /></p>
+<p>The form presented will show the number of files that will be deleted as a result
+of the tidy operation and how much space those files take up.</p>
+<p>This will only delete files that are no-longer in use on a Layout or Assigned to
+a Display Group/Display. It will only assess files owned by the logged in User.</p>
+<h2 id="tidy_from_settings">Tidy from Settings <a href="#tidy_from_settings" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>A super administrator user can initiate a system wide library tidy operation from
+the settings page.</p>
+<p><img src="../en/img/media_librarytidy_fromsettings.png" alt="Library Tidy from Settings" /></p>
+<p>As this functionality is <strong>system wide</strong> and operates on all users files confirmation
+is required to remove unused and old revisions.</p>
+<p>This option is more comprehensive and removes:</p>
+<ul>
+<li>Temporary files</li>
+<li>Orphaned files</li>
+<li>Thumbnails</li>
+<li>Media revisions that aren't used anywhere</li>
+<li>Media that isn't used anywhere (on any Layouts / Display Groups / Displays)</li>
+</ul>
+<h4>Orphaned files</h4>
+<p>Orphaned files are a rare occurrence where a file stored on disk in the library
+folder is not deleted when the media item is deleted from the library. This means
+that the file exists but the CMS doesn't know anything about it.</p>
+<p>These files are deleted in a Tidy Library Call.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

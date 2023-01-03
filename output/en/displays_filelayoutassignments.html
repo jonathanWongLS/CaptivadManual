@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="displays">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays.html">
+                    Introduction
+                    <!-- <span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span> -->
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_settings.html">Display Settings</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_groups.html">Display Groups</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="displays_filelayoutassignments.html">
+                    File/Layout Assignments
+                  </a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_reporting.html">Reporting</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_commands.html">Command
+                    Functionality</a>
+              
+                </ul>
+              </body>
+            </html>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <li>
+              <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=displays-->
+          <h1 id="file_layout_assignments">
+            File / Layout Assignments
+            <a href="#file_layout_assignments" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            Library files and Layouts can be assigned directly to a Display or Display Group so that they are always available in the local library of the Player.
+          </p>
+          <p>
+            <strong>This does NOT mean that assigned files and Layouts will be shown, and will still need to be Scheduled</strong> 
+          </p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              This is useful for pre-loading a Layout ahead of time when that Layout will be used for some API integration,
+              triggering a Layout change for example!
+          
+            </div>
+           </div>
+
+           <h2 id="assign_files/layouts">
+            Assign Files / Layouts 
+            <a href="#assign_files/layouts" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Directly assign by using the row menu for the selected Display or Display Group.</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_assign_menu.png" data-processed="1">
+            </figure>
+          </div>
+          <p>Select which <strong>Library files/Layouts</strong> you wish to directly assign (these will show in the staging area as files are selected) and Save.</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_assign_items.png" data-processed="1">
+            </figure>
+          </div>
+          <p>Those selected will be downloaded to the <strong>Display</strong> at the next collection interval. If XMR is installed these will be downloaded immediately.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Library files and Layouts that have been directly assigned will still need to be <strong>Scheduled</strong> to
+              Displays or Display groups to be shown.
+          
+            </div>
+          </div>
+          <p></p>
+          <p>
+            Files /Layouts can be removed by following the same steps as above and deselecting the items from the staging area.
+            These will be ‘cleaned up’ when the Player needs space or after 30 days of that file/Layout no-longer being required.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>

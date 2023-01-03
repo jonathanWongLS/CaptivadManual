@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Agenda<a id="content-agenda" href="#content-agenda" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h1>
+                <p>Display an agenda pulled from an iCal feed on Layouts.</p>
+                <p></p>
+
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Agenda</strong> from the <a>Widget</a> toolbar and click
+                    to
+                    <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.
+                </p>
+                <p>On adding, configuration options are shown in the right hand properties panel:</p>
+                <ul>
+                    <li>
+                        <p>Provide a <strong>Name</strong> for ease of identification.</p>
+                    </li>
+                    <li>
+                        <p>Choose to override the default <strong>duration</strong> if required.</p>
+                    </li>
+                    <li>
+                        <p>Select whether the duration is to be <strong>per item</strong> or leave unticked to set the
+                            duration per
+                            feed.</p>
+                    </li>
+                </ul>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_agenda_configuration.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Provide the iCal <strong>URL</strong> to link.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Ensure that the ICS feed URL is available to the CMS. If the feed loads in a browser without
+                        authentication then
+                        the feed should display in the CMS without issue.
+                        <p>For further information on how to view your Google Calendar in applications, use the
+                            following link selecting
+                            the <strong>Get your calendar (view only)</strong> option: <a
+                                href="https://support.google.com/calendar/answer/37648?hl=en">https://support.google.com/calendar/answer/37648?hl=en</a>
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the <strong>Interval</strong> field to filter events for a certain period. Use natural
+                        language such as ‘1
+                        day’ or ‘2 weeks’ to return the events within your chosen time frame.</li>
+                    <li>Tick the checkbox to enter a <strong>Date range</strong> instead with defined start and end
+                        dates.</li>
+                    <li>Specify the <strong>Number of items</strong>/events you wish to display from the iCal feed.</li>
+                    <li>Select to <strong>Exclude all day events</strong> which will be removed from the feed and not
+                        shown.</li>
+                    <li>Select to <strong>Show only current events</strong> which will hide all other events from the
+                        feed.</li>
+                    <li>Select to <strong>Exclude current events</strong> to remove from the feed and not be shown</li>
+                    <li>Choose to <strong>Use event timezone</strong> or deselect to use the CMS timezone instead.</li>
+                    <li>Choose to <strong>Use calendar timezone</strong> if the feed specifies that it’s own timezone
+                        should be used.
+                        Deselect to use the CMS timezone.</li>
+                    <li>If your feed comes from <strong>Windows</strong> use this check box.</li>
+                </ul>
+                <h3>Appearance<a id="content-appearance" href="#content-appearance" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Select an optional <strong>Background Colour</strong> or leave blank to stay transparent.</li>
+                    <li>Use the <strong>Date Format</strong> field to ensure that you show the appropriate date/time
+                        formats for your
+                        events.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Take a look at the table at the bottom of this page for PHP date formats!
+
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <p>Use the checkbox to show calendar items side by side.</p>
+                    </li>
+                    <li>
+                        <p>Select an <strong>Effect</strong> using the drop-down menu to be used to transition between
+                            items.</p>
+                        <p>When an effect is selected an additional option is shown to specify the number of events to
+                            show per page.
+                        </p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+
+                                <p>Use an effect when you have several events to display to prevent them being shown as
+                                    static lists!
+
+                                </p>
+                            </div>
+                            </figure>
+                        </div>
+                    </li>
+                </ul>
+                <h3>Template<a id="content-template" href="#content-template" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Click on the Templates tab:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_agenda_template.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h4>Main<a id="content-main" href="#content-main" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a>
+                </h4>
+                <ul>
+                    <li>Toggle <strong>On</strong> the Visual editor to format the main template using the inline
+                        editor.</li>
+                    <li>Click the edit icon to open.</li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_agenda_main.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Include text merge fields from the <strong>Snippets</strong> menu to pull in the required event
+                        information from
+                        the feed.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <p><code>[Date]</code> fields can include an optional format <code>[Date|format]</code> so that
+                            <code>[Date]</code> can be used multiple times in a Template with different formats to allow
+                            for different
+                            styling for each element of a date.
+
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Click to <strong>Save</strong>.</li>
+                </ul>
+                <h4>Current Event<a id="content-current-event" href="#content-current-event" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h4>
+                <p>Set alternative text and formatting to show Current Events. Xibo will use the Players date/time to
+                    work out if the
+                    event showing is current and switch to the Current Event template.</p>
+                <ul>
+                    <li>
+                        <p>Tick the box to <strong>Use an alternative template for Current Events</strong>.</p>
+                    </li>
+                    <li>
+                        <p>Include text and select from the available <strong>Snippets</strong> to create a template to
+                            be used just for
+                            <strong>Current Events</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Save</strong> changes.</p>
+                    </li>
+                </ul>
+                <h3>No Data Template<a id="content-no-data-template" href="#content-no-data-template"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p>This template allows a user to include a message to ensure that the intended audience is not left
+                    with blank displays
+                    when no events are returned from the iCal feed.</p>
+                <h3>Optional Style Sheet<a id="content-optional-style-sheet" href="#content-optional-style-sheet"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p>Include CSS to apply to the template structure.</p>
+                <h3>Caching<a id="content-caching" href="#content-caching" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Include a suitable time for the <strong>Update Interval</strong> in minutes, keeping it as high as
+                    possible. This
+                    determines how often data will be requested from the iCal feed. If the calendar is only ever
+                    modified with events
+                    scheduled days in advance, you can set this for a long period.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        It is best practice to contact a remote feed as little as possible.
+
+                    </div>
+                </div>
+                <h2>Trigger<a id="content-trigger" href="#content-trigger" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Use this tab to trigger a Web Hook <strong>Action</strong> when there is a <strong>Current
+                        Event</strong> or
+                    <strong>No Event</strong>!
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <p><strong>Example Scenario</strong>:</p>
+                        <p>A user has a meeting room calendar configured using the Agenda Widget on a Layout which shows
+                            the current
+                            occupancy for a room and would like to change LED lights to show when vacant or in use.</p>
+                        <ul>
+                            <li>The user would first need to create <strong>Shell Commands</strong> which issued
+                                commands to an LED IoT
+                                device or the inbuilt LEDS’s on some of the Philips Commercial Displays.</li>
+                            <li>Next an <a>Interactive Action</a> would need to
+                                be defined on
+                                the <strong>Layout</strong>, which would <strong>Navigate to Widget</strong> and
+                                <strong>Target the
+                                    Screen</strong>, with the <strong>Shell Command Widgets</strong> configured in the
+                                <strong>Interactive Drawer</strong>.
+                            </li>
+                            <li>Using the <strong>Trigger</strong> tab on the Agenda Widget, assign the code’s to
+                                trigger the
+                                <strong>Web Hooks</strong> for <strong>Current Event</strong> and <strong>No
+                                    Event</strong>.
+                            </li>
+                        </ul>
+                        <p>See the <a>Commands Functionality</a> page for more
+                            information.</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Agenda Widget from the <strong>Actions</strong> tab in
+                    the properties
+                    panel. Please see the <a href="layouts_interactive_actions.html">Interactive Actions</a> page for
+                    more information.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+
+                        <p>Take a look at the <a href="https://community.xibo.org.uk/t/agenda-module-guide/26993">Agenda
+                                Module
+                                Guide</a> to see an example of how you can utilise the <strong>Agenda Widget</strong> in
+                            your Layouts!
+                        </p>
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+                <h2>Date Format - PHP<a id="content-date-format---php" href="#content-date-format---php"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Xibo should accept any date format that is in a correct PHP date format, the following characters are
+                    recognised and
+                    can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)
+                            </td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)
+                            </td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO
+                                week number (W)
+                                belongs to the previous or next year, that year is used instead. (added in PHP 5.1.0)
+                            </td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

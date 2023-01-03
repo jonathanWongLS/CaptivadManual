@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="displays">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays.html">
+                    Introduction
+                    <!-- <span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span> -->
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_settings.html">Display Settings</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_groups.html">Display Groups</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_filelayoutassignments.html">
+                    File/Layout Assignments
+                  </a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_reporting.html">Reporting</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="displays_commands.html">Command
+                    Functionality</a>
+              
+                </ul>
+              </body>
+            </html>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <li>
+              <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=displays-->
+          <h1 id="command_functionality">
+            Command Functionality
+            <a href="#command_functionality" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            The Command Functionality in Captivad can be used to configure a set of Commands that a User can select to execute via <strong>XMR</strong>,
+            in a <strong>Schedule</strong> or include in a <strong>Layout</strong>.
+          </p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Commands can have Command Strings to apply to all Players or have a different Command String per Player which is
+              particularly useful if your network is mixed / connected to different Displays or have slightly different Player
+              hardware.
+          
+            </div>
+          </div>
+
+          <p>
+            A <strong>Command record</strong> is created with a Name, internal Reference and unique Command Code, which allows for a “generic command”
+            to be created which can be used across <strong>Display Profiles</strong>, <strong>Scheduled Events</strong> and the <strong>Shell Command Widget</strong>.
+          </p>
+          
+          <h2 id="creating_and_managing_commands">
+            Creating and Managing Commands
+            <a href="#creating_and_managing_commands" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p></p>
+          <p>Commands are created and managed by navigating to <strong>Commands</strong> under the <strong>Displays</strong> section of the main menu:</p>
+          <ul>
+            <li>Use the Row Menu for existing Commands to Edit, Delete and set <a>Share</a> options.</li>
+          </ul>
+
+          <h2 id="add_command">
+            Add Command
+            <a href="#add_command" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Click on the <strong>Add Command</strong> button at the top of the Commands Grid:
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_commands_add_command.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Complete a <strong>Name</strong></li>
+            <li>Include a <strong>Reference</strong> code for internal identification</li>
+          </ul>
+
+          <h2 id="command_command">
+            Command
+            <a href="#command_command" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Use the drop down to select from the following options and complete the presented fields:</p>
+          <p></p>
+          <ul>
+            <li><strong>Free Text</strong> to type in a Command String</li>
+            <p></p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                The Command String represents the final executed Command and can be a direct call to the shell or can have a
+                <strong>helper</strong> specified, see “Helpers” section below.
+              </div>
+            </div>
+            <p></p>
+            <li><strong>Philips Android</strong> Intents</li>
+            <li><strong>RS232</strong> configuration</li>
+            <li><strong>Android Intent</strong></li>
+          </ul>
+
+          <h2 id="available_on">
+            Available on
+            <a href="#available_on" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <ul>
+            <li>Click in the field and select which type of Display the Command will be available on.</li>
+            <li>Leave blank to apply to all types of Display.</li>
+          </ul>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              <strong>Command</strong> and <strong>Validation</strong> strings can be overridden using <a>Display Profiles</a>. Click to <strong>Edit</strong> and use
+              the <strong>Command</strong> tab!
+          
+            </div>
+          </div>
+          <p></p>
+
+          <h2 id="send_command">
+            Send Command
+            <a href="#send_command" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Commands can be executed via <strong>XMR</strong> from Display/Display Groups using the Row Menu:
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_commands_send_command.png"
+                data-processed="1"></figure>
+          </div>
+
+          <h2 id="scheduling_commands">
+            Scheduling Commands
+            <a href="#scheduling_commands" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Commands can be Scheduled to execute on a specific date/time by using the <strong>Schedule</strong> Page.:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_commands_schedule_command.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Click the <strong>Add Event</strong> button and select the <a>Event Type</a> as <strong>Command</strong></li>
+            <li>Complete the form fields using the <strong>Command</strong> drop down menu to select the Command to schedule.</li>
+          </ul>
+          <p></p>
+          <p>Scheduled commands are executed once on the Player and only require a Start date and time. The Command can be executed up to 10 seconds after the time selected.</p>
+
+          <h2 id="shell_commands">
+            Shell Commands
+            <a href="#shell_commands" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>The <a>Shell Command Widget</a> is used to run external Commands based on the Layouts activity.</p>
+          <p>Commands can be selected by adding the <strong>Shell Command Widget</strong> to a Layout. Shell Commands with a Command as their
+            source act in the same fashion as normal shell commands. The Command is executed when the Widget is shown on the
+            Layout.</p>
+
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                They should be used in a Region on their own so they are executed only once each time the Layout is shown!
+            
+              </div>
+            </div>
+            <p></p>
+            <p>A Shell Command can also be a Command String with options for all Players provided. This allows Users to add Commands ‘ad-hoc’ for one-time use.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                We recommend that Administrators create predefined commands when possible!
+            
+              </div>
+            </div>
+            <p></p>
+
+            <h2 id="helpers">
+              Helpers
+              <a href="#helpers" class="header-link">
+                <span class="glyphicon glyphicon-link"></span>
+              </a>
+            </h2>
+            <p>
+              Command Helpers are prefixes that can be added to the Command String in order to take a more advanced action. Commands
+              without a prefix are executed in the shell of the operating system which runs the Player. <code>cmd.exe</code> on Windows and <code>shell</code>
+              on Android.
+            </p> 
+            <p>
+              Captivad for Android <a>Helper Command to change Time zone</a>
+            </p>
+
+            <h3>RS232</h3>
+            <p>
+              RS232 commands can be executed on Players by using the rs232 prefix in the Command String. The format of the command is
+              <code>rs232|&lt;connection string&gt;|&lt;command&gt;</code>.
+            </p>
+            <p>The connection string should be provided in the following format on Android:</p>
+            <pre>
+              <code>&lt;DeviceName&gt;,&lt;Baud Rate&gt;,&lt;Data Bits&gt;,&lt;Parity&gt;,&lt;StopBits&gt;,&lt;FlowControl&gt;</code>
+            </pre>
+            <p>Each setting is represented by a corresponding number:</p>
+            <pre>
+              <code>
+              DATA_BITS_5 = 5;
+              DATA_BITS_6 = 6;
+              DATA_BITS_7 = 7;
+              DATA_BITS_8 = 8;
+              PARITY_NONE = 0;
+              PARITY_ODD = 1;
+              PARITY_EVEN = 2;
+              PARITY_MARK = 3;
+              PARITY_SPACE = 4;
+              STOP_BITS_1 = 1;
+              STOP_BITS_15 = 3;
+              STOP_BITS_2 = 2;
+              FLOW_CONTROL_OFF = 0;
+              FLOW_CONTROL_RTS_CTS = 1;
+              FLOW_CONTROL_DSR_DTR = 2;
+              FLOW_CONTROL_XON_XOFF = 3;
+              </code>
+            </pre>
+            <p>The Command itself is a string which gets sent over RS232 using the connection details.</p>
+
+            <h3>Android Intents</h3>
+            <p>
+              Android display profiles can use the <code>intent</code> helper to specify an intent that should be called when the
+              Command executes. The format of the Command is
+              <code>intent|&lt;type|activity,service,broadcast&gt;|&lt;activity&gt;|[&lt;extras&gt;]</code> .
+            </p>
+            <p>
+              <code>[&lt;extras&gt;]</code> is an optional parameter available from <strong>Android v2 R206</strong> used to provide
+              additional data to the Intent. This must be a JSON formatted string containing an array with at least one object. The
+              object format is below and must be on one line.
+            </p>
+            <pre class="language-json" tabindex="0">
+              <code class="language-json">
+                <span class="token punctuation">{</span>
+                  <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"&lt;extra name&gt;"</span><span class="token punctuation">,</span>
+                  <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"&lt;type|string,int,bool,intArray&gt;"</span><span class="token punctuation">,</span>
+                  <span class="token property">"value"</span><span class="token operator">:</span> &lt;the value of the above type&gt;
+                <span class="token punctuation">}</span>
+              </code>
+            </pre>
+            <p>For example, on some devices you can program the firmware to set on/off times.</p>
+            <p></p>
+            <pre><code>[{
+              "name": "timeon",
+              "type": "intArray",
+              "value": [2018, 7, 28, 8, 40]
+            }, {
+              "name": "timeoff",
+              "type": "intArray",
+              "value": [2018, 7, 28, 21, 40]
+            }]
+            </code></pre>
+            <p>This would be set on the command as:</p>
+            <pre><code>intent|broadcast|activity|[{ "name": "timeon", "type": "intArray", "value": [2018, 7, 28, 8, 40] }, { "name": "timeoff", "type": "intArray", "value": [2018, 7, 28, 21, 40] }]
+            </code></pre>
+
+            <h2 id="monitor_on_off">
+              Monitor ON/OFF
+              <a href="#monitor_on_off" class="header-link">
+                <span class="glyphicon glyphicon-link"></span>
+              </a>
+            </h2>
+            <h2>Serial/RS232</h2>
+            <p>Industry grade monitors often have a serial interface for turning the monitor panel on and off. Captivad can use the
+              RS232 Command helper to send these Commands to the monitor - usually in HEX mode.</p>
+            <p>
+              The following monitors and Commands have been tested:
+            </p>
+            <h4>NEC E464</h4>
+            <ul>
+              <li>Power On - <code>rs232|COM1,9600,8,None,One,None,1|01 30 41 30 41 30 43 02 43 32 30 33 44 36 30 30 30 31 03 73 0d</code></li>
+              <li>Power Off - <code>rs232|COM1,9600,8,None,One,None,1|01 30 41 30 41 30 43 02 43 32 30 33 44 36 30 30 30 34 03 76 0d</code></li>
+            </ul>
+
+            <h4>NEC E464</h4>
+            <ul>
+              <li>Power On - <code>rs232|COM1,9600,8,None,One,None,1|01 30 41 30 41 30 43 02 43 32 30 33 44 36 30 30 30 31 03 73 0d</code></li>
+              <li>Power Off - <code>rs232|COM1,9600,8,None,One,None,1|01 30 41 30 41 30 43 02 43 32 30 33 44 36 30 30 30 34 03 76 0d</code></li>
+            </ul>
+            <p></p>
+            <h4>Sharp LC-42D69U</h4>
+            <ul>
+              <li>Power On - <code>rs232|COM1,9600,8,None,One,None,1|50 4F 57 52 31 20 20 20 0D</code></li>
+              <li>Power Off - <code>rs232|COM1,9600,8,None,One,None,1|50 4F 57 52 00 20 20 20 0D</code></li>
+            </ul>
+            <p></p>
+            <h4>LG 55LK520</h4>
+            <ul>
+              <li>Power On - <code>rs232|COM1,9600,8,None,One,None,1|6B 61 20 30 30 20 30 31 0D</code></li>
+              <li>Power Off - <code>rs232|COM1,9600,8,None,One,None,1|6B 61 20 30 30 20 30 30 0D</code></li>
+            </ul>
+            <p></p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                It should be noted that other models of each brand should also use the same Commands.
+            
+              </div>
+            </div>
+
+            <h2 id="philips_commercial_displays">
+              Philips Commercial Displays
+              <a href="#philips_commercial_displays" class="header-link">
+                <span class="glyphicon glyphicon-link"></span>
+              </a>
+            </h2>
+            <p>The following commands can be used to control LED’s located on the sides of some commercial Phillips Displays:</p>
+            <p></p>
+            <pre>
+<code>tpv_led|off
+tpv_led|red
+tpv_led|green
+tpv_led|blue
+tpv_led|white</code>
+            </pre>
+            <p>
+              Integration has been added to power on/off the screen backlight by using the following commands:
+            </p>
+            <pre>
+              <code>
+tpv|backlighton
+tpv|backlightoff
+              </code>
+            </pre>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                The below commands can be used for one specific Android 4 model only; 2016 model <a
+                  href="https://www.philips.co.uk/p-p/10BDL3051T_00/signage-solutions-multi-touch-display">10BDL3051T</a>
+                <pre><code>
+tpv|screenoff
+tpv|screenon
+                      </code></pre>
+                <p><code>screenoff</code> will turn the screen off and put in a lower power state which can then be turned back on
+                  with <code>screenon</code>.</p>
+                <p>For all other models, please use <code>backlighton/off</code> as <code>screenoff</code> will power completely off
+                  resulting in the need for an on site restart!
+            
+                </p>
+              </div>
+            </div>
+
+            <p></p>
+
+            <p>Mute/unmute commands have also been added:</p>
+            <pre>
+              <code>
+tpv|mute
+tpv|unmute
+              </code>
+            </pre>
+
+            <p><strong>Please note</strong>: <code>backlighton/off</code> doesn’t mute audio, so if you have audio playing you will will also want to schedule the
+              above <code>mute/unmute</code> commands at the same time.</p>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>

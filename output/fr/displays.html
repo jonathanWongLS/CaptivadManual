@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="displays">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li class="active"><a href="displays.html">Introduction<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="displays_settings.html">Settings</a></li>
+<li><a href="displays_metrics.html">Metrics</a></li>
+<li><a href="displays_groups.html">Groups</a></li>
+<li><a href="displays_wakeonlan.html">Wake on LAN</a></li>
+<li><a href="displays_fileassociations.html">File Assignments</a></li>
+<li><a href="displays_layoutassignments.html">Layout Assignments</a></li>
+<li><a href="displays_commands.html">Commands</a></li>
+</ul></body></html>
+<li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=displays-->
+<h1 id="displays">Displays <a href="#displays" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The most basic purpose of Xibo is to show content on screens and the entire suite of applications exists for that one basic purpose. Xibo provides a concept called <strong>Displays</strong> to manage when and how content is shown on a screen.</p>
+<p>Displays are uniquely identified by a &quot;hardware key&quot; which is generated when the signage player software is installed. This hardware key is used to create a Display record in the CMS and is unique to that 1 Display record.</p>
+<h2 id="connecting_a_display">Connecting a Display <a href="#connecting_a_display" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Displays connect to the CMS over an API called &quot;XMDS&quot; (Xibo Media Distribution Service). Each signage player software application will have its own method of registering and connecting to the CMS - most of them only require the <code>URL</code> and <code>CMS Key</code>.</p>
+<h2 id="display_administration">Display Administration <a href="#display_administration" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The CMS provides a page for Display Administration which is used to show the user the Displays they have permission to view and the status of those Displays.</p>
+<p>The display administration table gives an easy to understand overview of each display registered in the CMS. </p>
+<p><img src="../en/img/displays_administration.png" alt="Display Administration Grid" /></p>
+<p>The rows and columns have the following meanings:</p>
+<ul>
+<li>
+<p><strong>Status</strong></p>
+<p>The status of the display.
+Tick (checkmark) = Player is up to date with the content (in older CMS versions, it used to be green),
+[!] = Player wasn't logged in since the content change (in older CMS versions, it used to be yellow),
+[X] = Player is currently downloading the new content (in older CMS versions, it used to be red)</p>
+</li>
+<li>
+<p><strong>ID</strong></p>
+<p>The internal ID for the display.</p>
+</li>
+<li>
+<p><strong>Licence</strong></p>
+<p>A tick or cross showing whether the display has been granted a licence with the CMS. This prevents unauthorised displays being added to the CMS.</p>
+</li>
+<li>
+<p><strong>Display</strong></p>
+<p>A friendly name for the display. This can be set during the registration process in the display client software.</p>
+</li>
+<li>
+<p><strong>Default Layout</strong></p>
+<p>The default layout that will play when there are no other layouts / campaigns scheduled or when all scheduled layouts are invalid.</p>
+</li>
+<li>
+<p><strong>Interleave Default</strong></p>
+<p>A tick or cross showing whether the default layout will play when there are other layouts scheduled.</p>
+</li>
+<li>
+<p><strong>Email Alert</strong></p>
+<p>A tick or cross showing whether an email alert will be sent by the Maintenance module.</p>
+</li>
+<li>
+<p><strong>Logged In</strong></p>
+<p>A tick or cross showing whether the display has logged in recently. The time out for the display is set on each display OR in the global settings field <code>MAINTENANCE_ALERT_TOUT</code>.</p>
+</li>
+<li>
+<p><strong>Last Accessed</strong></p>
+<p>The date/time of last access.</p>
+</li>
+<li>
+<p><strong>IP Address</strong></p>
+<p>The IP address the display had the last time it reported its status through the &quot;Media Inventory&quot; status call.</p>
+</li>
+<li>
+<p><strong>Mac Address</strong></p>
+<p>The Mac Address of the display (if the client software is capable of sending it).</p>
+</li>
+</ul>
+<h3>Row Menu</h3>
+<p>Displays can have a number of actions performed against them.</p>
+<ul>
+<li>
+<p><strong>Edit</strong></p>
+<p>The display edit form for adjusting all options available on the display.</p>
+</li>
+<li>
+<p><strong>Delete</strong></p>
+<p>The display delete form.</p>
+</li>
+<li>
+<p><strong>Schedule Now</strong></p>
+<p>A quick shortcut to scheduling a layout from the current time for a particular duration.</p>
+</li>
+<li>
+<p><strong>Default Layout</strong></p>
+<p>A quick shortcut to updating the default layout.</p>
+</li>
+<li>
+<p><strong>Assign Files</strong></p>
+<p>Allows the assignment of generic files to the Display. Usually for use by an embedded media type or custom module.</p>
+</li>
+<li>
+<p><strong>Request Screen Shot</strong></p>
+<p>Request a screen shot of the display window.</p>
+</li>
+<li>
+<p><strong>Media Inventory</strong></p>
+<p>View the required media inventory and the current status of each item as reported by the display during the last check in.</p>
+</li>
+<li>
+<p><strong>Recent Log</strong></p>
+<p>Show the recent log messages from this Display.</p>
+</li>
+<li>
+<p><strong>Display Groups</strong></p>
+<p>Administration of the display groups this Display belongs to.</p>
+</li>
+<li>
+<p><strong>Permissions</strong></p>
+<p>Adjust the user / user group permissions on the Display.</p>
+</li>
+<li>
+<p><strong>Version Information</strong></p>
+<p>Show the version of the signage player software installed on the Display.</p>
+</li>
+<li>
+<p><strong>Wake on LAN</strong></p>
+<p>Send a Wake on LAN packet to the display - requires the Wake On LAN settings to be configured.</p>
+</li>
+</ul>
+<h3>Display Edit</h3>
+<p>Before the display will be allowed to download its schedule or required media it must be licensed with the CMS. After a display client is registered a new display record will appear in the Display Administration - it will then need to be edited to grant is access (getting a licence).</p>
+<p>Click on the &quot;Edit&quot; button of the Display loads its editing window. You can then proceed to change the settings for the chosen Display.</p>
+<p><img src="../en/img/displays_edit.png" alt="Display Edit" /></p>
+<h3>Display Delete</h3>
+<p>Deleting a display will remove it from the CMS entirely and can only be performed if the display is not active.</p>
+<p><em>A display can be unlicensed without deleting it using the Display Edit form.</em></p>
+<p>Deleting a display cannot be reversed. A display can be reconnected to the CMS by repeating the &quot;register&quot; procedure which will create a new display record.</p>
+<h3>Media Inventory</h3>
+<p>When you schedule new content, or change existing content, it is helpful to know that the displays have updated with the new
+information. In a Xibo CMS and client system, the client applications will connect in to the CMS periodically
+and update itself on the media items that they have stored locally. Media Inventory allows you to look at a glance to check if
+your updates were pulled by the clients yet.</p>
+<p>On the display management page, you'll see a column &quot;Status&quot;. The status light can be one of either green, amber or red.</p>
+<p>When you make a change that affects the output of the CMS to a given client (for example if you modify a layout scheduled
+on that client, schedule a new layout or change the default layout), the status light will immediately goes red. That signifies
+that as far as the CMS is aware there are updates pending for that client and it has not received them yet.</p>
+<p>The client will then connect up to the CMS on a schedule and will read the new information that is available. If there
+are new files to download (for example if you modified a layout or scheduled something completely new), the status light will
+turn amber while the files are being downloaded.</p>
+<p>Once the client is satisfied that all files have been downloaded, it will send an inventory of all the files it has active
+in it is cache back to the CMS, and the CMS will change the status light to green.</p>
+<p>If you are curious to see what files the client is actively monitoring, you can click the &quot;Media Inventory&quot; button and a popup
+will appear showing the status of each file, along with the last time the client checked it was still stored correctly on disk.
+You will also see any files that the client is in the process of downloading.</p>
+<p><img src="../en/img/displays_cms_media_inventory.png" alt="Display Media Inventory" /></p>
+<p>Note here that what you will not see is files that the client needs to download, but that it is unaware of at the present time. For example. If you schedule a new layout and immediately go to the Media Inventory before the client has connected up to the CMS, you'll see the status light is red, but the content of the media inventory will not show the new files that are required. Once the client connects, those new files will be included in the inventory automatically.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

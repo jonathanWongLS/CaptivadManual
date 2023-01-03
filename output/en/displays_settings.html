@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Captivad Manual</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- favicon -->
+  <link href="../img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Bootstrap -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+  <!-- Stylesheets -->
+  <link href="../manual.css" rel="stylesheet" media="screen" />
+
+  <!-- META -->
+  <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+  <meta name="description"
+    content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="displays">
+  <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+  <div class="top-nav">
+    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+  </div>
+
+  <div class="ss_body container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="side-nav" class="nav nav-pills nav-stacked">
+          <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+          <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+          <html>
+
+          <body>
+            <ul class="list-group list-group-light">
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="displays.html">
+                Introduction
+                <!-- <span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span> -->
+              </a>
+              <a class="list-group-item list-group-item-action px-3 border-0 active" href="displays_settings.html">Display Settings</a>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="displays_groups.html">Display Groups</a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="displays_filelayoutassignments.html">
+                File/Layout Assignments
+              </a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="displays_reporting.html">Reporting</a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="displays_commands.html">Command
+                Functionality</a>
+          
+            </ul>
+          </body>
+
+          </html>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <li>
+            <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=displays-->
+        <h1 id="display_setting_profiles">
+          Display Settings
+          <a href="#display_setting_profiles" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <p>
+          Displays can be configured automatically from the CMS once they are connected and managed using Display
+          Setting
+          Profiles.
+        </p>
+        <p>
+          Each Display has a default <strong>Display Setting Profile</strong> which can be customised by an
+          Administrator to suit required
+          preferences.
+        </p>
+        <p>
+          New Display Setting Profiles can be created and assigned directly to a <strong>Display</strong>.
+        </p>
+        <p>
+          A list of available profiles can be viewed from <strong>Display Settings</strong> under the
+          <strong>Display</strong> section of the main menu.
+        </p>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_settings_profiles.png"
+              data-processed="1"></figure>
+        </div>
+        <p>
+          Each profile has a <strong>Name</strong>, <strong>Type</strong> and a flag indicating if it is the
+          <strong>default</strong> or not. Default profiles are automatically
+          assigned to Displays of the corresponding type.
+        </p>
+
+        <h2 id="editing_profiles">
+          Editing Profiles
+          <a href="#editing_profiles" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Use the row menu for the Profile you wish to view and click on Edit. Use the Edit Profile form to adjust
+          available
+          settings.
+        </p>
+        <p>
+          Each setting is explained under each form field for each of the tabs.
+        </p>
+        <p>
+          Each profile has a name, a type and a flag indicating if it is the
+          default or not. Default profiles are automatically assigned to
+          displays of the corresponding type.
+        </p>
+        <h2 id="editing_a_profile">
+          Editing a profile
+          <a href="#editing_a_profile" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Once the Edit action is selected for a profile the below Edit Form
+          is displayed. This form allows all the available settings to be
+          adjusted.
+        </p>
+        <p>Each setting is explained on the form under each form field.</p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Using the row menu click on <strong>Copy</strong> to make another version of a Profile. Make adjustments as
+            needed
+            to quickly and simply create new Profiles.
+
+          </div>
+        </div>
+
+
+        <h2 id="notable_settings">
+          Notable Settings
+          <a href="#notable_settings" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <h3>Collect Interval</h3>
+        <p>
+          Located on the <strong>General</strong> tab, use the drop-down menu select how often you would like the Player
+          to check for new content.
+          This means that once a Player has communicated with the CMS, it will check again for any changes by the time
+          set here.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            <p><strong>Scenario:</strong></p>
+            <p>A Player has a collect interval set for 24 hours, it will check for any changes, action pending changes
+              and then
+              wait for the next 24-hour collection. If a change is made between this period of time, the Player will not
+              be
+              aware of it until it is time to check again.
+
+            </p>
+          </div>
+        </div>
+
+        <p>
+          If a Display Profile for a Player is changed, the Player will only be aware of the change after it has
+          connected
+          according to its prior connection interval.
+        </p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            <p><strong>Scenario:</strong></p>
+            <p>A Player with a collect interval set for 24 hours made a check at 12 pm, it will not check again until 12
+              pm the
+              following day for any changes that have been made. Once the 24 hour interval has passed, it will update
+              the new
+              changes and from this point will collect changes based on the new Profile.
+
+            </p>
+          </div>
+        </div>
+
+        <p>
+          The CMS can be configured to talk to an XMR instance if player actions are required, please contact your
+          Administrator.
+        </p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            We recommend setting no lower than 5 minutes for production, generally a 15-30 minute setting would be
+            sensible.
+
+          </div>
+        </div>
+
+        <h2>Enable Stats Reporting</h2>
+        <p>
+          Tick/untick the box to enable/disable the collection of statistics for <strong>Proof of Play Reports</strong>
+          for all <strong>Displays</strong> that use
+          the selected <strong> Display Profile</strong>.
+        </p>
+        <p>
+          If enabled set the required level of collection for Proof of Play statistics to be applied to all Layouts /
+          Media and
+          Widget items using the <strong>Aggregation</strong> level drop down.
+        </p>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_aggregation_level_displays_proof_of_play.png"
+              data-processed="1"></figure>
+        </div>
+
+        <ul>
+          <li><strong>Individual</strong> - statistics are collected when specified by default.</li>
+          <li><strong>Hourly</strong> - statistics will be collected hourly by default.</li>
+          <li><strong>Daily</strong> - statistics will be collected daily by default.</li>
+        </ul>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Players aggregate ‘completed records’ only, with collection made at the end of the Widgets duration so if a
+            Widget
+            has a duration of 3 hours, the stat will be recorded once the Widget has expired.
+
+          </div>
+        </div>
+
+        <h2>Download and Update windows</h2>
+        <p>
+          Located on the <strong>Network</strong> tab, set a time window for <strong>Downloads</strong> from the CMS and
+          <strong>Updates</strong> to the Player.
+        </p>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_display_settings_network.png"
+              data-processed="1"></figure>
+        </div>
+
+        <h3>Download window timings</h3>
+        <ul>
+          <li>Select Start and End times to connect to the CMS and download any changes that have been made.</li>
+        </ul>
+
+        <p>
+          If you make changes to content outside of the download window set, the Player will not be able to download any
+          changes
+          and could cause the Player to show the assigned default Layout or Splash screen instead.
+        </p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Leave at the Default 00:00 - 00:00 to leave the window as always open!
+
+          </div>
+        </div>
+
+        <h3>Update window timings</h3>
+        <ul>
+          <li>Select Start and End times to install any application updates.</li>
+        </ul>
+        <p>
+          Define a time to download updates to a Player, such as new Player versions. This will also include any new or
+          changes to
+          existing schedules to be updated to the Player. Changes to content will NOT be updated during the set Update
+          window
+          timings set.
+        </p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            This setting is best used in conjunction with either assigned Layouts or deferred published Layouts so that
+            they
+            publish during the update window!
+
+          </div>
+        </div>
+
+        <h3>Force HTTPS</h3>
+        <p>
+          This option has been included to force a Displays connection to the CMS using HTTPS.
+        </p>
+        <p>
+          Use the checkbox to <strong>Force HTTPS</strong> on the <strong>Network</strong> tab of the Edit Profile form.
+        </p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            This option can be overridden for individual Displays.
+
+          </div>
+        </div>
+
+        <h2 id="operating_hours">
+          Operating Hours
+          <a href="#operating_hours" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>Set <strong>Operating Hours</strong> for Displays by setting pre-defined <a
+            href="scheduling_dayparting.html">Dayparts</a></p>
+
+        <ul>
+          <li>Use the Network tab for Android</li>
+          <li>Use the drop down menu to select the day part to apply.</li>
+        </ul>
+        <p>
+          ‘Email alerts’ such as those which send when a Display is offline, will not be sent outside of the specified
+          Operating
+          Hours.
+        </p>
+
+        <h2 id="expire_mod_layouts">
+          Expire Modified Layouts
+          <a href="#expire_mod_layouts" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Located on the <strong>Advanced</strong> tab, use this checkbox to tell Captivad to immediately expire and cut
+          playback of a Layout when a
+          Player receives an update from the CMS.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Useful for Layouts with long durations!
+
+          </div>
+        </div>
+
+        <h2 id="multiple_decoders">
+          Use Multiple Decoders (Captivad for Android)
+          <a href="#multiple_decoders" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>Gapless Playback with Video content requires an Android device to have multiple decoders. This setting can be
+          found on
+          the Advanced tab and will use the Device Default automatically.</p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Should an issue arise with playback, set to On!
+
+          </div>
+        </div>
+
+        <h2 id="enable_touch">
+          Enable Touch capabilities on the device (Captivad for Android)
+          <a href="#enable_touch" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Go to the <strong>Advanced</strong> tab and enable this option if the device will be used as a touch screen.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Enabling this option will show a one time message on the Player which will need to be manually dismissed!
+
+          </div>
+        </div>
+        <p></p>
+        <p>
+          When left disabled, touching the screen will show the action bar according to the <strong>Action Bar
+            Mode</strong> option.
+        </p>
+
+        <h2 id="add_a_profile">
+          Add a Profile
+          <a href="#add_a_profile" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p></p>
+        <p>
+          Click on the Add Profile button, and include a name and select <strong>Display Type</strong>, Save.
+        </p>
+        <p></p>
+        <p>
+          The Edit Profile form will open so that you can complete the necessary form fields for this Profile.
+        </p>
+
+        <h2 id="setting_display">
+          Setting on the Display
+          <a href="#setting_display" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          A <strong>default profile</strong> will automatically apply its settings to all Displays of the same Type. A
+          Display can be overridden
+          with a Profile other than the default by selecting the required <strong>Settings Profile</strong> on a
+          Display’s <strong>Edit form</strong> using the
+          <strong>Profile Settings</strong> tab. Each setting can also be overridden to suit individual Displays.
+        </p>
+        <p></p>
+
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_edit_profilesettings.png"
+              data-processed="1"></figure>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+      <div class="pull-right">
+        <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+      </div>
+
+      <p class="ss_back_to_top">Back to Top</p>
+
+      <p>
+        Designed and built by
+        <a href="http://springsignage.com/">Spring Signage</a>
+        for the
+        <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+        .
+      </p>
+      <p>
+        Open Source Code licensed under
+        <a href="" target="_blank">
+          GNU Affero General Public License v3 or later
+        </a>
+        , documentation under
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">
+          Creative Commons Licence
+        </a>
+        .
+      </p>
+
+      <p class="ss_footer_links">Currently v1.8.4</p>
+
+      <p class="ss_languages">
+        <a href="../en/index.html">en</a>
+        |
+        <a href="../fr/index.html">fr</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

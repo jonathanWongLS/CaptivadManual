@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Countdown<a id="content-countdown" href="#content-countdown" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display a countdown for a selected duration or until a specified date on Layouts.</p>
+                <p></p>
+                
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Countdown</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and
+                    click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Use the drop-down menu to select the type of countdown to display:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_countdown_type.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <strong>Widget Duration -</strong> The countdown will be determined by the duration of the
+                        Widget.
+                    </li>
+                    <li>
+                        <strong>Custom Duration</strong> - Set a countdown duration in seconds.
+                    </li>
+                    <li>
+                        <strong>Use Date</strong> - Countdown to a selected date and time.
+                    </li>
+                </ul>
+                <p>Use the <strong>Warning Date</strong> to set at which point the countdown will change to a ‘warning
+                    mode’ for the remainder of the countdown.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The “warning” and “finished” status can be styled using the CSS style sheet on overriding a
+                        Template.
+
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Users can set <strong>Horizontal</strong> and <strong>Vertical</strong> alignments
+                        for this Widget!
+
+                    </div>
+                </div>
+                <h3>Templates<a id="content-templates" href="#content-templates" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Click on the Templates tab and select from one of the preset templates available from the drop down
+                    menu.</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3_media_countdown_preset.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h2>Editing Preset Templates<a id="content-editing-preset-templates"
+                        href="#content-editing-preset-templates" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Preset templates can be edited by clicking in the <strong>Override the template</strong> checkbox.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The template will be automatically scaled and should be designed for the intended output
+                        resolution. The following guidelines should be considered when editing templates:
+                        <ul>
+                            <li>Templates must be designed at a fixed size</li>
+                            <li>All elements must use absolute sizing in px, including fonts, margins, widths, heights,
+                                etc</li>
+                            <li>If positioning is used, it must be from top,left</li>
+                            <li>Templates can use bootstrap</li>
+                            <li>The aspect ratio will be fixed by Xibo and sized to fit the Region</li>
+                            <li>Templates are treated the same as a static image
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>With override template selected, you can enter text, HTML and CSS.</p>
+                <p>Once override has been selected, click back on the <strong>Templates tab</strong> to select the
+                    templates to edit:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_countdown_override_template.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h2>Optional Stylesheet<a id="content-optional-stylesheet" href="#content-optional-stylesheet"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>This is the CSS to apply to the template structure above.</p>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Countdown Widget from the <strong>Actions</strong> tab.
+                    Please see the <a href="layouts_interactive_actions.html">Interactive Actions</a> page for more
+                    information.</p>
+                <h2>Additional Information<a id="content-additional-information" href="#content-additional-information"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Xibo should accept any date format that is in a correct PHP date format, the following characters are
+                    recognised and can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)
+                            </td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)
+                            </td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO
+                                week number (W) belongs to the previous or next year, that year is used instead. (added
+                                in PHP 5.1.0)</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td align="left">Lowercase Ante meridiem and Post meridiem</td>
+                            <td>am or pm</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td align="left">Uppercase Ante meridiem and Post meridiem</td>
+                            <td>AM or PM</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td align="left">Swatch Internet time</td>
+                            <td>000 through 999</td>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td align="left">12-hour format of an hour without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td align="left">24-hour format of an hour without leading zeros</td>
+                            <td>0 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td align="left">12-hour format of an hour with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td align="left">24-hour format of an hour with leading zeros</td>
+                            <td>00 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td align="left">Minutes with leading zeros</td>
+                            <td>00 to 59</td>
+                        </tr>
+                        <tr>
+                            <td>s</td>
+                            <td align="left">Seconds, with leading zeros</td>
+                            <td>00 through 59</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td align="left">Microseconds (added in PHP 5.2.2). Note that date() will always generate
+                                000000 since it takes an integer parameter, whereas DateTime::format() does support
+                                microseconds if DateTime was created with microseconds.</td>
+                            <td>654321</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Timezone</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td align="left">Timezone identifier (added in PHP 5.1.0)</td>
+                            <td>UTC, GMT, Atlantic/Azores</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td align="left">(capital i) Whether or not the date is in daylight saving time</td>
+                            <td>1 if Daylight Saving Time, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td align="left">Difference to Greenwich time (GMT) in hours</td>
+                            <td>+0200</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td align="left">Difference to Greenwich time (GMT) with colon between hours and minutes
+                                (added in PHP 5.1.3)</td>
+                            <td>+02:00</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td align="left">Timezone abbreviation</td>
+                            <td>EST, MDT …</td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td align="left">Timezone offset in seconds. The offset for timezones west of UTC is always
+                                negative, and for those east of UTC is always positive.</td>
+                            <td>-43200 through 50400</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Full Date/Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>c</td>
+                            <td align="left">ISO 8601 date (added in PHP 5)</td>
+                            <td>2004-02-12T15:19:21+00:00</td>
+                        </tr>
+                        <tr>
+                            <td>r</td>
+                            <td align="left">» RFC 2822 formatted date</td>
+                            <td>Thu, 21 Dec 2000 16:01:07 +0200</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

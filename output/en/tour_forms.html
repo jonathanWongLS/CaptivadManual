@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+</head>
+
+<body data-toc="widgets">
+    
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li>
+                        <a href="index.html" data-toc-name="getting_started">
+                            Getting Started
+                        </a>
+                    </li> -->
+                    <li class="active"><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+                    
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="index.html">
+                                Overview
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_login.html">Log In</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_user_profile.html">User Profile</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_two_fa.html">Two Factor
+                                Authentication</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_dashboards.html">CMS
+                                Dashboards</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_navigation.html">CMS
+                                Navigation</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_settings.html">CMS Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_grids.html">Grids</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="tour_forms.html">Forms</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_tags.html">Tags</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_folders.html">Folders</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_transitions.html">Transitions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_date_format.html">Date Format</a>
+                        </ul>
+                    </body>
+
+          </html>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <li>
+            <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=tour-->
+        <h1 id="forms">
+          Forms
+          <a href="#forms" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <p>
+          The CMS presents most transactions (actions that <strong>add</strong>/<strong>edit</strong> or
+          <strong>delete</strong> the content in
+          some way) using <strong>Forms</strong>.
+        </p>
+        <p>
+          The screenshot below gives an example of a how a form may look using the <strong>Add Layout</strong> form:
+        </p>
+
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_forms_add_layout.png" data-processed="1">
+          </figure>
+        </div>
+
+        <h2 id="tabs">
+          Tabs
+          <a href="#tabs" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Forms can have one or multiple tabs to provide further details and options, complete as required.
+        </p>
+
+        <h2 id="form_folders">
+          Form Folders
+          <a href="#form_folders" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Use <a>Folders</a> for easier searches, to organise and to easily set <a>Share</a> options for Users/User
+          Groups.
+        </p>
+        <p>
+          Click on <strong>Select Folder</strong> and select/create the destination folder.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Items that are saved in Folders will inherit the View, Edit, Delete <strong>Share</strong> options that have
+            been
+            applied to the destination Folder for User/User Group access!
+
+          </div>
+        </div>
+        <p></p>
+
+
+        <h2 id="form_fields">
+          Form Fields
+          <a href="#form_fields" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Each Form has fields that require completion. Each field has a title that explains what the field represents
+          and help
+          text for additional guidance.
+        </p>
+
+        <h2 id="form_check_boxes">
+          Check Boxes
+          <a href="#form_check_boxes" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Options that can be enabled/disabled are presented by check boxes.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Forms accessed from a Row Menu may contain an ‘auto submit capability’, which when selected allows for forms
+            to be
+            automatically submitted. Take a look at the <a>Grids</a> page for further information.
+
+          </div>
+        </div>
+
+        <h2 id="buttons">
+          Buttons
+          <a href="#buttons" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Every form has a button bar at the bottom for the User to commit or cancel the additions/edits they have made.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+
+            Most forms also include a <strong>Help</strong> button, which provides a link to sections of this
+            <strong>User
+              Manual</strong> for additional guidance.
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+      <div class="pull-right">
+        <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+      </div>
+
+      <p class="ss_back_to_top">Back to Top</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

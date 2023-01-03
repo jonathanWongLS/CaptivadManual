@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Captivad Manual</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- favicon -->
+  <link href="../img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Bootstrap -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+  <!-- Stylesheets -->
+  <link href="../manual.css" rel="stylesheet" media="screen" />
+
+  <!-- META -->
+  <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+  <meta name="description"
+    content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+  <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+  <div class="top-nav">
+    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+  </div>
+
+  <div class="ss_body container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="side-nav" class="nav nav-pills nav-stacked">
+          <!-- <li>
+            <a href="index.html" data-toc-name="getting_started">
+              Getting Started
+            </a>
+          </li> -->
+          <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+          <html>
+
+          <body>
+            <ul class="list-group list-group-light">
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                Overview
+              </a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+              </li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_menuboards.html">Menu Boards</a></li>
+              <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+            </ul>
+          </body>
+
+          </html>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <!-- <li>
+            <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=media-->
+        <h1 id="menu_boards">
+          Menu Boards (Feature Preview)
+          <a href="#menu_boards" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            <p><strong>Please note:</strong> This feature is a preview and should not be used in production.</p>
+            <p>Whilst we work on this to make improvements please be aware of the following limitations if you would like to try
+              this feature:</p>
+            <ul>
+              <li>When creating Categories please be aware that available Templates will only display 3 or 4 Categories in
+                Portrait and 3, 4 or 5 in Landscape</li>
+              <li>Product descriptions do not have a maximum character length which could result in descriptions being
+                incorrectly displayed in a chosen template.</li>
+              <li>Any Allergy information completed in the Product form will automatically show.</li>
+              <li>There is no limit to the amout of Product Options a Product can have which could result in them being
+                incorrectly displayed if more than 2 are created.</li>
+              <li>Product Options does not have a maximum character length which could result in descriptions being incorrectly
+                displayed.</li>
+            </ul>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <p></p>
+        <p>The Menu Boards interface provides a simple way for users to create and configure information to be used with the
+          <a>Menu Board Widget</a> to display Menu items and information using customisable templates.</p>
+
+        <p>Menu Boards allow for the creation of ‘reusable Menus’ which are created and managed independantly to Layouts. Once
+          created, Menus can easily be reused across multiple Layouts.</p>
+        
+        <p>Using Menu Boards is a two part process:</p>
+
+        <ul>
+          <li>The Menu Board - contains the content of the Menu</li>
+          <li>The Menu Board Widget - allows for configuration of the Menu</li>
+        </ul>
+
+        <p>Menu Boards are administered by clicking on <strong>Menu Boards</strong> under the <strong>Library</strong> section of the main menu:</p>
+
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_grid.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <p>The Menu Boards <a>Grid</a> allows users to create new and edit existing.</p>
+        <p>Click the Folders icon to toggle on/off from view.</p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            When Folders are hidden from view, the file path for the selected folder will be shown!
+        
+          </div>
+        </div> 
+        <ul>
+          <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.
+          </li>
+        </ul> 
+        <p>or</p>
+        <ul>
+          <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters
+            applied to the grid.</li>
+        </ul>
+
+        <h2 id="creating_menu_board_data">
+          Creating Menu Board data
+          <a href="#creating_menu_board_data" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Creating information for Menu Boards requires 3 stages:
+        </p>
+        <p>Examples of Library Media are:</p>
+        <ol>
+          <li>Adding a Menu Board record</li>
+          <li>Creating Categories</li>
+          <li>Adding Products</li>
+        </ol>
+        
+        <h2 id="add_new_menu_board">
+          1. Add new Menu Board
+          <a href="#add_new_menu_board" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>Click on the Add Menu Board button and complete the form fields:</p>
+        <ul>
+          <li>Provide a <strong>Name</strong> for easy identification purposes within the CMS.</li>
+          <li>Menu Boards can be optionally saved to <a>Folders</a> for easier searches, organisation
+            and to easily set <a>Share</a> options for Users/User Groups.</li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Menu Boards that are saved to Folders will inherit the View,Edit and Delete <strong>Share</strong> options that have
+            been applied to the destination Folder for User/User Group access!
+        
+          </div>
+        </div>
+        <p></p>
+        <ul>
+          <li>Enter a <strong>Code</strong> to be used to identify this Menu Board (advanced use used for referencing the API).
+          </li>
+          <li>Include an optional <strong>Description</strong> to give more detail/instructions to other potential users of the
+            Menu Board.</li>
+          <li>Click to <strong>Save</strong>.</li>
+        </ul>
+
+        <h2 id="create_categories">
+          2. Create Categories
+          <a href="#create_categories" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Categories are used to define and structure the menu.
+        </p>
+        <ul>
+          <li>Use the row menu for a Menu Board and select View Categories:</li>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_rowmenu.png"
+                data-processed="1"></figure>
+          </div>
+          <p></p>
+        </ul>
+        <p>Click on the <strong>Add Category</strong> button and complete the required form fields:</p>
+        <ul>
+          <li>Provide a <strong>Name</strong> which can be selected to be shown on displays as a header.</li>
+          <li>Enter a <strong>Code</strong> to be used to identify this Category (advanced use used for referencing the API).
+          </li>
+          <li>Optionally include a <strong>Media</strong> file to be used for this category.</li>
+          <li>Click to <strong>Save</strong>.</li>
+        </ul>
+        <p>Repeat this process to add the required <strong>Categories</strong> for the Menu Board.</p>
+
+
+        <h2 id="add_products">
+          3. Add Products
+          <a href="#add_products" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Add Products to Categories to provide pricing and other key information, to be shown on displays.
+        </p>
+        <ul>
+          <li>Use the row menu for a Category and select <strong>View Products</strong>:</li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_products.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <ul>
+          <li>Click on the <strong>Add Product</strong> button and complete the product information to display on screen:</li> 
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_add_product.png"
+              data-processed="1"></figure>
+        </div>
+        <ul>
+          <li>
+            <p>Provide the <strong>Name</strong> of your product.</p>
+          </li>
+          <li>
+            <p>Give your product a <strong>Description</strong> to provide further information to the intended audience.</p>
+          </li>
+          <li>
+            <p>Enter a <strong>Price</strong> (this can also be text such as TBC / Free etc)</p>
+          </li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            The <strong>Price</strong> field must not be left blank in order to save the form!
+        
+          </div>
+        </div>
+        <p></p>
+
+        <ul>
+          <li>Toggle <strong>On Availability</strong> to show the product information in the menu board. Products that are
+            toggled to <strong>Off</strong> will not automatically show.</li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            The Menu Boards Widget has a setting to allow for <strong>Unavailable Products</strong> to show greyed out!
+        
+          </div>
+        </div>
+        <p></p>
+
+        <ul>
+          <li>
+            <p>Enter a <strong>Code</strong> to be used to identify this Product (advanced use used for referencing the API).
+            </p>
+          </li>
+          <li>
+            <p>Optionally include a <strong>Media</strong> file to be used for this Product.</p>
+          </li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Images can be toggled on/off to be shown using the Menu Board Widget.
+        
+          </div>
+        </div>
+        <p></p>
+
+        <p>The Product Options tab allows for additional options to be added if required:</p>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_product_options.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <p>Repeat the process to add further <strong>Products</strong> to the selected Category.</p>
+        <p>Use the tabs to navigate to the other categories to add Product information.</p>
+
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_menuboards_products_tabs.png"
+              data-processed="1"></figure>
+        </div>
+
+        <p>Once all information has been completed, add the <a>Menu Board Widget</a> to a Layout using the <a>Layout Designer</a> and complete configuration options to best present the information.</p>
+
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Menu Boards are edited independently to Layouts, so there is no need to access or edit the Layout(s) the Menu Board has
+            been added to. Changes will be available in the system straight away ready to be picked up by Players on their next
+            collection, with no need to make any edits to Layouts!
+        
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+        <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

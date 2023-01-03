@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="cms_upgrade">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="cms_upgrade">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="upgrade.html">Upgrading</a></li>
+<li><a href="upgrade_docker.html">Upgrade Xibo for Docker</a></li>
+<li class="active"><a href="upgrade_switch_to_docker.html">Switching to Docker<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="upgrade_custom.html">Upgrade Custom installation</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=cms_upgrade-->
+<h1 id="switching_to_docker">Switching to Docker <a href="#switching_to_docker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Installations prior to 1.8 will be &quot;Custom/Manual&quot; installations and should be migrated
+to Docker during the upgrade. Please follow the below instructions:</p>
+<p>Review the Docker installation guide for your choice of platform which can be found here:
+<a href="install_cms.html">Install CMS</a></p>
+<p>Follow that guide, until you get to the step where the CMS is initially bootstrapped.
+<em>Do not run the <code>docker-compose up</code> command.</em> When you get to that step, please return
+here, and pickup.</p>
+<p>If your server is already running a webserver, then you will need to pay specific attention
+to the instructions on running on custom port numbers.</p>
+<p>Once you have Docker installed, and have extracted the Xibo Docker Release
+Archive, and created your config.env file, you should continue from this point.</p>
+<p>In the same directory as you extracted the <code>docker-compose.yml</code> file, create the following
+directory structure:</p>
+<pre><code>shared
+     |
+     - backup
+     - cms
+         |
+         - library</code></pre>
+<p>Copy the library files from your existing install in to <code>shared/cms/library</code> - so for
+example, you might have <code>shared/cms/library/10.jpg</code>.</p>
+<p>On your existing Xibo installation, empty your log table by using the CMS Web Portal
+to go to the <code>Log</code> page and clicking on <code>Truncate</code>, or by running <code>TRUNCATE log</code> from a
+MySQL prompt with your Xibo database selected.</p>
+<p>Export your database from your old installation by running the following,
+e.g. <code>mysqldump -u user -p database-name &gt; shared/backup/import.sql</code></p>
+<p>where <code>user</code> is the Xibo database user. You will be prompted for the password. You can find
+both those values in the <code>settings.php</code> file in your old Xibo installation directory.</p>
+<p>If you're not comfortable using the mysqldump command, then see the <a href="#exporting_with_phpmyadmin">following section</a>
+which covers using PHPMyAdmin if you have that available, however, please note that PHPMyAdmin is
+known to have issues exporting very large database backups reliably.</p>
+<p>It is CRITICAL that your import.sql file contains only the Xibo database that you
+wish to upgrade. It must not contain multiple databases. Specifically, it must not contain a
+<code>USE db_name</code> command.</p>
+<p>Save your 1.7 (or 1.8) database export as <code>shared/backup/import.sql</code></p>
+<p>We can now bring up the new CMS containers with your old data.</p>
+<p>Run the following:</p>
+<pre><code>docker-compose up -d</code></pre>
+<p>or if you're using a custom ports or remote mysql docker-compose file,</p>
+<pre><code>docker-compose -f custom.yml up -d</code></pre>
+<p>where custom.yml is that custom file you've created.</p>
+<p>That will cause the containers to be created for your database, web server and XMR server.</p>
+<p>After a period of time (allow up to 10 minutes), you should see the CMS webpage appear at
+<code>http://localhost</code> or <code>http://localhost:port</code> if you're running on a custom port.</p>
+<p>Since we're importing a non-Docker based installation, there's a couple of additional steps
+to take which require direct modification of the database. If you're running with an external
+database, then please run the SQL commands listed below directly on your remote database
+instead of running these commands from inside the Docker console.</p>
+<p>First, run <code>docker ps</code> to list all running docker containers, and find there the name of
+the database container. It will be the one with <code>web</code> in the name - so for example
+<code>Xibo_cms-web_1</code>.</p>
+<p>Once you have the database container name, run the following to get to a shell inside the web
+container</p>
+<pre><code>docker exec -ti Xibo_cms-web_1 bash</code></pre>
+<p>Next run the following</p>
+<pre><code>mysql -h mysql -u cms -p cms</code></pre>
+<p>You will be prompted for a password. It will be the one that you chose in config.env for MySQL.</p>
+<p>Assuming the correct password is entered, you'll be presented with a MySQL command prompt.</p>
+<p>Run the following commands:</p>
+<pre><code>UPDATE `setting` SET `value`="/var/www/cms/library/", userSee=0, userChange=0 WHERE `setting`="LIBRARY_LOCATION";
+UPDATE `setting` SET `value`="tcp://cms-xmr:50001", userSee=0, userChange=0 WHERE `setting`="XMR_ADDRESS";
+UPDATE `setting` SET `value`="Apache" WHERE `setting`="SENDFILE_MODE";
+exit</code></pre>
+<p>Run <code>exit</code> again to return to your local machine shell.</p>
+<p>Finally delete any files inside <code>shared/cms/library/cache</code> directory (you may need to use sudo
+or be the root user on a Linux system to do so).</p>
+<p>You should then be able to log on to the 1.8 web interface using an administrative user account.
+The passwords will be the same as your old 1.7 installation used.</p>
+<h2 id="exporting_with_phpmyadmin">Exporting with PHPMyAdmin <a href="#exporting_with_phpmyadmin" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The example above uses <code>mysqldump</code>, however if your environment does not have
+<code>mysqldump</code> it is possible to use <code>phpmyadmin</code> to generate a backup. Care must
+be taken to ensure that a database is selected in the left hand pane <strong>before</strong>
+going to the export tab. Failure to do this will result in the export containing
+the existing database name, which may not match the new name in Docker.</p>
+<p>Step 1:</p>
+<p><img src="img/phpmyadmin_backup_1.png" alt="Truncate Logs" /></p>
+<p>Step 2:</p>
+<p><img src="img/phpmyadmin_backup_2.png" alt="Export Database" /></p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

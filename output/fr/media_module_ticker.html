@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="widgets">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="widgets">Library</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="media_modules.html">Modules</a></li>
+<li><a href="media_module_audio.html">Audio</a></li>
+<li><a href="media_module_clock.html">Clock</a></li>
+<li><a href="media_module_currencies.html">Currencies</a></li>
+<li><a href="media_module_dataset_view.html">DataSet View</a></li>
+<li><a href="media_module_embedded.html">Embedded</a></li>
+<li><a href="media_module_flash.html">Flash</a></li>
+<li><a href="media_module_font.html">Font</a></li>
+<li><a href="media_module_genericfile.html">Generic File</a></li>
+<li><a href="media_module_image.html">Image</a></li>
+<li><a href="media_module_localvideo.html">Local Video</a></li>
+<li><a href="media_module_pdf.html">PDF</a></li>
+<li><a href="media_module_powerpoint.html">PowerPoint</a></li>
+<li><a href="media_module_shellcommand.html">Shell Command</a></li>
+<li><a href="media_module_stocks.html">Stocks</a></li>
+<li><a href="media_module_text.html">Text</a></li>
+<li class="active"><a href="media_module_ticker.html">Ticker<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="media_module_googletraffic.html">Google Traffic</a></li>
+<li><a href="media_module_twitter.html">Twitter</a></li>
+<li><a href="media_module_twitter_metro.html">Twitter Metro</a></li>
+<li><a href="media_module_video.html">Video</a></li>
+<li><a href="media_module_weather.html">Weather</a></li>
+<li><a href="media_module_webpage.html">Web Page</a></li>
+</ul></body></html>
+<li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=widgets-->
+<h1 id="ticker">Ticker <a href="#ticker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The Ticker module allows dynamic Feed and DataSet content to be added to a Layout. The Ticker module primarily consists of a data source location and a template to apply to each data item retrieved from that data source.</p>
+<p>For example, if the data source is a RSS Feed, the feed will have multiple items and the template will be applied to each of these items.</p>
+<p>Tickers are specific to a layout rather than saved in the library - this means that text items are not reusable and will need to be copied / pasted between Layouts if the same text is required on more than one.</p>
+<h2 id="adding_a_ticker">Adding a Ticker <a href="#adding_a_ticker" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>When adding a new Ticker the CMS provides a simple form asking for the Data Source and duration of the Ticker. These items cannot be changed without re-creating the Ticker.</p>
+<p><img src="../en/img/media_ticker_form_add.png" alt="Add Ticker Form" /></p>
+<ul>
+<li>
+<p><strong>Source Type</strong></p>
+<p>Whether the Ticker uses a Feed (RSS / Atom / XML) or a CMS DataSet as its Data Source.</p>
+</li>
+<li>
+<p><strong>Feed URL</strong></p>
+<p>If using a Feed, the URL of the Feed.</p>
+</li>
+<li>
+<p><strong>DataSet</strong></p>
+<p>If using a DataSet, the DataSet to use.</p>
+</li>
+<li>
+<p><strong>Duration</strong></p>
+<p>The Duration this media item should be shown in the Timeline. In seconds.</p>
+</li>
+</ul>
+<p>After choosing the Source of the Ticker the Edit form will automatically open, providing access to the other options.</p>
+<h2 id="editing">Editing <a href="#editing" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>All Tickers have some common settings in the CMS, regardless of the Data Source.</p>
+<ul>
+<li>
+<p><strong>Direction</strong></p>
+<p>Tickers can be scrolling left / right / top and bottom. Tickers can also be static using the &quot;None&quot; direction and can be split into pages that are automatically cycled using the &quot;Single&quot; mode.</p>
+</li>
+<li>
+<p><strong>Duration</strong></p>
+<p>The duration in seconds that this text item should remain in the Region.</p>
+</li>
+<li>
+<p><strong>Duration is per Item</strong></p>
+<p>If the Duration is per Item the configured Duration will be extended by the Number of Items that is returned by the Data Source. This should be used carefully as it can create long running media items. Typically it is preferable to use this setting in conjunction with a setting to limit the number of items shown.</p>
+</li>
+<li>
+<p><strong>Scroll Speed</strong></p>
+<p>Speed up or slow down the scroll rate - assuming you have a Direction selected.</p>
+</li>
+<li>
+<p><strong>Fix text to region?</strong></p>
+<p>Should the text resize to fill the entire available space in the Region? This option should only be used for a single line text item. The default behaviour is to scale the text to fill the Display Client resolution.</p>
+</li>
+<li>
+<p><strong>Update Interval</strong></p>
+<p>Xibo Display Clients can cache the content of this media type to prevent repeated download of identical resources. They are also cached for off-line playback.</p>
+</li>
+<li>
+<p><strong>Items per Page</strong></p>
+<p>When using &quot;Single&quot; mode, how many items should appear on each page.</p>
+</li>
+<li>
+<p><strong>Show side by Side</strong></p>
+<p>When there is more than 1 item per page, should the items be shown side-by-side.</p>
+</li>
+<li>
+<p><strong>Style Sheet</strong></p>
+<p>An optional style sheet to apply to the entire Ticker.</p>
+</li>
+</ul>
+<p>The Ticker Edit form has minor differences depending on the Data Source of the Ticker that is being edited.</p>
+<h3>Feed</h3>
+<p><img src="../en/img/media_ticker_form_edit_general.png" alt="General Tab" />
+<img src="../en/img/media_ticker_form_edit_template.png" alt="Template Tab" />
+<img src="../en/img/media_ticker_form_edit_format.png" alt="Format Tab" />
+<img src="../en/img/media_ticker_form_edit_advanced.png" alt="Advanced Tab" /></p>
+<ul>
+<li>
+<p><strong>from the</strong></p>
+<p>Where should items be taken from? Used in conjunction with the &quot;Number of Items&quot; setting.</p>
+</li>
+<li>
+<p><strong>Copyright</strong></p>
+<p>Should the Display Client insert a Copyright notice at the end of the feed.</p>
+</li>
+<li>
+<p><strong>Randomise</strong></p>
+<p>Should the feed items be shown in a random order? Random feeds work offline; the entire feed is parsed, rendered
+and downloaded to the Player and then sorted in a random fashion for display. We use a Durstenfeld shuffle to
+randomise the order of items. Randomise works on the full feed, &quot;number of items&quot; and &quot;take items from&quot;.</p>
+</li>
+<li>
+<p><strong>Substitutions</strong></p>
+<p>The available keywords to use in the template that will be substituted with content from the feed. The CMS supports
+a set of default keywords that will be present of the majority of feeds. A special notation is also available where
+the user can specify the Tag|Namespace within the feed for Xibo to extract content.</p>
+</li>
+</ul>
+<p>The Available Substitutions can be double clicked to automatically insert them into the Template editing area.</p>
+<h3>Data Set</h3>
+<ul>
+<li>
+<p><strong>Order</strong></p>
+<p>An Order by clause using SQL syntax that should be applied to the Data Source. e.g. Name DESC</p>
+</li>
+<li>
+<p><strong>Filter</strong></p>
+<p>A filtering clause using SQL syntax that should be applied to the Data Source. e.g. Region = 'Europe'</p>
+</li>
+<li>
+<p><strong>Upper Row Limit</strong></p>
+<p>The upper row count (0 = unlimited)</p>
+</li>
+<li>
+<p><strong>Lower Row Limit</strong></p>
+<p>The lower row count (0 = unlimited)</p>
+</li>
+<li>
+<p><strong>Substitutions</strong></p>
+<p>The available columns to use in the template that will be substituted with content from the DataSet Columns. The CMS will look up the columns for the DataSet and present a set to substitutions. These should be double clicked to add into the template.</p>
+</li>
+</ul>
+<h2 id="optional_style_sheet">Optional Style sheet <a href="#optional_style_sheet" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The Optional Style sheet is applied to the entire Ticker media item when shown on the Display Clients. This is intended for advanced use to &quot;tweak&quot; the CMS generated output.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

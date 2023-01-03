@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="scheduling">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                    </li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling.html">Introduction</a>
+                          <!-- <li><a href="scheduling_calendar.html">Calendar</a></li> -->
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_schedule.html">Schedule</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0 active" href="scheduling_events.html">Events</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_geoscheduling.html">Geo
+                            Scheduling</a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_dayparting.html">Dayparting</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_now.html">Schedule Now</a>
+                        </ul>
+                      </body>
+
+                    </html>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=scheduling-->
+                <h1 id="events">
+                    Events
+                    <a href="#events" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    Events are administered from the Schedule section of the main menu.
+                </p>
+                <p>
+                    Layouts, Campaigns, Overlay Layouts, Interrupt Layouts, Command and Action <strong>Event Types</strong> can be assigned to
+                    Displays/Display Groups to be shown at specific dates and times.
+                </p>
+                
+                <h2 id="add_event">
+                    Add Event
+                    <a href="#add_event" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>Click on the <strong>Add Event</strong> button on the calendar to schedule an Event.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/schedule_event_add.png" data-processed="1">
+                    </figure>
+                </div>
+
+                <h2 id="event_type">
+                    Event Type
+                    <a href="#event_type" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>Use the drop-down to select an Event Type:</p>
+                <ul>
+                    <li>
+                        <p><strong>Layout</strong> - select Published Layouts.</p>
+                    </li>
+                    <li>
+                        <p><strong>Campaign</strong> - select designed Campaigns.</p>
+                    </li>
+                    <li>
+                        <p><strong>Overlay Layout</strong> - select a specifically designed Layout to schedule as an <a>Overlay Layout</a>.</p>
+                    </li>
+                    <li>
+                        <p><strong>Interrupt Layout</strong> (available from v2.2.0) - select an <a>Interrupt Layout</a> to play for a specified <strong>Share of
+                                Voice</strong> to interrupt your usual schedule.</p>
+                    </li>
+                    <li>
+                        <p><strong>Command</strong> - select from a predefined command.</p>
+                    </li>
+                    <li>
+                        <p><strong>Actions</strong> (available from v3.1.0) - this Event makes the Player listen for a <strong>Trigger
+                                Code</strong> coming in on a webhook to trigger one of the following <strong>Action Types</strong>:</p>
+                        <p><strong>Navigate to Layout</strong> - enter the code identifier for the Layout that the Player should
+                            navigate to when triggered.</p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                This code can be entered on adding a new Layout or by editing a Layout from the Layouts Grid row menu.
+                
+                            </div>
+                        </div>
+                        <p></p>
+                        <p><strong>Command</strong> - select from the drop down menu.</p>
+                    </li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Events, with the exception of Interrupt/Command and Action Events, can also be added using the <a>Schedule Now</a> function.
+                
+                    </div>
+                </div>
+
+                <h2 id="display">
+                    Display
+                    <a href="#display" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>Click in the Display field to select one or more Displays/Display Groups to show the event content on.</p>
+
+                <h2 id="dayparting">
+                    Dayparting
+                    <a href="#dayparting" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p><strong>Custom</strong>/<strong>Always</strong> or <strong>User</strong> created Dayparts can be selected using the drop-down menu.</p>
+                <p>With Custom selected, use the date picker to select Start/End dates and times.</p>
+
+                <h2 id="layout_campaign">
+                    Layout/Campaign
+                    <a href="#layout_campaign" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>Use the drop-down menu to select the Layout or Campaign to schedule.</p>
+
+                <h2 id="preview">
+                    Preview
+                    <a href="#preview" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>Click on the Preview button to view the Layout or Campaign in another tab.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        This is useful to use to ensure that the correct Layout or Campaign has been selected and to make checks, such
+                        as the total duration, without having to leave the schedule.
+                
+                    </div>
+                </div>
+
+                <h2 id="display_order">
+                    Display Order
+                    <a href="#display_order" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Determine the order in which the Layout/Campaign will play in rotation when scheduled at the same time as other
+                    Layouts/Campaigns. Ordering is by a simple numerical sort, lowest to highest numbers, therefore <strong>Layouts/Campaigns marked
+                    1</strong> will be played before <strong>Layouts/Campaigns marked 2</strong>.
+                </p>
+                <p>
+                    The Display Order on Overlay Layouts determines the order in which the Layout Regions are applied to the overlay and
+                    compliments the Regions own layer settings.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        To ensure ordering of Layouts we would recommend that these are ordered within a Campaign. The Display Order
+                        could then be used to determine the order in which entire Campaigns should playout. If no Display Order is
+                        specified for Campaigns or they have the same Display order the Campaigns will play according to the Play List
+                        order chosen for the <a>Campaign</a>, Interleaved or Block.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Campaigns with the same display order will play interleaved.
+                
+                    </div>
+                </div>
+
+                <h2 id="priority">
+                    Priority
+                    <a href="#priority" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Set the Priority of the Event with the <strong>highest</strong> number stated playing in preference to lower numbers. This can be used to
+                    override all other non-priority Events on the schedule.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        This functionality is useful for displaying temporary/important notices for overriding a schedule for a specific
+                        Event without having to make any changes to your existing schedule or cancelling Layouts/Campaigns that would be
+                        running at that time.
+                
+                    </div>
+                </div>
+
+                <h2 id="run_at_cms_time">
+                    Run at CMS Time
+                    <a href="#run_at_cms_time" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    When selected, the Event will play at the time determined by the <strong>CMS</strong> rather than using the local display time.
+                </p> 
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Scenario</strong>
+                        CMS Time = GMT
+                        Display 1 = GMT
+                        Display 2 = GMT -4
+                        <p>An event scheduled for 11:00 with <strong>Run at CMS time</strong> deselected will run on display 1 at 11:00
+                            and display 2 at 11:00. These two displays will not show the same content at the same time, because display
+                            2 is 4 hours behind.</p>
+                        <p>With <strong>Run at CMS time</strong> selected, display 1 will run at 11:00 as before but display 2 will run
+                            at 07:00.
+                
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    Please note <strong>The Schedule Now</strong> functionality will always create events with this option selected.
+                </p>
+
+                <h2 id="repeats">
+                    Repeats
+                    <a href="#repeats" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    An Event can be repeated at defined intervals (hourly, daily, weekly, monthly or yearly) until a specified time. Use the
+                    <strong>Repeats</strong> tab to create recurring events. Select the type of repeat from the drop-down and complete the form fields as
+                    required. Use <strong>Repeat every</strong> to further specify the frequency of the repeat.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <p>E.g. With a <strong>Weekly</strong> Repeat you could specify to repeat each Wednesday and Friday every other
+                            week by including a 2 in the ‘Repeat every’ form field.
+                
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Monthly</strong> Repeats can be determined by the Event date or by
+                        the day in the month the event falls on.
+                        <p>For example: an event which is scheduled on 06/03/2019 can be set to repeat on the 6th day of every month or
+                            the 1st Wednesday of each month (as 06/03/2019 falls on a Wednesday).
+                
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <li>To completely remove all instances of a Recurring Event, click on the <strong>Delete</strong> button at the
+                        bottom of the form.</li>
+                </ul>
+                <p>
+                    An individual recurrence can be deleted from the Schedule.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2.3_scheduling_deleting_repeats.png"
+                            data-processed="1"></figure>
+                </div>
+                <ul>
+                    <li>Click on the Recurring event you wish to remove from the Schedule, to open the <strong>Edit Event</strong> form.
+                    </li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2.3_scheduling_delete_from_schedule.png"
+                            data-processed="1" naptha_cursor="text"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click on the <strong>Delete from Schedule</strong> button to remove this singular event from the schedule and
+                        remove it from all Displays.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Care should be taken if amendments are made to the Schedule after deleting individual instances of a recurring
+                        schedule. Previously deleted instances could be recreated with any edits made to the existing Schedule.
+                
+                    </div>
+                </div>
+ 
+                <h2 id="reminders">
+                    Reminders
+                    <a href="#reminders" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Create a set of reminders to be sent to the <a>Notification Drawer</a> as well as notified by email for selected scheduled Events.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Please ensure that your Administrator has entered a <strong>Sending Email</strong> address on the CMS
+                        <strong>Settings</strong> page, <strong>Network</strong> tab prior to set up of Reminders.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_scheduling_event_reminders.png"
+                            data-processed="1"></figure>
+                </div>
+                <p>
+                    Use the form fields to define a reminder, use the + icon to add additional fields. Tick the box if you wish to be
+                    notified email, this will be sent to the email address as set for your <a>User Profile</a>.
+                </p>
+
+                <h2 id="geolocation">
+                    Geo Location
+                    <a href="#geolocation" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Tick the checkbox to make this Event location aware. Further details can be found on the <a>Geo Scheduling</a> page.
+                </p>
+
+                <h2 id="edit_delete">
+                    Edit / Delete
+                    <a href="#edit_delete" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Click on any <strong>Event/Icon</strong> in the calendar to edit form fields or to remove completely from the schedule by clicking delete
+                    and confirming.
+                </p>
+
+                <h2 id="duplicate">
+                    Duplicate
+                    <a href="#duplicate" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Located at the bottom of the Edit form, the <strong>Duplicate</strong> button allows for event details to be duplicated and configured
+                    for a new event. Once clicked a pop up will appear to confirm that a new form has been loaded so that amendments can be
+                    made.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        The new loaded form will not have a <strong>Duplicate</strong> button!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p><strong>It is important to note that if at any time there are no Layouts/Campaigns Scheduled to run, the Default Layout assigned for the display will run automatically.</strong></p>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

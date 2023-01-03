@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+</head>
+
+<body data-toc="widgets">
+    
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li>
+                        <a href="index.html" data-toc-name="getting_started">
+                            Getting Started
+                        </a>
+                    </li> -->
+                    <li class="active"><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+                    
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="index.html">
+                                Overview
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="tour_login.html">Log In</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_user_profile.html">User Profile</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_two_fa.html">Two Factor
+                                Authentication</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_dashboards.html">CMS
+                                Dashboards</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_navigation.html">CMS
+                                Navigation</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_settings.html">CMS Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_grids.html">Grids</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_forms.html">Forms</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_tags.html">Tags</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_folders.html">Folders</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_transitions.html">Transitions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_date_format.html">Date Format</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">
+                            Scheduling
+                        </a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li>
+                        <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=tour-->
+                <h1 id="logging_in">
+                    Logging In
+                    <a href="#logging_in" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    The CMS is protected by an authentication system that requires a
+                    <strong>Username</strong> and <strong>Password</strong>.
+                </p>
+                <p>
+                    During the installation process, a Username and Password is provided which grants
+                    <strong>unrestricted</strong> access to all areas of
+                    the CMS, as a top level <strong>Super Admin</strong> User.
+                </p>
+                <p>
+                    After installation the Username and Password provided must be used to access the CMS for the first
+                    time as a <a class="sub-heading">Super Administrator User</a>.
+                </p>
+
+                <h2 id="password_policy">
+                    Password Policy
+                    <a href="#password_policy" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    Once logged in, Administrators can set a <strong>Password Policy Regular Expression</strong> to test
+                    password complexity from the
+                    <strong>Settings</strong> page under the <strong>Administration</strong> section of the main CMS
+                    menu.
+                </p>
+                <ul>
+                    <li>
+                        Click on the <strong>Users</strong> tab:
+                    </li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56">
+                        <img src="./img/v3_tour_login_password_settings.png" data-processed="1"
+                            alt="Tour Login Password Settings" class="img-thumbnail">
+                    </figure>
+                </div>
+                <p>
+                    Complete any valid regular expression in this field, which will cause all password change requests
+                    and newly created
+                    passwords to be tested against this expression.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        A text description prompt will be shown to Users when their passwords do not meet the required
+                        policy!
+                    </div>
+                </div>
+
+                <h3>Users</h3>
+                <p>
+                    <a class="sub-heading">Users</a class="sub-heading"> can be created by Administrators and given
+                    access to the system. The Username and Password for any new User should
+                    be shared in a private and secure manner. We highly recommend that the User changes their password
+                    after first time log
+                    in.
+                </p>
+                <p>
+                    <strong>All pages</strong> in the CMS are authenticated and if the User is not logged in a login
+                    form will appear.
+                </p>
+
+                <h3>Password Reminder</h3>
+                <p>
+                    Provide a <strong>Forgotten your Password</strong> reset link for <strong>Users</strong> at login.
+                    Users can then click the link which will send a
+                    <strong>Password Reset Notification</strong> to their stored email address as recorded on their <a
+                        class="sub-heading">User Profile</a>.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <strong>Users</strong> can change their own passwords, once logged into the CMS, by clicking on
+                        the Profile Icon
+                        located in the top right-hand corner of the CMS.
+
+                    </div>
+                </div>
+
+                <h3>Force Password Change at next login</h3>
+                <p>
+                    Ensure that new Users change the password first given to them to access the system or use if a User
+                    account password has been reset.
+                </p>
+                <p>
+                    Edit the <a class="sub-heading">User Profile</a> and select the <strong>Options</strong> tab.
+                </p>
+
+                <h3>Two Factor Authentication</h3>
+                <p>
+                    <a class="sub-heading">Two Factor Authentication</a> can be set by Users for added security. Once
+                    configured a User would need to enter a code sent
+                    via email or displayed in the Google Authenticator app to complete login and gain access to the CMS.
+                </p>
+                <p>
+                    Complete the name you wish to appear as the <strong>Two Factor Issuer</strong> for Users who enable
+                    Two Factor Authentication. This will
+                    appear on the Google Authenticator app and email when authenticated codes are generated.
+                </p>
+
+                <h3>Cookies</h3>
+                <p>
+                    The CMS uses cookies to track whether Users are logged in or not. If you are experiencing trouble
+                    logging in you may
+                    need to adjust your browser settings for cookies.
+                </p>
+
+                <h3>Successful login</h3>
+                <p>
+                    Each User is assigned a <a class="sub-heading">Dashboard</a> which they will be taken to after
+                    login.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="manual_install">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="manual_install">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="install_environment.html">Environment</a></li>
+<li><a href="install_xtr.html">XTR - Routine Tasks</a></li>
+<li class="active"><a href="install_xmr.html">XMR - Push Messaging<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=manual_install-->
+<h1 id="xibo_message_relay">Xibo Message Relay <a href="#xibo_message_relay" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>XMR for short, the message relay is responsible for <strong>pushing</strong> messages from the CMS to the Players. XMR is used
+for any Player Actions that need to be taken immediately.</p>
+<h2 id="mile-high_overview">Mile-high Overview <a href="#mile-high_overview" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>XMR is a message queuing application and comes in two parts, one handles the CMS -&gt; XMR communication and the other the
+XMR -&gt; Player communication. Therefore it must listen on two ports.</p>
+<p>The CMS -&gt; XMR section is a request/response queue and the XMR -&gt; Player section is a publisher/subscriber queue.</p>
+<p>The communication protocol doesn't matter and you may choose - we recommend TCP.</p>
+<h2 id="installation">Installation <a href="#installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p><a href="install_docker.html">Docker installations</a> have XMR pre-installed and configured.</p>
+<p>Please make sure <a href="install_environment.html#zeroMQ">ZeroMQ</a> is installed and enabled.</p>
+<p>XMR is included in the <code>vendor/bin</code> folder of your CMS installation and requires a <code>config.json</code> file to be written
+to that folder before use.</p>
+<p>The <code>config.json</code> is very simple:</p>
+<pre><code class="language-json">{
+  "listenOn": "tcp://localhost:50001",
+  "pubOn": ["tcp://your_ip:9505"],
+  "debug": false
+}</code></pre>
+<ul>
+<li><code>listenOn</code> is the XMR Private Address for CMS -&gt; XMR communication</li>
+<li><code>pubOn</code> is the XMR Public Address for XMR -&gt; Player communication</li>
+<li><code>debug</code> determines the level of debug messaging output and whether the output goes to the console (false = no)</li>
+</ul>
+<p>XMR is a PHAR (PHP archive) and can be run from any terminal by issuing <code>php xmr.phar</code>. It is a long running application
+and will not terminate once started. It is recommended to run this as a service,
+you can find an example upstart conf file in <code>vendor/xibosignage/xibo-xmr/bin/upstart</code>.</p>
+<h3>CMS Configuration</h3>
+<p>The CMS must be configured to talk to an XMR instance if player actions are required. The CMS has settings for this in
+the &quot;Displays&quot; section of the Settings Page.</p>
+<p>There are two settings:</p>
+<ul>
+<li>XMR Private Address - this is the <code>listenOn</code> address for CMS -&gt; XMR communication</li>
+<li>XMR Public Address - this is the <code>pubOn</code> address for XMR -&gt; Player communication</li>
+</ul>
+<p>The XMR Public Address can be adjusted for Displays using the Display Settings Profile functionality.</p>
+<h2 id="security">Security <a href="#security" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>XMR only handles encrypted messages.</p>
+<p>When Players register with the CMS they generate a public / private key and send the public key to the CMS. All messages
+running through XMR are encrypted using the public key of the display the are intended to reach. This happens in the CMS
+and therefore XMR only receives encrypted messages.</p>
+<p>The CMS -&gt; XMR <code>listenOn</code> address should be private to your internal network.</p>
+<p>It is common to run the CMS and XMR on the same machine.</p>
+<h2 id="multiple_cms_installations">Multiple CMS installations <a href="#multiple_cms_installations" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>XMR can service multiple CMS installations - it is CMS agnostic as the message encryption ensures that only the intended
+recipient of a message can read it.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

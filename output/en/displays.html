@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="displays">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                        
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="displays.html">
+                                Introduction
+                                <!-- <span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span> -->
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="displays_settings.html">Display Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="displays_groups.html">Display Groups</a>
+                        
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="displays_filelayoutassignments.html">
+                                File/Layout Assignments
+                            </a>
+                        
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="displays_reporting.html">Reporting</a>
+                        
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="displays_commands.html">Command
+                                Functionality</a>
+                        
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">
+                            Scheduling
+                        </a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=displays-->
+                <h1 id="displays">
+                    Displays
+                    <a href="#displays" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    The primary purpose of Xibo is to show content on screens with the entire application suite existing
+                    for that one
+                    purpose. Xibo provides a concept called <strong>Displays</strong> to manage when and how content is
+                    shown on a screen.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        When no other content is Scheduled, or if there is an issue that prevents the scheduled Event
+                        from showing, we
+                        highly recommend that a <strong>Default Layout</strong> is set so that something is
+                        <strong>always</strong>
+                        shown on Displays! You can create your own Default Layout to replace the existing one, but keep
+                        in mind that
+                        designs should be kept simple with no complex media or web content. Edit a Display to select or
+                        use the Row Menu
+                        and click on Default Layout to select your designed Layout from the dropdown menu.
+                        <p>
+                            <strong>Please note</strong>: If no Default Layout is set or there is an issue with the
+                            Default Layout that
+                            has been set, the splash screen will be shown on Displays!
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
+                <p></p>
+
+                <p>Displays are uniquely identified by a <strong>hardware key</strong> which is generated when the Signage Player software is installed.
+                    This hardware key is used to create a Display record in the CMS and is unique to that one Display record.</p>
+                    
+                <p></p>
+
+                <h2 id="connecting_a_display">
+                    Connecting a Display
+                    <a href="#connecting_a_display" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+                <p>
+                    Displays connect to the CMS over an API called “XMDS” with most Players only requiring
+                    the URL and CMS Key.
+                </p>
+                <p></p>
+                <p>Alternatively, Displays can be added by providing a 6 character ‘Activation Code’ in the <strong>Displays</strong> page of the CMS.</p>
+            
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        New Displays will need to be marked as <strong>Authorised</strong> before they can be sent any content. This can
+                        be done by using the Row Menu for the Display and clicking the <strong>Authorise</strong> action.
+                
+                    </div>
+                </div> 
+                <p></p>
+                
+                <h2 id="display_administration">
+                    Display Administration
+                    <a href="#display_administration" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                
+                <p>Displays are administered in the CMS from clicking on <strong>Displays</strong> under the <strong>Administration</strong> section of the main menu. The
+                    Displays <a>Grid</a> will open for you to add new and manage exiting Displays.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_administration_grid.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <p>Click the Folders icon to toggle on/off from view.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When Folders are hidden from view, the file path for the selected folder will be shown!
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+                    
+                </ul>
+                <p>or</p>
+                <ul>
+                    <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters applied to the grid.</li>
+                </ul>
+
+                <p></p>
+
+                <p>Check out the <a>Folders</a> page for further information.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Logged in Users will only view the status of Displays that they have been given access to!
+                
+                    </div>
+                </div>
+
+                <p></p>
+
+                <p><strong>ID</strong> - Used for internal identification of the Display only.</p>
+                <p><strong>Display </strong> - Name given to the Display for easy identification purposes within the CMS (this is not shown on the Display itself).</p>
+                <p><strong>Status </strong> - Tick = Player is up to date (this may also show as green in colour). Cloud Icon = Player has not logged in with content waiting to be downloaded (this may also show as amber in colour, as above) Cross = Player is currently downloading new content and has yet to complete the download (this may also show as red in colour)</p>
+                <p><strong>Authorised </strong> - Tick or cross to indicate whether the Display has been granted a licence with the CMS. This prevents unauthorised Displays being added to the CMS.</p>
+                <p><strong>Logged In </strong> - Tick or cross to show if the Display has logged in recently.</p>
+                <p><strong>Last Accessed </strong> - Date and time stamp of when the Display was last accessed.</p>
+                <p><strong>MAC Address </strong> - Media Access Control Address of the Display (if the Player software is capable of sending it).</p>
+                
+                <p></p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use the <strong>Column visibility</strong> button to select from the available options to show the information
+                        you would like to display for your administration purposes. Deselect to remove a column from the Displays grid!
+                
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="row_menu">
+                    Row Menu
+                    <a href="#row_menu" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+                <p>Each Display has a Row Menu containing a number of actions that can be performed:</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_row_menu.png" data-processed="1">
+                    </figure>
+                </div>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Selected actions allow for <a href="tour_forms.html">Forms</a> to be automatically submitted by clicking on the
+                        action from the Row Menu, such as <strong>Authorise</strong> and <strong>Check Licence</strong>. Actions that
+                        have an auto submit capability will display an option to enable. Take a look at <a
+                            href="tour_grids.html">Grids</a> for further information!
+                
+                    </div>
+                </div>
+
+                <p></p>
+
+                <h2 id="displays_manage">
+                    Manage
+                    <a href="#displays_manage" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+
+                <p>Each Display has its own <strong>Dashboard</strong> which shows the Displays current status, bandwidth usage, file status and errors.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_manage_dashboard.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        This Dashboard is useful as a first step to look at when troubleshooting issues with a Display!
+                
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="displays_edit">
+                    Edit
+                    <a href="#displays_edit" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+
+                <p>Clicking on <strong>Edit</strong> opens the Edit Display form which contains tabs with configuration options</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_edit_form.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        The unique hardware key that is generated during installation is shown on the General tab for the selected
+                        Display!
+                
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="displays_folders">
+                    Folders
+                    <a href="#displays_folders" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+
+                <p>Displays can be optionally saved to <a>Folders</a> using the <strong>Edit form</strong> or from the <strong>Select Folder</strong> option on the Row Menu.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Displays that are saved in Folders will inherit the View, Edit, Delete Share options that been applied to the
+                        destination Folder for the User/User Group!
+                        <p>Assign multiple Displays to a Folder using the <strong>With Selected</strong> option at the bottom of the
+                            grid!
+                
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="tags_displays">
+                    Tags
+                    <a href="#tags_displays" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+
+                <p>Displays can be tagged for organisation and to make it easier to find a large number of Displays all grouped by <a>Tags</a>.
+                    When entering text into the Tag field on the form, an auto complete helper will show possible matches to make it
+                    easier for Users to select from.</p>
+                <p></p>
+                <h4>Override Display Profile Settings for individual Displays</h4>
+                <p></p>
+                <p>Use the <strong>Profile Settings</strong> tab to see the settings applied from the selected <a>Display Settings Profile</a>.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_edit_profilesettings.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <p></p>
+
+                <p>Click the edit icon to change selected settings to override the Profile.</p>
+
+                <h4>Set Bandwidth Limits per Display</h4>
+                <p>Use the <strong>Advanced</strong> tab to apply a limit to determine the amount of bandwidth that a <strong>Display</strong> can consume.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_edit_advanced_bandwidth.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Set bandwidth limits for multiple Displays using the With Selected option at the bottom of the grid!
+                
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="delete_displays">
+                    Delete
+                    <a href="#delete_displays" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>Deleting a <strong>Display</strong> will remove it from the <strong>CMS</strong> entirely - this operation cannot be reversed. A deleted Display can be
+                    reconnected to the CMS by repeating the “Register” procedure which will create a new unique Display record.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Deauthorise</strong> a Display instead of deleting so that it can be re-authorised at a later date if
+                        needed. Use the row menu for the Display and click on <strong>Authorise</strong> to toggle to
+                        <strong>Deauthorise</strong>. This can also be actioned from the <strong>Edit Display</strong> form by selecting
+                        <strong>No</strong> for Authorise display.
+                
+                    </div>
+                </div>
+                <p></p>
+
+                <h2 id="send_command_displays">
+                    Send Command
+                    <a href="#send_command_displays" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>The <strong>Send Command</strong> functionality is executed via XMR to Players by selecting a predefined command. This is useful for
+                    sending Players ‘Reboot’ commands for example.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_send_command.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        This type of <a>Command</a> can also be executed by scheduling a <a>Command Event</a>
+
+                    </div>
+                </div>
+                <p></p>
+                
+                <h2 id="transfer_display_to_another_cms">
+                    Transfer Display to Another CMS
+                    <a href="#transfer_display_to_another_cms" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>To use this functionality you will first need to activate Google Authenticator using <a>Two factor Authentication</a>, if
+                    you have not already set this up.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/displays_transfer_cms_google_authenticator.png" data-processed="1"></figure>
+                </div>
+
+                <p>Once activated, click on <strong>Displays</strong> from the CMS main menu and use the Row Menu to click on <strong>Transfer to another CMS</strong> for
+                    the selected Display you want to transfer.</p>
+
+                <p>Ensure all the form fields are completed by:</p>
+
+                <ul>
+                    <li>Entering the full <strong>CMS URL</strong> you wish to transfer this Display to.</li>
+                    <li>Providing the <strong>CMS Secret Key</strong> for the CMS Address you wish to transfer to.</li>
+                    <li>Complete the <strong>Two Factor authentication code</strong>, as displayed on the app.</li>
+                </ul>
+                
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_move_cms.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+
+                <p>Once the details provided have been authenticated, the Display will attempt registration with the ‘new’ CMS. Once the
+                    Display has been successfully transferred the Display will stop communicating with the ‘old’ CMS and will change
+                    from a ‘tick’ to a <code>X</code> in the <strong>Authorised</strong> column.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Select multiple Displays to transfer using the <strong>With Selected</strong> option at the bottom of the grid!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Certain Actions from the Row Menu have the option to be ‘automatically submitted’, see <a>Grids</a> for further information!
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a>
+                for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+                .
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">
+                    GNU Affero General Public License v3 or later
+                </a>
+                , documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">
+                    Creative Commons Licence
+                </a>
+                .
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a>
+                |
+                <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

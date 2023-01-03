@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="layouts">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="layouts.html">
+                    Introduction
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_designer.html">Layout Designer</a><a
+                    class="list-group-item list-group-item-action px-3 border-0" href="layouts_regions.html">Regions</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_widgets.html">Widgets</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_librarysearch.html">Library Search</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_layouttimeline.html">Layout
+                    Timeline</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interactiveactions.html">
+                    Interactive Actions
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_templates.html">Templates</a><a
+                    class="list-group-item list-group-item-action px-3 border-0" href="layouts_campaigns.html">Campaigns</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_overlaylayout.html">Overlay
+                    Layouts</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interruptlayouts.html">
+                    Interrupt Layouts
+                  </a>
+                </ul>
+              </body>
+            </html>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li>
+              <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=layouts-->
+          <h1 id="layouts">
+            Layouts
+            <a href="#layouts" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            A Layout is a complete screen design made up of content, which is then scheduled to a Display/multiple Displays /
+            Display Groups. A <strong>Layout</strong> is made up of 1 or more <strong>Regions</strong> which act as placeholders for content which each contain a
+            <strong>Timeline</strong> of <strong>Media</strong> to show. Media is assigned to a Timeline using a wide range of Widgets.
+          </p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Take a look at the <a>Modules</a> page to see the variety of Widgets availalable!
+          
+            </div>
+          </div>
+          <p></p>
+
+          <p>
+            Captivad has no limit to the number of Layouts you can have in the system or the number a User/User Group can have.
+          </p>
+          
+          <p>
+            Layouts are administered by clicking on Layouts under the Design section of the main menu:
+          </p>
+          
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_grid.png" data-processed="1">
+            </figure>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Thumbnails will show for Published Layouts. If you have upgraded from an earlier version, you will need to checkout
+              and Publish existing Layouts to update the Thumbnail!
+          
+            </div>
+          </div>
+          <p></p>
+          <p>Click the Folders icon to toggle on/off from view.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              When Folders are hidden from view, the file path for the selected folder will be shown!
+          
+            </div>
+          </div>
+          <ul>
+            <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+            
+          </ul>
+          <p>or</p>
+          <ul>
+            <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters applied to the grid.</li>
+          </ul>
+          <p></p>
+          <p>Check out the <a>Folders</a> page for further information!</p>
+          <p>The Layout <a>Grid</a> allows users to create new and edit existing.</p>
+
+          <h2 id="add_layout">
+            Add Layout
+            <a href="#add_layout" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              <p><strong>When should a User create a new Layout? When should a User add to an existing Layout?</strong>
+                Layouts provide vast flexibility in the system, but can also cause confusion. The recommended usage for a Layout
+                is to only contain the design and media required for a set of related content that should be scheduled at the same
+                time.</p>
+              <p><strong>Scenario</strong>:
+                You have a video showing a fire safety demonstration and a video showing an advert for an upcoming production - it
+                would be natural to have separate Layouts for these.</p>
+              <p>
+              </p>
+            </div>
+          </div>
+          <p>Click on the Add Layout button at the top of the grid:</p>
+          
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_add_layout.png"
+                data-processed="1"></figure>
+          </div>
+
+          <p>Select a Template to use from the available options:</p>
+          <ul>
+            <li>Default pre-defined templates</li>
+            <li>Blank to add your own Regions</li>
+            <li>Choose from your own published <a>Templates</a></li>
+            <li>On making a selection click the <strong>Next</strong> button at the very bottom of the form:</li>
+          </ul>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_add_layout_form.png" data-processed="1">
+            </figure>
+          </div>
+          <p></p>
+          <ul>
+            <li>Provide a <strong>Name</strong> for easy identification purposes within the CMS.</li>
+            <li>Layouts can be optionally saved to <a>Folders</a> for easier searches, organisation and to easily set <a>Share</a> options for Users/User Groups.</li>
+          </ul>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Layouts that are saved in Folders will inherit the View, Edit, Delete <strong>Share</strong> options that have been
+              applied to the destination Folder for User/User Group access.
+              <p>If users should also have access to the content of the Layout, ensure that this is also saved to the same Folder!
+          
+              </p>
+            </div>
+          </div>
+
+          <h2 id="resolutions">
+            Resolutions
+            <a href="#resolutions?" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Layouts are designed for an intended display Resolution and will function best when shown on a <strong>Player</strong> with a matching
+            resolution. If they are shown on a display that has a different resolution it will dynamically resize which may result
+            in unused screen space.
+          </p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Sending a Player a Layout that has been designed with a 4:3 resolution which is connected to a 16:9 TV screen would
+              result in two empty bars either side of your content.
+          
+            </div>
+          </div>
+          <p></p> 
+          <p>Captivad comes with a selection of default resolutions that cater for most digital signage applications. Add/edit and
+            enable from the <strong>Resolutions</strong> page under the <strong>Design</strong> section of the main CMS menu.</p>
+
+          <ul>
+            <li>Include an optional Description to give more detail/instructions to other potential users of the Layout.</li>
+            <li>Include optional <a>Tags</a> to organise and make it easier to search for.</li>
+          </ul>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Use the <strong>With Selected</strong> option at the bottom of the Layout <a>grid</a> to edit Tag assignments in bulk!
+          
+            </div>
+          </div>
+          <p></p>
+          <p>Click on the <strong>Settings</strong> tab for further options:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_settings_tab.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Enter a string to be used as the <strong>Code Identifier</strong> to identify this Layout when used with <a>Interactive Actions</a></li>
+            <li>Tick/untick the box to enable/disable the collection of statistics for <a>Proof of Play Reports</a> for the newly added <strong>Layout</strong>.</li>
+          </ul>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Ensure that the <strong>Enable Stats Collection</strong> check box has been enabled for the <strong>Display</strong>
+              this Layout will be scheduled to, in the <a>Display Profile Settings</a>.
+          
+            </div>
+          </div>
+          <ul>
+            <li>Default <a>Transition</a> settings can be applied to all Widgets on the Layout by ticking the box.</li>
+            <li><strpmg>Save</strpmg> the Add Layout form to automatically open the <a>Layout Designer</a>.</li>
+          </ul>
+
+          <h2 id="row_menu">
+            Row menu
+            <a href="#row_menu?" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Each Layout has additional actions/shortcuts that can be accessed using the <strong>Row Menu</strong> in the grid:
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_layouts_row_menu.png" data-processed="1">
+            </figure>
+          </div>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              The following options are available from the row menu of a <strong>Published</strong> Layout!
+          
+            </div>
+          </div>
+          <p></p>
+
+          <h2 id="design">
+            Design
+            <a href="#design" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Select <strong>Design</strong> to open the <a>Layout Designer</a> to make edits to the content/design of the Layout.
+          </p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              To prevent two Users editing the same Layout concurrently, the Layout will lock for a User whilst editing.
+          
+            </div>
+          </div>
+          <p></p>
+          <p>If your Layout has a Published status, the Layout Designer will open in a <strong>Read Only Mode</strong>. You will need to ‘Checkout’ the Layout to enable editing.</p>
+          
+          <h2 id="checkout">
+            Checkout
+            <a href="#schedule_now" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Checkout from the Row Menu to put the Layout into a <strong>draft</strong> mode so that changes can be made later. Once edited, the
+            Layout can be <strong>Published</strong> to make changes permanent and to overwrite the existing Layout. <strong>Discard</strong> will revert the Layout
+            back to the original published state.
+          </p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Users can select the ‘auto submit’ check box so that this form is automatically sent each time that
+              <strong>Checkout</strong> is selected. Further information can be found on the <a>Grids</a>
+              page.
+          
+            </div>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Take your time with any edits you need to make as using <strong>Checkout</strong> ensures that no changes are made
+              to your published version or shown on scheduled <strong>Displays</strong> until you choose to do so.
+              <strong>Publish</strong> confirms changes have been made and will overwrite your published version.
+              <strong>Discard</strong> will delete the draft with the published version remaining untouched.
+          
+            </div>
+          </div>
+
+          <h2 id="preview_layout">
+            Preview Layout
+            <a href="#preview_layout" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>The Published <strong>Layout</strong> will play from start to finish to allow you to see how it will play. Make important adjustments
+            to ensure that layout designs play as intended before scheduling to Displays.</p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Before the Layout can start all <strong>Media</strong> must be downloaded to your browser and verified so you may
+              experience a slight delay whilst this is in process.
+          
+            </div>
+          </div>
+          <p></p>
+
+          <h2 id="schedule_now">
+            Schedule Now
+            <a href="#schedule_now" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>To save time, <strong>Layouts</strong> can be scheduled for a specified amount of time, which can be very useful for important notices / promotions.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Layouts must have a <strong>Published</strong> status before being scheduled.
+          
+            </div>
+          </div>
+
+          <h2 id="assign_to_campaign">
+            Assign to Campaign
+            <a href="#assign_to_campaign" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Click to add the selected Layout to an existing <a>Campaign</a>.</p>
+
+          <h2 id="jump_lists">
+            Jump Lists
+            <a href="#jump_lists" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Select to ‘jump’ to Playlists, Campaigns and Media associated for the selected Layout.</p>
+
+          <h2 id="edit">
+            Edit
+            <a href="#edit" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Make changes to the Layout record such as, Folder location, Name and Tags etc.</p>
+
+          <h2 id="select_folder">
+            Select Folder
+            <a href="#select_folder" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Move the Layout to a selected Folder.</p>
+
+          <h2 id="copy">
+            Copy
+            <a href="#copy" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Create copies of designed Layouts to easily make modifications. Choose to include all contained <strong>Media</strong> items, to use
+            as a base for creating new layouts to save time.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Copying a Layout will create an exact copy of the last time the Layout was Published. Make sure that you Publish a
+              Layout before making a copy to preserve any changes!
+          
+            </div>
+          </div>
+
+          <h2 id="retire">
+            Retire
+            <a href="#retire" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Retire a Layout so it does not affect existing <strong>Schedules</strong>. A retired Layout will be hidden from new Scheduling options
+            but will remain unaffected in existing Schedules and continue to show on Displays.</p>
+
+          <h2 id="delete">
+            Delete
+            <a href="#delete" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Remove a Layout and all its associated media completely from all existing Schedules. <strong>Please note:</strong> This action is irreversible!</p>
+
+          <h2 id="enable_stats_collection">
+            Enable Stats Collection
+            <a href="#enable_stats_collection" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Enable the collection of Proof of Play statistics.</p>
+
+          <h2 id="export">
+            Export
+            <a href="#export" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Export the Layout including all associated Widgets/Media/DataSet structures to a ZIP file, so it can be easily shared.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              When exporting a Layout, all assigned <strong>Layout</strong>, <strong>Playlist</strong> and <strong>Media Tags</strong> will be exported. Select the <strong>Import Tags</strong> option to
+              add these Tags on Layout Import.
+          
+            </div>
+          </div> 
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Add the ‘Export’ <a>Feature</a> to allow a User/User Group to export regardless of the Share options that have been set for the Layout and its contents!
+          
+            </div>
+          </div> 
+
+          <h2 id="share">
+            Share
+            <a href="#share" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Enable <a>Share</a> options for selected Users/User Groups.</p>
+
+          <h2 id="draft_status">
+            Draft Status
+            <a href="#draft_status" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Selecting a Layout that is in a <strong>Draft</strong> status will present the following additional Row Menu options:</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Administrators can use the default setting on the CMS <strong>Settings</strong> page to automatically <strong>Publish</strong> draft Layouts 30 minutes after the last edit!
+          
+            </div>
+          </div> 
+
+          <h2 id="publish">
+            Publish
+            <a href="#publish" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Select to <strong>Publish Now</strong> or select a date and time to set the Layout to Publish in the future.</p>
+
+          <h2 id="discard">
+            Discard
+            <a href="#discard" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Click to ignore any changes that have been made and revert to the previous Published version of the Layout.</p>
+
+          <h2 id="preview_draft_layout">
+            Preview Draft Layout
+            <a href="#preview_draft_layout" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2> 
+          <p>Play a Preview of your Layout in its current <strong>Draft</strong> status. Make any necessary adjustments before commiting any changes by Publishing.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Did you know….<strong>Layouts</strong> and <strong>Library files</strong> can be <a>Assigned</a> directly to a <strong>Display</strong> or <strong>Display Group</strong> so that they are always
+              available in the local library of the Player. Useful for pre-loading a Layout ahead of time ready to be scheduled.
+          
+            </div> 
+          </div> 
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>

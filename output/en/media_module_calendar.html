@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Calendar<a id="content-calendar" href="#content-calendar" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display a Schedule, Daily, Weekly or Monthly calendar views pulled from an iCal feed.</p>
+                
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Calendar</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and click
+                    to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p>On adding, configuration options are shown in the right hand properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Provide the iCal <strong>URL</strong> to link.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Ensure that the ICS feed URL is available to the CMS. If the feed loads in a browser without
+                        authentication then the feed should display in the CMS without issue.
+                        <p>For further information on how to view your Google Calendar in applications, use the
+                            following link selecting the <strong>Get your calendar (view only)</strong> option: <a
+                                href="https://support.google.com/calendar/answer/37648?hl=en">https://support.google.com/calendar/answer/37648?hl=en</a>
+                        </p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Use the drop down to select the <strong>type of calendar</strong> to use to display events:</li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_calendar_configuration.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h4>Schedule<a id="content-schedule" href="#content-schedule" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h4>
+                <ul>
+                    <li>
+                        <p>Include a <strong>Message</strong> to be shown when no events are returned.</p>
+                    </li>
+                    <li>
+                        <p>Use the <strong>Interval</strong> field to filter events for a certain period. Use natural
+                            language such as ‘1 day’ or ‘2 weeks’ to return the events within your chosen time frame.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Tick the checkbox to enter a <strong>Date range</strong> instead with defined start and end
+                            dates.</p>
+                    </li>
+                </ul>
+                <h4>Daily/Weekly<a id="content-dailyweekly" href="#content-dailyweekly" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h4>
+                <ul>
+                    <li>Set <strong>Start and End times</strong> to define a window to show events.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        An additional option to remove Weekends is available for both Weekly and
+                        Monthy Calendar Types!
+
+                    </div>
+                    <figure><img data-processed="true" src="/dist/img/documents/manual-card-2.svg" alt=""></figure>
+                </div>
+                <h4>All Calender Types have the following options:<a
+                        id="content-all-calender-types-have-the-following-options"
+                        href="#content-all-calender-types-have-the-following-options" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h4>
+                <ul>
+                    <li>
+                        <strong>Exclude all day events</strong> to remove from the feed so they won’t be shown.
+                    </li>
+                    <li>
+                        <strong>Exclude current events</strong> to remove from the feed so they won’t be shown.
+                    </li>
+                    <li>
+                        <strong>Use event timezone</strong> or deselect to use the CMS timezone instead.
+                    </li>
+                    <li>
+                        <strong>Use calendar timezone</strong> if the feed specifies that it’s own timezone should be
+                        used. Deselect to use the CMS timezone.
+                    </li>
+                    <li>If your feed comes from <strong>Windows</strong> use this check box.</li>
+                </ul>
+                <h3>Appearance<a id="content-appearance" href="#content-appearance" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Depending on the Calendar Type selected, configure the Appearance using the available options:</p>
+                <h4>Schedule<a id="content-schedule-1" href="#content-schedule-1" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h4>
+                <ul>
+                    <li>Choose to provide a <strong>Time Format</strong> to replace the default HH:mm.</li>
+                    <li>Use the checkbox to show a <strong>now marker</strong> on the calendar for the current time.
+                    </li>
+                    <li>Use the checkbox to <strong>show event descriptions</strong> for events that have them in the
+                        iCal feed.</li>
+                    <li>Set a <strong>Text Scale</strong>, 1 being the lowest.</li>
+                    <li>Select from a <strong>Light</strong> or <strong>Dark</strong> colour scheme to apply to the
+                        template.</li>
+                </ul>
+                <h4>Daily<a id="content-daily" href="#content-daily" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <ul>
+                    <li>Choose to provide a <strong>Time Format</strong> to replace the default HH:mm.</li>
+                    <li>Use the checkbox to show a <strong>now marker</strong> on the calendar for the current time.
+                    </li>
+                    <li>Set a <strong>Text Scale</strong>, 1 being the lowest.</li>
+                    <li>Enter a <strong>Grid step</strong> duration in minutes to apply to rows of events.</li>
+                    <li>Select from a <strong>Light</strong> or <strong>Dark</strong> colour scheme to apply to the
+                        template.</li>
+                </ul>
+                <h4>Weekly<a id="content-weekly" href="#content-weekly" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <ul>
+                    <li>
+                        <p>Choose to provide a <strong>Time Format</strong> to replace the default HH:mm.</p>
+                        <p>Use the checkbox to show a <strong>now marker</strong> on the calendar for the current time.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Set a <strong>Text Scale</strong>, 1 being the lowest.</p>
+                    </li>
+                    <li>
+                        <p>Select from a Long, Medium, Short <strong>Week name length</strong> to apply.</p>
+                    </li>
+                    <li>
+                        <p>Enter a <strong>Grid step</strong> duration in minutes to apply to rows of events.</p>
+                    </li>
+                    <li>
+                        <p>Select from a <strong>Light</strong> or <strong>Dark</strong> colour scheme to apply to the
+                            template.</p>
+                    </li>
+                </ul>
+                <h4>Monthly<a id="content-monthly" href="#content-monthly" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h4>
+                <ul>
+                    <li>Choose to provide a <strong>Time Format</strong> to replace the default HH:mm.</li>
+                    <li>Use the checkbox to show a <strong>now marker</strong> on the calendar for the current time.
+                    </li>
+                    <li>Tick to enable <strong>showing a header</strong>.</li>
+                    <li>Set a <strong>Text Scale</strong>, 1 being the lowest.</li>
+                    <li>Select from a Long, Medium, Short <strong>Week name length</strong> to apply.</li>
+                    <li>Select from a <strong>Light</strong> or <strong>Dark</strong> colour scheme to apply to the
+                        template.</li>
+                </ul>
+                <p>All calendar types have the option to provide alternative colours by using the checkbox to
+                    <strong>Override the colour template</strong> to change all elements of the selected calendar:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_calendar_override.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h3>Caching<a id="content-caching" href="#content-caching" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Include a suitable time for the <strong>Update Interval</strong> in minutes, keeping it as high as
+                    possible. This determines how often data will be requested from the iCal feed. If the calendar is
+                    only ever modified with events scheduled days in advance, you can set this for a long period.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        It is best practice to contact a remote feed as little as possible.
+
+                    </div>
+                </div>
+                <h2>Trigger<a id="content-trigger" href="#content-trigger" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Use this tab to trigger a Web Hook <strong>Action</strong> when there is a <strong>Current
+                        Event</strong> or <strong>No Event</strong>!</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <p><strong>Example Scenario</strong>:</p>
+                        <p>A user has a meeting room calendar configured using the Calendar Widget on a Layout which
+                            shows the current occupancy for a room and would like to change LED lights to show when
+                            vacant or in use.</p>
+                        <ul>
+                            <li>The user would first need to create <strong>Shell Commands</strong> which issued
+                                commands to an LED IoT device or the inbuilt LEDS’s on some of the Philips Commercial
+                                Displays.</li>
+                            <li>Next an <a href="layouts_interactive_actions.html">Interactive Action</a> would need to
+                                be defined on the <strong>Layout</strong>, which would <strong>Navigate to
+                                    Widget</strong> and <strong>Target the Screen</strong>, with the <strong>Shell
+                                    Command Widgets</strong> configured in the <strong>Interactive Drawer</strong>.</li>
+                            <li>Using the <strong>Trigger</strong> tab on the Calendar Widget, assign the code’s to
+                                trigger the <strong>Web Hooks</strong> for <strong>Current Event</strong> and <strong>No
+                                    Event</strong>.</li>
+                        </ul>
+                        <p>See the <a href="displays_command_functionality">Command Functionality</a> page for more
+                            information.</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Calendar Widget from the <strong>Actions</strong> tab in
+                    the properties panel. Please see the <a href="layouts_interactive_actions.html">Interactive
+                        Actions</a> page for more information.</p>
+                <h2>Time Format - PHP<a id="content-time-format---php" href="#content-time-format---php"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Xibo should accept any time format that is in a correct PHP time format, the following characters are
+                    recognised and can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td align="left">Lowercase Ante meridiem and Post meridiem</td>
+                            <td>am or pm</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td align="left">Uppercase Ante meridiem and Post meridiem</td>
+                            <td>AM or PM</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td align="left">Swatch Internet time</td>
+                            <td>000 through 999</td>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td align="left">12-hour format of an hour without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td align="left">24-hour format of an hour without leading zeros</td>
+                            <td>0 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td align="left">12-hour format of an hour with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td align="left">24-hour format of an hour with leading zeros</td>
+                            <td>00 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td align="left">Minutes with leading zeros</td>
+                            <td>00 to 59</td>
+                        </tr>
+                        <tr>
+                            <td>s</td>
+                            <td align="left">Seconds, with leading zeros</td>
+                            <td>00 through 59</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td align="left">Microseconds (added in PHP 5.2.2). Note that date() will always generate
+                                000000 since it takes an integer parameter, whereas DateTime::format() does support
+                                microseconds if DateTime was created with microseconds.</td>
+                            <td>654321</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Timezone</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td align="left">Timezone identifier (added in PHP 5.1.0)</td>
+                            <td>UTC, GMT, Atlantic/Azoresr</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td align="left">(capital i) Whether or not the date is in daylight saving time</td>
+                            <td>1 if Daylight Saving Time, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td align="left">Difference to Greenwich time (GMT) in hours</td>
+                            <td>+0200</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td align="left">Difference to Greenwich time (GMT) with colon between hours and minutes
+                                (added in PHP 5.1.3)</td>
+                            <td>+02:00</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td align="left">Timezone abbreviation</td>
+                            <td>EST, MDT …</td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td align="left">Timezone offset in seconds. The offset for timezones west of UTC is always
+                                negative, and for those east of UTC is always positive.</td>
+                            <td>-43200 through 50400</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+
+  <body data-toc="scheduling">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling"
+                >Scheduling</a
+              >
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling.html">Introduction</a>
+                  <!-- <li><a href="scheduling_calendar.html">Calendar</a></li> -->
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="scheduling_schedule.html">Schedule</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_events.html">Events</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_geoscheduling.html">Geo
+                    Scheduling</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_dayparting.html">Dayparting</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_now.html">Schedule Now</a>
+                </ul>
+              </body>
+            </html>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=scheduling-->
+            <h1 id="scheduling_schedule">
+                Schedule
+                <a href="#scheduling_schedule" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h1>
+            <p>
+                Schedule content using the simple calendar interface by clicking on the <strong>Schedule</strong> section of the Menu.
+            </p>
+            <h2 id="controls">
+                Controls
+                <a href="#controls" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Use the control bar at the top of the calendar to select <strong>Displays</strong>, <strong>Add Events</strong>, <strong>view date periods</strong> and <strong>alternate Views</strong>.</p>
+            
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_controls.png" data-processed="1">
+                </figure>
+            </div>
+
+            <h2 id="displays">
+                Displays
+                <a href="#displays" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Click in this field to select Displays/Display Groups to view the associated schedules.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Multiple Displays/Display Groups can be added here.
+                    <p>Use the <strong>Show All</strong> option to see schedules for <strong>all</strong> Displays.</p>
+
+                </div>
+            </div>
+
+            <h2 id="layout/campaign">
+                Layout / Campaign
+                <a href="#layout/campaign" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Use the field to search for Layouts/Campaigns that already exist in the Schedule for filtered Display/Display Groups.</p>
+
+            <h2 id="add_event">
+                Add Event
+                <a href="#add_event" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Use the Add Event button to add a new Scheduled Event.</p>
+
+            <h2 id="prev/today/next">
+                Prev/Today/Next
+                <a href="#prev/today/next" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Use the buttons to navigate through the calendar.</p>
+
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Use the calendar icon, next to these buttons, to go directly to a selected date.
+                    
+                </div>
+            </div>
+
+            <h2 id="calendar_views">
+                Prev/Today/Next
+                <a href="#calendar_views" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>
+                Each Calendar View will show the associated schedule for the selected Display/Display Group. Views show <strong>Events</strong>
+                represented by Icons, with a key to explain each one, located below the calendar.
+            </p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Click on an Event Icon to view/edit the schedule!
+            
+                </div>
+            </div>
+
+            <h2 id="year">
+                Year
+                <a href="#year" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>
+                The Year view is intended as an overview of the Events scheduled throughout the year and provides a total number of
+                Events scheduled per month. Click in a month to view the Event details.
+            </p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_year_view.png"
+                        data-processed="1"></figure>
+            </div>
+            <p></p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Double-click to open the Month View for that particular month!
+            
+                </div>
+            </div>
+            <p></p>
+
+            <h2 id="month">
+                Month
+                <a href="#month" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>
+                This View includes Icons to represent the Events that have been scheduled for that Month. Click on a particular day
+                square to see an expanded view for that day. Double click on a day square to open the Day View for that date.
+            </p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_month_view.png"
+                        data-processed="1"></figure>
+            </div> 
+            <p></p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Hover over each Icon to view the Event information!
+            
+                </div>
+            </div>
+            <p></p>
+
+
+            <h2 id="week">
+                Week
+                <a href="#week" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>This view gives a week overview of scheduled Events. Double click on a date to open the Day View.</p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_scheduled_week_view.png"
+                        data-processed="1"></figure>
+            </div>
+
+            <h2 id="day">
+                Day
+                <a href="#day" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>The Day View shows all Events occurring within a single day.</p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_day_view.png" data-processed="1">
+                </figure>
+            </div>
+
+            <h2 id="agenda">
+                Agenda
+                <a href="#agenda" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>
+                Events can span multiple days/weeks/months so it is highly useful to be able to see a precise representation of
+                Layouts/Campaigns that will be shown on a selected Display at a point in time.
+            </p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_calendar_agenda.png"
+                        data-processed="1"></figure>
+            </div>
+            <p></p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Select multiple Displays/Display Groups which will be presented in separate tabs!
+            
+                </div>
+            </div>
+            <p></p>
+
+            <p>Layouts/Campaigns will be shown in tabular format in the order they will cycle on the Display.</p>
+            
+            <p>
+                Use the slider, located above the tabs, to pinpoint the exact time of day to view. Change the date using the
+                <strong>Prev/Today/Next</strong> buttons or by selecting a date using the calendar icon.
+            </p>
+
+            <p>
+                Click on a Layout to highlight the associated information (associations will turn blue) and view the breadcrumb, to show
+                further Campaign and Display Group information. If nested Display Groups have been configured, these will show in the
+                breadcrumb.
+            </p>
+
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Use the Preview window to Play the highlighted Layout, use the buttons to minimise/maximise the
+                    viewing window or go to full screen to Play.
+                    Click on the breadcrumb to view the selected Layout in the Layout Designer and make necessary edits to the
+                    Schedule!
+            
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+          <div class="pull-right">
+              <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+
+          <p class="ss_back_to_top">Back to Top</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".ss_body img").addClass("img-thumbnail");
+        $(".ss_body table").addClass("table");
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $("#side-nav a").each(function () {
+          if ($(this).data().tocName == $("body").data().toc)
+            $(this).parent().addClass("active");
+        });
+
+        $(".ss_back_to_top").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+        });
+
+        if (inIframe()) {
+          console.log("In Frame");
+          $("#top-nav").css("display", "none");
+          $(".ss-sidebar").parent().css("display", "none");
+        }
+      });
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

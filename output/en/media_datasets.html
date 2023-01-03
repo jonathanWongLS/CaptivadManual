@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                            Overview
+                          </a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+                          </li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_datasets.html">DataSets</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+                          <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+                        </ul>
+                      </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=media-->
+                <h1 id="datasets">
+                    DataSets 
+                    <a href="#datasets" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    DataSets are a feature to design and store <strong>tabular</strong> data. Once designed data can be imported from a CSV file, entered
+                    manually, as JSON via the API or synced remotely on a Schedule. A DataSet provides a convenient way to import and
+                    display data from other systems in Captivad.
+                </p>
+                <p>Examples of where DataSets could be utilised:</p>
+                <ul>
+                    <li>A drinks menu at a bar</li>
+                    <li>Tee times at a golf club</li>
+                    <li>Meeting room bookings</li>
+                </ul>
+                <p>DataSets have been designed to be versatile and reusable and come in two parts:</p>
+                <ul>
+                    <li><strong>The DataSet</strong> (Data Structure and data)</li>
+                    <li><strong>The Display</strong> (<a>DataSet View</a>/<a>DataSet Ticker</a>/<a>Chart</a> or a source of data for a custom Module)</li>
+                </ul>
+                <p>
+                    DataSets are first defined, which can then be reused across multiple DataSet Views/Tickers/Chart Widgets added to
+                    Layouts. Access by navigating to DataSets under the Library section of the main menu:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_dataset_grid.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>The DataSets <a>Grid</a> allows you to edit existing and create new.</p>
+                <p>Click the Folders icon to toggle on/off from view.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When Folders are hidden from view, the file path for the selected folder will be shown!
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+                </ul>
+                <p>or</p>
+                <ul>
+                    <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any
+                        filters applied to the grid.</li>
+                </ul>
+                <p>Check out the <a>Folders</a> page for further information!</p>
+                
+                <h2 id="create_a_new_dataset">Create a new DataSet <a href="#create_a_new_dataset"
+                        class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>
+                    Creating a DataSet is a 2 step process:
+                </p>
+                <ol>
+                    <li>Add the DataSet record</li>
+                    <li>Create and configure Columns</li>
+                </ol>
+                <h2 id="add_the_dataset_record">Add the DataSet record<a href="#add_the_dataset_record"
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>Click on the Add DataSet button and complete the appropriate form fields:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_dataset_add.png" data-processed="1"
+                            naptha_cursor="text"></figure>
+                </div>
+                <p>DataSets can be optionally saved to <a>Folders</a> for easier searches, organisation and to easily set <a>Share</a> options for Users/User Groups.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Datasets that are saved in Folders will inherit the View, Edit, Delete Share options that been applied to the
+                        destination Folder for the User/User Group!
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <p>Give the DataSet a <strong>Name</strong> for easy identification purposes within the CMS.</p>
+                    </li>
+                    <li>
+                        <p>Provide an optional <strong>Description</strong> to give more detail/instructions to other potential users of
+                            the DataSet.</p>
+                    </li>
+                    <li>
+                        <p>Enter a Code to lookup this DataSet (usually used for referencing via the API)</p>
+                    </li>
+                    <li>
+                        <p>If this DataSet should sync itself with a remote data source enable the <strong>Remote</strong> checkbox to
+                            present further options for configuration.</p>
+                    </li>
+                </ul>
+                <p>If your DataSet is <strong>not Remote</strong>, click to <strong>Save</strong> the DataSet record and continue from the the <a>Create and Configure Columns</a> section of this page.</p>
+
+                <h2 id="remote_datasets">Remote DataSets <a href="#remote_datasets"
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>
+                    Remote DataSets are a special type of DataSet which will periodically sync from a 3rd party data source. Captivad will call
+                    the URL at a chosen time period and parse the data according to instructions set on the DataSet record and any <strong>Columns</strong>
+                    defined as <strong>Remote</strong>.
+                </p>
+                <p>On selecting Remote, additional tabbed fields are presented so that the Remote DataSet record can be completed:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_dataset_remote.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>
+                    Use each tab to enter the URL for the remote data source, request method, request parameters and authentication
+                    information.
+                </p>
+                <p><strong>Remote</strong> - Enter the URL for the remote data source and request method.</p>
+                <p><strong>Authentication</strong> - provide authentication information and optional string of custom HTTP headers.</p>
+                <p><strong>Data</strong> - The remote data source can be JSON formatted or selected as a CSV. </p>
+
+                <ul>
+                    <li><h4>JSON Source</h4></li> 
+                    
+                </ul>
+                <p>
+                    JSON data is populated according to Columns defined as Remote types. When specifying a ‘Remote Column’ a ‘data path’
+                    needs to be entered which is the JSON syntax path to the data for that column, in respect to the <strong>Data
+                        Root</strong> specified.
+                </p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Consider an example JSON data source:
+<pre class="language-json" tabindex="0"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"base"</span><span class="token operator">:</span> <span class="token string">"EUR"</span><span class="token punctuation">,</span>
+    <span class="token property">"date"</span><span class="token operator">:</span> <span class="token string">"2017-12-22"</span><span class="token punctuation">,</span>
+    <span class="token property">"rates"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"GBP"</span><span class="token operator">:</span> <span class="token number">0.88568</span><span class="token punctuation">,</span>
+        <span class="token property">"THB"</span><span class="token operator">:</span> <span class="token number">38.83</span><span class="token punctuation">,</span>
+        <span class="token property">"USD"</span><span class="token operator">:</span> <span class="token number">1.1853</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+        </code></pre>
+                        <p>If we wanted to columns to capture the currency symbol and value, we would need to set the <strong>Data
+                                Root</strong> to <code>rates</code> and have Columns for:</p>
+                        <p>Symbol - data path = 0
+                            Value - data path = 1</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li><h4>CSV Source</h4></li> 
+                </ul>
+                <p>
+                    If the CSV source contains headers, tick to ignore the first row.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        In both cases, use the <strong>Test data URL</strong> to ensure that the desired structure is returned!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p><strong>Advanced</strong> - Set how often the remote data should be fetched and imported.</p>  
+                <ul>
+                    <li>Once completed, click to <strong>Save</strong> the DataSet record.</li>
+                </ul>
+
+                <h2 id="create_and_configure_columns">2. Create and Configure Columns<a href="#create_and_configure_columns" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <p>Columns are used to define the structure of the data.</p>
+                <ul>
+                    <li>Use the row menu for the selected DataSet record and select <strong>View Columns</strong>.</li> 
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_add_columns_grid.png"
+                            data-processed="1"></figure>
+                </div>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        All created Columns for the DataSet will be shown here. By default, all new DataSets will have a
+                        <strong>Col1</strong> added. This should be edited or removed using the row menu!
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click on the <strong>Add Column</strong> button to create a new column.</li>
+                    <li>Use the form fields to define settings:</li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_columns_form.png" data-processed="1">
+                    </figure>
+                </div>
+                <ul>
+                    <li>Include a <strong>Heading</strong> to identify the Column.</li>
+                    <li>Use the drop down to select the type of Column required.
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                Additional information will be required for the particular type selected, see the section below!
+                
+                            </div>
+                            </figure>
+                        </div>
+                    </li>
+                    <li>Select the format to use for the intended type of data.</li>
+                    <li>Set the position this Column should appear when viewing/editing Data.</li>
+                    <li>Use the additional check boxes if <strong>Filters</strong> or <strong>Sort</strong> is required for the selected
+                        Column.</li>
+                </ul>
+                <p></p>
+                <h4>Additional information required for Column Types</h4>
+                <p>Depending on the Column Type selected, additional information will be required:</p>
+                <ul>
+                    <li>
+                        <p><strong>Value</strong> - Provide a comma-separated list of values that can be selected for this field.</p>
+                    </li>
+                    <li>
+                        <p><strong>Formula</strong> - Enter a MySQL statement suitable to use in a ‘SELECT’ statement, or a string to
+                            format a date field <code>$dateFormat(&lt;col&gt;,&lt;format&gt;,&lt;language&gt;)</code></p>
+                        <p></p>
+                        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                            <div class="manual-notes-card-info">
+                
+                                Ensure that <code>&lt;col&gt;</code> has a date and time specified for the date format to work.
+                                If the Language has not been set, it will default to English.
+                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p><strong>Remote</strong> - Provide a JSON syntax string showing how to access the data from a 3rd party data
+                            source.</p>
+                    </li>
+                </ul>
+                <p>There is no theoretical limit to the number of Columns Captivad can support, although a smaller DataSet is often easier to manage and display.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        The ordering and list content of Columns can be changed after Data has been collected!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    Captivad should accept any date format that is in a correct PHP date format. Use the Date Format Table at the bottom of
+                    this page for further reference.
+                </p>
+
+                <h2 id="data_row">Data Row<a href="#data_row" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <ul>
+                    <li>
+                        <p>Once you have defined the Columns needed for the DataSet, you will need to add some data. This can be
+                            achieved a number of ways:</p>
+                        <ul>
+                            <li>Manually through the CMS User interface</li>
+                            <li>Imported via a CSV file</li>
+                            <li>Using the API</li>
+                            <li>Remotely Sync</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2 id="manually">Manually<a href="#manually" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <p>Data is added/edited using the <strong>View Data</strong> button on the Columns page or from the row menu for a DataSet.</p>
+                <p>The data table will show each of the Columns as they have been configured.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_dataset_row.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <p>Add a new row of data by clicking on the <strong>Add Row</strong> button and complete for each non-formula
+                            Column type.</p>
+                    </li>
+                    <li>
+                        <p>Click <strong>Next</strong> to continue adding data to add more rows.</p>
+                    </li>
+                    <li>
+                        <p>When all data has been completed, click <strong>Save</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>Edit</strong> by clicking on the row to edit and make the necessary changes and click to
+                            <strong>Save</strong>.</p>
+                    </li>
+                    <li>
+                        <p><strong>Delete</strong> a row by clicking on the cross at the end of the selected row, and confirm.</p>
+                    </li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Users can toggle to a <strong>Multi Select Mode</strong> using the button on the grid. In this mode,
+                        Users can select multiple rows and click on <strong>Delete Rows</strong> to remove in bulk.
+                        <p>Once complete click on the <strong>Edit Mode</strong> button to come out of multi-select mode.
+                
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="importing_csv">Importing CSV<a href="#importing_csv" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <p>
+                    The CMS has a DataSet CSV importer that can be used to extract data from a CSV file and put it into a DataSet. The
+                    Import CSV function can be accessed through the row menu of any DataSet (with the exception of DataSets configured for
+                    Remote data sources).
+                </p>
+                <p>
+                    When the importer opens, there are options to overwrite any existing data with the data held in the import file as well
+                    as ignoring the first row of the CSV to import if your file has headings.
+                </p>
+                <p>
+                    The Remote Columns in the DataSet will be listed with a field next to them to indicate the column number in the CSV file
+                    that corresponds with the listed Column Header.
+                </p>
+                <p>
+                    An example of this form is shown below:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/media_dataset_importcsv_form.png"
+                            data-processed="1"></figure>
+                </div>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        It is important to ensure that your CSV file has the correct file encoding if you are using non-ASCII
+                        characters. Non-ASCII characters are very common for languages outside of English. The file encoding most
+                        commonly used is UTF-8.
+                        <p>If you have edited your CSV file using Excel, you will need to make sure you select “Unicode (UTF-8)” from
+                            the Tools -&gt; Web Options -&gt; Encoding tab on the Save as dialogue.
+                
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="through_the_api">Through the API<a href="#through_the_api" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <p>You can write your own application which syncs data into a DataSet using the Captivad API. Data can be added row by
+                    row or by importing whole JSON structures.</p>
+                
+                <h2 id="remotely">Remotely<a href="#remotely" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <p>Remote DataSets are kept in sync with a Task called <strong>Fetch Remote DataSets</strong>. This task is configured by default and
+                    runs once per minute.</p>
+                <h4>Dependents</h4>
+                <p>
+                    A remote DataSet can depend on another DataSet to formulate its request. Each row in the dependent DataSet will be used
+                    to create a request using the parent DataSet’s request parameters.
+                </p>
+
+                <h2 id="row_menu">Row Menu<a href="#row_menu" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <ul>
+                    <li>
+                        <p>Use the row menu for a DataSet to access additional actions:</p>
+                    </li>
+                    <li>
+                        <p>View RSS allows for publishing content in a Layout as an RSS feed from data held in your own DataSet. Click
+                            <strong>View RSS</strong> to copy the URL which can then be included in the <a>Ticker</a> Widget configuration.</p>
+                    </li>
+                    <li>
+                        <p>Export the DataSet as a CSV</p>
+                    </li>
+                </ul>
+                <p>
+                    On selecting Delete, users will be given the option of also deleting any data contained within the DataSet.
+                </p> 
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        DataSets can only be deleted if they are not in use.
+                        <p>Multiple DataSets can be selected and deleted in bulk using the With Selected option at the bottom
+                            of the grid.
+                
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Assign <a>View</a>, <a>Edit</a>, <a>Delete access</a> for other Users/User Groups.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        DataSets are edited independently to Layouts, so there is no need to access or edit the Layout(s) the DataSet
+                        has been added to.
+                        Changes will be available in the system straight away ready to be picked up by Players on their next collection,
+                        with no need to make any edits to Layouts!
+                
+                    </div>
+                </div>
+                <h2 id="date_format_table">Date Format Table<a href="#date_format_table" 
+                    class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)</td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)</td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO week number (W)
+                                belongs to the previous or next year, that year is used instead. (added in PHP 5.1.0)</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

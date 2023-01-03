@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="scheduling">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li class="active"><a href="scheduling.html">Introduction<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="scheduling_calendar.html">Calendar</a></li>
+<li><a href="scheduling_events.html">Events</a></li>
+<li><a href="scheduling_dayparting.html">Dayparting</a></li>
+<li><a href="scheduling_now.html">Schedule Now</a></li>
+</ul></body></html>
+<li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=scheduling-->
+<h1 id="scheduling">Scheduling <a href="#scheduling" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Xibo has a sophisticated scheduling system allowing for scheduling
+Layouts and Campaigns across Displays and Display Groups. This is achieved
+through Schedule Events and visualised on the Calendar.</p>
+<h2 id="event_types">Event Types <a href="#event_types" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The CMS supports 3 types of event:</p>
+<ul>
+<li>Campaign / Layout</li>
+<li>Overlay Layout</li>
+<li>Command</li>
+</ul>
+<h3>Campaign / Layout</h3>
+<p>The most common event type is the scheduling of a Campaign or Layout to be shown
+within a specific time period. These events can be scheduled from the
+<a href="scheduling_calendar.html">Calendar</a> and the <a href="scheduling_now.html">Schedule Now</a>
+form.</p>
+<p>When a Display has more than one Layout scheduled to it at one time it will
+automatically alternate between the Layouts in the schedule. The display order
+is used to determine which order the Layouts will be rotated.</p>
+<p>If at any time there are no layouts scheduled to run, the default layout for the
+Display will be run automatically.</p>
+<h3>Overlay Layout</h3>
+<p>Layouts can be overlaid over the existing schedule so that they sit on top
+of the Campaign / Layout schedule playing. This is particularly useful for
+having a company logo or Ticker that exists across all Layouts being shown.</p>
+<p>These events can be scheduled from the <a href="scheduling_calendar.html">Calendar</a>.</p>
+<p>The Display Order on Overlay Layouts determines the order in which the Layouts
+regions are applied to the overlay and compliments the regions own Layer
+settings.</p>
+<h3>Command</h3>
+<p>A scheduled command is executed by the player at a specific point in time and
+therefore command events do not need a <code>toDt</code>.</p>
+<p>These events can be scheduled from the <a href="scheduling_calendar.html">Calendar</a>.</p>
+<p>The commands available to schedule are configured in the Commands section of
+the CMS. More information can be found <a href="displays_commands.html">here</a>.</p>
+<p>Display Order and Priority are also irrelevant when it comes to executing the
+command, but may be set in the CMS for organisational purposes.</p>
+<h2 id="schedule">Schedule <a href="#schedule" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Events are scheduled into &quot;dayparts&quot; which are blocks of time that split up the
+day. By default the CMS contains a daypart for adhoc scheduling (called the custom
+daypart) and for scheduling an event &quot;always.&quot; More information can be found in
+<a href="scheduling_dayparting.html">Dayparting</a>.</p>
+<p>To give your own From/To Dates then the &quot;Custom&quot; daypart should be selected.</p>
+<h2 id="priority">Priority <a href="#priority" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Event Priority determines whether the event is included in the schedule
+on the player or not. Priority is a number where 0 is considered the lowest
+priority.</p>
+<p>If a player has a schedule containing events which are all priority 0, then
+all of the events will be shown in rotation together. If one of the events
+has a priority of 1, then this will be the only event shown. Likewise if there
+are some events with priority 0, some with priority 1 and some with priority 2
+only the priority 2 events will be shown.</p>
+<p>Priority is a way to alter the schedule at specific times - for example
+a normal rotation during the day, with a priority event at lunch time which
+shows some lunch specific information (i.e. a menu).</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

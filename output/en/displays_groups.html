@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="displays">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays.html">
+                    Introduction
+                    <!-- <span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span> -->
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_settings.html">Display Settings</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="displays_groups.html">Display Groups</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_filelayoutassignments.html">
+                    File/Layout Assignments
+                  </a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_reporting.html">Reporting</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="displays_commands.html">Command
+                    Functionality</a>
+              
+                </ul>
+              </body>
+            </html>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <li>
+              <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=displays-->
+          <h1 id="display_groups">
+            Display Groups
+            <a href="#display_groups" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            For ease of <strong>Scheduling</strong> and <strong>Media Assignment</strong> create Display Groups and assign Displays to one or multiple Display Groups.
+          </p>
+          <p>
+            Display Groups are administered in the CMS by clicking on <strong>Display Settings</strong> under the <strong>Displays</strong> section from the main
+            menu. The Display Group grid will open to Add new and manage existing Display Groups.
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_groups_grid.png"
+                data-processed="1"></figure>
+          </div>
+          <p></p>
+
+          <p>
+            Click the Folders icon to toggle on/off from view.
+          </p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              When Folders are hidden from view, the file path for the selected folder will be shown!
+          
+            </div>
+          </div>
+          <p></p> 
+          <ul>
+            <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+          </ul>
+          <p>or</p>
+          <ul>
+            <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters applied to the grid.</li>
+          </ul>
+ 
+          <p>Check out the <a href="../en/tour_folders.html">Folders</a> page for further information!</p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Logged in Users will only view the status of Displays that they have been given access to!
+          
+            </div>
+          </div>
+          <p></p>
+           
+          <h2 id="add/edit">
+            Add/Edit
+            <a href="#add/edit" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Click on the <strong>Add Display Group</strong> button to create a new Display Group or use the Row Menu to
+            <strong>Edit</strong> an existing Display Group.
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_groups_add.png" data-processed="1">
+            </figure>
+          </div>
+
+          <h2 id="displays_folders">
+            Folders
+            <a href="#displays_folders" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Display Groups can be optionally saved to <a>Folders</a> using the <strong>Edit form</strong> or from the
+            <strong>Select Folder</strong> option on the Row Menu.</p>
+          
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Display Groups that are saved in Folders will inherit the View, Edit, Delete Share options that been applied to the
+              destination Folder for the User/User Group!
+              <p>Assign multiple Display Groups to a Folder using the <strong>With Selected</strong> option at the bottom of the
+                grid!
+          
+              </p>
+            </div>
+          </div>
+
+          <h2 id="display_tags">
+            Tags
+            <a href="#display_tags" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Display Groups can be optionally tagged. When entering text into the <a>Tag</a> field, an auto complete helper will show
+            possible matches to make it easier for Users to select Tags already added in the system.
+          </p>
+
+          <h2 id="members">
+            Members
+            <a href="#members" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            The membership of a Display Group is either a <strong>Manual Assignment</strong> or controlled by filter criteria using <strong>Dynamic Groups</strong>.
+          </p>
+
+          <h3>Manual Assignment</h3>
+          <p>
+            After completing and saving the <strong>Add Display Group</strong> form, assign Displays using the Row Menu and selecting <strong>Members</strong>.
+          </p>
+          <p>Control membership using the <strong>Member</strong> checkbox for selected Displays/Display Groups.</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/displays_groups_memberships.png"
+                data-processed="1"></figure>
+          </div>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Use the <strong>Relationship Tree</strong> tab to view the ancestors and descendants of the Display Group being
+              edited.
+          
+            </div>
+          </div>
+          <p></p>
+
+          <h3>Nested Groups</h3>
+          <p>
+            Display Groups can be nested to create complex structures and allow for targeted Scheduling.
+          </p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Example Group Structure
+              <ul>
+                <li>Site 1</li>
+                <li>Site 1 - Building A</li>
+                <li>Site 1 - Building A - Level 1</li>
+                <li>Site 1 - Building A - Level 2</li>
+                <li>Site 1 - Building B</li>
+              </ul>
+              <p>The Display membership is set on the lowest level groups and those groups then belong to the next level up, which
+                in turn belong to the highest level parent “Site 1”.
+                The CMS will not allow a circular reference to be created (an assignment that creates a loop i.e. Site 1 has Site
+                1 - Building A, and Site 1 - Building A has Site 1.)
+          
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <p>
+            Schedules, Media file and Layout Assignments set to the Display Group, will apply to all members within the group.
+          </p>
+
+          <h3>Dynamic Groups</h3>
+          <p>
+            When ticked an additional field will appear to allow for entry of one or more regular expressions to use to select which
+            Displays belong to that Display Group.
+          </p>
+          <p>
+            Filter criteria for Dynamic Groups is in the format of regular expressions, but can also be simple string comparisons.
+            The expressions should be separated by a comma and can be negated with a <code>-</code> prefix. 
+          </p>
+
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              For example, all Displays containing “a” but not “b” would be <code>a,-b</code>.
+          
+            </div>
+          </div>
+          <p></p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_displays_group_dynamic.png"
+                data-processed="1"></figure>
+          </div>
+          <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Criteria Tags can be filtered using additional OR/AND filters for Displays that have multiple Tags
+              assigned!
+          
+            </div>
+          </div>
+
+          <h2 id="reference_tab">
+            Reference Tab
+            <a href="#reference_tab" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>Optionally use this tab to provide reference information for the selected Display Group. Once added, this information
+            can be viewed in the Display Group grid and via the API.</p>
+          
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="layouts">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts.html">
+                                Introduction
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_designer.html">Layout
+                                Designer</a><a class="list-group-item list-group-item-action px-3 border-0"
+                                href="layouts_regions.html">Regions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_widgets.html">Widgets</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_librarysearch.html">Library
+                                Search</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_layouttimeline.html">Layout
+                                Timeline</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interactiveactions.html">
+                                Interactive Actions
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active"
+                                href="layouts_templates.html">Templates</a><a class="list-group-item list-group-item-action px-3 border-0"
+                                href="layouts_campaigns.html">Campaigns</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_overlaylayout.html">Overlay
+                                Layouts</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interruptlayouts.html">
+                                Interrupt Layouts
+                            </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=layouts-->
+                <h1 id="templates">Templates <a href="#templates" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h1>
+                <p>
+                    Templates are saved copies of designed <strong>Layouts</strong> which can then be used when creating new Layouts. Using a template can
+                    speed up the design process and is a good way to ensure that a corporate image/standard is maintained.
+                </p>
+                <h2 id="creating_a_template">Creating a Template <a href="#creating_a_template" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>Templates can be created two ways:</p>
+                <p>1 - Adding directly from the <strong>Templates</strong> page</p>
+                <p>2 - Saving an existing <strong>Layout</strong> as a Template</p>
+                
+                <h2 id="add_layout_from_template_page">1. Add Layout from Template Page <a href="#add_layout_from_template_page" class="header-link"><span
+                    class="glyphicon glyphicon-link"></span></a></h2>
+                
+                <ul>
+                    <li>Click on <strong>Templates</strong> under the <strong>Design</strong> section of the main menu</li>
+                    <li>Select the <strong>Add Template</strong> button and complete the appropriate form fields.</li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_layouts_add_template_form.png"
+                            data-processed="1"></figure>
+                </div>
+                <ul>
+                    <li>Templates an be optionally saved to <a>Folders</a> for easier searches, organisation and to easily set <a>Share</a> options for
+                        Users/User Groups.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Templates that are saved in Folders will inherit the View, Edit, Delete <strong>Share</strong> options that have
+                        been applied to the destination Folder for that User/User Group.
+                        <p>If users should also have access to the content of the Template, ensure that this is also saved to the same
+                            Folder!
+                
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for easy identification purposes within the CMS.</li>
+                    <li>Include optional <a>Tags</a> to organise and make it easier to search for.</li>
+                    <li>Select the <strong>Resolution</strong> to be used for this Template/Layout.</li>
+                </ul>
+                <p>Templates/Layouts are designed for an intended display Resolution and will function best when shown on a <strong>Player</strong> with
+                    a matching resolution. If they are shown on a display that has a different resolution it will dynamically resize
+                    which may result in unused screen space.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        
+                        Sending a Player a Layout that has been designed with a 4:3 resolution which is connected to a 16:9 TV screen would result in two empty bars either side of your content.
+                
+                    </div>
+                </div>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for easy identification purposes within the CMS.</li>
+                    <li>On saving the form, the <a>Layout Designer</a> will automatically open.</li>
+                </ul>
+                <h2 id="saving_a_layout_as_a_template">2. Saving a Layout as a Template <a href="#saving_a_layout_as_a_template" class="header-link"><span
+                    class="glyphicon glyphicon-link"></span></a></h2>
+                <p>A <strong>Published Layout</strong> can be saved as a Template from the <strong>Layout Designer</strong> by using the status menu and selecting <strong>Save Template</strong>:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_layouts_save_template.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Layouts can also be saved as Templates by using the <strong>Row Menu</strong> for a Layout in the Layouts Grid
+                        and selecting <strong>Save Template</strong>!
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_layouts_templates_save.png"
+                            data-processed="1"></figure>
+                </div>
+                <p>Complete all relevant form fields to save the selected Layout as a Template:</p>
+                <ul>
+                    <li>Use <strong>Select Folder</strong> to move from the shown Current Folder Location.</li>
+                    <li>Give the Template an identifiable <strong>Name</strong> so that Users can easily select from the Template drop down when adding Layouts.</li>
+                    <li>Assign <a>Tags</a> if required.</li>
+                    <li>Provide an optional description/explanation/instructions to other users of this Template.</li>
+                    <li>Use the tick box to include all <strong>Widgets</strong> that have been added to the Layout to be included in the Template.</li>
+                    <li><strong>Save</strong></li>
+                </ul>
+                <p>Once saved, Templates can be managed from the Templates grid.</p>
+                <p>Each Template has additional actions/shortcuts that can be accessed from the row menu.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_templates_row_menu.png"
+                            data-processed="1"></figure>
+                </div>
+                <p><strong>Alter Template</strong> - Use to open the Layout Designer to make design changes to the Template.</p>
+                <p><strong>Checkout</strong> - If the Template has been Published, Checkout to edit.</p>
+                <p><strong>Publish</strong> - Publishing a Template will add it to the list of selections when adding a new Layout.</p>
+                <p><strong>Discard</strong> - Revert back to the previous Published version and discard all changes made whilst in a draft status.</p>
+                <p><strong>Edit</strong> - Make changes to the Template record such as, Folder location, Name and Tags etc.</p>
+                <p><strong>Select Folder</strong> - add or make edits to a selected folder path.</p>
+                <p><strong>Copy</strong> - Create copies of Templates and choose to include all contained <strong>Media</strong> items, to use as a base for creating new Templates or to simply make modifications.</p>
+                <p><strong>Delete</strong> - Remove a Template and all its associated media. Layout specific media such as Text/RSS will be deleted. <strong>Please note: This action is irreversible!</strong></p>
+                <p><strong>Share</strong> - Enable <a>View, Edit and Delete</a> access for selected Users/User Groups.</p>
+                <p><strong>Export</strong> - Export the Template including all associated Widgets/Media/DataSet structures to a ZIP file, so it can be easily shared.</p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When exporting a Template, all assigned <strong>Layout</strong>, <strong>Playlist</strong> and <strong>Media
+                            Tags</strong> will be exported. Select the <strong>Import Tags</strong> option to add these Tags on Layout
+                        Import.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use the <strong>With Selected</strong> option at the bottom of the Templates <a href="tour_grids.html">Grid</a>
+                        to Edit Tags, move Folder, Delete and Share in bulk actions!
+                
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a
+                    href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+            <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or
+                    later</a>, documentation under <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons
+                    Licence</a>.</p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

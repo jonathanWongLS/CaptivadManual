@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Clock<a id="content-clock" href="#content-clock" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h1>
+                <p>Display an analogue, flip or digital clock in Layouts.</p>
+
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Clock</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and click to
+                    <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.
+                </p>
+                <p></p>
+
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h3>Appearance<a id="content-appearance" href="#content-appearance" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Use the drop-down menu to select the type of clock to display:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_clock_appearance.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <strong>Analogue</strong> is a traditional clock face available in a Light or Dark theme (black
+                        or white face).
+                    </li>
+                    <li>
+                        <strong>Digital</strong> has an additional <strong>Editor</strong> tab to enter formatting.
+                    </li>
+                </ul>
+                <p>Enter text or HTML in the box provided or toggle on the Visual editor and click on the edit icon to
+                    access the inline editor:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_clock_editor.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>Use the editor to select font, size, colour and use <strong>Snippets</strong> to include available
+                    merge fields.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        See the section at the bottom of the page for further information on date/time formats!
+
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <strong>Flip Clock</strong> is a pre-formatted clock that animates a “flip” for each hour,
+                        minute and seconds (optional) elapsed.
+                    </li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The <strong>Flip Clock</strong> has Hourly, Minute and Daily <strong>Counter</strong> options
+                        which can run from a specified date/time to give a countdown!
+
+                    </div>
+                </div>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Clock Widget from the <strong>Actions</strong> tab.
+                    Please see the <a href="layouts_interactive_actions.html">Interactive Actions</a> page for more
+                    information.</p>
+                <h2>Available Formatting<a id="content-available-formatting" href="#content-available-formatting"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Date / time can be formatted by providing “tokens” that sit between square brackets [] in the
+                    template area.</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Token</th>
+                            <th>Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Month</td>
+                            <td>M</td>
+                            <td>1 2 … 11 12</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Mo</td>
+                            <td>1st 2nd … 11th 12th</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>MM</td>
+                            <td>01 02 … 11 12</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>MMM</td>
+                            <td>Jan Feb … Nov Dec</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>MMMM</td>
+                            <td>January February … November December</td>
+                        </tr>
+                        <tr>
+                            <td>Quarter</td>
+                            <td>Q</td>
+                            <td>1 2 3 4</td>
+                        </tr>
+                        <tr>
+                            <td>Day of Month</td>
+                            <td>D</td>
+                            <td>1 2 … 30 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Do</td>
+                            <td>1st 2nd … 30th 31st</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>DD</td>
+                            <td>01 02 … 30 31</td>
+                        </tr>
+                        <tr>
+                            <td>Day of Year</td>
+                            <td>DDD</td>
+                            <td>1 2 … 364 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>DDDo</td>
+                            <td>1st 2nd … 364th 365th</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>DDDD</td>
+                            <td>001 002 … 364 365</td>
+                        </tr>
+                        <tr>
+                            <td>Day of Week</td>
+                            <td>d</td>
+                            <td>0 1 … 5 6</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>do</td>
+                            <td>0th 1st … 5th 6th</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>dd</td>
+                            <td>Su Mo … Fr Sa</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>ddd</td>
+                            <td>Sun Mon … Fri Sat</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>dddd</td>
+                            <td>Sunday Monday … Friday Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>Day of Week (Locale)</td>
+                            <td>e</td>
+                            <td>0 1 … 5 6</td>
+                        </tr>
+                        <tr>
+                            <td>Day of Week (ISO)</td>
+                            <td>E</td>
+                            <td>1 2 … 6 7</td>
+                        </tr>
+                        <tr>
+                            <td>Week of Year</td>
+                            <td>w</td>
+                            <td>1 2 … 52 53</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>wo</td>
+                            <td>1st 2nd … 52nd 53rd</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>ww</td>
+                            <td>01 02 … 52 53</td>
+                        </tr>
+                        <tr>
+                            <td>Week of Year (ISO)</td>
+                            <td>W</td>
+                            <td>1 2 … 52 53</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Wo</td>
+                            <td>1st 2nd … 52nd 53rd</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>WW</td>
+                            <td>01 02 … 52 53</td>
+                        </tr>
+                        <tr>
+                            <td>Year</td>
+                            <td>YY</td>
+                            <td>70 71 … 29 30</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>YYYY</td>
+                            <td>1970 1971 … 2029 2030</td>
+                        </tr>
+                        <tr>
+                            <td>Week Year</td>
+                            <td>gg</td>
+                            <td>70 71 … 29 30</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>gggg</td>
+                            <td>1970 1971 … 2029 2030</td>
+                        </tr>
+                        <tr>
+                            <td>Week Year (ISO)</td>
+                            <td>GG</td>
+                            <td>70 71 … 29 30</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>GGGG</td>
+                            <td>1970 1971 … 2029 2030</td>
+                        </tr>
+                        <tr>
+                            <td>AM/PM</td>
+                            <td>A</td>
+                            <td>AM PM</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>a</td>
+                            <td>am pm</td>
+                        </tr>
+                        <tr>
+                            <td>Hour</td>
+                            <td>H</td>
+                            <td>0 1 … 22 23</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>HH</td>
+                            <td>00 01 … 22 23</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>h</td>
+                            <td>1 2 … 11 12</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>hh</td>
+                            <td>01 02 … 11 12</td>
+                        </tr>
+                        <tr>
+                            <td>Minute</td>
+                            <td>m</td>
+                            <td>0 1 … 58 59</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>mm</td>
+                            <td>00 01 … 58 59</td>
+                        </tr>
+                        <tr>
+                            <td>Second</td>
+                            <td>s</td>
+                            <td>0 1 … 58 59</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>ss</td>
+                            <td>00 01 … 58 59</td>
+                        </tr>
+                        <tr>
+                            <td>Fractional Second</td>
+                            <td>S</td>
+                            <td>0 1 … 8 9</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>SS</td>
+                            <td>0 1 … 98 99</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>SSS</td>
+                            <td>0 1 … 998 999</td>
+                        </tr>
+                        <tr>
+                            <td>Timezone</td>
+                            <td>z or zz</td>
+                            <td>EST CST … MST PST</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Z</td>
+                            <td>-07:00 -06:00 … +06:00 +07:00</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>ZZ</td>
+                            <td>-0700 -0600 … +0600 +0700</td>
+                        </tr>
+                        <tr>
+                            <td>Unix Timestamp</td>
+                            <td>X</td>
+                            <td>1360013296</td>
+                        </tr>
+                        <tr>
+                            <td>Unix Millisecond Timestamp</td>
+                            <td>x</td>
+                            <td>1360013296123</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

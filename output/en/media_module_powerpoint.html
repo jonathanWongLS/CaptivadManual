@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Captivad Manual</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="ss-navbar">
+                <ul class="nav navbar-nav">
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul>
+                            <li><a href="media_modules.html">Modules</a></li>
+                            <li><a href="media_module_audio.html">Audio</a></li>
+                            <li><a href="media_module_clock.html">Clock</a></li>
+                            <li><a href="media_module_currencies.html">Currencies</a></li>
+                            <li><a href="media_module_dataset_view.html">DataSet View</a></li>
+                            <li><a href="media_module_embedded.html">Embedded</a></li>
+                            <li><a href="media_module_flash.html">Flash</a></li>
+                            <li><a href="media_module_font.html">Font</a></li>
+                            <li><a href="media_module_genericfile.html">Generic File</a></li>
+                            <li><a href="media_module_image.html">Image</a></li>
+                            <li><a href="media_module_localvideo.html">Local Video</a></li>
+                            <li><a href="media_module_pdf.html">PDF</a></li>
+                            <li class="active"><a href="media_module_powerpoint.html">PowerPoint<span
+                                        class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+                            <li><a href="media_module_shellcommand.html">Shell Command</a></li>
+                            <li><a href="media_module_stocks.html">Stocks</a></li>
+                            <li><a href="media_module_text.html">Text</a></li>
+                            <li><a href="media_module_ticker.html">Ticker</a></li>
+                            <li><a href="media_module_googletraffic.html">Google Traffic</a></li>
+                            <li><a href="media_module_twitter.html">Twitter</a></li>
+                            <li><a href="media_module_twitter_metro.html">Twitter Metro</a></li>
+                            <li><a href="media_module_video.html">Video</a></li>
+                            <li><a href="media_module_weather.html">Weather</a></li>
+                            <li><a href="media_module_webpage.html">Web Page</a></li>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>PowerPoint<a id="content-powerpoint" href="#content-powerpoint" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Use one of the available options to display PowerPoint files on Layouts.</p>
+                
+                <p>Captivad has 3 options to display PowerPoint PPT files.</p>
+                <p><strong>Option 1 -</strong> Exported as a Video for non-Windows Players, and or, have no full copy of
+                    PowerPoint to install. (Our recommended option)</p>
+                <p><strong>Option 2</strong> - Saved as a PDF for non-Windows Players, and or, have no full copy of
+                    PowerPoint to install.</p>
+                
+                <h2>Option 1 - Export as a Video<a id="content-option-1---export-as-a-video"
+                        href="#content-option-1---export-as-a-video" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>From Office 2010 onwards PowerPoint presentations can be exported as <strong>Video files</strong>
+                    which can then be uploaded to Captivad and played using the Video Widget.</p>
+                  
+                <h3>Export PowerPoint file<a id="content-export-powerpoint-file" href="#content-export-powerpoint-file"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <ul>
+                    <li>Export a PowerPoint by using the option on the file menu from inside the PowerPoint application.
+                    </li>
+                    <li>Save the file with an appropriate name to be selected for upload.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        If your Players are Android devices you should ensure that the export format is MP4
+                        (PowerPoint 2013 onwards) or convert your video to a MP4 using a 3rd party tool.
+
+                    </div>
+                </div>
+                <h3>Add Video Widget<a id="content-add-video-widget" href="#content-add-video-widget"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p>Follow the instructions as detailed on the <a>Video</a> page to add
+                    and upload the file.</p>
+                <h2>Option 2 - Save as a PDF<a id="content-option-2---save-as-a-pdf"
+                        href="#content-option-2---save-as-a-pdf" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                
+                <ul>
+                    <li>Save your PowerPoint as a PDF.</li>
+                </ul>
+                <h3>Add PDF Widget<a id="content-add-pdf-widget" href="#content-add-pdf-widget"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p>Follow the instructions as detailed on the <a href="media_module_pdf.html">PDF</a> page to add and
+                    upload the file.</p>
+                
+                </div>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a
+                    href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+            <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or
+                    later</a>, documentation under <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons
+                    Licence</a>.</p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

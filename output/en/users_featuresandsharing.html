@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="users">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users.html">Introduction</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_administration.html">Users</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_groups.html">User Groups</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_library_quota.html">User Library
+                                Quota</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="users_featuresandsharing.html">Features
+                                and Sharing</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0"
+                                href="users_notifications.html">Notifications</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=users-->
+                <h1 id="features_and_sharing">
+                    Features and Sharing
+                    <a href="#features_and_sharing" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    Access is controlled for Users and User Groups using two concepts:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Features</strong> - control what a User can see and do within the CMS
+                    </li>
+                    <li>
+                        <strong>Share</strong> - controls View, Edit and Delete options for user objects such as; Folders, Media,
+                        Playlists, DataSets, Layouts, Displays/Display Groups.
+                    </li>
+                </ol> 
+                <p>
+                    When used in conjunction with each other, these concepts ensure that only the relevant parts of the CMS are visible to
+                    Users/User Groups with the appropriate level of interaction applied for objects.
+                </p>
+
+
+                <h2 id="features">
+                    1. Features
+                    <a href="#features" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    From the <strong>Administration</strong> section of the menu, click on <strong>Users</strong> or <strong>User Groups</strong>.
+                </p>
+                <ul>
+                    <li>Use the Row Menu for the selected User or User Group and select <strong>Features</strong> from the dropdown menu.</li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_features_row_menu.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>
+                    This tabbed form contains all Features that can be controlled by enabling/disabling access.
+                </p> 
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_features.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When viewing an individual user record, the <strong>Inherited</strong> column will show if any Features are
+                        already enabled from <a>User Group</a> memberships!
+                
+                    </div>
+                
+                </div>
+                <p></p>
+                <p>
+                    Each <strong>Feature</strong> contains a ‘Feature Set’. Use the arrow to expand to see all the Features within that set.
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_feature_set.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p>
+                    A line shown in the check box, as in the above image, shows you that selected Features from the ‘set’ have been enabled.
+                    Expand to see what has been enabled and to make further edits if required. A blue tick in the check box tells you that
+                    all Features within the set have been enabled.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Make it easier to onboard new Users by using the predefined User categories which contain the required Feature
+                        access for the type of User or manage Feature access via <a>User Groups</a>. If you
+                        need to give further access to specific Users within User Groups, assign these directly on their individual User
+                        record.
+                
+                    </div>
+                
+                </div>
+                <p></p>
+
+                <h2 id="share">
+                    2. Share
+                    <a href="#share" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    User objects within the CMS can have options applied so that the User/User Group has the necessary access rights.
+                </p>
+                <ul>
+                    <li>
+                        Use the Row Menu for the object and select <strong>Share</strong> from the dropdown menu. 
+                    </li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_share_options.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the form to enable/disable <strong>View</strong>, <strong>Edit</strong> and <strong>Delete</strong> options
+                        for both individual Users and User Groups (User Groups are shown in bold).</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Please note:</strong> In order for Users to enable <strong>Share</strong> options for objects, the User
+                        would need to have the ‘Allow Sharing capabilities for all User objects’ Feature enabled which is within the
+                        <strong>User functions</strong> subset of <strong>User</strong> Features.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_users_share_option_feature.png"
+                            data-processed="1"></figure>
+                </div>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <h3>Scenario:<a id="content-scenario" href="#content-scenario" class="heading-permalink" aria-hidden="true"
+                                title="Permalink"></a></h3>
+                        <p>All members of a User Group need to edit DataSet data with only one specific User able to delete data.</p>
+                        <p>First ensure that the User Group can access DataSets and then apply the appropriate edit options for the
+                            DataSet(s)</p>
+                        <p>Actions to take:</p>
+                        <ul>
+                            <li>Use the Row Menu for the User Group and select <strong>Features</strong>
+                            </li>
+                            <li>From the <strong>Content</strong> tab expand the <strong>Library</strong> Feature set</li>
+                            <li>Tick to enable ‘Allow edits including deletion to all data contained within a DataSet independently to
+                                Layouts’</li>
+                            <li>Go to <strong>DataSets</strong> under the <strong>Library</strong> section of the CMS and use the Row
+                                menu for the selected DataSet and select <strong>Share</strong>
+                            </li>
+                            <li>Tick <strong>View</strong> and <strong>Edit</strong> for the <strong>User Group</strong>
+                            </li>
+                            <li>Tick <strong>Delete</strong> for the <strong>User</strong> (View and Edit are already enabled for the
+                                Group so do not need to be ticked for the User)</li>
+                        </ul>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <p>
+                    The highest editing level will always be used for Users. If a User belongs to two groups where one group has Delete
+                    enabled for an object and the other does not, the User will have Delete access for the object.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Sharing options for <strong>Regions</strong> and <strong>Widgets</strong> are assigned using the context menu in
+                        the <a>Layout Designer</a>!
+                
+                    </div>
+                
+                </div>
+                <p></p>
+                <p>Modifications made to items are available in ‘real time’ which means that the next time a User interacts with the
+                    object the newly set options will be applied.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use <strong>With Selected</strong> at the bottom of <a>Grids</a> to perform bulk actions
+                        with Sharing!
+                
+                    </div>
+                
+                </div> 
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Share permissions on an item can be changed by the owner, Group Admin or a Super Administrator.
+                        Share permissions for Display and Display Groups, that have no owner, can only be changed by a Super
+                        Administrator.
+                
+                    </div>
+                
+                </div>
+                <p></p>
+
+                <h2 id="folders">
+                    Folders
+                    <a href="#folders" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h2>
+                <p>
+                    Create <a>Folders</a> and assign <strong>Share</strong> options to easily set the required access for Layouts, Library Media, DataSets, Displays
+                    / Display Groups etc, saved within that Folder for Users/User Groups.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a> for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative
+                    Commons Licence</a>.
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

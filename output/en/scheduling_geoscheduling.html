@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Captivad Manual</title>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon" />
+
+        <!-- Bootstrap -->
+        <link
+            href="../vendor/bootstrap/css/bootstrap.min.css"
+            rel="stylesheet"
+            media="screen"
+            />
+
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen" />
+
+        <!-- META -->
+        <meta
+            name="keywords"
+            content="digital signage, signage, narrow-casting, xibo, open
+            source, agpl, documentation"
+            />
+        <meta
+            name="description"
+            content="Xibo is an open source digital signage solution. It
+            supports all main media types and can be interfaced to other sources
+            of data using CSV, Databases or RSS."
+            />
+    </head>
+
+    <body data-toc="scheduling">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <div class="top-nav">
+            <a href="index.html"><img src="../img/logo.png" alt=""></a>
+          </div>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                        <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                        <li>
+                            <a href="displays.html" data-toc-name="displays">Displays</a>
+                        </li>
+                        <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                        <li><a href="media.html" data-toc-name="media">Library</a></li>
+                        <li>
+                            <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                        </li>
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0
+                            Transitional//EN"
+                            "http://www.w3.org/TR/REC-html40/loose.dtd">
+                        <html>
+                            <body>
+                                <ul class="list-group list-group-light">
+                                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling.html">Introduction</a>
+                                  <!-- <li><a href="scheduling_calendar.html">Calendar</a></li> -->
+                                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_schedule.html">Schedule</a>
+                                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_events.html">Events</a>
+                                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="scheduling_geoscheduling.html">Geo
+                                    Scheduling</a>
+                              
+                                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_dayparting.html">Dayparting</a>
+                                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_now.html">Schedule Now</a>
+                                </ul>
+                              </body>
+                        </html>
+                        <li><a href="users.html" data-toc-name="users">Users</a></li>
+                        <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=scheduling-->
+                    <h1 id="geoscheduling">
+                        Geo Scheduling
+                        <a href="#geoscheduling" class="header-link"><span
+                                class="glyphicon glyphicon-link"></span></a>
+                    </h1>
+                    <p>
+                        <strong>Events</strong> can be scheduled to be location aware.
+                    </p>
+                    <p>
+                        Click on the <strong>Geo Location</strong> tab on the <strong>Schedule Event</strong> form.
+                    </p>
+
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_schedule_geolocation.png"
+                                data-processed="1"></figure>
+                    </div>
+                    <p></p>
+
+                    <p>Tick in the <strong>Geo Schedule</strong> box to enable and define the location.</p>
+
+                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                        <div class="manual-notes-card-info">
+                    
+                            On opening, the map will default to what is entered for DEFAULT_LAT and DEFAULT_LONG in <strong>CMS
+                                Settings</strong>, under the <strong>Displays</strong> Tab.
+                    
+                        </div>
+                    </div>
+                    <p></p>
+                    <p>
+                        Use the buttons in the top left of the map to Zoom in and out. Click on the search icon to enter details for a
+                        particular area.
+                    </p>
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_schedule_geolocation_search.png"
+                                data-processed="1"></figure>
+                    </div>
+                    <p></p>
+                    <p>Define an area by drawing a Polygon or Rectangle layer on the map.</p>
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_schedule_polygon.png" data-processed="1"
+                                naptha_cursor="region"></figure>
+                    </div>
+                    <p></p>
+                    <p>
+                        Once an area has been defined, click on the edit icon to to drag the markers to make adjustments to the existing Layer.
+                        Click on the grey Save button located here to ensure that edits are saved.
+                    </p>
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_schedule_edit_layer.png"
+                                data-processed="1"></figure>
+                    </div>
+                    <p></p>
+
+                    <p>
+                        To remove the area, use the bin icon and click into the area to delete, click the grey Save button to save the removal
+                        of the layer.
+                    </p>
+                    <p>
+                        Once scheduled, the scheduler will identify this event as being Geo Location aware by showing the map marker icon.
+                    </p>
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v2_scheduler_icon.png" data-processed="1">
+                        </figure>
+                    </div>
+
+                    <p>Click on the icon to open the <strong>Edit Event</strong> form to make any required changes to your scheduled event.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+    
+                <p class="ss_back_to_top">Back to Top</p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+      $(document).ready(function () {
+        $(".ss_body img").addClass("img-thumbnail");
+        $(".ss_body table").addClass("table");
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $("#side-nav a").each(function () {
+          if ($(this).data().tocName == $("body").data().toc)
+            $(this).parent().addClass("active");
+        });
+
+        $(".ss_back_to_top").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+        });
+
+        if (inIframe()) {
+          console.log("In Frame");
+          $("#top-nav").css("display", "none");
+          $(".ss-sidebar").parent().css("display", "none");
+        }
+      });
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+    </script>
+    </body>
+</html>

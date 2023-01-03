@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Captivad Manual</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- favicon -->
+  <link href="../img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Bootstrap -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+  <!-- Stylesheets -->
+  <link href="../manual.css" rel="stylesheet" media="screen" />
+
+  <!-- META -->
+  <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+  <meta name="description"
+    content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+  <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+  <div class="top-nav">
+    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+  </div>
+
+  <div class="ss_body container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="side-nav" class="nav nav-pills nav-stacked">
+          <!-- <li>
+            <a href="index.html" data-toc-name="getting_started">
+              Getting Started
+            </a>
+          </li> -->
+          <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+          <html>
+
+          <body>
+            <ul class="list-group list-group-light">
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                Overview
+              </a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_resizingimages.html">Resizing Images</a>
+              </li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+              <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+            </ul>
+          </body>
+
+          </html>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <!-- <li>
+            <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=media-->
+        <h1 id="resizing_images">
+          Resizing Images
+          <a href="#resizing_images" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <p>
+          Default thresholds and limits can be specified which are then considered in the event an image should be resized. This
+          could be when uploading an image or an image being downloaded by a Widget - NASA RSS in a Ticker Widget for example.
+        </p>
+        <p>Settings can be configured from the <strong>Settings</strong> page under the <strong>Administration</strong> section of the main CMS menu.</p>
+        <ul>
+          <li>Click on the <strong>Defaults</strong> tab:</li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_resizing_images.png"
+              data-processed="1"></figure>
+        </div>
+
+        <h2 id="resize_threshold">
+          Resize Threshold
+          <a href="#resize_threshold" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <ul>
+          <li>Set a maximum threshold (based on the longest side) that should be considered for resizing an image.</li>
+        </ul>
+        <p></p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            If you set a Resize Threshold of 1920 and you upload/download an image which is 800, this image would not need
+            resizing. If you uploaded/downloaded an image which was 2400, this would then be resized to 1920.
+        
+          </div>
+        </div>
+
+
+        <h2 id="resize_limit">
+          Resize Limit
+          <a href="#resize_limit" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <ul>
+          <li>Set a limit (based on the longest side) for uploaded/downloaded images. Images that exceed this limit will not be
+            processed and should be replaced with another image that is within the limit.</li>
+        </ul>
+        <p>This setting will determine whether the image file is too large to be processed.</p>
+        
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+        <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+    </div>
+  </footer> 
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

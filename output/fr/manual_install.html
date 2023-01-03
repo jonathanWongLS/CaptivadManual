@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="manual_install">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="manual_install">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="install_environment.html">Environment</a></li>
+<li><a href="install_xtr.html">XTR - Routine Tasks</a></li>
+<li><a href="install_xmr.html">XMR - Push Messaging</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=manual_install-->
+<h1 id="manual_installation">Manual Installation <a href="#manual_installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>It is possible to install Xibo without using Docker, this is referred to as a
+manual or custom installation.</p>
+<h2 id="requirements">Requirements <a href="#requirements" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Xibo requires:</p>
+<ul>
+<li>MySQL 5.6 </li>
+<li>A web server (nginx, apache, iis)</li>
+<li>PHP 5.6+ (lower than PHP7)</li>
+<li>PHP-CLI 5.6+ (lower than PHP7)</li>
+<li>PHP PHAR support</li>
+<li>ZeroMQ bindings for PHP</li>
+<li>URL Rewriting</li>
+<li>Virtual Hosts or dedicated web server (modify DocumentRoot)</li>
+<li>CRON/Scheduled Tasks</li>
+</ul>
+<p>We have explained some common environment configurations in
+<a href="install_environment.html">Prepare your environment</a>.</p>
+<h2 id="release_download">Release Download <a href="#release_download" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The latest release can be downloaded from the <a href="https://github.com/xibosignage/xibo-cms/releases">release archives page on GitHub</a>.</p>
+<h2 id="community_guides">Community Guides <a href="#community_guides" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Special thanks to members of our community who have written guides for installing Xibo in
+specific environments.</p>
+<p>These guides are community contributed and should be considered as guidance only:</p>
+<ul>
+<li><a href="https://community.xibo.org.uk/t/xibo-1-8-0-with-docker-on-ubuntu-16-04/9392">Docker on Ubuntu 16:04</a></li>
+<li><a href="https://community.xibo.org.uk/t/synology-dsm6-xibo-docker-1-8-installation/9697/8">Docker on Synology DSM6+</a></li>
+<li><a href="https://community.xibo.org.uk/t/xibo-step-by-step-installation-iis-8-5-on-windows-server-2012/9878/16">Non-docker on IIS 8.5, Windows Server 2012</a></li>
+<li><a href="https://community.xibo.org.uk/t/installation-guide-of-xibo-1-8-on-centos-7/9429/1">Non-docker on CentOS 7</a></li>
+</ul>
+<h2 id="installation">Installation <a href="#installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Beyond this point it is assumed that a web server running with PHP and MySQL is
+available and that the compressed archive (ZIP or Tarball) of the CMS
+installation package has been transferred to the server.</p>
+<p>The installation process is:</p>
+<ol>
+<li>Download and extract the archive</li>
+<li>Starting the Installation</li>
+<li>Pre-requisites</li>
+<li>Creating the database</li>
+<li>Database details</li>
+<li>Starting the Installation</li>
+<li>Final Configuration</li>
+<li>Install <a href="install_xmr.html">XMR</a></li>
+<li>Configure <a href="install_xtr.html">XTR</a></li>
+<li>Complete</li>
+</ol>
+<h3>Download and extract the archive</h3>
+<p>The CMS archive contains a sub folder called Xibo-cms-1.8.4, the contents of
+this folder should be copied into an appropriate location on your web server. It
+is <strong>strongly recommended</strong> that the folder is extracted in a non-webservable location. On a
+dedicated server the <code>DocumentRoot</code> should point to <code>/path/to/Xibo-folder/web</code>. Other
+configurations are discussed on the <a href="install_environment.html">environment</a> page.</p>
+<p>The extracted archive should look like the below screen shot:</p>
+<p><img src="../en/img/win32_install_extracted.png" alt="Extracted Archive" /></p>
+<p>A folder is provided for the Xibo library which will be used to store images, videos and
+other files. This folder can be moved to another location and changed during the install process.</p>
+<h3>Starting the Installation</h3>
+<p>Navigating to <code>http://localhost</code> will automatically start the installation.</p>
+<p>The installation is in a <em>wizard</em> format that contains 6 steps in total. The wizard will guide the
+installer through the process of installing Xibo.</p>
+<h3>Step 1 - Pre-requisites</h3>
+<p>The installer contains a detailed check list of all the items required for a successful installation.
+Each item will have either:</p>
+<ul>
+<li>A tick - the item is present and correct</li>
+<li>An exclamation mark - the item is present but may not be configured correctly.</li>
+<li>A cross - the item is missing.</li>
+</ul>
+<p>Any items with an exclamation mark or a cross should be addressed and the retest button used to run
+this step again.</p>
+<p><img src="../en/img/install_cms_step1.png" alt="Installer Step 1" /></p>
+<p>The most common problems here are missing PHP modules, configuration of PHP settings and file
+permissions issues to the library.</p>
+<p>Once all the items are ticked press next to advance.</p>
+<h3>Creating the database</h3>
+<p>The CMS can install into a new database, or an existing one. We recommend a new database.</p>
+<p>Xibo does not prefix its table names and may conflict with content in an existing database.</p>
+<p>The choice for a new or existing database can be made by switching between the two available tabs.</p>
+<h3>Database Details</h3>
+<p>Whether you chose an existing database or a new one, the installer will need to collect some
+information about that database to allow the CMS to connect, read and write.</p>
+<p><img src="../en/img/install_cms_step2.png" alt="Installer Step 2" /></p>
+<p>The installer will need the following information:</p>
+<p><strong>Host</strong>
+The host name for your MySQL installation - in the majority of cases this will be &quot;localhost&quot;.</p>
+<p><strong>Admin Username</strong>
+The &quot;root&quot; user name for your MySQL installation. This is only used for the installation and is
+only required if you have asked the installer to create a new database.</p>
+<p><strong>Admin Password</strong>
+The &quot;root&quot; password. This is only used for the installation and is only required if you have
+asked the installer to create a new database.</p>
+<p><strong>Database Name</strong>
+The name for the CMS database.</p>
+<p><strong>Database User name</strong>
+The user name for the CMS to use to connect to the database - usually this can be the same.</p>
+<p><strong>Database Password</strong>
+The password to use to connect to the database.</p>
+<h3>Start the Installation</h3>
+<p>The installer will now create / populate database for Xibo. You should see a series
+of dots appear on the screen as this happens. It can take a few moments to complete. Assuming
+everything went well, click &quot;Next&quot;.</p>
+<p><em>If there are errors at this point, please see the troubleshooting section of this manual.</em></p>
+<h3>Admin Password</h3>
+<p>Each installation will require at least one &quot;Super User&quot; level Administrator to manage the system,
+apply upgrades and configure the advanced settings. The installer will prompt for the creation of
+this user at Step 3.</p>
+<p><img src="../en/img/install_cms_step3.png" alt="Installer Step 3" /></p>
+<p><strong>This user name and password should be kept safe as it will be required when the installation is complete.</strong></p>
+<h3>Settings</h3>
+<p>The next screen deals with configuring Xibo. The first box asks for the location
+that Xibo should store the media you upload. The release archive included a folder for this
+<code>/library</code> or a different folder can be used. Enter enter that folder here
+e.g <code>/var/www/Xibo/library</code>.</p>
+<p>The next box asks for a CMS key - this key is used to authenticate Displays with the CMS and should
+be something obscure.</p>
+<p>The final tick box asks if it's OK to send anonymous statistics back to the Xibo project.
+We would be very happy if you did!</p>
+<p><img src="../en/img/install_cms_step4.png" alt="Install Step 4" /></p>
+<h3>Complete</h3>
+<p>The installation is now complete and the system is ready to log in.</p>
+<p><img src="../en/img/install_cms_complete.png" alt="Install Complete" /></p>
+<h2 id="xmr_and_xtr">XMR and XTR <a href="#xmr_and_xtr" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>XMR is the push messaging engine in Xibo and it is recommended to
+have XMR running for all installations. Instructions for installing XMR can be
+found <a href="install_xmr.html">here</a>.</p>
+<p>XTR is the task runner and should be configured for all installations. Instructions for
+configuring XTR can be found <a href="install_xtr.html">here</a>.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

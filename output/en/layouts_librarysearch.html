@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="layouts">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts.html">
+                    Introduction
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_designer.html">Layout Designer</a><a
+                    class="list-group-item list-group-item-action px-3 border-0" href="layouts_regions.html">Regions</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_widgets.html">Widgets</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="layouts_librarysearch.html">Library Search</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_layouttimeline.html">Layout
+                    Timeline</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interactiveactions.html">
+                    Interactive Actions
+                  </a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_templates.html">Templates</a><a
+                    class="list-group-item list-group-item-action px-3 border-0" href="layouts_campaigns.html">Campaigns</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_overlaylayout.html">Overlay
+                    Layouts</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interruptlayouts.html">
+                    Interrupt Layouts
+                  </a>
+                </ul>
+              </body>
+            </html>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li>
+              <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=layouts-->
+          <h1 id="library_search">
+            Library Search
+            <a href="#library_search" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            The <strong>Toolbar</strong> contains multiple <strong>Library Search</strong> options to give users an easy way to assign media which already exists in
+            the <a>Library</a> to Layouts and Playlists. 
+          </p>
+          <ul>
+            <li>Select from Image, Audio, Video or ‘other media’ files to open:</li>
+          </ul>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_library_search.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Use the fields to narrow down searches.</li>
+          </ul>
+          <p>Integration from Pixabay allows for images/videos to additionally be shown here.</p>
+          <div class="manual-notes-card manual-notes-sea-green pt-34 pr-26 pl-40 pb-24 mb-66" id="grids">
+            <div class="manual-notes-card-info">
+          
+              <p>Pixabay can be enabled from the <strong>Administration</strong> section of the CMS menu by clicking on
+                <strong>Applications</strong> and scrolling down the page to the <strong>Connectors</strong> section. Click
+                Configure and enter your API Key after signing up for a Pixabay account. <a>PixabayAPI Documentation</a>
+          
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Images/videos that are selected from Pixabay to be used in Layouts will automatically be added to your Library!
+          
+            </div>
+          </div>
+          <p></p>
+
+          <ul>
+            <li>Click on the <strong>+</strong> icon in the top left corner of a media file to select:</li>
+          </ul>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_search_results.png"
+                data-processed="1"></figure>
+          </div>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              <p>Select multiple files to add to the target Region in bulk. They will appear in the timeline in the same order
+                they have been selected!
+          
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <ul>
+            <li>Once selected click in the target Region to add.</li>
+            <li>Files can also be added by drag and drop to the Region.</li>
+          </ul>
+          <p>You can also add selections to a specific point on the <strong>Timeline</strong>, as indicated by the markers:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_search_timeline_marker.png"
+                data-processed="1"></figure>
+          </div>
+          <p></p>
+          <p>Files can be previewed before selecting.</p>
+          <ul>
+            <li>Click on the Play icon in the top right corner of the media file.</li>
+          </ul>
+          <p>The file will open in a separate window where you can toggle to a larger window size using the arrow:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_media_preview.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>
+              Click on the <strong>+</strong> icon to select the media from the preview window.
+            </li>
+            <li>
+              Add to a Region or Timeline. 
+            </li>
+          </ul>
+
+          <p>Library Media can also be added to a Region as a Playlist view by clicking on the menu to the right of the Timeline:</p>
+
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_playlist_timeline.png"
+                data-processed="1"></figure>
+          </div>
+          <p>A Playlist view will open to add media in the same way, by clicking to add or drag and drop.</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_playlist_view.png"
+                data-processed="1"></figure>
+          </div>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Delete multiple items on the playlist using the purple <strong>Select Multiple Widgets</strong> button in the
+              toolbar
+              and then clicking on media in the timeline to select. Click the bin icon to remove all selections.
+          
+            </div>
+          </div>
+          <p></p>
+          <ul>
+            <li>Exit the Playlist view by closing down the Playlist window.</li>
+          </ul>
+
+          <h2 id="upload_new">
+            Upload new
+            <a href="#upload_new" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>New files can be uploaded from the <strong>Toolbar</strong> to be used directly in Layouts and saved to the Library.</p>
+          <ul>
+            <li>Open a Library Search for Image/Audio or Video and select <strong>Upload new</strong> and add to a Region:</li>
+          </ul>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_media_uploadnew.png"
+                data-processed="1"></figure>
+          </div>
+          <p></p>
+          <p>The file uploader will open on adding:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_media_uploader.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Click on <strong>Add files</strong> and select the file(s) to upload.</li>
+          </ul>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              We recommend the following file formats:
+              <ul>
+                <li>
+                  <strong>Audio</strong> - mp3.wav
+                </li>
+                <li>
+                  <strong>Image</strong> - jpg,jpeg,png,bmp,gif (Animated gif’s are not supported on any Player).
+                </li>
+                <li>
+                  <strong>Video</strong> - H264 MP4
+                </li>
+              </ul>
+              <p>
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <p>Give your file a Name for easier identification in the CMS and an optional Tag.</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              If the Name field is left blank, the file will be named as per the original file name on upload!
+          
+            </div>
+          </div>
+          <p>Files can be optionally saved to <a>Folders</a> for easier searches, organisation and to
+            easily set <a>Share</a> options for Users/User Groups.</p>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              Files that are saved in Folders will inherit the View, Edit, Delete <a>Share</a> options that have been applied to the destination Folder for
+              User/User Group access!
+          
+            </div>
+          </div>
+          <p></p>
+          <p>Media uploaded directly to Layouts have the option to Set Expiry Dates</p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              This is particularly useful should you need to preload media to be shown at a later date/time!
+          
+            </div>
+          </div>
+
+          <ul>
+            <li>Tick the <strong>Set Expiry Dates</strong> box.</li>
+          </ul>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_image_expiry_dates.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>
+              Select <strong>Start</strong> and <strong>End</strong> dates and times.
+            </li>
+            <li>
+              Use the check boxes to remove the media file from the Playlist on expiry and delete from the Library.
+            </li>
+            <li>
+              Click the <strong>Start upload</strong> button to begin the upload of all files added. If a Folder/Expiry Dates
+                have been selected and there are multiple files to be added, all files will be uploaded to the specified location
+                and have the same Expiry Dates set.
+            </li>
+            <li>
+              Once successfully uploaded, click <strong>Done</strong>.
+            </li>
+          </ul>
+          <p>
+            Files can also be uploaded individually and have different Folder locations/Expiry dates and times specified. Instead of
+            clicking on the Start upload button, click on the <strong>blue upload</strong> button shown at the end of the row for an added file.
+          </p>
+          <p>
+            Change the Folder location using the <strong>Select Folder</strong> button as before and then click the blue button at the end of the row to upload just that singular file.
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_image_multiple_files.png"
+                data-processed="1"></figure>
+          </div>
+          <ul>
+            <li>Once all files have been individually uploaded, click <strong>Done</strong>.</li>
+          </ul>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              View or make changes to Expiry Dates by clicking on the icon on the uploaded media from the Timeline!
+          
+            </div>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              We recommend the following file formats for images:
+              <ul>
+                <li>
+                  <p>jpg,jpeg,png,bmp,gif</p>
+                  <p>Animated gif’s are not supported on any Player</p>
+                </li>
+              </ul>
+              <p>
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <p>When selecting image files to upload, users should check the resolution of the image and keep it within the intended
+            screen size. Caution should be taken as uploading very large images can cause issues for the Player.</p>
+          
+          <p>Please see the <a>Image</a> page for configuration options.</p>
+
+          <h2 id="audio_files">
+            Audio Files
+            <a href="#audio_files" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              We recommend the following file formats for audio:
+              <ul>
+                <li>mp3.wav</li>
+              </ul>
+              <p>
+              </p>
+            </div>
+          </div>
+          <p>
+            Please see the <a>Audio</a> page for configuration options.
+          </p>
+          
+          <h2 id="video_files">
+            Video Files
+            <a href="#video_files" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              We recommend the following file formats for video:
+              <ul>
+                <li>H264 MP4</li>
+              </ul>
+              <p>
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <p>When uploading video files the scroll bar can be used to select a frame to be used as the thumbnail in the CMS:</p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_video_thumbnail.png"
+                data-processed="1"></figure>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+          
+              The thumbnail will be used in the Library media grid for easier identification as well as being used for the Region
+              preview when <strong>Preview Enabled</strong> has been ticked in the Video Module settings!
+          
+            </div>
+          </div>
+          <p></p>
+          <p>Please see the <a>Video</a> page for configuration options.</p>
+          
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>

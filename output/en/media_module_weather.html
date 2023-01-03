@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="widgets">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light"> 
+                            <!-- <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">Go Back</a> -->
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Overview</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_agenda.html">Agenda </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_audio.html">Audio</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_calendar.html">Calendar </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_chart.html">Chart </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_clock.html">Clock</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_countdown.html">Countdown </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_currencies.html">Currencies</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_ticker.html">DataSet Ticker </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_dataset_view.html">DataSet View</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_embedded.html">Embedded</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_googletraffic.html">Google Traffic</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_hls.html">HLS </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_html_package.html">HTML Package </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_image.html">Image</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_localvideo.html">Local Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_menu_boards.html">Menu Boards </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_notifications.html">Notifications </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_pdf.html">PDF</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_shellcommand.html">Shell Command</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_spacer.html">Spacer </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_stocks.html">Stocks</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_sub_playlist.html">Sub Playlist </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_text.html">Text</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_ticker.html">Ticker</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter.html">Twitter</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_twitter_metro.html">Twitter Metro</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video.html">Video</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_video_in.html">Video In </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_module_weather.html">Weather</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_webpage.html">Web Page</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="media_module_world_clock.html">World Clock </a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=widgets-->
+                <h1>Weather<a id="content-weather" href="#content-weather" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h1>
+                <p>Display daily weather forecasts on Layouts.</p>
+                <p></p>
+                
+                <p>The Weather Widget provides current daily weather forecasts worldwide using a service called <a
+                        href="https://openweathermap.org/">Open Weather Map</a> as a source of weather data.</p>
+                
+                <p></p>
+                <h2>Installation<a id="content-installation" href="#content-installation" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Weather data is provided by <a href="https://openweathermap.org/">OpenWeather</a> which is provided
+                    under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA</a> and <a
+                        href="https://opendatacommons.org/licenses/odbl/">ODbL</a></p>
+                <p>To get an API key please visit <a href="https://openweathermap.org/api">Open Weather Map</a> to
+                    create an account.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <strong>Please note:</strong> Since the release of Open Weather’s One Call 3.0, new users must
+                        enter credit card details to use the free x number of calls Key or opt for a paid subscription!
+                        <p>Open Weather Map allows 1000 requests for a forecast, per day before charging a small fee for
+                            each subsequent request.</p>
+                        <p><strong>Paid plans</strong> unlock a 16 day forecast as well as other optimisations in the
+                            way the data is pulled through.</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p>The Weather Module is installed from the <strong>Modules</strong> page, under the
+                    <strong>Administration</strong> section of the main CMS menu:</p>
+                <ul>
+                    <li>Click on the <strong>Install Module</strong> button and select the Weather Module to install.
+                    </li>
+                </ul>
+                <p>Once installed:</p>
+                <ul>
+                    <li>
+                        <p>Select the Weather Module from the grid and use the row menu to select <strong>Edit</strong>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Complete the form fields and include the <strong>API Key</strong>:</p>
+                    </li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_weather_api_key.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Once you have entered your API Key use the drop down menu to select the <strong>Open Weather Map
+                            Version</strong>.</li>
+                    <li>If you have subscribed to a <strong>Paid Plan</strong> ensure that you tick the box.</li>
+                    <li>The CMS allows a Cache period to be specified which will create a delay between requests for
+                        each geographic location.</li>
+                </ul>
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>The Open Weather Map Terms of Service <a
+                        href="https://openweathermap.org/terms">https://openweathermap.org/terms</a> should be read and
+                    understood before using this Widget.</p>
+                <p>Locate <strong>Agenda</strong> from the <a href="layouts_widgets.html">Widget</a> toolbar and click
+                    to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_weather_configuration.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Tick to use the <strong>Display Location</strong> or untick to manually enter
+                        <strong>Latitude</strong> and <strong>Longitude</strong> to be used for this Widget.</li>
+                    <li>Use the drop down menu to select the <strong>Unit</strong> of measurement or opt for the
+                        automatic selection (first item) which will be based on the geographic location.</li>
+                    <li>Select the <strong>Language</strong> to be used.</li>
+                    <li>Use the checkbox to <strong>Only show Daytime weather conditions</strong>.</li>
+                    <li>Use the <strong>Horizontal</strong> and <strong>Vertical</strong> alignment options to position
+                        the Widget within its Region.</li>
+                </ul>
+                <h3>Templates<a id="content-templates" href="#content-templates" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>Captivad provides a selection of <strong>Preset Templates</strong> for ease of use.</p>
+                <p>On selecting <strong>Preset</strong>, choose the <strong>Type</strong> and
+                    <strong>Orientation</strong> and use the drop down to select an available <strong>Template</strong>
+                    matching your entered criteria:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_modules_weather_templates.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>On selecting a <strong>Template</strong>, options will be made available to change the appearance of
+                    the template using the colour picker or providing the Hex if known:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_modules_weather_colouring.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>When a <strong>Background Image</strong> has been selected, images uploaded to the Library can be
+                    used to replace the images provided by default:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_modules_weather_background.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h2>Editing Preset Templates (Advanced Use)<a id="content-editing-preset-templates-advanced-use"
+                        href="#content-editing-preset-templates-advanced-use" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Preset templates can be edited by clicking in the <strong>Override the template</strong> checkbox.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The template will be automatically scaled and should be designed for the intended output
+                        resolution. The following guidelines should be considered when editing templates:
+                        <ul>
+                            <li>Templates must be designed at a fixed size</li>
+                            <li>All elements must use absolute sizing in px, including fonts, margins, widths, heights,
+                                etc</li>
+                            <li>If positioning is used, it must be from top,left</li>
+                            <li>Templates can use bootstrap</li>
+                            <li>The aspect ratio will be fixed by Captivad and sized to fit the Region</li>
+                            <li>Templates are treated the same as a static image
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>With override template selected, you can enter text, HTML and CSS.</p>
+                <p>Once override has been selected, click back on the <strong>Templates tab</strong> to select templates
+                    to edit:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_weather_override_template.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <h3>Current Forecast Template<a id="content-current-forecast-template"
+                        href="#content-current-forecast-template" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Also known as the main template, used for the current weather conditions and as the basis for the
+                    repeating Daily Forecast Template.</p>
+                <p>Toggle <strong>On</strong> the Visual editor to access the inline editor to enter text and formatting
+                    or provide text/HTML in the box provided.</p>
+                <p>Use the drop down to include <strong>Snippets</strong>.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        Click on <strong>Get Forecast</strong> to see available substitutions to use.
+
+                    </div>
+                </div>
+                <h3>Daily Forecast Template<a id="content-daily-forecast-template"
+                        href="#content-daily-forecast-template" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>This is the <strong>repeating template</strong> that should be provided for the 7 day forecast. It
+                    will be repeated each day and then substituted into the special <code>[dailyForecast]</code> tag
+                    (which should feature on the main Current Forecast template).</p>
+                <p>The <code>[dailyForecast]</code> tag has 2 optional settings which can be added to the tag by
+                    including the<code>|</code> character. These are
+                    <code>[dailyForecast|Number of days|Start day]</code> and default to 7 days, starting at tomorrow
+                    (day 2). If you wanted to see the next 3 days you would use <code>[dailyForecast|3]</code> and for a
+                    3 day forecast starting the day after tomorrow you could use <code>[dailyForecast|3|3]</code>.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        <br>
+                        A common example is to ignore the “Current Template” and produce a full 7 day forecast using the
+                        Daily Forecast - this is achieved with <code>[dailyForecast|7|1]</code>.
+
+                    </div>
+                </div>
+                <h3>Style Sheet<a id="content-style-sheet" href="#content-style-sheet" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>This is the CSS to apply to the template structure above.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        This optional template is intended for advanced users to ‘tweak’ the CMS generated output!
+
+                    </div>
+                </div>
+                <h3>Attribution<a id="content-attribution" href="#content-attribution" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>All Layouts that use the Weather Widget need to include attribution, available by using the
+                    <code>[Attribution]</code> tag. All preset templates contain this tag by default, please ensure that
+                    this tag is included when editing/overriding default templates.</p>
+                <h3>Caching<a id="content-caching" href="#content-caching" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h3>
+                <p>Enter the Update Interval to be applied, in minutes, kept as high as possible.</p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        If the data will only change once per hour the Update Interval could be set to 60.
+
+                    </div>
+                </div>
+                <h3>Get Forecast<a id="content-get-forecast" href="#content-get-forecast" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h3>
+                <p>It is possible to <strong>request a forecast</strong> at any time to see what forecast data is
+                    returned. Any field is available as a substitute in the template by entering the field name between
+                    square
+                    brackets - for example <code>[nearestStormDistance]</code>.</p>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink" aria-hidden="true"
+                        title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Weather Widget from the <strong>Actions</strong> tab in
+                    the properties panel. Please see the <a href="layouts_interactive_actions.html">Interactive
+                        Actions</a> page for more information.</p>
+                <h2>Date Format - PHP<a id="content-date-format---php" href="#content-date-format---php"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p>Captivad should accept any date format that is in a correct PHP date format, the following characters are
+                    recognised and can be used:</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Format Character</th>
+                            <th align="left">Description</th>
+                            <th>Example returned values</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Day</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td align="left">Day of the month, 2 digits with leading zeros</td>
+                            <td>01 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td align="left">A textual representation of a day, three letters</td>
+                            <td>Mon through Sun</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td align="left">Day of the month without leading zeros</td>
+                            <td>1 to 31</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td align="left">(lowercase ‘L’) A full textual representation of the day of the week</td>
+                            <td>Sunday through Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>N</td>
+                            <td align="left">ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)
+                            </td>
+                            <td>1 (for Monday) through 7 (for Sunday)</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td align="left">English ordinal suffix for the day of the month, 2 characters</td>
+                            <td>st, nd, rd or th. Works well with j</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td align="left">Numeric representation of the day of the week</td>
+                            <td>0 (for Sunday) through 6 (for Saturday)</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td align="left">The day of the year (starting from 0)</td>
+                            <td>0 through 365</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Week</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>W</td>
+                            <td align="left">ISO-8601 week number of year, weeks starting on Monday (added in PHP 4.1.0)
+                            </td>
+                            <td>42 (the 42nd week in the year)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Month</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>F</td>
+                            <td align="left">A full textual representation of a month, such as January or March</td>
+                            <td>January through December</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td align="left">Numeric representation of a month, with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td align="left">A short textual representation of a month, three letters</td>
+                            <td>Jan through Dec</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td align="left">Numeric representation of a month, without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td align="left">Number of days in the given month</td>
+                            <td>28 through 31</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Year</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td align="left">Whether it’s a leap year</td>
+                            <td>1 if it is a leap year, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td align="left">ISO-8601 year number. This has the same value as Y, except that if the ISO
+                                week number (W) belongs to the previous or next year, that year is used instead. (added
+                                in PHP 5.1.0)</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>Y</td>
+                            <td align="left">A full numeric representation of a year, 4 digits</td>
+                            <td>1999 or 2003</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td align="left">A two digit representation of a year</td>
+                            <td>99 or 0</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td align="left">Lowercase Ante meridiem and Post meridiem</td>
+                            <td>am or pm</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td align="left">Uppercase Ante meridiem and Post meridiem</td>
+                            <td>AM or PM</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td align="left">Swatch Internet time</td>
+                            <td>000 through 999</td>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td align="left">12-hour format of an hour without leading zeros</td>
+                            <td>1 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>G</td>
+                            <td align="left">24-hour format of an hour without leading zeros</td>
+                            <td>0 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td align="left">12-hour format of an hour with leading zeros</td>
+                            <td>01 through 12</td>
+                        </tr>
+                        <tr>
+                            <td>H</td>
+                            <td align="left">24-hour format of an hour with leading zeros</td>
+                            <td>00 through 23</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td align="left">Minutes with leading zeros</td>
+                            <td>00 to 59</td>
+                        </tr>
+                        <tr>
+                            <td>s</td>
+                            <td align="left">Seconds, with leading zeros</td>
+                            <td>00 through 59</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td align="left">Microseconds (added in PHP 5.2.2). Note that date() will always generate
+                                000000 since it takes an integer parameter, whereas DateTime::format() does support
+                                microseconds if DateTime was created with microseconds.</td>
+                            <td>654321</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Timezone</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td align="left">Timezone identifier (added in PHP 5.1.0)</td>
+                            <td>UTC, GMT, Atlantic/Azores</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td align="left">(capital i) Whether or not the date is in daylight saving time</td>
+                            <td>1 if Daylight Saving Time, 0 otherwise.</td>
+                        </tr>
+                        <tr>
+                            <td>O</td>
+                            <td align="left">Difference to Greenwich time (GMT) in hours</td>
+                            <td>+0200</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td align="left">Difference to Greenwich time (GMT) with colon between hours and minutes
+                                (added in PHP 5.1.3)</td>
+                            <td>+02:00</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td align="left">Timezone abbreviation</td>
+                            <td>EST, MDT …</td>
+                        </tr>
+                        <tr>
+                            <td>Z</td>
+                            <td align="left">Timezone offset in seconds. The offset for timezones west of UTC is always
+                                negative, and for those east of UTC is always positive.</td>
+                            <td>-43200 through 50400</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td align="left"><strong>Full Date/Time</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>c</td>
+                            <td align="left">ISO 8601 date (added in PHP 5)</td>
+                            <td>2004-02-12T15:19:21+00:00</td>
+                        </tr>
+                        <tr>
+                            <td>r</td>
+                            <td align="left">» RFC 2822 formatted date</td>
+                            <td>Thu, 21 Dec 2000 16:01:07 +0200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+          <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+      
+          <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

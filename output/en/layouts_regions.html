@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="layouts">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts.html">
+                            Introduction
+                          </a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_designer.html">Layout Designer</a><a
+                            class="list-group-item list-group-item-action px-3 border-0 active" href="layouts_regions.html">Regions</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_widgets.html">Widgets</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_librarysearch.html">Library Search</a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_layouttimeline.html">Layout
+                            Timeline</a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interactiveactions.html">
+                            Interactive Actions
+                          </a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_templates.html">Templates</a><a
+                            class="list-group-item list-group-item-action px-3 border-0" href="layouts_campaigns.html">Campaigns</a>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_overlaylayout.html">Overlay
+                            Layouts</a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interruptlayouts.html">
+                            Interrupt Layouts
+                          </a>
+                        </ul>
+                      </body>
+
+                    </html>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=layouts-->
+                <h1 id="regions">Regions <a href="#regions" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h1>
+                <p>
+                    Regions define areas on a <strong>Layout</strong> which hold <strong>Media</strong> to form sets of timed content which are added and edited by using the
+                    edit layout icon located below the viewer:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_layout_editor.png"
+                            data-processed="1"></figure>
+                </div>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        If you have chosen a blank template, you can also click the ‘No Regions’ banner to open the editor.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_region_resize.png"
+                            data-processed="1"></figure>
+                </div>
+                <ul>
+                    <li>Click on a <strong>Region</strong> to select (highlighted orange once selected) and resize by using the handle located in the right bottom corner.</li>
+                    <li>Move a selected Region around the canvas using drag and drop.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        You can toggle to a full sized screen using the icon located in the top right of the editor.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When you are in ‘editing’ mode you will notice that the window is framed orange!
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Add further Regions by clicking on the <strong>+</strong> button located in the bottom left:</li> 
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_add_region.png"
+                            data-processed="1"></figure>
+                </div>
+                <ul>
+                    <li>Clicking anywhere on the canvas will save changes made to a Region.</li>
+                </ul>
+                <p>Further options are available in the properties panel:</p>
+                <ul>
+                    <li>Highlight a Region to view the options</li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_regions_editing_panel.png"
+                            data-processed="1"></figure>
+                </div>
+                <ul>
+                    <li>The <strong>General</strong> tab allows you to optionally create a <strong>Name</strong> for a Region for easier identification in the CMS, and to enable the <strong>Loop</strong> option if it is required.</li>
+                </ul> 
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <p><strong>When to enable Loop?</strong></p>
+                        <p>It may be desirable to have a Region with just 1 media item reload when that item has finished. With the
+                            <strong>Loop</strong> ticked the media item will reload each time it expires and show refreshed content
+                            until other Regions have fully played out. Loop is only effective for a Region with only 1 media item and
+                            should only be used for certain Media types where the content changes (Ticker RSS, Calendar etc).</p>
+                        <p><strong>Consider the following rules when thinking about using the Region Loop option for the best
+                                results:</strong></p>
+                        <ul>
+                            <li>If your Region contains more than one Widget, Loop should not be enabled.</li>
+                            <li>If your Region contains one Widget, and that Widget is a ‘fixed’ item (eg Text), Loop should not be
+                                enabled.</li>
+                            <li>If your Region contains one Widget, and that Widget needs to update periodically (eg RSS Ticker Widget),
+                                Loop can be enabled ONLY if the Widget needs to update MORE frequently than the duration of the overall
+                                Layout.</li>
+                        </ul>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the <strong>Positioning</strong> tab for more precise sizing and positioning of Regions, as well as setting a <strong>Layering Order</strong> for playback.</li>
+                </ul>
+                <h4>Rules for Layering Regions:</h4>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Please note:</strong> You cannot overlay anything on a Region that has Widgets / Media that use the Edge
+                        browser. This would include HLS and Embedded Youtube.
+                        For content other than a video you can use the CEF browser instead.
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>If required, overlapping Regions can be ordered for playback using z-index settings.</p>
+                <p>Enter a number in the <strong>Layer</strong> field to determine the order that Region should be shown within the overall stack.</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_regions_layer.png"
+                            data-processed="1"></figure>
+                </div>
+                <p>The <strong>Layer</strong> order is determined by the number entered here, with 1 considered the lowest Layer. The higher the number the higher the Layer.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        
+                        On some devices, it is impossible to overlay anything on a Region showing a <strong>Video</strong> or <strong>VideoIn</strong> Widget. Whether it is
+                        possible will depend on the device and whether hardware accelerated playback is being used. In general, it is possible
+                        on Android.
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>At the bottom of this tab, click on the <strong>Make this Region full screen</strong> text to resize as shown by the dimensions displayed here.</p>
+                <ul>
+                    <li>Select the <a>Transitions</a> tab to apply an <strong>Exit Transition</strong> for when the Region finishes playing.</li>
+                </ul> 
+                <p>Exit transitions happen when the last media item in a Region is shown and occurs only when all other media items have expired in the other Regions.</p>
+                <ul>
+                    <li>Ensure any edits made are saved using the <strong>Save</strong> button before returning to the Layout View.</li>
+                </ul>
+                <p><strong>Actions</strong> can be attached to Regions to effect changes on the Layout. Full details are available on the <a>Interactive Actions</a> page.</p>
+
+
+                <h2 id="share_options_for_a_region">Share options for a Region <a href="#share_options_for_a_region" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>
+                    Control which <strong>Users</strong>/ <strong>User Groups</strong> can have <strong>View</strong>/ <strong>Edit</strong> /<strong>Delete</strong> access for a Region.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        
+                        <strong>Please note</strong>: The owner of the <strong>Layout</strong> has full control over sharing.
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Assign and Edit <a>Share</a> options by right clicking on the target Region to open the form:</li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_layouts_regions_share.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        
+                        Alternatively Share options can be accessed from the context menu at the bottom of the viewer!
+                
+                    </div>
+                </div> 
+                <p></p>
+                <p>Remove Regions by highlighting the Region to delete in the viewer or timeline and cliick the bin icon. <strong>Please note: This action cannot be undone!</strong></p>
+                <p>Exit the editor and return to the Layout View by using the back arrow in the top left of the viewer.</p>
+            </div>
+        </div>
+    </div> <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a
+                    href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+            <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or
+                    later</a>, documentation under <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons
+                    Licence</a>.</p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

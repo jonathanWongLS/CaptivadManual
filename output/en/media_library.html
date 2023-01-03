@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                            Overview
+                          </a>
+                      
+                          <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_library.html">Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+                          </li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+                          <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+                          <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+                        </ul>
+                      </body>
+
+                    </html>
+                    <li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=media-->
+                <h1 id="library">
+                    Library <a href="#library" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>The CMS Library stores all file-based media that is uploaded for use on Layouts.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Pixabay images and videos that are selected to be used on Layouts/Playlists are also added to the Library!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>Library media is managed from <strong>Media</strong> under the <strong>Library section</strong> of the main menu:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_library_grid.png"
+                            data-processed="1"></figure>
+                </div>
+                <p>Use the availalble filters to easily narrow down searches.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use the <strong>OR/AND</strong> option to filter items that have been assigned multiple <strong>Tags</strong>.
+                        <p>This option can be also used with the <strong>Name</strong> field!</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <p>Images and Videos that have a set thumbnail can also be filtered by Orientation.</p>
+                        <ul>
+                            <li>
+                                <p>Set by using the row menu and select <strong>Edit</strong> for an Image/Video file.</p>
+                            </li>
+                            <li>
+                                <p>Scroll down to the bottom of the form and set the intended <strong>Orientation</strong>.</p>
+                            </li>
+                        </ul>
+                        <p><strong>Resolution</strong> has been added to the list for <strong>Column visibility</strong> to
+                            easily view the resolution of the uploaded file!</p>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <p></p>
+                <p>Use the <strong>Folder Search</strong> option to view media saved to folders:</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        When Folders are hidden from view, the file path for the selected folder will be shown!
+
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+                    <p>or</p>
+                    <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters applied to the grid.</li>
+                </ul>
+                <p>Check out the <a>Folders</a> page for further information!</p>
+
+                <h2 id="adding_media">Adding Media <a href="#adding_media" class="header-link"><span
+                            class="glyphicon glyphicon-link"></span></a></h2>
+                <p>Library media can be either uploaded directly using the <strong>Add Media</strong> button and uploading or by providing a URL using the <strong>Add Media (URL)</strong> button.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Upload to the library to have media ready for use to be selected using <a>Library Search</a> options!
+
+                    </div>
+                </div>
+
+                <h2 id="upload">Upload<a href="#upload" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+                <ul>
+                    <li>Select the <strong>Add Media</strong> button at the top of the grid:</li>
+                    <p></p>
+                    <div class="position-relative">
+                        <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_library_upload.png" data-processed="1">
+                        </figure>
+                    </div>
+                    <p></p>
+                    <li>Click <strong>Add files</strong> and select the file(s) you wish to upload.</li> 
+                    <p></p>
+                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                        <div class="manual-notes-card-info">
+                    
+                            Files can also be added via drag and drop!
+    
+                        </div>
+                    </div>
+                    <p></p>
+                    <li>Give your file a <strong>Name</strong> for easier identification in the CMS and an optional Tag.</li>
+                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                        <div class="manual-notes-card-info">
+                    
+                            If the Name field is left blank, the file will be named as per the original file name on upload!
+                    
+                        </div>
+                    </div>
+                    <p></p>
+                    <p>Media can also be directly uploaded to a specified <a>Folder</a> location.</p>
+                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                        <div class="manual-notes-card-info">
+                    
+                            Media files that are saved in Folders will inherit the View, Edit, Delete Share option that have been applied to the
+                            destination Folder for User/User Group access!
+                    
+                        </div>
+                    </div>
+                    <p></p>
+                    <li>Click on the <strong>Select Folder</strong> button and expand to select a Folder to save in.</li>
+                    <li>Users can also right click a Folder to access further options.</li>
+                    <p></p>
+                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                        <div class="manual-notes-card-info">
+                    
+                            Available Folder options are based on enabled <a>Feature and Sharing</a> options for a User/User Group.
+                    
+                        </div>
+                    </div>
+                    <p></p>
+                    <li>Click in the Folder you wish to upload the file to and click <strong>Done</strong>.</li>
+                    <li>The <strong>Current Folder</strong> will now show the selected file path.</li>
+                    <li>Click the <strong>Start upload</strong> button to begin the upload of all files. If a Folder has been selected and you have added
+                        multiple files, all files will be uploaded to that location.</li>
+                    <p></p>
+                </ul>
+                <p>
+                    Files can also be uploaded individually and have different Folder locations specified. Instead of clicking on the Start
+                    upload button, click on the <strong>blue upload</strong> button shown at the end of the row for an added file.
+                </p>
+                <ul>
+                    <li>Change the Folder location using the <strong>Select Folder</strong> button as before and then click the blue button at the end of the row to upload just that singular file.</li>
+                </ul>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_single_upload.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Once all files have been successfully uploaded, click <strong>Done</strong>.</li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Media files can also be uploaded directly to Layouts using the upload tool from the <a>Library Search</a> function for Images, Audio and Video files. Other file
+                        types (such as PDF) can be uploaded by adding the associated <strong>Widget</strong> to a
+                        <strong>Layout</strong>. Files that are added directly to Layouts are saved by default to the Library.
+                
+                    </div>
+                </div>
+
+                <h2 id="add_media_via_url">
+                    Add Media via URL
+                    <a href="#add_media_via_url" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <ul>
+                    <li>Select the <strong>Add Media (URL)</strong> button at the top of the grid.</li>
+                </ul>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_library_upload_url.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the Select Folder button if you need to select /create a specific Folder to add this media file to.</li>
+                    <li>Provide the remote URL for the file.</li>
+                    <li>Include a Name to be used instead of the file name if required for easier identification in the system.</li>
+                    <li>Click to <strong>Save</strong>.</li>
+                </ul>
+
+                <h2 id="upload_fonts">
+                    Upload Fonts
+                    <a href="#upload_fonts" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>Captivad comes with a set of standard fonts provided by our text editor tool - CKEditor, which are currently:</p>
+                <ul>
+                    <li>Aileron Heavy Regular (Aileron-Heavy.otf)</li>
+                    <li>Aileron Regular (Aileron-Regular.otf)</li>
+                    <li>Dancing Script Regular (DancingScript-Regular.ttf)</li>
+                    <li>Railway Regular (Railway.ttf)</li>
+                    <li>Linear Regular (linear-by-braydon-fuller.otf)</li>
+                </ul>
+                <p>Additional fonts can be added to the <strong>Library</strong> using the uploader tool. Once added, the font will be available to use in the text editor.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        If the new font does not show in the text editor after upload, try clearing the browser cache!
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Please note:</strong> Fonts have preferences built into then known as <strong>OS/2 tags</strong>. Xibo
+                        checks for OS/2 preferences and can use <strong>fonts with OS/2 tags 0 or 8</strong>. Fonts with other OS/2 tags
+                        may produce an error on uploading and may not display correctly.
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>Each item in the <strong>Library</strong> has a row menu where users can access a list of actions/shortcuts</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_library_row_menu.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <h2 id="edit">
+                    Upload Fonts
+                    <a href="#upload_fonts" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>Make changes to Folder location, Naming, Duration etc:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_library_row_menu_edit.png"
+                            data-processed="1" naptha_cursor="text"></figure>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Current Folder</strong> will show the current file path. Click <strong>Select Folder</strong> to move to
+                        a different location.
+                    </li>
+                    <li>
+                        <a>Tags</a> - allow for ordering and make files easier to find.
+                    </li>
+                    <li>
+                        <strong>Expiry date</strong> - set a date and time to remove the selected media file completely from the CMS.
+                    </li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Please note:</strong> This will remove media from any Layouts that contain the selected file.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        If you do not want to completely remove the media file and keep it assigned to existing Layout’s then tick the
+                        <strong>Retire this media</strong> option. The Media file will not show for selection for new Layouts.
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <strong>Enable Media Stats Collection</strong> - set the collection of <a>Proof of Play</a> statistics to On / Off / Inherit for the
+                        selected Media file.
+                    </li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        To collect Proof of Play records ensure that the Enable Stats Reporting has been ticked in <a>Display Settings</a>
+                
+                    </div>
+                </div>
+                <p></p>
+                <ul>
+                    <li>
+                        <strong>Orientation</strong> - applicable for Images and Videos, set as Landscape or Portrait to set for
+                        filtering.
+                    </li>
+                </ul>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use the check box <strong>Update this Media in all Layouts it is assigned to</strong> so that edits made are
+                        reflected in Layouts that this Media file is currently assigned to. Edits will only be updated in Layouts which
+                        you have permission to edit.
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>It may be necessary to upload a new revision of an existing file. This can be done by using the Replace button at the bottom of the form.</p>
+                <p>Upload a replacement file using the same steps as before and select whether the replacement file should be updated to all Layouts it is currently assigned to and if the old version should be removed.</p>
+            
+                <h3>Copy</h3>
+                <p>Make copies of the selected media file, give the copied file a new <strong>Name</strong> and <strong>Tag</strong>.</p>
+
+                <h3>Select Folder</h3>
+                <p>Select a <a>Folder</a> to save the media file to.</p>
+
+                <h3>Delete</h3>
+                <p>Media files can only be deleted from the CMS if they are <strong>not</strong> being used on any existing Layouts .The option to force 
+                    a delete from any existing <strong>Layouts</strong> must be used with caution as deleting a file cannot be reversed.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        <strong>Retiring Content</strong> means that it will no longer be available to assign to new Layouts but will
+                        <strong>remain</strong> in existing Layouts it is assigned to, meaning scheduled content can remain unaffected.
+                        Click on <strong>Edit</strong> and tick the box to retire on the Edit Media form!
+                
+                    </div>
+                </div>
+                <p></p>
+                <p>Tick in the box to enable a hard push using XMDS to completely remove the file from a Players local storage:</p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_library_purge.png"
+                            data-processed="1"></figure>
+                </div>
+
+                <h3>Share</h3>
+                <p>Enable <a>Share</a> options for selected Users/User Groups.</p>
+
+                <h3>Download</h3>
+                <p>Download a copy of the <strong>media file</strong> for ease of sharing.</p>
+
+                <h3>Enable Stats collection</h3>
+                <p>Enable the collection of Proof of Play statistics.</p>
+
+                <h3>Usage Report</h3>
+                <p>This will show if the selected <strong>media file</strong> is directly assigned/scheduled to <strong>Displays</strong>.</p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_library_usage_report.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the Layout tab to see what <strong>Layouts</strong> the media file is currently included in.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        The <strong>Usage Report</strong> is great to make final checks prior to tidying media files.
+                
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                
+                        Use the <strong>With Selected</strong> option at the bottom of the Library <a href="tour_grids.html">Grid</a> to
+                        Edit Tags, Move to Folder, Delete and Share in bulk!
+                
+                    </div>
+                </div>
+
+
+            </div> 
+        </div>
+    </div> 
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

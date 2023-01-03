@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+</head>
+
+<body data-toc="widgets">
+    
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li>
+                        <a href="index.html" data-toc-name="getting_started">
+                            Getting Started
+                        </a>
+                    </li> -->
+                    <li class="active"><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+                    
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="index.html">
+                                Overview
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_login.html">Log In</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_user_profile.html">User Profile</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="tour_two_fa.html">Two Factor
+                                Authentication</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_dashboards.html">CMS
+                                Dashboards</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_navigation.html">CMS
+                                Navigation</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_settings.html">CMS Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_grids.html">Grids</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_forms.html">Forms</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_tags.html">Tags</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_folders.html">Folders</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_transitions.html">Transitions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_date_format.html">Date Format</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">
+                            Scheduling
+                        </a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li>
+                        <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=tour-->
+                <h1 id="two_fa">
+                    Two Factor Authentication
+                    <a href="#two_fa" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    For added security, Users can set <strong>Two Factor Authentication</strong> options for
+                    <strong>Email</strong> or <strong>Google Authenticator</strong> to complete login
+                    by entering a code, to further confirm their identity when logging into the CMS.
+                </p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Please ensure that you have entered a <strong>Sending Email</strong> address on the CMS
+                        <strong>Settings</strong> page, <strong>Network</strong> tab prior to the set up of Two Factor
+                        Authentication.
+                    </div>
+                </div>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/tour_2fa_login.png"
+                            data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p>
+                    Navigate to the <a>User Profile</a> in the top right hand corner of the CMS and click on
+                    <strong>Edit Profile</strong>.
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/tour_2fa_edit_profile.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>
+                    Use the dropdown menu for <strong>Two Factor Authentication</strong> and select from one of the two
+                    options:
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/tour_2fa_dropdown.png"
+                            data-processed="1">
+                    </figure>
+                </div>
+
+                <h2 id="email">
+                    Email
+                    <a href="#email" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    Each time a User enters their <strong>Username</strong> and <strong>Password</strong> to login they
+                    will also receive an <email>email</email>, to the address provided,
+                    containing a 6 digit <strong>code</strong> to enter to complete log in.
+                </p>
+                <p>
+                    Ensure that an Email address for the User has been provided on this form and press
+                    <strong>Save</strong>.
+                </p>
+
+                <h2 id="google_auth">
+                    Google Authenticator
+                    <a href="#google_auth" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    Each time a User enters their <strong>Username</strong> and <strong>Password</strong> to login they
+                    will need to access the <strong>Google Authenticator app</strong>
+                    to enter the 6 digit <strong>code</strong> displayed.
+                </p>
+                <p>
+                    Install the <a>Google Authenticator app</a> to your mobile device.
+                </p>
+                <p>
+                    Scan the QR code shown on the Edit User Profile form and enter the code displayed into the Access
+                    Code field and Save to
+                    complete the set up.
+                </p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/tour_2fa_qrcode.png"
+                            data-processed="1">
+                    </figure>
+                </div>
+
+                <p></p>
+                <p></p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Ensure that your phone and server have the correct time and date to avoid errors!
+                    </div>
+                </div>
+
+                <p></p>
+
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        You will need to enter your password to verify any changes made to the Two Factor Authentication
+                        options.
+                    </div>
+                </div>
+
+                <p></p>
+
+                <h2 id="generate_recovery_code">
+                    Generate Recovery Code
+                    <a href="#generate_recovery_code" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p></p>
+                <p>
+                    Once you have saved either <strong>Email</strong> or <strong>Google Authenticator</strong> as an
+                    option, go back to the <strong>Profile Icon</strong> and select <strong>Edit
+                        Profile</strong> to <strong>Generate</strong> recovery codes. Copy the generated recovery codes
+                    and store them in a safe place like password
+                    manager. Click on Save to make the codes active.
+                </p>
+                <p></p>
+                <p>
+                    Click on <strong>Show</strong> at anytime to see your generated recovery codes.
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Clicking on Generate will invalidate all existing codes.
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        In the event access is lost to the configured email address or app with a User unable to
+                        retrieve recovery codes, this can be reset from the <a>Edit User form</a>. Once ticked the User
+                        can reconfigure the options from the User Profile as before.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

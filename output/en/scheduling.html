@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+
+  <body data-toc="scheduling">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling"
+                >Scheduling</a
+              >
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                  <a class="list-group-item list-group-item-action px-3 border-0 active" href="scheduling.html">Introduction</a>
+                  <!-- <li><a href="scheduling_calendar.html">Calendar</a></li> -->
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_schedule.html">Schedule</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_events.html">Events</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_geoscheduling.html">Geo
+                    Scheduling</a>
+              
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_dayparting.html">Dayparting</a>
+                  <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_now.html">Schedule Now</a>
+                </ul>
+              </body>
+            </html>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+            <!--toc=scheduling-->
+            <h1 id="scheduling">
+                Scheduling
+                <a href="#scheduling" class="header-link"
+                ><span class="glyphicon glyphicon-link"></span
+                ></a>
+            </h1>
+            <p>
+                Captivad has a sophisticated scheduling system which allows for the simple creation of complex schedules for Events across
+                Displays/Display Groups.
+            </p>
+            <h2 id="events">
+                Events
+                <a href="#events" class="header-link"
+                ><span class="glyphicon glyphicon-link"></span
+                ></a>
+            </h2>
+            <p>Events are administered from the <strong>Schedule</strong> section of the menu and managed from the calendar interface.</p>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_scheduling_intro.png" data-processed="1">
+                </figure>
+            </div>
+            <p></p>
+            <p>The CMS supports scheduling for the following Event types:</p>
+            <ol> 
+                <li>
+                    <h4>Layout Event</h4>
+                    <p>Select Published Layouts to schedule to Displays.</p>
+                </li>
+                <li>
+                    <h4>Campaign</h4>
+                    <p>Select Campaigns to schedule to Displays.</p>
+                </li>
+                <li>
+                    <h4>Overlay Layout Event</h4>
+                    <p>Specially created <a>Overlay Layouts</a> are scheduled at the same time as
+                        existing Layouts to create an <strong>overlay</strong> of content to be displayed.</p>
+                </li>
+                <li>
+                    <h4>Interrupt Layout Event</h4>
+                    <p>A Layout that is scheduled as an <a>Interrupt Layout</a> will interrupt your
+                        usual schedule to fit around other scheduled Layouts to play for the specified <strong>Share of
+                            Voice</strong> percentage set.</p>
+                </li>
+                <li>
+                    <h4>Command Event</h4>
+                    <p>A Scheduled Command can be executed by the Player at a specific point in time and therefore this type of
+                        event does not need a <code>toDt</code>.</p>
+                </li>
+            </ol>
+            <p>Available <a>Commands</a> can be selected using the <strong>Command</strong> drop-down menu on the <strong>Schedule Event</strong> form.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Display Order and Priority are irrelevant when it comes to executing the Command, but may be set in the CMS for
+                    organisational purposes.
+            
+                </div>
+            </div>
+
+            <ol start="6">
+                <li>
+                    <h4>Action Events</h4>
+                    
+                </li>
+            </ol>
+            <p><strong>Actions</strong> allows listening for webhooks independently to Layouts. Users can schedule Action Events to <strong>Navigate to a Layout</strong> or run a <strong>Command</strong>.</p>
+            
+            <h2 id="schedule_events">
+                Schedule Events
+                <a href="#schedule_events" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>Events are scheduled into <strong>Dayparts</strong>. Select from the two available options when configuring an Event:</p>
+            <ul>
+                <li>
+                    <h3>Custom</h3>
+                </li>
+            </ul>
+            <p>Create your own To/From dates and times.</p>
+
+            <ul>
+                <li>
+                    <h3>Always</h3>
+                </li>
+            </ul>
+            <p>Select to have the event run constantly.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    Create your own defined <a>Dayparts</a> for ease of scheduling. Once created
+                    these will show in the Dayparting drop down menu for selection!
+            
+                </div>
+            </div>
+
+            <h2 id="priority">
+                Priority
+                <a href="#priority" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h2>
+            <p>
+                Use Event Priority to determine whether the event should be included in the schedule for the Player or not. A ‘Priority
+                Event’ is determined by a number, with 0 considered the lowest Priority.
+            </p>
+
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    If a Player has a schedule containing Events which are all Priority 0, then all of the Events will be shown in
+                    rotation together.
+                    <p>If 1 of the Events has a Priority of 1, then this will be the only Event shown.</p>
+                    <p>If there are some Events with Priority 0, some with Priority 1 and some with Priority 2 only the Priority 2
+                        Events will be shown, in a rotation for that Scheduled period (as the highest Priority)</p>
+                    <p>A good example to use Priority would be in a way to alter the Schedule at a specific time, for example, a
+                        normal rotation during the day with a Priority Event at lunchtime which shows specific ‘lunch’ information
+                        (i.e. Lunchtime specials on a cafe menu).</p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+          <div class="pull-right">
+              <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+
+          <p class="ss_back_to_top">Back to Top</p>
+      </div>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".ss_body img").addClass("img-thumbnail");
+        $(".ss_body table").addClass("table");
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $("#side-nav a").each(function () {
+          if ($(this).data().tocName == $("body").data().toc)
+            $(this).parent().addClass("active");
+        });
+
+        $(".ss_back_to_top").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+        });
+
+        if (inIframe()) {
+          console.log("In Frame");
+          $("#top-nav").css("display", "none");
+          $(".ss-sidebar").parent().css("display", "none");
+        }
+      });
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

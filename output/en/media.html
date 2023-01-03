@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Captivad Manual</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- favicon -->
+  <link href="../img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Stylesheets -->
+  <link href="../manual.css" rel="stylesheet" media="screen">
+
+  <!-- Bootstrap -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+  <!-- META -->
+  <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+  <meta name="description"
+    content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+  <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+  <div class="top-nav">
+    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+  </div>
+
+  <div class="ss_body container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="side-nav" class="nav nav-pills nav-stacked">
+          <!-- <li>
+            <a href="index.html" data-toc-name="getting_started">
+              Getting Started
+            </a>
+          </li> -->
+          <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+          <html>
+
+          <body>
+            <ul class="list-group list-group-light">
+              <a class="list-group-item list-group-item-action px-3 border-0 active" href="media.html">
+                Overview
+              </a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+              </li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_playlists.html">Playlists</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+              <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+            </ul>
+          </body>
+
+          </html>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <!-- <li>
+            <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=media-->
+        <h1 id="media">
+          Media
+          <a href="#media" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <p>
+          Captivad supports a wide variety of Media which can be categorised into 2 different types:
+        </p>
+        <ol>
+          <li><strong>Library Media</strong></li>
+          <li><strong>Layout Media</strong></li>
+        </ol>
+
+        <h2 id="library_media">
+          Library Media
+          <a href="#library_media" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Library Media is file-based Media that is uploaded and stored in the CMS Library for use on one or multiple Layouts.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Integration with Pixaby allows for Images and Videos to be selected when adding content to Layouts using
+            <a>Library Searches</a>. Selections will be automatically added to the Library!
+        
+          </div>
+        </div>
+        <p></p>
+        <p>Examples of Library Media are:</p>
+        <ul>
+          <li>Images</li>
+          <li>Videos</li>
+          <li>Fonts</li>
+        </ul>
+        <p>
+          Library Media is administered from <strong>Media</strong> under the Library section of the Menu.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            <a>DataSets</a> and <a>Menu Boards</a> are a special type
+            of Library Media which are used to represent tabular data.
+        
+          </div>
+        </div>
+
+        <h2 id="layout_media">
+          Layout Media
+          <a href="#layout_media" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h2>
+        <p>
+          Layout Media is created and stored directly on a Layout. This Media cannot be reused and exists on only 1 Playlist
+          specific to a particular Layout.
+        </p>
+        <p>Examples of Layout Media are:</p>
+        <ul>
+          <!-- <li>Text</li> -->
+          <li>Ticker</li>
+          <li>Embedded Content</li>
+        </ul>
+        <strong>Please be aware: Captivad takes no measures to control what content is put on your Displays. It is your
+          responsibility to ensure that your content is appropriate material for your desired audience. Content must be
+          appropriately attributed if you do not own the rights to it.</strong>
+        
+         
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+      <div class="pull-right">
+        <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+      </div>
+  
+      <p class="ss_back_to_top">Back to Top</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

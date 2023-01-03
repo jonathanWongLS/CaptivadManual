@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Captivad Manual</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- favicon -->
+  <link href="../img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Bootstrap -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+  <!-- Stylesheets -->
+  <link href="../manual.css" rel="stylesheet" media="screen" />
+
+  <!-- META -->
+  <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+  <meta name="description"
+    content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="media">
+  <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+  <div class="top-nav">
+    <a href="index.html"><img src="../img/logo.png" alt=""></a>
+  </div>
+
+  <div class="ss_body container">
+    <div class="row">
+      <div class="col-md-3">
+        <ul id="side-nav" class="nav nav-pills nav-stacked">
+          <!-- <li>
+            <a href="index.html" data-toc-name="getting_started">
+              Getting Started
+            </a>
+          </li> -->
+          <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+          <li>
+            <a href="displays.html" data-toc-name="displays">Displays</a>
+          </li>
+          <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+          <li><a href="media.html" data-toc-name="media">Library</a></li>
+          <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+          <html>
+
+          <body>
+            <ul class="list-group list-group-light">
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media.html">
+                Overview
+              </a>
+          
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_library.html">Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_tidylibrary.html">Tidy Library</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_resizingimages.html">Resizing Images</a>
+              </li>
+              <a class="list-group-item list-group-item-action px-3 border-0 active" href="media_playlists.html">Playlists</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_datasets.html">DataSets</a></li>
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_menuboards.html">Menu Boards</a></li>
+              <!-- <li><a href="media_dashboardservice.html">Dashboard Service</a></li> -->
+              <a class="list-group-item list-group-item-action px-3 border-0" href="media_modules.html">Modules</a></li>
+            </ul>
+          </body>
+
+          </html>
+          <li>
+            <a href="scheduling.html" data-toc-name="scheduling">
+              Scheduling
+            </a>
+          </li>
+          <li><a href="users.html" data-toc-name="users">Users</a></li>
+          <!-- <li>
+            <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+          </li> -->
+        </ul>
+      </div>
+      <div class="col-md-9" role="main">
+        <!--toc=media-->
+        <h1 id="media_playlists">
+          Playlists
+          <a href="#media_playlists" class="header-link">
+            <span class="glyphicon glyphicon-link"></span>
+          </a>
+        </h1>
+        <p>
+          Playlists allow for the creation of ‘Reusable Playlists’ which are created and managed independently to Layouts. Once
+          created, Playlists can then be easily reused across multiple Regions and Layouts.
+        </p>
+        <p>
+          Think of Playlists as a two part process:
+        </p>
+        <ol>
+          <li><strong>The Playlist</strong> (contains the content and configuration of media to be shown)</li>
+          <li><strong>The Sub-Playlist Widget</strong> (once added to Layouts, Playlists can be selected and further configured to Play in a specified order)</li>
+        </ol> 
+        <p>Playlists are administered by clicking on <strong>Playlists</strong> under the <strong>Library</strong> section of the main menu:</p>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_playlists_grid.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <p>The Playlists <a>Grid</a> allows you to edit existing and create new.</p>
+        <p>Click the Folders icon to toggle on/off from view.</p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            When Folders are hidden from view, the file path for the selected folder will be shown!
+        
+          </div>
+        </div>
+        <p></p>
+        <ul>
+          <li>Click on a Folder/sub-folder to search the contents and return results based on any filters applied to the grid.</li>
+          <p></p>
+          <p>or</p> 
+          <li>Tick <strong>All Folders</strong> to include searching in the Root Folder and return results based on any filters applied to the grid.</li>
+        </ul>
+        <p>Check out the <a>Folders</a> page for further information!</p>
+
+        <h2 id="create_a_new_playlist">Create a new Playlist <a href="#create_a_new_playlist"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <ul>
+          <li>Click on the <strong>Add Playlist</strong> button and complete the appropriate form fields:</li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_media_playlists_add.png" data-processed="1">
+          </figure>
+        </div>
+        <ul>
+          <li>Playlists can be optionally saved to <a>Folders</a> for easier searches, organisation and to easily set <a>Share</a> options for Users/User Groups.</li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Playlists that are saved in Folders will inherit the View, Edit, Delete <strong>Share</strong> options that have
+            been applied to the destination Folder for User/User Group access.
+        
+          </div>
+        </div>
+        <p></p>
+        <ul>
+          <li>
+            <p>Provide a <strong>Name</strong> for easy identification purposes within the CMS.</p>
+          </li>
+          <li>
+            <p>Include optional <a>Tags</a> to organise and make it easier to search for.</p>
+          </li>
+        </ul> 
+
+        <h2 id="automatic_media_assignment">Automatic Media Assignment <a href="#automatic_media_assignment"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <ul>
+          <li>Use the <strong>Dynamic</strong> check box if you want to automatically manage media assignments for this
+            Playlist.</li>
+          <li>Once selected, click on the <strong>Filter</strong> tab to set the criteria to use to add Library Media and
+            automatically maintain the Playlist.</li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_playlists_filter_tab.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Use the <strong>Tag Filter</strong> drop down to use And/Or criteria when selecting media to add!
+        
+          </div>
+        </div>
+        <p></p>
+        <ul>
+          <li>Enter a number to set the <strong>maximum</strong> amount of Media items that can be dynamically assigned to the Playlist.</li>
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            You can also prepopulate a Playlist with media from the Library by leaving the Dynamic checkbox unticked and just
+            using the Filter tab and criteria to add media as a one-time assignment.
+        
+          </div>
+        </div>
+
+        <h2 id="manually_adding_media">Manually adding Media<a href="#manually_adding_media"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <ul>
+          <li>Complete the form fields and click the <strong>Save</strong> button:</li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_playlists_timeline.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <ul>
+          <li>
+            <p>Use the Toolbar to add content to your Playlist using available <a>Widgets</a> and <a>Library Media</a></p>
+          </li>
+          <li>
+            <p>Add to the canvas by clicking to add or drag and drop.</p>
+          </li>
+          <li>
+            <p>Once added, configure using the available options:</p>
+          </li>
+        </ul>
+        <div class="position-relative">
+          <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3.1_media_playlists_edit_widget.png"
+              data-processed="1"></figure>
+        </div>
+        <p></p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            For further information on the options available, refer to the relevant manual page for the chosen <a>Widget</a>.
+        
+          </div>
+        </div>
+        <p></p>
+        <p>
+          Change the order of added media items in a Playlist by clicking on a Widget in the Timeline and dragging it to the
+          desired positioning. As changes are autosaved, use the Undo button located at the of the toolbar to revert any changes
+          if required.
+        </p>
+        <p>
+          All Widgets/Library Media can access a <strong>Context Menu</strong> with a set of options that can be applied, such as <strong>Share</strong> access and
+          <strong>Transitions</strong>. Right click a selected Widget/Media file to access. Further information regarding the Context Menu can be
+          found on the <a>Layout Designer</a> page of the manual.
+        </p>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            If you need to delete multiple Widgets on the Timeline, click the <strong>Select Multiple Widgets</strong> button on
+            the bottom of the toolbar and then click on Widgets to highlight. Once you have made your selections click to delete
+            with one click.
+        
+          </div>
+        </div>
+
+        <h2 id="editing_playlists">Editing Playlists<a href="#editing_playlists"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <p>
+          Playlists are edited independently to Layouts, so there is no need to access or edit the Layout(s) the Playlist has been
+          added to.
+        </p>
+        <ul>
+          <li>To edit content on the Playlist use the row menu from the Playlist grid and select Timeline to open the Playlist editor.</li> 
+        </ul>
+        <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+          <div class="manual-notes-card-info">
+        
+            Changes will be available in the system straight away ready to be picked up by Players on their next collection,
+            with no need to make any edits to Layouts!
+        
+          </div>
+        </div>
+
+        <h2 id="row_menu">Row Menu<a href="#row_menu"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <p>Use the <strong>Row Menu</strong> to access further actions/shortcuts for the selected Playlist</p>
+
+        <h2 id="sharing_playlists">Sharing<a href="#sharing_playlists"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <p>The creator (owner) of the Playlist or a Super Administrator can assign View/Edit/Delete access for other Users/User Groups.</p>
+        <p>Take a look at <a>Features and Sharing</a> for more information.</p>
+        
+        <h2 id="add_playlists_to_layouts">Add Playlists to Layouts<a href="#add_playlists_to_layouts"
+          class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+        <p>Include the <a>Sub-Playlist Widget</a> to add Playlists to Layouts.</p>
+      </div>
+    </div>
+  </div>
+  <!-- container-->
+  <footer class="ss_footer" role="contentinfo">
+    <div class="container">
+        <div class="pull-right">
+            <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.ss_body img').addClass('img-thumbnail')
+      $('.ss_body table').addClass('table')
+
+      // Set the selected page based on the TOC name
+      // Mark the appropriate top nav element as the selected page
+      $('#side-nav a').each(function () {
+        if ($(this).data().tocName == $('body').data().toc)
+          $(this).parent().addClass('active')
+      })
+
+      $('.ss_back_to_top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800)
+      })
+
+      if (inIframe()) {
+        console.log('In Frame')
+        $('#top-nav').css('display', 'none')
+        $('.ss-sidebar').parent().css('display', 'none')
+      }
+    })
+
+    function inIframe() {
+      try {
+        return window.self !== window.top
+      } catch (e) {
+        return true
+      }
+    }
+  </script>
+</body>
+
+</html>

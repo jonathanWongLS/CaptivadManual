@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="getting_started">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="index.html">Introduction</a></li>
+<li><a href="release_notes.html">Release Notes</a></li>
+<li class="active"><a href="install_cms.html">CMS Installation<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="upgrade.html">Upgrading</a></li>
+<li><a href="install_windows_client.html">Windows Player Installation</a></li>
+<li><a href="cms_settings.html">CMS Settings</a></li>
+<li><a href="troubleshooting.html">Troubleshooting</a></li>
+<li><a href="licence_information.html">Licenses</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=getting_started-->
+<h1 id="installation_du_cms">Installation du CMS <a href="#installation_du_cms" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Le CMS de Xibo est une application web PHP s'appuyant sur une base de données MySQL. La combinaison PHP / MySQL est très courante en tant que plateforme web et peut fonctionner sur des serveurs Linux ou Windows.</p>
+<p>Nous vous donnons quelques instructions de base pour installer votre propre serveur web <a href="install_environment.html">here</a>, mais nous vous recommandons une solution basée sur le Cloud ou gérée par un service informatique si l'application d'affichage dynamique est primordiale.</p>
+<h2 id="installation">Installation <a href="#installation" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>À partir de maintenant nous considérons que vous disposez d'un serveur web avec PHP et MySQL et que l'archive compressée (ZIP ou Tarball) du pack d'installation du CMS a été transférée sur le serveur.</p>
+<p>Le processus de base est le suivant:</p>
+<ol>
+<li>Téléchargement et extraction de l'archive</li>
+<li>Démarrage de l'installation</li>
+<li>Configurations requises</li>
+<li>Création de la base de données</li>
+<li>Informations sur la base de données</li>
+<li>Installation de la base de données</li>
+<li>Configuration finale</li>
+<li>Terminé</li>
+</ol>
+<h3>Téléchargement et extraction de l'archive</h3>
+<p>L'archive CMS contient un sous-dossier nommé Xibo-server-1.8.4, les contenus de ce dossier doivent être copiés sur un emplacement approprié du web accessible par votre serveur. Pour les configurations les plus simples de serveur web, le nom de ce dossier correspondra au nom de l'url que vous utilisez pour accéder au CMS. Par exemple: <code>http://localhost/Xibo</code>.</p>
+<p>L'archive extraite doit ressembler à la capture d'écran ci-dessous:</p>
+<p><img src="../en/img/win32_install_extracted.png" alt="Extracted Archive" /></p>
+<p>Il conviendra de créer un dossier pour la bibliothèque de Xibo. Il servira à stocker des images, des vidéos et autres supports basés sur fichiers étant transférés sur le CMS. <em>Cette information sera nécessaire pour les étapes ultérieures de l'installation.</em></p>
+<h3>Démarrage de l'Installation</h3>
+<p>Le fait de se rendre sur <code>http://localhost/Xibo</code> démarrera automatiquement l'installation.</p>
+<p>L'installation se fait par le biais d'un &quot;assistant&quot; comprenant en tout six étapes. Il vous guidera tout au long du processus d'installation de Xibo.</p>
+<h3>Étape 1 - Configuration requise</h3>
+<p>Le programme d'installation contient une liste détaillée des contrôles de tous les éléments indispensables pour une installation réussie. Chaque élément comporte soit:</p>
+<ul>
+<li>Une coche - l'élément est présent et correct</li>
+<li>Un point d'exclamation - l'élément est présent mais peut ne pas être correctement configuré.</li>
+<li>Une croix - l'élément est manquant.</li>
+</ul>
+<p>Tout élément avec un point d'exclamation ou une croix doit être vérifié et on utilisera ensuite le bouton réessayer pour recommencer cette étape.</p>
+<p><img src="../en/img/install_cms_step1.png" alt="Installer Step 1" /></p>
+<p>Ici, les problèmes les plus courants sont l'absence des modules PHP, les paramètres de configuration PHP et les difficultés liées aux fichiers d'autorisation d'accès à la bibliothèque.</p>
+<p>Dès que tous les éléments sont cochés appuyez sur suivant.</p>
+<h3>Création de la base de données</h3>
+<p>Le CMS peut faire l'installation dans une nouvelle base de données ou dans une déjà existante. Nous recommandons une nouvelle base.</p>
+<p>Xibo ne préfixe pas ses noms de table ce qui peut générer des conflits avec du contenu dans une base existante.</p>
+<p>Le choix entre une base nouvelle ou existante se fera en commutant entre les deux onglets disponibles.</p>
+<h3>Informations sur la base de données</h3>
+<p>Que vous ayez opté pour une base de données existante ou pour une nouvelle, le programme d'installation aura besoin de certaines informations la concernant pour permettre au CMS de se connecter, de lire et d'écrire.</p>
+<p><img src="../en/img/install_cms_step2.png" alt="Installer Step 2" /></p>
+<p>Le programme d'installation aura besoin des informations suivantes:</p>
+<p><strong>Hôte</strong>
+Le nom de votre serveur MySQL - dans la plupart des cas ce sera &quot;localhost&quot;.</p>
+<p><strong>Nom d'utilisateur administrateur</strong>
+Le nom d'utilisateur &quot;root&quot; de votre installation MySQL. Il ne sert que lors de l'installation et n'est utile que si vous avez demandé au programme d'installation de créer une nouvelle base de données.</p>
+<p><strong>Mot de passe administrateur</strong>
+Le mot de passe &quot;root&quot;. Il ne sert que pour l'installation et n'est utile que si vous avez demandé au programme d'installation de créer une nouvelle base de données.</p>
+<p><strong>Nom de la base de données</strong>
+Le nom de la base de données.</p>
+<p><strong>Nom d'utilisateur de la base de données</strong>
+Le nom d'utilisateur du CMS utilisé pour se connecter à la base de données - généralement le même.</p>
+<p><strong>Mot de passe de la base de données</strong>
+Le mot de passe utilisé pour se connecter à la base de données.</p>
+<h3>Installation de la base de données</h3>
+<p>Le programme d'installation va maintenant créer / compléter la base de données de Xibo. Une série de points doit apparaître sur l'écran durant le processus. Cela peut prendre quelque temps. Si tout s'est bien passé, cliquez sur &quot;suivant&quot;.</p>
+<p><em>Si à ce stade il y a des erreurs, veuillez vous reporter à la section (résolution des problèmes&quot; de ce manuel.</em></p>
+<h3>Mot de passe administrateur</h3>
+<p>Pour chaque installation au moins un niveau administrateur &quot;superutilisateur&quot; est nécessaire pour gérer le système, appliquer les mises à jour et configurer les paramètres avancés. Le programme d'installation vous demandera de créer cet utilisateur lors de l'étape 3.</p>
+<p><img src="../en/img/install_cms_step3.png" alt="Installer Step 3" /></p>
+<p><strong>Ce nom d'utilisateur et ce mot de passe doivent être conservés en lieu sûr car ils seront nécessaires lorsque l'installation sera terminée.</strong></p>
+<h3>Paramétrages</h3>
+<p>L'écran suivant concerne la configuration de Xibo. La première case demande l'emplacement où Xibo stockera les supports que vous allez télécharger. Nous avons déjà créé un dossier pour cela, saisissez en ici le nom par exemple <code>/home/Xibo/library</code>.</p>
+<p>La case suivante demande une clé d'accès au CMS - celle-ci permet d'authentifier les afficheurs en lien avec celui-ci. choisissez quelque chose de compliqué, et notez la. Elle ne sera pas utilisée très souvent. </p>
+<p>La dernière case à cocher vous demande si vous acceptez d'envoyer des statistiques anonymes au projet Xibo. Nous vous en remercions vivement !</p>
+<p><img src="../en/img/install_cms_step4.png" alt="Install Step 4" /></p>
+<h3>Terminé</h3>
+<p>L'installation est maintenant terminée et le système est prêt à se connecter.</p>
+<p><img src="../en/img/install_cms_complete.png" alt="Install Complete" /></p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="manual_install">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <li><a href="index.html" data-toc-name="manual_install">Getting Started</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="install_environment.html">Environment</a></li>
+<li class="active"><a href="install_xtr.html">XTR - Routine Tasks<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="install_xmr.html">XMR - Push Messaging</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=manual_install-->
+<h1 id="routine_tasks">Routine Tasks <a href="#routine_tasks" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>XTR is Xibo's task scheduler and caters for running routine tasks on the CMS. Typical
+tasks include Maintenance, Email Alerts, Archiving and 3rd party integrations.</p>
+<p>Tasks are run by a php script which is scheduled to run with either CRON, Task Scheduler
+or the equivalent system on your OS.</p>
+<h3>Prerequisites</h3>
+<p>The operating system the CMS is installed on must have a task scheduler and must have access to
+a PHP Command Line (CLI).</p>
+<p>In addition, in order to send email notifications, the PHP CLI must have a working mail() command. You
+need to ensure your PHP installation is configured to send mail via a
+<a href="http://email.about.com/od/emailprogrammingtips/qt/Configure_PHP_to_Use_a_Local_Mail_Server_for_Sending_Mail.htm">local</a> or <a href="http://email.about.com/od/emailprogrammingtips/qt/Configure_PHP_to_Use_a_Remote_SMTP_Server_for_Sending_Mail.htm">remote</a> SMTP server.</p>
+<p>Tasks are run in parallel for maximum efficiency and therefore the system must support
+<a href="http://php.net/manual/en/function.pcntl-fork.php">pcnt_fork</a>.</p>
+<h2 id="configuration">Configuration <a href="#configuration" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<h3>Docker</h3>
+<p>If you are using the <a href="install_docker.html">docker installation</a> then XTR will be configured and
+running already and this section can be skipped.</p>
+<h3>UNIX Crontab</h3>
+<p>This section is broadly based upon the Moodle Cron documentation available
+<a href="http://docs.moodle.org/en/Cron#Using_the_crontab_program_on_Unix">here</a>. Most unix-based servers
+run a version of cron. Cron executes commands on a schedule.</p>
+<p>Modern Linux distributions use a version of cron that reads its configuration from /etc/crontab.
+If you have an /etc/crontab, edit it with your favourite editor, otherwise run the following to
+edit the crontab:</p>
+<pre><code>crontab -e</code></pre>
+<p>and then add:</p>
+<pre><code>* * * * * /usr/bin/php /var/www/xibo/bin/xtr.php</code></pre>
+<p>The first five entries are the times to run values, followed by the command to run. The asterisk is a
+wildcard, indicating any time.</p>
+<p><strong>Importantly</strong> the <code>xtr.php</code> file must be run by a user which can share files with the user account your web
+server runs under. If you run <code>crontab -e</code> you will need to do so as said user, and if you edit <code>/etc/crontab</code> you
+can specify the user in the task.</p>
+<pre><code>* * * * * www-data /usr/bin/php /var/www/xibo/bin/xtr.php</code></pre>
+<p>This is because XTR may update cached files.</p>
+<p>There are CRON resources available online which may be useful:</p>
+<ul>
+<li><a href="http://linuxweblog.com/node/24">A basic crontab tutorial</a></li>
+<li><a href="http://www.freebsd.org/cgi/man.cgi?query=crontab&amp;amp;apropos=0&amp;amp;sektion=5&amp;amp;manpath=FreeBSD+6.0-RELEASE+and+Ports&amp;amp;format=html">Online version of the man page</a></li>
+</ul>
+<p>For <strong>beginners</strong>, &quot;EDITOR=nano crontab -e&quot; will allow you to edit the crontab using
+the <a href="http://www.nano-editor.org/dist/v1.2/faq.html">nano</a> editor. Ubuntu defaults to using the nano editor.</p>
+<p>Usually, the &quot;crontab -e&quot; command will put you into the 'vi' editor. You enter &quot;insert mode&quot; by pressing
+&quot;i&quot;, then type in the line as above, then exit insert mode by pressing ESC. You save and exit by
+typing &quot;:wq&quot;, or quit without saving using &quot;:q!&quot; (without the quotes). Here is an
+<a href="http://www.unix-manuals.com/tutorials/vi/vi-in-10-1.html">intro</a> to the 'vi' editor.</p>
+<h2 id="windows_scheduled_task">Windows Scheduled Task <a href="#windows_scheduled_task" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>This section is broadly based upon the Moodle Cron documentation available
+<a href="http://docs.moodle.org/en/Cron#Managing_Cron_on_Windows_systems">here</a>.</p>
+<ul>
+<li>Find the php.exe or php-win.exe program on your server. It will be in your PHP installation directory.</li>
+<li>Setup a <strong>Scheduled Task</strong></li>
+<li>Go to Start -&gt; Control Panel -&gt; Scheduled Tasks -&gt; Add Scheduled Task.</li>
+<li>Click &quot;Next&quot; to start the wizard:</li>
+<li>Click the &quot;Browse...&quot; button and browse to your php.exe or php-win.exe and click &quot;Open&quot;</li>
+<li>Type &quot;Xibo Maintenance&quot; as the name of the task and select &quot;Daily&quot; as the schedule.
+Click &quot;Next&quot;.</li>
+<li>Select &quot;12:00 AM&quot; as the start time, perform the task &quot;Every Day&quot; and choose today's date as the
+starting date. Click &quot;Next&quot;.</li>
+<li>Enter the username and password of the user the task will run under (it does not have to be a
+privileged account at all).Make sure you type the password correctly. Click &quot;Next&quot;.</li>
+<li>Mark the checkbox titled &quot;Open advanced properties for this task when I click Finish&quot; and
+click &quot;Finish&quot;.</li>
+<li>In the new dialog box, type the following in the &quot;Run:&quot; text box:</li>
+</ul>
+<pre><code>c:\php\php-win.exe -f c:\path\to\Xibo\xtr.php</code></pre>
+<p>Replace secret with your Maintenance Key if you are running in Protected Mode.</p>
+<ul>
+<li>Click on the &quot;Schedule&quot; tab and there in the &quot;Advanced...&quot; button.</li>
+<li>Mark the &quot;Repeat task&quot; checkbox and set &quot;Every:&quot; to 1 minute, and set &quot;Until:&quot; to &quot;Duration&quot; and type &quot;23&quot; hours and &quot;59&quot; minutes.</li>
+<li>Click &quot;OK&quot;.*   <strong>Test your scheduled task</strong>.</li>
+</ul>
+<p>You can test that your scheduled task can run successfully by clicking it with the right button
+and chosing &quot;Run&quot;. If everything is correctly setup, you will briefly see a DOS command window
+while php executes and fetches the cronpage and then it disappears. If you refresh the scheduled
+tasks folder, you will see the <em>Last Run Time column</em> in detailed folder view) reflects the current
+time, and that the Last Result column displays &quot;0x0&quot; (everything went OK). If either of these is
+different, then you should recheck your setup.</p>
+<h2 id="trouble_running_via_cron_/_scheduled_tasks?">Trouble running via CRON / Scheduled Tasks? <a href="#trouble_running_via_cron_/_scheduled_tasks?" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Users that cannot run CRON will not be able to run tasks, however it is important the maintenance
+still be run in these cases.</p>
+<p>For this purpose the Maintenance Routes are available via the web address at
+<code>http://&lt;host&gt;/maint?key=changeme</code>.</p>
+<p>Accessing over the web route will require a key, which is configured via the CMS settings:</p>
+<ul>
+<li>Enable Maintenance?</li>
+<li>Maintenance Key</li>
+</ul>
+<p>The key is required if Enable Maintenance is set to &quot;Protected&quot; - this is strongly recommended. More
+information is available in the <a href="cms_maintenance.html">Maintenance Section</a>.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

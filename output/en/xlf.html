@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="api">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="api">Advanced</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="api.html">Overview</a></li>
+<li>
+<p><a href="cms_api.html">CMS API</a></p>
+</li>
+<li>
+<p><a href="../api/">CMS API Reference</a></p>
+</li>
+<li><a href="xmds.html">Player API</a></li>
+<li class="active"><a href="xlf.html">XLF<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="xmr_api.html">XMR</a></li>
+</ul></body></html>
+
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=api-->
+<h1 id="xibo_layout_format_-_xlf">Xibo Layout Format - XLF <a href="#xibo_layout_format_-_xlf" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>XLF is a standard XML document used to completely describe a Layout and its resources. The CMS manages the creation of XLF files and will insure they are valid XML before transmission to the Player.</p>
+<p>It is the Player's sole responsibility to parse the Layout files, request any necessary resources and put the Layout on screen for playback.</p>
+<p>To simplify the explanation the XLF will be considered in two parts:</p>
+<ul>
+<li>Structure</li>
+<li>Media</li>
+</ul>
+<h2 id="structure">Structure <a href="#structure" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The Layout structure defines the layout width, height and the regions it is divided into. It can also define the background properties.</p>
+<p>The structure part of a Layout XLF is shown below:</p>
+<pre><code class="language-xml">&lt;layout schemaVersion="3" width="1920" height="1080" background="126.jpg" bgcolor="#FF3399"&gt;
+    &lt;region id="1" width="1920" height="1080" top="0" left="0" zindex="1"&gt;
+        &lt;media&gt;...&lt;/media&gt;
+        &lt;options&gt;
+            &lt;loop&gt;0&lt;/loop&gt;
+            &lt;transitionType&gt;&lt;/transitionType&gt;
+            &lt;transitionDuration&gt;&lt;/transitionDuration&gt;
+            &lt;transitionDirection&gt;&lt;/transitionDirection&gt;
+        &lt;/options&gt;
+    &lt;/region&gt;
+    &lt;tags&gt;
+        &lt;tag&gt;default&lt;/tag&gt;
+    &lt;/tags&gt;
+&lt;/layout&gt;</code></pre>
+<p>This is a 1080p landscape Layout with a single full screen region.</p>
+<p>A XLF will always have 1 Layout node (the root element of the document) and one or more region nodes. A Layout without any regions should be considered invalid.</p>
+<h3>Layout</h3>
+<p>The Layout node provides the following options:</p>
+<ul>
+<li>schemaVersion: The schema version for this Layout.</li>
+<li>width: The Layout Width.</li>
+<li>height: The Layout Height.</li>
+<li>background: The path to the background image.</li>
+<li>bgcolor: A HEX colour for the background.</li>
+</ul>
+<h4>Dimensions</h4>
+<p>The XLF provides the width/height of the Layout and the width/height/position of each region. This should be used alongside the Player Dimensions to reconstruct the Layout at the appropriate aspect ratio. Simply put, the Player should scale the Layout according to the Player Dimensions.</p>
+<h3>Regions</h3>
+<p>The region nodes provide the following options:</p>
+<ul>
+<li>id: The regionId.</li>
+<li>width: The region width.</li>
+<li>height: The region height.</li>
+<li>top: The region position from the top of the Layout.</li>
+<li>left: The region position from the left of the Layout.</li>
+<li>zindex: The order this region should be drawn on the screen (0 first, with each new region on top).</li>
+</ul>
+<p>It may also provide an options node with one or more option nodes describing additional settings for that region.</p>
+<h4>Options</h4>
+<p>A region node provides additional options in its <code>&lt;options&gt;</code> node. These are optional elements and should be provided with sensible defaults in the Player.</p>
+<h4>Loop</h4>
+<p>The Loop option is only applicable when there is only 1 media item in the region. It controls whether that one media item should be reloaded after it finished or not. The default is 0 (don't loop).</p>
+<h4>Transition</h4>
+<p>The Transitions attached to the Region are referred to as &quot;Region Exit Transitions&quot;. They are the transition that should be shown when the Layout is finishing. Transitions are described in more detail in the Media section.</p>
+<h2 id="media">Media <a href="#media" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Media appears as <code>&lt;media&gt;</code> nodes within <code>&lt;region&gt;</code> nodes on a Layout. Media should be played in the order is appears in the XLF.</p>
+<p>Media Nodes have attributes common to all types of Media and Options Nodes which are specific to the Media Module. There are set of core modules documented here, 3rd party modules should provide their own documentation notes.</p>
+<pre><code class="language-xml">&lt;media id="" duration="" type="" render=""&gt;
+    &lt;options&gt;
+        &lt;uri&gt;&lt;/uri&gt;
+        &lt;transIn&gt;&lt;/transIn&gt;
+        &lt;transInDuration&gt;&lt;/transInDuration&gt;
+        &lt;transInDirection&gt;&lt;/transInDirection&gt;
+        &lt;transOut&gt;&lt;/transOut&gt;
+        &lt;transOutDuration&gt;&lt;/transOutDuration&gt;
+        &lt;transOutDirection&gt;&lt;/transOutDirection&gt;
+    &lt;/options&gt;
+    &lt;raw&gt;
+
+    &lt;/raw&gt;
+&lt;/media&gt;</code></pre>
+<ul>
+<li>id: The <code>mediaId</code> of this media node</li>
+<li>duration: The duration in seconds that this media item should be played</li>
+<li>type: The type of media module</li>
+<li>render: The render type, either native or html</li>
+<li>options -&gt; uri: The uri of the save location as presented in <code>RequiredFiles</code>. This is common to all library based media.</li>
+</ul>
+<p>Additional options may be present from <strong>v5</strong> onwards</p>
+<pre><code class="language-xml">&lt;media "..."&gt;
+    &lt;audio&gt;
+        &lt;uri&gt;1.mp4&lt;/uri&gt;
+    &lt;/audio&gt;
+    &lt;commands&gt;
+        &lt;command&gt;code&lt;/command&gt;
+    &lt;/commands&gt;
+&lt;/media&gt;</code></pre>
+<h3>Type and Render</h3>
+<p>The Media Node contains a type which the Player can use to determine how that type of Media should be shown. This is particularly important if the <code>render</code> attribute is <code>native</code>. Native rendering means that the CMS does not provide a HTML file for the Player to show and that the Player should be responsible for implementing the logic to render that item.</p>
+<p>Some media items are set to render <code>native</code> but can actually be rendered in <code>html</code> at the discretion of the implementer. This HTML files are provided for convenience.</p>
+<p>A list of media types and their associated render options can be found below:</p>
+<pre><code class="language-json">[
+   {
+      "Module":"Image",
+      "render":"native"
+   },
+   {
+      "Module":"Video",
+      "render":"native"
+   },
+   {
+      "Module":"Flash",
+      "render":"native"
+   },
+   {
+      "Module":"PowerPoint",
+      "render":"native"
+   },
+   {
+      "Module":"Webpage",
+      "render":"native"
+   },
+   {
+      "Module":"Ticker",
+      "render":"native"
+   },
+   {
+      "Module":"Text",
+      "render":"native"
+   },
+   {
+      "Module":"Embedded",
+      "render":"native"
+   },
+   {
+      "Module":"datasetview",
+      "render":"native"
+   },
+   {
+      "Module":"shellcommand",
+      "render":"native"
+   },
+   {
+      "Module":"localvideo",
+      "render":"native"
+   },
+   {
+      "Module":"clock",
+      "render":"html"
+   },
+   {
+      "Module":"forecastio",
+      "render":"html"
+   },
+   {
+      "Module":"twitter",
+      "render":"html"
+   },
+   {
+      "Module":"audio",
+      "render":"native"
+   }
+]</code></pre>
+<p>The following <code>native</code> modules can be rendered using the HTML returned by <code>GetResource</code>.</p>
+<ul>
+<li>DataSet View</li>
+<li>Embedded (may need to adjust transparency)</li>
+<li>Text</li>
+<li>Ticker</li>
+<li>Web Page (may need to open natively)</li>
+</ul>
+<p>These media items predate the &quot;render&quot; mode on Modules and will be converted in due course where appropriate.</p>
+<h3>Duration</h3>
+<p>Each Media item represented in the XLF has a duration in seconds attribute. This represents the total time the Player should show that item before moving on to the next.</p>
+<p>All media cycling in the Player should be driven by the Duration. This means that a Layout is shown for the duration of the longest set of media.</p>
+<h3>Transitions</h3>
+<p>Media options include instructions for showing transitions at the start and end of each media item, described as In and Out. Each of the two transitions have the following 3 properties:</p>
+<ul>
+<li>Type: The type of transition, currently supported are Fade In, Fade Out and Fly.</li>
+<li>Duration: This is the duration in milliseconds that the transition should run for.</li>
+<li>Direction: This is a compass point set of directions for the transition (only applicable for fly). N, NE, E, SE, S, SW, W, W, NW.</li>
+</ul>
+<h3>Audio Nodes</h3>
+<p>Starting in <strong>v5</strong> the XLF may contain <code>&lt;audio&gt;</code> nodes. These are audio files that should be played at the start of a media item and should be executed by the Audio module.</p>
+<h3>Command Nodes</h3>
+<p>Starting in <strong>v5</strong> the XLF may contain one or more <code>&lt;command&gt;</code> nodes contained in a <code>&lt;commands&gt;</code> element. These are commands that should be executed in order when the
+media item is started. They should be executed by the Shell Command module.</p>
+<h1 id="modules">Modules <a href="#modules" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>The term <code>Modules</code> is used by Xibo to represent the different types of Media. The term is being phased out in 1.8 to <code>Widgets</code>.</p>
+<p>Essentially both modules and widgets are short terminology for &quot;assigning media to a region in a layout&quot;.</p>
+<h2 id="image">Image <a href="#image" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Images are library items and will be transferred to the Player via <code>RequiredFiles</code>. By default the CMS allows JPG, PNG, GIF and BMP images to be uploaded. Image media nodes contain the <code>uri</code> option which matches the <code>path</code> attribute provided in <code>Required Files</code>. The Player should use this to locate the cached file.</p>
+<p>The Player is responsible for natively rendering images according to the following options:</p>
+<ul>
+<li>scaleType: Either center or stretch.</li>
+<li>align: Either left, center or right.</li>
+<li>valign: Either top, middle or bottom.</li>
+</ul>
+<h2 id="video">Video <a href="#video" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Videos are library items and will be transferred to the Player via <code>RequiredFiles</code>. By default the CMS allows WMV, AVI, MP4 and WEBM videos to be uploaded. Video media nodes contain the <code>uri</code> option which matches the <code>path</code> attribute provided in <code>Required Files</code>. The Player should use this to locate the cached file.</p>
+<p>The Player is responsible for natively rendering videos according to the following options:</p>
+<ul>
+<li>loop: Play the video for its full duration and loop if it finishes before the duration is reached.</li>
+<li>mute: Mute the video.</li>
+</ul>
+<h4>Loop</h4>
+<p>The loop setting is only applicable if the duration has been specified and is not 0 (end-detect). Duration always specifies the total duration for the media item, which means the loop setting can be used to play a shorter video in a loop for a set period of time, without any gap between playback.</p>
+<p>For example, a 10 second video with duration set to 60 seconds and set to loop will play through 6 times before moving on to the next media in the list.</p>
+<h3>Duration</h3>
+<p>Videos can have a special duration attribute of &quot;0&quot; which means &quot;end detect&quot;. This allows the user to assign a video widget to the Layout without having to assess its duration. When a duration of 0 is provided it is the Players responsibility to detect when that video has completed and advance to the next item.</p>
+<p>When a duration of 0 is provided the <code>loop</code> option should be ignored.</p>
+<h2 id="local_video">Local Video <a href="#local_video" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The local video module is very similar to the video module except that the file is not provided by <code>RequiredFiles</code>. Local Video is used either when the file is provided to the player by another means or when the video should be streamed.</p>
+<p>In both cases the <code>uri</code> option is the path to the video file.</p>
+<h2 id="flash_and_powerpoint">Flash and PowerPoint <a href="#flash_and_powerpoint" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Flash and PowerPoint have limited support on the Windows Player and rely on the underlying application being available.</p>
+<p>They are both library items transferred to the Player via <code>RequiredFiles</code>.</p>
+<p>There are no additional options with these widgets.</p>
+<h2 id="web_page">Web Page <a href="#web_page" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Web Page widgets provide rendered HTML via <code>GetResource</code>. However they also provide a <code>modeId</code> option which is used to determine whether the web page should be opened natively or via the rendered HTML.</p>
+<p>When the <code>modeId</code> is equal to 1 the Player should parse the <code>url</code> option and open that directly in a web view.</p>
+<h2 id="embedded">Embedded <a href="#embedded" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Embedded widgets provide rendered HTML via <code>GetResource</code>. They also provide a <code>transparency</code> option which is used to determine if the web view should be transparent.</p>
+<h2 id="shell_commands">Shell Commands <a href="#shell_commands" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The Shell Command widget exists to execute Shell Commands on a Layout. It provides three options:</p>
+<ul>
+<li>commandCode</li>
+<li>windowsCommand</li>
+<li>linuxCommand</li>
+</ul>
+<p>Pre-defined commands can be used which have been configured as per the <a href="displays_commands.html">command functionality</a>. The player should inspect the command configuration
+it received during the <a href="xmds.html#RegisterDisplay"><code>RegisterDisplay</code></a> XMDS call for the command string to execute.</p>
+<p>An adhoc command does not have a commandCode and instead provides a windows/linux Command to execute. It is the players responsibility to sanitize and execute these commands in a Shell.</p>
+<h2 id="audio">Audio <a href="#audio" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Audio files are library items and will be transferred to the Player via <code>RequiredFiles</code>. The player is responsible for natively rendering these files in an appropriate
+media player.</p>
+<h2 id="get_resource">Get Resource <a href="#get_resource" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Using the rendered HTML provided by the CMS is entirely at the Players discretion. All widget options are also provided on each Media node should the Player implementation require native rendering of any other types of media.</p>
+<p>Rendered HTML should be loaded in a transparent Web View unless otherwise stated by a <code>transparency</code> option.</p>
+<h3>Additional Data</h3>
+<p>Some widget (such as Ticker / DataSet) provide additional data in the <code>GetResource</code> HTML which is used to adjust the duration of the media item. For example Tickers have an option to use the duration setting as a duration per item.</p>
+<p>These options are provided as HTML tags which can be parsed by the Player and used to adjust the duration accordingly. They are:</p>
+<ul>
+<li><code>&lt;!-- NUMITEMS=X --&gt;</code>: Informational tag containing the number of items in the resource.</li>
+<li><code>&lt;!-- DURATION=X --&gt;</code>: Calculated total duration for this media item.</li>
+</ul>
+<h1 id="complete_example">Complete Example <a href="#complete_example" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Below is a complete Layout XLF.</p>
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;layout width="1920" height="1080" resolutionid="9" bgcolor="#ffffff" schemaVersion="2" background="975.jpg"&gt;
+   &lt;tags&gt;
+      &lt;tag&gt;unittest&lt;/tag&gt;
+   &lt;/tags&gt;
+   &lt;region id="1" userId="1" width="1812" height="132" top="57.1875" left="54.7875"&gt;
+      &lt;media id="1" type="text" render="native" duration="5"&gt;
+         &lt;options&gt;
+            &lt;xmds&gt;1&lt;/xmds&gt;
+            &lt;effect&gt;none&lt;/effect&gt;
+            &lt;speed&gt;0&lt;/speed&gt;
+            &lt;backgroundColor /&gt;
+         &lt;/options&gt;
+         &lt;raw&gt;
+            &lt;text&gt;&lt;![CDATA[&lt;p style="text-align: center;"&gt;&lt;font color="#000000" face="lucida sans unicode, lucida grande, sans-serif"&gt;&lt;span style="font-size: 80px;"&gt;Image Alignment Test&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;]]&gt;&lt;/text&gt;
+         &lt;/raw&gt;
+      &lt;/media&gt;
+   &lt;/region&gt;
+   &lt;region id="2" userId="1" width="1816.8" height="772.79999999999" top="253.9875" left="54.7875"&gt;
+      &lt;media id="2" type="image" render="native" duration="10"&gt;
+         &lt;options&gt;
+            &lt;uri&gt;2.png&lt;/uri&gt;
+         &lt;/options&gt;
+         &lt;raw /&gt;
+      &lt;/media&gt;
+      &lt;media id="3" type="image" render="native" duration="10"&gt;
+         &lt;options&gt;
+            &lt;uri&gt;3.png&lt;/uri&gt;
+            &lt;scaleType&gt;center&lt;/scaleType&gt;
+            &lt;align&gt;left&lt;/align&gt;
+            &lt;valign&gt;middle&lt;/valign&gt;
+         &lt;/options&gt;
+         &lt;raw /&gt;
+      &lt;/media&gt;
+      &lt;media id="4" type="image" render="native" duration="10"&gt;
+         &lt;options&gt;
+            &lt;uri&gt;4.png&lt;/uri&gt;
+            &lt;scaleType&gt;center&lt;/scaleType&gt;
+            &lt;align&gt;right&lt;/align&gt;
+            &lt;valign&gt;middle&lt;/valign&gt;
+         &lt;/options&gt;
+         &lt;raw /&gt;
+      &lt;/media&gt;
+   &lt;/region&gt;
+&lt;/layout&gt;</code></pre>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

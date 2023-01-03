@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+    <meta name="description"
+        content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+</head>
+
+<body data-toc="users">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+      </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+                    <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">Scheduling</a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!DOCTYPE html
+                        PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users.html">Introduction</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_administration.html">Users</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_groups.html">User Groups</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="users_library_quota.html">User Library
+                                Quota</a>
+                    
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="users_featuresandsharing.html">Features
+                                and Sharing</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0"
+                                href="users_notifications.html">Notifications</a>
+                        </ul>
+                    </body>
+                    </html>
+                    <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=users-->
+                <h1 id="library_quota">
+                    Library Quota
+                    <a href="#library_quota" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+                </h1>
+                <p>
+                    Captivad includes a <strong>Library Quota</strong> system so that <strong>Users</strong> and <strong>User Groups</strong> can be assigned a Library quota to determine the maximum amount of content they can upload.
+                </p>
+                <p>
+                    Quotas can be assigned on User and User Group <strong>Add/Edit forms</strong> and are expressed in kilobytes.
+                </p>
+                <p>
+                    Putting a value of <strong>0</strong> means the User/User Group has an unlimited Library quota.
+                </p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/user_library_quota.png" data-processed="1"
+                            naptha_cursor="text"></figure>
+                </div>
+
+                <p>
+                    The <strong>largest</strong> quota that can be resolved for the User is always the quota that is applied and excludes
+                    the unlimited quota.
+                </p>
+
+                <h4>Example:</h4>
+                <ul>
+                    <li>User A has a quota of 100 MB assigned to their User record</li>
+                    <li>Group 1 has a quota of 50 MB assigned to the Group record</li>
+                    <li>Group 2 has a quota of 120 MB assigned to the Group record</li>
+                </ul>
+                <p>
+                    User A belongs to Group 1 and Group 2, therefore their library quota is 120 MB (as this is the largest quota applied).
+                </p>
+                <p>
+                    User A leaves Group 2 which means their quota is now 100 MB (as the largest applied quota).
+                </p>
+                <p>
+                    User A is re-assigned an unlimited quota (0), their Library quota is 50 MB as they still belong to Group 1 (the largest Library quota).
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+
+            <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a> for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.
+            </p>
+            <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative
+                    Commons Licence</a>.
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".ss_body img").addClass("img-thumbnail");
+            $(".ss_body table").addClass("table");
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $("#side-nav a").each(function () {
+                if ($(this).data().tocName == $("body").data().toc)
+                    $(this).parent().addClass("active");
+            });
+
+            $(".ss_back_to_top").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 800);
+            });
+
+            if (inIframe()) {
+                console.log("In Frame");
+                $("#top-nav").css("display", "none");
+                $(".ss-sidebar").parent().css("display", "none");
+            }
+        });
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

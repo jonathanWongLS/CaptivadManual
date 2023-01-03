@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="tour">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="index.html">Overview</a></li>
+<li><a href="tour_login.html">Log In</a></li>
+<li><a href="tour_status_dashboard.html">Status Dashboard</a></li>
+<li><a href="tour_icon_dashboard.html">Icon Dashboard</a></li>
+<li><a href="tour_media_dashboard.html">Media Dashboard</a></li>
+<li><a href="tour_navigation.html">Navigation</a></li>
+<li><a href="tour_grids.html">Grids</a></li>
+<li><a href="tour_forms.html">Forms</a></li>
+<li><a href="tour_guides.html">Guides</a></li>
+</ul></body></html>
+<li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=tour-->
+<h1 id="setting_up_a_cafe_menu_sign_with_xibo">Setting up a cafe menu sign with Xibo <a href="#setting_up_a_cafe_menu_sign_with_xibo" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<h2 id="1._introduction">1. Introduction <a href="#1._introduction" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The combination of the Xibo CMS and the Xibo Player Software operating together is extremely powerful. It has the potential to allow you to control hundreds of different displays running hundreds of different layouts simultaneously.</p>
+<p>The price of that power is a certain amount of complexity, and it can be difficult for a new user to know where to start when there are so many options available.</p>
+<p>This tutorial will provide you with a soft start by providing a step-by-step introduction to the process of setting up a simple, single screen campaign.</p>
+<p>We have tried to provide a realistic scenario for the tutorial. It allows us to take you through the setup procedure and also lets us talk about practical design considerations you should be making while you layout your signs.</p>
+<h2 id="2._scenario">2. Scenario <a href="#2._scenario" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The Riverside Cafe is a small cafe near the river which passes through a small town. It is popular with boat owners and canoeists during the daytime, but also does a busy trade during the evening period.</p>
+<p>The cafe is open from 7.30 am through to 10.00 pm. It operates three different menus across the day for Breakfast (7.30 to 11.30), Lunch (11.30 to 3.30pm) and Teatime (3.30 to 10.00 pm). The cafe is closed all day on Wednesday and on Sunday evenings.</p>
+<p>The cafe owner has decided to install a digital sign to be displayed on a single screen located on a wall close to the Point of Sale (POS). It will be in a position where it can be seen through the window when the cafe is closed. When the cafe is open it will display a menu board which will update to show the current offering. When the cafe is closed it will show a promotional screen with information about the cafe's opening times and useful local information (bus times, taxi numbers, etc).</p>
+<p>This is an easy task for you using the Xibo CMS. It will need you to create four different layouts – one for each menu and a default layout to be shown when the Cafe is closed. You will then need to schedule each layout so that it displays at the correct time of day. Once these have been scheduled you can turn your attention to the visual appearance of each of the layouts.
+<img src="img/cafe-menu-0043.png" alt="Completed Riverside Cafe menu" /></p>
+<h2 id="3._before_you_begin">3. Before you begin <a href="#3._before_you_begin" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Our tutorial assumes that you already have a Xibo digital signage system set and running for you. If not, you can find instruction on how to do that <a href="http://xibo.org.uk">here</a>.</p>
+<p>There are an enormous range of options to choose from. You need to make choices about screens, display player hardware, and the configuration of the Xibo CMS. All of this is beyond the scope of this tutorial.</p>
+<p>However, we can tell you that, if you are simply looking to evaluate Xibo using the tutorial, the fastest, simplest option is to:</p>
+<ol>
+<li>Download and install the free Xibo <a href="http://xibo.org.uk/get-xibo">Player Software</a> on your PC or laptop.</li>
+<li>Take advantage of the 14 day free trial <a href="http://springsignage.com/hosting">CMS Cloud Hosting</a> offer provided by our sponsor, Spring Signage Ltd.</li>
+</ol>
+<p>This will allow you to get your Digital Signage system up and running quickly without the complication and bother of installing the Xibo CMS and a MySQL database on a server.</p>
+<p>Alternatively, if you prefer to use your Android phone or tablet as a display, you can install Spring Signage's Xibo for Android app. Like the CMS Cloud Hosting this is a commercial offering , but it has a 15 day free trial period which should give you plenty of time to complete the tutorial.  </p>
+<p>You can download an archive containing all the graphics file and other materials used in the tutorial <a href="img/guide_getting_started_cafe_menu.zip">here</a>. The archive also includes the completed layouts we have produced so that you can import them for comparison.</p>
+<h2 id="4._setting_up_the_display_in_the_cms">4. Setting up the display in the CMS <a href="#4._setting_up_the_display_in_the_cms" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Once your display software has been set up and registered with the CMS you can make a number of adjustments from the DISPLAYS menu in the CMS Dashboard. The Displays screen can be used to adjust many individual characteristics of the screen to suit your system.</p>
+<p><img src="img/cafe-menu-0007.png" alt="Editing your display" /></p>
+<p>We won't cover them here, but you can find more information on the various settings you can make from the DISPLAYS dashboard <a href="displays.html">here</a>.</p>
+<h2 id="5._creating_basic_layouts">5. Creating basic layouts <a href="#5._creating_basic_layouts" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>You will need to create four different screen layouts – one for each of the three menus, and a default layout to be shown when the Cafe is closed. These will then need to be scheduled so that each layout displays at the correct time of day.</p>
+<p>Think of layouts as containers for the images, videos and other media that will be displayed. Layouts allow you to control where and when they will appear on the screen. </p>
+<p>For now, we are going to keep things simple and set up basic layouts containing a single Region containing a simple text message. Once these have been scheduled to display at the correct times we will return and focus on the visual appearance of each of the layouts.</p>
+<p>We will start by editing the existing Default layout. Once configured this will become a template for the creation of the other layouts</p>
+<ol>
+<li>Select DESIGN/Layouts from the Dashboard.</li>
+<li>
+<p>Select Design from the Default layout's drop down menu.</p>
+<p><img src="img/cafe-menu-0018.png" alt="Default Layout drop down menu" /></p>
+</li>
+<li>
+<p>The Layout Designer will open.</p>
+<p><img src="img/cafe-menu-0012.png" alt="Layout Designer" />  </p>
+</li>
+</ol>
+<p>The Xibo CMS's Layout Designer will allow you to set up basic characteristics of the layout and specify a number of screen Regions where media can be added and controlled. We will start by setting up a plain white background:</p>
+<ol>
+<li>
+<p>Click the Options menu button and select Background.</p>
+<p><img src="img/cafe-menu-0013.png" alt="Layout Options menu" /></p>
+</li>
+<li>Pick white from the colour picker or enter &quot;#ffffff&quot; in the Background Colour box. Click Save.</li>
+</ol>
+<p>The layout is created with a single Region that covers the full screen. We will edit that and use it for our text message display.</p>
+<ol>
+<li>Hover your mouse over the Region and then select Options from the drop down menu.</li>
+<li>Ensure that the Loop? check box is selected. Click Save.</li>
+<li>Select Edit Timeline from the drop down menu. The Region Timeline dialog will open.</li>
+<li>Select Text from the Add Media list to the left of the dialog. The Xibo CMS's HTML text editor will open.</li>
+</ol>
+<p>Xibo uses CKEditor for text input. CKEditor is a powerful WYSIWYG HTML editor that will allow you to add and style both text and graphics to be displayed within the Region. Its button based user interface will provide access to many of the typographical features of HTML and CSS. Complete documentation is available over at CKEditor's website.
+<img src="img/cafe-menu-0014.png" alt="CKEditor" /></p>
+<p>For now, we will add and format a simple text message:</p>
+<ol>
+<li>Place the cursor in the text area and press Enter to create a new line.</li>
+<li>Type &quot;Welcome to Riverside Cafe&quot;. Press Enter to create a new line.</li>
+<li>Type &quot;Open from 7.30 am through to 10.30 pm&quot;.</li>
+<li>Drag the mouse to highlight all three lines. Select &quot;Verdana&quot; from the font menu and select the &quot;Center&quot; from the text alignment group.</li>
+<li>Highlight &quot;Welcome to Riverside Cafe&quot; and select a font size of 72.</li>
+<li>Highlight &quot;Open from 7.30 am through to 10.30 am&quot; and select a font size of 48    .</li>
+<li>The result should look something like the screenshot here:</li>
+<li>Finally, click the Options tab and enter 600 in the duration field . This will cause the layout to run for 5 minutes before it is updated.</li>
+<li>Click Save and close the Timeline editor to return to the Layout Designer screen.</li>
+</ol>
+<p><img src="img/cafe-menu-0019.png" alt="Riverside Basic Default Layout" /></p>
+<p>We can now use this Layout as a template to speed up the process of creating the three additional Layouts. Start by saving the template:</p>
+<ol>
+<li>
+<p>Select Save Template from the drop down menu. Type &quot;Riverside Basic&quot; in to the Name field. Click Save.</p>
+<p><img src="img/cafe-menu-0016.png" alt="Save Layout as Template" /></p>
+</li>
+<li>
+<p>We can use the template to create a new layout for the Breakfast menu:</p>
+</li>
+<li>
+<p>Select DESIGN/Layout from the Dashboard. Select Add Layout. The Add Layout dialog will open.</p>
+<p><img src="img/cafe-menu-0017.png" alt="Add Layout" /></p>
+</li>
+<li>In the Name field enter &quot;Riverside Cafe - Breakfast&quot;, and then select Riverside Basic from the list of available templates. Click Save. The Layout Designer will open with the new Layout.</li>
+<li>Use the Region timeline text editor to edit the text. The main headline should read &quot;Riverside Cafe - Breakfast Menu&quot; and the second line should read &quot;7.30 to 11.30 am&quot;. Click save.</li>
+</ol>
+<h2 id="exercise">Exercise <a href="#exercise" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Try it out for yourself. Use the above method to create the Riverside Cafe Lunch (11.30 to 3.00 pm) and Teatime (3.30 to 10.00 pm) menu Layouts.</p>
+<h2 id="6._scheduling_repeated_events">6. Scheduling repeated events <a href="#6._scheduling_repeated_events" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>If you test the results of your work so far by running Xibo Player Software you should see that the default layout is now displayed continuously. This is because the default layout acts as a fallback screen that will display in the absence of any scheduled layout. We now need to schedule the three menu layouts so that that will be displayed on the correct days and at the correct times.</p>
+<p>The Xibo CMS's scheduler is extremely powerful and will allow you to schedule a specific layout to be shown on a specific monitor at a specific time years in advance of the current date. It will also allow recurring events to be set up to repeat with minute by minute accuracy if required. Individual events can be overridden by giving alternative events priority and this will allow you to build up a complex schedule which can be easily adapted to account for variations and special occasions such as holidays.</p>
+<p><img src="img/cafe-menu-0021.png" alt="CMS Scheduler" /></p>
+<p>We will begin by setting up the Breakfast Menu layout so that it displays at the correct time of day:</p>
+<ol>
+<li>Select Schedule from the Dashboard. </li>
+<li>By default the CMS Scheduler opens in Month view with the current day selected. You can use the buttons to the right to switch between Year, Month, Week and Day view. For now, we will continue using the Month view.</li>
+<li>
+<p>Select Riverside Monitor 1 from the drop down list of available Displays.</p>
+<p><img src="img/cafe-menu-0022.png" alt="Select Monitor" /></p>
+</li>
+<li>
+<p>Click on today's date to make sure it is selected and then click Add Event. The Schedule Event dialogue will open.</p>
+<p><img src="img/cafe-menu-0024.png" alt="Schedule Event" /></p>
+</li>
+<li>Click in the Start Time box and select today's date and a start time of 7.30.</li>
+<li>Set the End Time to today at 11.30.</li>
+<li>Finally, select the Riverside-Breakfast layout from the Layout/Campaign drop down list.</li>
+<li>Click Save.</li>
+</ol>
+<p>The newly scheduled event will be shown as a blue (single display) monitor icon on the CMS Schedulers display. We now need to set it up so that it repeats on a daily basis:</p>
+<ol>
+<li>Click on the monitor icon to open the Edit Event dialogue will open.</li>
+<li>
+<p>Select the Repeats tab.</p>
+<p><img src="img/cafe-menu-0025.png" alt="Riverside Basic Default Layout" /></p>
+</li>
+<li>From the drop down list select Daily.</li>
+<li>Set Repeat every to a value of 1.</li>
+<li>Finally, set the Until value to a date a year or so in to the future.*</li>
+<li>Click Save.</li>
+</ol>
+<p>The event will now be shown in the scheduler with the recurring event symbol for every day going forward.</p>
+<p>* The choice of date here in this application is not significant – it simply ensures that the layout will continue to display on a daily basis in to the future. The scheduler will allow you to set a date up to five years in advance, and currently does not offer a continuous display option.</p>
+<p>We will now set up the Lunch menu events and then, to save time, we will set up the Teatime menu events using the Next (event) button in the Edit Event dialogue:</p>
+<ol>
+<li>Click on today's date to make sure it is selected and then click Add Event. The Schedule Event dialogue will open.</li>
+<li>Click in the Start Time box and select 11.30.</li>
+<li>Set the End Time to today at 15.00.</li>
+<li>Select the Riverside Cafe Lunch Menu layout from the Layout/Campaign drop down list.</li>
+<li>Select the Repeats tab.</li>
+<li>From the drop down list select Daily.</li>
+<li>Set Repeat every to a value of 1.</li>
+<li>Set the Until value to a date a year or so in to the future.</li>
+<li>We can now save this event and create a new one by clicking Next. The Lunch Menu event will be scheduled and the Schedule event dialogue will remain open with all of the settings of the previous event in place.</li>
+<li>Edit the Start time to 15.00 and the end time to 22.30</li>
+<li>Select Riverside – Teatime from the Layout/Campaign drop down list.</li>
+<li>
+<p>Click Save and check that all three events are now shown as recurring events on each page.</p>
+<p><img src="img/cafe-menu-0046.png" alt="Schedule recurring events" /></p>
+</li>
+</ol>
+<h2 id="7._scheduling_exceptional_events">7. Scheduling exceptional events <a href="#7._scheduling_exceptional_events" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The result of all this activity should be that the Breakfast, Lunch and Teatime Layouts will now be displayed at the correct times every day of the week. The default layout will display at all times where an event has not been scheduled, i.e from 22.30 through until 7.30 the following morning. </p>
+<p>However, the cafe does not open all day on every day of the year. As we have already mentioned , the cafe is closed all day on Wednesday and on Sunday evenings, and it is also closed on Christmas and New Years day. In addition, there may be occasions when the cafe needs to close temporarily for unexpected reasons, such as illness, extreme weather, etc., or there may be times when the menu needs to change to reflect a shortage of an ingredient, or a special offer.</p>
+<p>Although the solution may seem obvious, it is not possible to delete an individual repeat of an event within the scheduler without deleting all of the programmed repeats. This is by design. To adapt the scheduling of the display to accommodate these exceptional events we need to first add additional events and then give those events priority so that they override the existing event.</p>
+<p>For this tutorial we will use the default layout for those times when the cafe is closed. However, it would easily be possible to create special layouts for particular occasions like Christmas Day to give a seasonal feel.</p>
+<p>We will start by setting up the regular Wednesday closing display.</p>
+<ol>
+<li>Click Add Event. </li>
+<li>Set the Start Time to 7.30 on the next available Wednesday and the End Time to 22.30 on the same day.</li>
+<li>Set Layout/Campaign to Default layout. </li>
+<li>
+<p>Check the Priority box </p>
+<p><img src="img/cafe-menu-0026.png" alt="Schedule recurring events" /></p>
+</li>
+<li>Select the Repeats tab.</li>
+<li>Set Repeats to Weekly.</li>
+<li>Set Until to a date a year or so in to the future.</li>
+<li>
+<p>Click Save.</p>
+<p><img src="img/cafe-menu-0047.png" alt="Schedule recurring events" /></p>
+</li>
+</ol>
+<p>The new scheduler will show a new event occurring every Wednesday, indicated with the Priority symbol. This event will override the existing daily event and the Default layout will be displayed.</p>
+<h3>Exercise:</h3>
+<p>Set up the Sunday early closing priority event, so that the default screen is shown from 15.00 onward.</p>
+<h2 id="8._layout_design_–_creating_the_default_layout">8. Layout design – creating the Default layout <a href="#8._layout_design_–_creating_the_default_layout" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Now that we have all three layouts scheduled so that they are displayed at the correct times, we can now turn our attention to their visual design. This part of the tutorial will cover the design of the Default and Breakfast Menu layouts.</p>
+<p>We will start with the Default layout, which will be displayed whenever the cafe is closed, and will be viewable by passersby through the cafe window. This last point is an important practical consideration when planning the design. Whatever text and visual elements are included, they must be visible, and readable, from a viewing distance of 3 metres. Text, in particular, must be of a sufficient size to be read at a distance.</p>
+<p>In this process we will add a background image, a text area, a clock, and an image sideshow to the layout. </p>
+<p>The choice of background image is important for any project like this. If you main aim is to provide information, avoid busy backgrounds that may make the text difficult to read. Ensure that it provides clear areas where you can add the content regions to the page.</p>
+<p>We have used a custom background for our tutorial, which has allowed us to make use of fonts and other graphic elements that may not be available on the display player equipment.</p>
+<p>We have provided a Resource archive of graphics for use in this section of the tutorial, which can be downloaded <a href="img/guide_getting_started_cafe_menu.zip">here</a>. Once downloaded, extract all the files to a convenient location on your computer.</p>
+<p>There are many alternative background images available for free download in the <a href="http://xibo.org.uk/layouts/">Layout Exchange</a>.</p>
+<h3>Adding media to the Library</h3>
+<p>The images to be used in the layout must first be added to the Library so that they will be available for insertion in the layouts. You can do this individually as you insert them into the layout, but its perhaps faster and more convenient to add them in bulk at the beginning.</p>
+<ol>
+<li>Select LIBRARY/Media from the Dashboard.</li>
+<li>
+<p>Click &quot;Add Media&quot;. </p>
+<p><img src="img/cafe-menu-0027.png" alt="Add media" /></p>
+</li>
+<li>
+<p>Select &quot;Add Image&quot;.</p>
+<p><img src="img/cafe-menu-0028.png" alt="Add image" /></p>
+</li>
+</ol>
+<p>The Add New Image dialogue will allow you to upload jpg, jpeg, png, bmp, gif files up to the maximum size configured by your CMS administrator.</p>
+<ol>
+<li>Click &quot;+ Add files&quot;. </li>
+<li>Navigate to the tutorial resource file folder on your computer.</li>
+<li>
+<p>Hold down the Control key (to allow the selection of multiple files)and select the following files: &quot;Riverside_Cafe_Background.png&quot;, &quot;Coffee.png&quot;, &quot;Full English.png&quot;, Wholewheat waffle.png, &quot;strawberry waffle.png&quot;.</p>
+<p><img src="img/cafe-menu-0031.png" alt="Add image" /></p>
+</li>
+<li>Click Open and then &quot;Start upload&quot;.</li>
+</ol>
+<p>Your Library file list should now include the uploaded files and they will be available to insert immediately in to your layouts.</p>
+<p>First we will add the background image.</p>
+<ol>
+<li>Navigate to the Default layout Design screen (DESIGN/Layouts - Default Layout/ Design).</li>
+<li>Select Background from the drop down menu.</li>
+<li>
+<p>In the dialogue that opens, select &quot;Riverside_Cafe_Background.png&quot; from the Background Image drop down menu.</p>
+<p><img src="img/cafe-menu-0032.png" alt="Add Backgound image" /></p>
+</li>
+<li>Click Save and the background image should now completely fill the layout. It will look a little faded, because the temporary text region we added earlier will be sitting in front of it. </li>
+</ol>
+<p>Now we will edit the text region.</p>
+<ol>
+<li>Hover the mouse pointer over the region and select Options from the top right drop down menu.</li>
+<li>
+<p>Edit the fields in the dialogue as follows: Name = Opening Times ,Top = 340, Left 55, Width = 914, Height = 698.</p>
+<p><img src="img/cafe-menu-0033.png" alt="Region Options" /></p>
+</li>
+<li>Select Save and the region will resize accordingly.</li>
+</ol>
+<p>To edit the text:</p>
+<ol>
+<li>
+<p>Select Edit Timeline from the drop down menu.</p>
+<p><img src="img/cafe-menu-0034.png" alt="Add image" /></p>
+</li>
+<li>Select Edit for the Text item in the Region Timeline dialogue. </li>
+<li>Begin by deleting all of the existing text so you start with a blank document.</li>
+<li>
+<p>Copy and paste the following in to the text editor screen:</p>
+<blockquote>
+<p>Opening Times:-</p>
+<p>Monday: 7.30 am to 10.00 pm</p>
+<p>Tuesday: 7.30 am to 10.00 pm</p>
+<p>Wednesday: Closed all day</p>
+<p>Thursday: 7.30 am to 10.00 pm</p>
+<p>Friday: 7.30 am to 10.00 pm</p>
+<p>Saturday: 7.30 am to 10.00 pm</p>
+<p>Sunday: 7.30 am to 3.30 pm</p>
+</blockquote>
+</li>
+<li>Drag the mouse to select all of the text and, from the text editors toolbar, select Align Left, Font = Verdana, Size = 48px and Text Colour = #cc3300 (you will find this in the &quot;More Colors&quot; section of the colour selector).</li>
+<li>
+<p>Select the top line of the text (&quot;Opening Times:-&quot;) and select Bold and set the Size as 72 px.</p>
+<p><img src="img/cafe-menu-0035.png" alt="Style text" /></p>
+</li>
+</ol>
+<p>The text editor toolbar provides a number of tools to allow you to easily format the text, but the editor will also allow you to edit the HTML source code. This will allow you to fine tune that formatting or add more advanced code. In this case we would like to select a font size other than that provided by the toolbar's drop down list:</p>
+<ol>
+<li>Select &quot;Source&quot; from the toolbar to view the HTML source code for the current layout.</li>
+<li>Use the search tool to highlight all instances of &quot;48px&quot;, the current size of the main body text. Change these all to 52px then click Save.</li>
+<li>Double check that everything is as it should be by choosing &quot;Preview layout&quot; from the Options drop down menu. A browser tab should open, providing a full screen sized preview of the layout.</li>
+</ol>
+<p>To add the slideshow:</p>
+<ol>
+<li>From the Options menu, select Add Region. A new region will appear at the top left of the display.</li>
+<li>Drag the region over to the clear area to the right of the display and click Save Position. </li>
+<li>Select Options from the region's drop down menu and edit the settings as follows: Top =456, Left =1132, Width = 640, Height = 480. Make sure that the Loop box is ticked and click Save.</li>
+<li>Select Edit TimeLine from the region's menu to open the Region Timeline editor.</li>
+<li>From the Add Media list to the left select &quot;Image&quot; and then click View Library.</li>
+<li>
+<p>From the list of available media select: coffee.png, Full English.png, strawberry waffle.png and wholewheat waffle.png (by clicking the + symbol to the right of the entry). </p>
+<p><img src="img/cafe-menu-0037.png" alt="Assign Library item" /></p>
+</li>
+<li>
+<p>Click assign.</p>
+<p><img src="img/cafe-menu-0038.png" alt="Slideshow region timeline" /></p>
+</li>
+</ol>
+<p>The region timeline editor will now be populated with the four images shown in the sequence that they will be displayed. To change the order of display, simply drag the images to their new position in the list. By default the images will be set to display for 10 seconds. You can change this, and edit various other aspects of how they will display, by clicking the edit button for each image.</p>
+<ol>
+<li>When you are happy with the timeline setting, click Save Order and then Close.</li>
+<li>From the Options menu, select Preview Layout and check that the slideshow images show as intended, and that they loop continuously.  </li>
+</ol>
+<p>To add the clock to the display:</p>
+<ol>
+<li>From the Options menu, select Add Region. A new region will appear at the top left of the display.</li>
+<li>Drag the region over to the clear area to the right of the display and click Save Position. </li>
+<li>Select Options from the region's drop down menu and edit the settings as follows: Top =952, Left =1194, Width = 504, Height = 110. Make sure that the Loop box is ticked and click Save.</li>
+<li>Select Edit TimeLine from the region's menu to open the Region Timeline editor.</li>
+<li>From the Add Media list to the left select &quot;Clock&quot; and then select Digital from the Clock Type menu.</li>
+<li>Set the duration to 30 seconds.</li>
+<li>
+<p>In the text editor window, type [HH:mm:ss]. This will provide a 6 digit display showing the current hours, minutes and seconds.</p>
+<p><img src="img/cafe-menu-0039.png" alt="Edit Clock" /></p>
+</li>
+<li>Drag the mouse to highlight all the text and from the toolbar set; Bold, Align Centre, Font =Verdana, Font Size = 72px. Click Save.</li>
+<li>From the Timeline editor, select Save Order and then Close.</li>
+<li>From the Options menu, select Preview Layout and check that the clock displays as intended, and that it loops continuously. </li>
+<li>To check that the layout is working correctly on the actual display, select Schedule Now from the Options menu. Set a duration of 10 minutes, select the monitor and make sure the Priority box is ticked to override the scheduled layouts. Click Save. The layout will be displayed at the end of the monitor's current collection interval.</li>
+</ol>
+<p>This should complete the creation of the Default layout, which will now show at all times that the Cafe is closed.</p>
+<h2 id="9._layout_design_–_creating_the_breakfast_menu_layout">9. Layout design – creating the Breakfast Menu layout <a href="#9._layout_design_–_creating_the_breakfast_menu_layout" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>We can now move on to create the Breakfast menu layout. This will make use of the same background image that we used for the Default screen and will contain a single text region for the actual menu, alongside a slideshow of breakfast menu items.</p>
+<p>The design requirements for this layout are different to those of the Default layout , because this is intended to be read by customers as they place their order at the Point Of Sale. This means we can make use of smaller text, and because of this the information density of the display can be much higher.</p>
+<h3>Exercise:</h3>
+<p>Open the Riverside – Breakfast layout and add the background image. Resize and reposition the text region as follows: Name = Breakfast Menu Top =319, Left = 53, Width = 1010 and Height = 672 Loop = ticked.</p>
+<p><img src="img/cafe-menu-0040.png" alt="Breakfast menu text region options" /></p>
+<h3>Importing HTML Formatted Text</h3>
+<p>The big advantage of using HTML based text regions, apart from providing access to unlimited formatting options, is that there are many third party applications that can be used to produce HTML code which can be easily added using the text editor.</p>
+<p>This means that the display content can be created and edited by a third party, who does not need to have access to the Xibo CMS. They can edit the information in office applications such as MS Word or any one of a number of dedicated HTML editors.</p>
+<p>Once the editing is complete all the author needs do is email the file to you so that you can insert it in the appropriate place using the Xibo CMS.</p>
+<p>To demonstrate this we have provided a text file called &quot;Riverside_Breafast_Menu_Source.txt&quot;, which can be found in the tutorial Resources folder.</p>
+<p>Note. To do this reliably you need to open the source file in a pure text editor such as, on Windows machine, Notepad. Don't use a word processor such as Word, which may attempt to add additional formatting code to the document.</p>
+<p>To edit the Breakfast menu text region:</p>
+<ol>
+<li>Select Edit Timeline from the region's drop down menu.</li>
+<li>Select Edit for the Text item in the Region Timeline dialogue. </li>
+<li>Begin by deleting all of the existing text so you start with a blank screen.</li>
+<li>Open Riverside_Breafast_Menu_Source.txt in a text editor application (such as Notepad).</li>
+<li>Select all of the text in the document and then select Copy (usually in the Edit menu, or use the Ctrl C keyboard shortcut). </li>
+<li>Go back to the timeline text editor screen and click the Source button in the toolbar.</li>
+<li>
+<p>Place the cursor in the editor window, hold the Ctrl key down and press V. The source code for the menu should fill the window.</p>
+<p><img src="img/cafe-menu-0048.png" alt="Breakfast menu text region options" /></p>
+</li>
+<li>Press the Source button once more to return to the preview window. It should now contain a fully formatted menu containing a table of breakfast items and their prices. </li>
+<li>If you want to adjust any aspect of the menu layout you can do that using the toolbar tools. When you are happy with the appearance click Save.
+<img src="img/cafe-menu-0041.png" alt="Breakfast menu text region options" /></li>
+</ol>
+<p>It is a worthwhile exercise to study the source code for the menu listing to see how it is formatted. You will notice that the list of items and prices is comprised of a table. This is a very convenient way of formatting this kind of information, particularly because it makes it very easy to easy to align the columns.</p>
+<h3>Exercise:</h3>
+<p>The final touch is to add the slideshow to the layout .</p>
+<p>To do this create a new region in the layout and resize and reposition it as follows: Name = Breakfast Slideshow, Top =384, Left = 1113, Width = 722 and Height = 540 Loop = ticked. Add the breakfast item images to create a slideshow similar to the one used in the Default menu.</p>
+<h2 id="10._next_steps">10. Next steps <a href="#10._next_steps" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>If you have followed the tutorial right the way through from the beginning you should now have a fairly good grasp of how to use the Xibo CMS to create and schedule dynamically changing signs. However, it is important to realise that we have only touched on a small part of the software's capabilities here. There are many other aspects to explore.</p>
+<p>Also, please remember that there are many different ways of achieving these results and what we have shown you is by no means the only or best way of doing this. We encourage you to experiment with both the methods and workflow to find your optimum way of working.</p>
+<h3>Coming soon</h3>
+<p>You may have noticed that this project is not yet completed. The visual layout of the Lunch and Teatime menus for Riverside Cafe remains to be done. Part two of this tutorial will complete these and show how to use advanced features of the Xibo CMS including datasets, tickers and embedded HTML.</p>
+<h3>Additional help available now:</h3>
+<p><a href="http://xibo.org.uk"><a href="http://xibo.org.uk">http://xibo.org.uk</a></a></p>
+<p><a href="troubleshooting.html">Troubleshooting</a></p>
+<p><a href="https://community.xibo.org.uk/"><a href="https://community.xibo.org.uk/">https://community.xibo.org.uk/</a></a></p>
+<h3>Photo Credits</h3>
+<p>Images used for this tutorial:</p>
+<p>Photo: Riverside Cafe by Graham Wyatt CC (www.gpwyatt.co.uk)</p>
+<p>Photo: Breakfast at Keys by JFXie CC flickr.com – Converted to PNG format</p>
+<p><a href="https://www.flickr.com/photos/jfxie/8664928657">https://www.flickr.com/photos/jfxie/8664928657</a></p>
+<p>Photo: The Full English by Neil Conway CC flickr.com – Converted to PNG format</p>
+<p><a href="https://www.flickr.com">https://www.flickr.com</a> /photos/neilconway/4460785994</p>
+<p>Photo: breakfast by Meg Lessard CC flickr.com – Converted to PNG format</p>
+<p><a href="https://www.flickr.com/photos/megleo/5334218936/">https://www.flickr.com/photos/megleo/5334218936/</a></p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

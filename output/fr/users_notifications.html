@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="users">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="users.html">Introduction</a></li>
+<li><a href="users_administration.html">Users</a></li>
+<li><a href="users_user_types.html">Types</a></li>
+<li><a href="users_groups.html">Groups</a></li>
+<li><a href="users_library_quota.html">Library Quota</a></li>
+<li><a href="users_permissions.html">Permissions</a></li>
+<li class="active"><a href="users_notifications.html">Notifications<span class="glyphicon glyphicon-arrow-left you-are-here-arrow"></span></a></li>
+<li><a href="users_saml.html">SAML</a></li>
+</ul></body></html>
+<li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=users-->
+<h1 id="notifications">Notifications <a href="#notifications" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Xibo has a notification system to keep the administrators and users of the CMS informed of important system
+events and other user created notifications.</p>
+<h2 id="notification_drawer">Notification Drawer <a href="#notification_drawer" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Notifications for the logged in user appear in the notification drawer at the top right of the screen. The notification
+drawer can be accessed by clicking on the Alarm bell icon.</p>
+<p>The number of unread notifications is shown next to the Alarm bell.</p>
+<p><img src="../en/img/user_notification_draw.png" alt="User Notification Drawer" /></p>
+<p>Clicking on the Alarm bell opens the notification drawer and shows the last 5 notifications. Unread notifications are
+shown in black text and read ones in a light grey. Each notification can be read by clicking on the title which will open
+a popup containing the full notification.</p>
+<p>The notification drawer is shown when a user or group has the &quot;Notification Drawer&quot; permission, without this permission the
+bell icon is not shown.</p>
+<h3>Automatic notifications</h3>
+<p>Users may see some notifications after login or navigate (moving to a different page in the CMS). Where an automatic
+notification is shown the user is taken to a page showing the full notification and they must click &quot;Continue...&quot; to
+reach their original destination.</p>
+<h2 id="notification_centre">Notification Centre <a href="#notification_centre" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Notifications are created in the notification centre which can be accessed by authenticated users from a link at the bottom
+of the notification drawer. The notification centre link is shown when a user or group has the &quot;Notifications&quot; permission.</p>
+<p>The notification centre is a standard CMS administration screen with a grid showing all notifications.</p>
+<p><img src="../en/img/users_notification_centre.png" alt="Notification Centre" /> </p>
+<p>Notifications have the following properties:</p>
+<ul>
+<li>Subject</li>
+<li>Body</li>
+<li>Release Date</li>
+<li>Is Email?</li>
+<li>Is Interrupt?</li>
+<li>One or more Users/UserGroups</li>
+<li>One or more Displays/DisplayGroups</li>
+</ul>
+<p>Notifications will only show in the notification drawer if their release date has been passed and if the logged in user
+has been assigned the notification.</p>
+<p>If the notification has been configured for email and the user has an email address recorded in the CMS against their
+user account, then the notification will be emailed by the CMS maintenance system. <strong>Maintenance must be configured for
+email notifications to be sent.</strong></p>
+<h3>Editing Notifications</h3>
+<p>When editing a notification is should be noted that the notification will be altered in the CMS web portal according to
+the edits made, but that any emails generated which have already been sent will not be recalled.</p>
+<h2 id="system_notifications">System Notifications <a href="#system_notifications" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Xibo raises various system notifications to report on the health of the system as a whole. These notifications
+will be emailed to the maintenance alert email address configured in Settings. They will also be sent to users who belong
+to groups configured to receive system notifications or who have been configured to receive these notifications themselves.</p>
+<p>This configuration is managed on the User/User Group Edit form.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

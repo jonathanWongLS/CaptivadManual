@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="getting_started">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="index.html">Introduction</a></li>
+<li><a href="release_notes.html">Release Notes</a></li>
+<li><a href="install_cms.html">CMS Installation</a></li>
+<li><a href="upgrade.html">Upgrading</a></li>
+<li><a href="install_windows_client.html">Windows Player Installation</a></li>
+<li><a href="cms_settings.html">CMS Settings</a></li>
+<li><a href="troubleshooting.html">Troubleshooting</a></li>
+<li><a href="licence_information.html">Licenses</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=getting_started-->
+<h1 id="Notes_Title">Xibo 1.6.0 RC 1 - Codename "Pons-Winnecke"</h1>
+<p><strong>This is a release candidate for the first stable 1.6 release, 1.6.0. This should NOT BE USED IN PRODUCTION.</strong></p>
+<p>You can download this release from <a rel="nofollow" class="external free" href="https://launchpad.net/xibo/1.6/1.6.0-rc1;">https://launchpad.net/xibo/1.6/1.6.0-rc1;</a></p>
+<p class="alert alert-info">As of RC1 all text/rss/dataset media modules will need to be connected at least once at play back. This means that clients that are entirely offline and have those media types scheduled to them, will not function. This will be enhanced before the final 1.6.0 release.</p>
+<div id="toctitle"><h2 id="contents">Contents <a href="#contents" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2></div>
+<ol>
+    <li class="toclevel-1 tocsection-1"><a href="#Notes_Title">Introduction</a></li>
+    <li class="toclevel-1 tocsection-2"><a href="#Requirements">Requirements</a></li>
+    <li class="toclevel-1 tocsection-3"><a href="#Upgrading">Upgrading</a></li>
+    <li class="toclevel-1 tocsection-4"><a href="#Help">Help</a></li>
+    <li class="toclevel-1 tocsection-5"><a href="#New_Features">New Features</a></li>
+    <li class="toclevel-1 tocsection-7"><a href="#Bug_Fixes">Bug Fixes</a></li>
+    <li class="toclevel-1 tocsection-8"><a href="#Known_Issues_and_Limitations">Known Issues and Limitations</a></li>
+</ol>
+<h2 id="Requirements">Requirements</h2>
+<p>You must use the 1.6.0-RC1 version of the Windows and Ubuntu Display Clients with this version of the Xibo CMS.</p>
+<p>Xibo requires PHP 5.3 or higher. A full list of module requirements is presented at the point of installation - we'll even tell you which modules you're missing!</p>
+<p class="alert alert-warning">The PHP-PDO module is required from this release onwards.</p>
+<h2 id="Upgrading">Upgrading</h2>
+<p>There are significant database schema changes between the 1.4 series of Xibo and prior released. The upgrade wizard will take a prior database and convert it to a schema suitable for the 1.4 series to date. Note that this is a one-way conversion. Please do not upgrade your production database to test Xibo 1.6-rc1 functionality, and then expect to run a prior series code base against that database.</p>
+<p>Instructions for cloning a Xibo database are available here <a href="release_notes_clonedb.html" title="Clone Database">Clone Database</a>.</p>
+<ul>
+    <li> Clone your existing Xibo database and grant permissions (see <a href="release_notes_clonedb.html" title="Clone Database">Release Notes:Clone Database</a> for details)</li>
+    <li>Backup settings.php from your installation</li>
+    <li>Manually take a backup of your database</li>
+    <li>Replace your existing installation with the new version from the tar.gz or zip file</li>
+    <li>Replace your backup settings.php file in your Xibo installation directory</li>
+    <li>Browse to <a rel="nofollow" class="external free" href="http://your.server/path">http://your.server/path</a>as normal</li>
+    <li>You will be prompted that an upgrade is required.</li>
+    <li>Enter your xibo_admin password, and follow the upgrade wizard.</li>
+    <li>The upgrade should run, and finally ask you to log in as you would normally.</li>
+</ul>
+<h2 id="Help">Help</h2>
+<p>Please ask for help / advice in the Answers section of Launchpad: <a rel="nofollow" class="external free" href="https://answers.launchpad.net/xibo">https://answers.launchpad.net/xibo</a></p>
+<p>Please report any bugs in the Bugs section of Launchpad: <a rel="nofollow" class="external free" href="https://bugs.launchpad.net/xibo">https://bugs.launchpad.net/xibo</a> (if you're not sure that what you have found is a bug, please ask in the Answers section first!)</p>
+<p>Please report any enhancement requests in the Blueprints section of Launchpad: <a rel="nofollow" class="external free" href="https://blueprints.launchpad.net/xibo">https://blueprints.launchpad.net/xibo</a></p>
+<p>When asking for assistance with this release, please make it clear that you're using the release candidate and not a stable release of Xibo.</p>
+<h2 id="New_Features">New Features</h2>
+<p>This release candidate focusses on documentation for the work already done in the 1.5 series.</p>
+<p>For a complete list of new features please refer to the Release Project Page Blueprint section: <a rel="nofollow" class="external free" href="https://launchpad.net/xibo/1.6/1.6.0-rc1;">https://launchpad.net/xibo/1.6/1.6.0-rc1;</a></p>
+<h2 id="Bug_Fixes">Bug Fixes</h2>
+<p>For a full list of bug fixes please refer to the Release Project Page: <a rel="nofollow" class="external free" href="https://launchpad.net/xibo/1.6/1.6.0-rc1;">https://launchpad.net/xibo/1.6/1.6.0-rc1;</a></p>
+<h2 id="Known_Issues_and_Limitations">Known Issues and Limitations</h2>
+<p>There are plenty of new features in the pipeline, but to provide a stable platform for users wanting Xibo now, the 1.6 series of releases are now feature-frozen (no new features will be implemented). All new development work will go in to the 1.7 series - which will be made available as a BETA.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Xibo Documentation</title>
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <!-- favicon -->
+        <link href="../img/favicon.ico" rel="shortcut icon"/>
+
+        <!-- Bootstrap -->
+        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+        <!-- Stylesheets -->
+        <link href="../manual.css" rel="stylesheet" media="screen">
+        
+        <!-- META -->
+        <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+        <meta name="description" content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS." />
+    </head>
+    <body data-toc="getting_started">
+        <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+        <nav id="top-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ss-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand">Xibo Documentation</a>
+                </div>
+            
+                <div class="collapse navbar-collapse" id="ss-navbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ss_body container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="side-nav" class="nav nav-pills nav-stacked">
+                        <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><ul>
+<li><a href="index.html">Introduction</a></li>
+<li><a href="release_notes.html">Release Notes</a></li>
+<li><a href="install_cms.html">CMS Installation</a></li>
+<li><a href="upgrade.html">Upgrading</a></li>
+<li><a href="install_windows_client.html">Windows Player Installation</a></li>
+<li><a href="cms_settings.html">CMS Settings</a></li>
+<li><a href="troubleshooting.html">Troubleshooting</a></li>
+<li><a href="licence_information.html">Licenses</a></li>
+</ul></body></html>
+<li><a href="index.html" data-toc-name="tour">Tour</a></li><li><a href="displays.html" data-toc-name="displays">Displays</a></li><li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li><li><a href="media.html" data-toc-name="media">Library</a></li><li><a href="scheduling.html" data-toc-name="scheduling">Scheduling</a></li><li><a href="users.html" data-toc-name="users">Users</a></li><li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9" role="main">
+                    <!--toc=getting_started-->
+<h1 id="maintenance">Maintenance <a href="#maintenance" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h1>
+<p>Maintenance is an important part of any system and should always be configured.
+Maintenance keeps the database and files in trim condition, alerts when there are
+errors and runs in the background. Maintenance is configured in the CMS settings,
+under the Maintenance heading.</p>
+<h2 id="introduction">Introduction <a href="#introduction" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>When Xibo is running, logs and statistics slowly accumulate on the server
+and consume disk space. In extreme cases the sheer volume of those records can cause
+the CMS web interface to slow and become unresponsive.</p>
+<p>It is also reassuring to know that if there is a problem with a display and it stops
+checking in with the Xibo server, you will be notified by email so you can
+take action to resolve the problem.</p>
+<p>The maintenance script can be scheduled to run periodically and perform background
+clean-up tasks such as deleting old logs and statistics, and checking the status of
+the displays.</p>
+<h2 id="configuration">Configuration <a href="#configuration" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>Configuration for the maintenance script can be found in Xibo server at
+&quot;Administration -&gt; Settings -&gt; Maintenance&quot; tab.</p>
+<p>There are several options associated with the maintenance script:</p>
+<ul>
+<li>
+<p>Maintenance Enabled (<code>MAINTENANCE_ENABLED</code>):</p>
+<ul>
+<li><strong>Off</strong> - All maintenance functionality is disabled.</li>
+<li><strong>On</strong> - All maintenance functionality is enabled. You can use any of the methods below to call the maintenance script on a schedule without specifying a key.</li>
+<li><strong>Protected</strong> - All maintenance functionality is enabled. You must specify the correct key when calling the maintenance script. This is to prevent unauthorised persons from repeatedly calling the script and generating large amounts of alert email.</li>
+</ul>
+</li>
+<li>
+<p>Maintenance Key (MAINTENANCE_KEY)</p>
+<p>The secret key required to allow the maintenance script to run when &quot;Maintenance Enabled&quot; is set to &quot;Protected&quot; mode.</p>
+</li>
+<li>
+<p>Email Alerts (MAINTENANCE_EMAIL_ALERTS)</p>
+<p>Globally enable or disable the sending of email alerts. You can enable/disable alerts for individual displays in Display Management.</p>
+</li>
+<li>
+<p>Alert Timeout (MAINTENANCE_ALERT_TOUT)</p>
+<p>Globally configure how many minutes after a display lasts connects to the server we should consider it to have a problem and cause analert to be sent. You can override this default for individual displays in Display Management. You should make sure this time is longerthan the collection interval you have configured on your clients to avoid false positive alerts.</p>
+</li>
+<li>
+<p>Email To (mail_to)</p>
+<p>Who should the alert emails be sent to?</p>
+</li>
+<li>
+<p>Email From (mail_from)</p>
+<p>Who should the alert emails appear to be from?</p>
+</li>
+<li>
+<p>Log Maximum Age (MAINTENANCE_LOG_MAXAGE)</p>
+<p>How many days worth of log messages to keep. Logs older than this will be deleted. Set to 0 to keep all logs indefinitely.</p>
+</li>
+<li>
+<p>Statistics Maximum Age (MAINTENANCE_STAT_MAXAGE)</p>
+<p>How many days worth of statistics to keep. Statistics older than this will be deleted. Set to 0 to keep all statistics indefinitely.</p>
+</li>
+</ul>
+<p>If <a href="xtr.html">XTR</a> is configured on the CMS instance it is <strong>not necessary</strong> to configure
+&quot;Enable Maintenance?&quot; and &quot;Maintenance Key&quot; as the Maintenance Tasks are run securely from the command line.</p>
+<p>If the environment is not compatible with XTR it is necessary to arrange a 3rd party service to call the
+<a href="xtr.html#trouble_running_via_cron_/_schedule_tasks?">maintenance web route</a>.</p>
+                </div>
+            </div>
+        </div> <!-- container-->
+        <footer class="ss_footer" role="contentinfo">
+            <div class="container">
+                <div class="pull-right">
+                    <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+                </div>
+
+                <p class="ss_back_to_top">Back to Top</p>
+
+                <p>Designed and built by <a href="http://springsignage.com/">Spring Signage</a> for the <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>.</p>
+                <p>Open Source Code licensed under <a href="" target="_blank">GNU Affero General Public License v3 or later</a>, documentation under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">Creative Commons Licence</a>.</p>
+
+                <p class="ss_footer_links">Currently v1.8.4</p>
+
+                <p class="ss_languages"><a href="../en/index.html">en</a> | <a href="../fr/index.html">fr</a></p>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".ss_body img").addClass("img-thumbnail");
+                $(".ss_body table").addClass("table");
+
+                // Set the selected page based on the TOC name
+                // Mark the appropriate top nav element as the selected page
+                $("#side-nav a").each(function() {
+                    if ($(this).data().tocName == $("body").data().toc)
+                        $(this).parent().addClass("active");
+                });
+
+                $(".ss_back_to_top").click(function() {
+                    $('html, body').animate({scrollTop : 0},800);
+                });
+
+                if (inIframe()) {
+                    console.log("In Frame");
+                    $("#top-nav").css("display", "none");
+                    $(".ss-sidebar").parent().css("display", "none");
+                }
+            });
+
+            function inIframe () {
+                try {
+                    return window.self !== window.top;
+                } catch (e) {
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

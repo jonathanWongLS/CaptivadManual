@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+</head>
+
+<body data-toc="widgets">
+    
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li>
+                        <a href="index.html" data-toc-name="getting_started">
+                            Getting Started
+                        </a>
+                    </li> -->
+                    <li class="active"><a href="index.html" data-toc-name="tour">Tour</a></li>
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+                    
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="index.html">
+                                Overview
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_login.html">Log In</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_user_profile.html">User Profile</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_two_fa.html">Two Factor
+                                Authentication</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_dashboards.html">CMS
+                                Dashboards</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_navigation.html">CMS
+                                Navigation</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="tour_cms_settings.html">CMS Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_grids.html">Grids</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_forms.html">Forms</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_tags.html">Tags</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_folders.html">Folders</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_transitions.html">Transitions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_date_format.html">Date Format</a>
+                        </ul>
+                    </body>
+
+                    </html>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">
+                            Scheduling
+                        </a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <li>
+                        <!-- <a href="advanced.html" data-toc-name="advanced">Advanced</a> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=tour-->
+                <h1 id="cms_settings">
+                    CMS Settings
+                    <a href="#cms_settings" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    Like any complex application, the Captivad CMS comes with a number of configurable options.
+                </p>
+                <p></p>
+                <p>
+                    These are found by navigating to <strong>Settings</strong> under the <strong>Administration</strong>
+                    section of the main CMS menu:
+                </p>
+                <p></p>
+
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img src="./img/tour_cms_settings_admin.png"
+                            data-processed="1"></figure>
+                </div>
+                <p></p>
+                <p>
+                    For ease of use settings have been split into related <strong>Categories</strong>:
+                </p>
+
+                <h3>Configuration</h3>
+                <ul>
+                    <li>View the <strong>CMS Secret Key</strong> which is used to authenticate Players with the CMS.
+                    </li>
+                    <li>Select the default positioning for users of the CMS for the <strong>Navigation Menu</strong>.
+                    </li>
+                </ul>
+                <p></p>
+
+                <h3>Defaults</h3>
+                <ul>
+                    <li>Set default behaviours for <strong>Media</strong> files.</li>
+                    <li>Enable Layouts to be <strong>Automatically Published</strong> after edits are made.</li>
+                    <li>Set <strong>Default Transitions</strong> to apply to Widgets.</li>
+                    <li>Enter <strong>Resize Thresholds</strong> and Limits for images.</li>
+                    <li>Set the <strong>Default ttl</strong> in days for records in the purge_list table to be removed.
+                    </li>
+                    <li>Set default values for items that can be assigned to <strong>dynamic Playlists</strong>.</li>
+                </ul>
+                <p></p>
+
+                <h3>Displays</h3>
+                <ul>
+                    <li>Assign a <strong>Default Layout</strong> to show on Displays.</li>
+                    <li>Set defaults for <strong>Latitude</strong> and <strong>Longitude</strong> for Geo aware
+                        Previews.</li>
+                    <li>Add a link to the Display name using the last IP address collected.</li>
+                    <li>Set the default settings to use with the collection of <strong>Proof of Play</strong>
+                        statistics.</li>
+                    <li>Define the default size and retention period for <strong>Display Screenshots</strong>.</li>
+                </ul>
+                <p></p>
+
+                <h3>General</h3>
+                <ul>
+                    <li>View the <strong>address</strong> for the user manual.</li>
+                    <li>Tick to <strong>Allow usage tracking</strong> to send anonymous statistics to help to improve
+                        the software.</li>
+                    <li>Enable <strong>Send Schedule in advance</strong> and set the time in seconds.</li>
+                    <li>Tick to Enable <a>Library Tidy</a> functions.</li>
+                    <li>Enable settings to show the <strong>Latest News</strong> and to show a <strong>Logo</strong>
+                        when exporting a saved report to a PDF.</li>
+                </ul>
+                <p></p>
+
+                <h3>Maintenance</h3>
+                <ul>
+                    <li><strong>Enable Maintenance</strong> and set <strong>email alerts</strong>.</li>
+                    <li>Set maximum retention ages for <strong>Logs</strong> and <strong>Statistics</strong>.</li>
+                    <li>Set the minutes for the <strong>Max Display Timeout</strong> and enable to <strong>send repeat
+                            Display Timeouts</strong>.</li>
+                </ul>
+                <p></p>
+
+                <h3>Network</h3>
+                <ul>
+                    <li>Set <strong>Email</strong> settings, which need to be completed prior to setting up any email
+                        notifications.</li>
+                    <li>Provide network settings such as Proxy Server information (if your CMS is behind a proxy)</li>
+                    <li>Set monthly <strong>Bandwidth</strong> and <strong>Library</strong> size limits.</li>
+                    <li>Enable to force <strong>HTTPS</strong>.</li>
+                    <li>Enable <strong>STS</strong> to response headers and set a Time out (ensure that you fully
+                        understand STS before enabling this option
+                        as it will prevent access via HTTP after the first successful HTTPS connection.)</li>
+                    <li>If the CMS is behind a load balancer, enter a comma delimited list of the load balancer IP
+                        addresses to Whitelist.</li>
+                </ul>
+                <p></p>
+
+                <h3>Sharing</h3>
+                <ul>
+                    <li>Use the dropdown to select how to <strong>colour Widgets</strong> shown in the Playlist editor.
+                    </li>
+                    <li>Enable to allow Users with View Share options applied to Displays are also allowed to
+                        <strong>schedule</strong> to them.</li>
+                    <li>Enable to show <strong>Layouts</strong> for existing Scheduled Events even when the user does
+                        not have View Share options applied.</li>
+                    <li>Tick to allow for modifications to the <strong>Transition configuration</strong>.</li>
+                    <li>Tick to allow Users to save content to the top level Root Folder.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Disable this option to force Users to first select a Folder to save in!
+                    </div>
+                </div>
+
+                <h3>Regional</h3>
+                <ul>
+                    <li>Set the <strong>Language</strong> to use for the CMS.</li>
+                    <li>Let the CMS know what <strong>Timezone</strong> it should use by selecting the nearest major
+                        city in your timezone.</li>
+                    <li>Set the <strong>Date Format</strong> default to use for displaying date data in the CMS.</li>
+                    <li>Tick to detect the <strong>browser language</strong> to use for the CMS.</li>
+                    <li>Use the drop down to select which type of <strong>Calendar</strong> the CMS should use.</li>
+                </ul>
+                <p></p>
+
+                <h3>Troubleshooting</h3>
+                <ul>
+                    <li>Set the <strong>Resting Log Level</strong> which the CMS will revert to after an elevated period
+                        ends.</li>
+                    <li>Set the <strong>Log Level</strong> the CMS should record.</li>
+                    <li>Provide an until date to <strong>Elevate the Log</strong>.</li>
+                    <li>Set the <strong>Server Mode</strong> to display the maximum allowed error messaging through the
+                        UI.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Useful for capturing critical php errors and environment issues.
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+
+                <h3>Users</h3>
+                <ul>
+                    <li>View and set one of the existing Super Administrators as a default <strong>System User</strong>
+                        for the CMS. (why do you set this?)</li>
+                    <li>Set the <strong>Default User Group</strong> to assign when onboarding new Users.</li>
+                    <li>Set the <strong>Default User Type</strong> for when creating new Users.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        We recommend that this is set to User!
+                    </div>
+                </div>
+                <p></p>
+                <p></p>
+
+                <ul>
+                    <li>Set a <strong>Regular Expression</strong> for <strong>Password Complexity</strong>. A text
+                        description will be shown to users who enter a password that does not meet the requirements
+                        entered.</li>
+                    <li>Select to enable a <strong>Password Reminder</strong> on the CMS login page.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        Ensure that a valid Sending email address has been entered on the Network tab before enabling
+                        this.
+                    </div>
+                </div>
+                <p></p>
+
+                <ul>
+                    <li>Enter the name that should appear as the <strong>Issuer</strong> to be used when <strong>Two
+                            Factor</strong> authentication has been enabled.</li>
+                </ul>
+
+                <h3>Tidy Library</h3>
+                <p>
+                    The Tidy Library button shown on the settings page is available for Super Administrators only and
+                    inititates a system
+                    wide Library tidy operation to clear up orphaned Media items and temporary files. More information
+                    can be found in our
+                    User Manual: <a>Tidy from Settings</a>
+                </p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-secondary pt-34 pr-26 pl-40 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+                        <strong>Important:</strong> This function can be potentially destructive if you do not
+                        understand the
+                        implication of running it with all options selected.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

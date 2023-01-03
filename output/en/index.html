@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- META -->
+    <meta name="keywords" content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation" />
+</head>
+
+<body data-toc="widgets">
+    
+    <div class="top-nav">
+        <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul id="side-nav" class="nav nav-pills nav-stacked">
+                    <!-- <li>
+                        <a href="index.html" data-toc-name="getting_started">
+                            Getting Started
+                        </a>
+                    </li> -->
+                    <li class="active"><a href="index.html" data-toc-name="tour">Tour</a></li> 
+                    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                    <html>
+                    
+                    <body>
+                        <ul class="list-group list-group-light">
+                            <a class="list-group-item list-group-item-action px-3 border-0 active" href="index.html">
+                                Overview
+                            </a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_login.html">Log In</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_user_profile.html">User Profile</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_two_fa.html">Two Factor
+                                Authentication</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_dashboards.html">CMS
+                                Dashboards</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_navigation.html">CMS
+                                Navigation</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_cms_settings.html">CMS Settings</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_grids.html">Grids</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_forms.html">Forms</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_tags.html">Tags</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_folders.html">Folders</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_transitions.html">Transitions</a>
+                            <a class="list-group-item list-group-item-action px-3 border-0" href="tour_date_format.html">Date Format</a>
+                        </ul>
+                    </body>
+                    
+                    
+                    </html>
+                    <li>
+                        <a href="displays.html" data-toc-name="displays">Displays</a>
+                    </li>
+                    <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+                    <li><a href="media.html" data-toc-name="media">Library</a></li>
+                    <li>
+                        <a href="scheduling.html" data-toc-name="scheduling">
+                            Scheduling
+                        </a>
+                    </li>
+                    <li><a href="users.html" data-toc-name="users">Users</a></li>
+                    <!-- <li>
+                        <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="col-md-9" role="main">
+                <!--toc=tour-->
+                <h1 id="welcome_to_the_tour!">
+                    Welcome to the Tour!
+                    <a href="#welcome_to_the_tour!" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h1>
+                <p>
+                    Captivad is a flexible and powerful application with a core
+                    &quot;ethos&quot; to digital signage that is important to understand
+                    from the very beginning.
+                </p>
+                <p>The software centres itself on 5 core concepts:</p>
+                <ul>
+                    <li>Displays</li>
+                    <li>Layouts</li>
+                    <li>Library</li>
+                    <li>Scheduling</li>
+                    <li>Users</li>
+                </ul>
+                <p>
+                    Using these 5 concepts we can sum up what Captivad can do in a simple sentence;
+                </p>
+                <p>
+                    <strong>
+                        "Captivad enables a User to upload Media and arrange it in a Layout which is then Scheduled to
+                        one or more authorised Displays“.
+                    </strong>
+                </p>
+                <p>
+                    Captivad has many more features to take advantage of which are covered within this User Manual, but
+                    to get started let’s take a quick look at the main 5.
+                </p>
+
+                <h3>Displays</h3>
+                <p>
+                    <a class="sub-heading">Displays</a> represent the hardware connected to the TV/Projector/Tablet that
+                    is displaying the <strong>Scheduled</strong> end content. Each
+                    Display is uniquely identified in the CMS so that every Display can have its own content, Layout
+                    designs and Schedules
+                    set with uniquely identified reporting statistics available.
+                </p>
+
+                <h3>Layouts</h3>
+                <p>
+                    <a class="sub-heading">Layouts</a> are the complete design that is seen on the screen. Layouts are
+                    made up of <strong>Regions</strong> which allows you to split the screen/position how you choose,
+                    with each Region
+                    containing its own <strong>Playlist/Timeline</strong> to which <strong>Media Widgets</strong> are
+                    assigned. A Layout will remain on
+                    screen until all Regions have finished playing their assigned content through once, then an entirely
+                    fresh Scheduled Layout can be loaded that has different positioning/sizing of Regions and different
+                    Playlists/Timelines.
+                </p>
+                <p>
+                    This flexibility drives the dynamic nature of a Captivad display screen.
+                </p>
+
+                <h3>Media</h3>
+                <p>
+                    <a class="sub-heading">Media</a> content is at the core of the Captivad solution and has many
+                    different types which can be generally split into two categories:
+                </p>
+                <p>
+                    <strong>File-based media</strong> - uploaded and stored in the <a class="sub-heading">Library</a>,
+                    for example, image and video files.
+                </p>
+                <p>
+                    <strong>Layout based media</strong> - does not have an associated file and is configured directly on
+                    a Layout; RSS feeds and free Text
+                </p>
+                <p>
+                    Captivad uses powerful Widgets which allow you to show your content as well as integrating dynamic
+                    third-party information from a variety of sources.
+                </p>
+
+                <h3>Scheduling</h3>
+                <p>
+                    <a class="sub-heading">Scheduling</a> is highly flexible and supports Schedules to single
+                    <strong>Displays</strong> as well as to <strong>Display Groups</strong>. Each Display will
+                    check for new Scheduled content periodically, and download Scheduled Items in advance of playback.
+                    <strong>Default Layouts</strong> are shown on Displays when nothing else is Scheduled.
+                </p>
+
+                <h3>Users</h3>
+                <p>
+                    Users are the people that are granted access to the CMS and are identified by a Username and
+                    Password to securely log
+                    in.
+                </p>
+                <p>
+                    Captivad supports 3 <a>User Types</a>, <a>User Groups</a> as well as multi-level <a>Feature and
+                        Sharing</a> access to all parts and items stored
+                    within the CMS.
+                </p>
+
+                <!-- <h2 id="content_-_what_can_captivad_play?">
+                    Content - what can Captivad play?
+                    <a href="#content_-_what_can_captivad_play?" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    Captivad can play a wide range of file based content, as well as
+                    consuming content from the Internet.
+                </p>
+                <ul>
+                    <li>Text</li>
+                    <li>Images</li>
+                    <li>Video</li>
+                    <li>Twitter</li>
+                    <li>Google Maps</li>
+                    <li>Weather</li>
+                    <li>Stocks</li>
+                    <li>Currencies</li>
+                    <li>PowerPoint (Windows only)</li>
+                    <li>Flash (Windows only)</li>
+                    <li>PDF</li>
+                    <li>HLS/RTSP video streams</li>
+                    <li>MediaRSS (images) / RSS / Atom</li>
+                    <li>Tabular data / CSV file (formatted)</li>
+                    <li>Web Pages</li>
+                    <li>Custom Embedded Content</li>
+                </ul>
+                <p>A full list of features are available on the Captivad website.</p> -->
+
+                <!-- <h2 id="cms_-_how_can_all_this_be_managed?">
+                    CMS - How can all this be managed?
+                    <a href="#cms_-_how_can_all_this_be_managed?" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    Management of a solution as flexible as Captivad required a powerful CMS
+                    (Content Management System) to present the core concepts in a
+                    sensible, controlled fashion. The Captivad CMS is packed with features,
+                    such as:
+                </p>
+                <ul>
+                    <li>User Groups</li>
+                    <li>User and Group Permissions</li>
+                    <li>Display Groups</li>
+                    <li>Display Group Permissions</li>
+                    <li>Menu and Page Permissions</li>
+                    <li>Campaigns (ordered groups of Layouts)</li>
+                    <li>Layout Templates</li>
+                    <li>Display Statistics</li>
+                </ul> -->
+
+                <h2 id="the_manual">
+                    The Manual
+                    <a href="#the_manual" class="header-link">
+                        <span class="glyphicon glyphicon-link"></span>
+                    </a>
+                </h2>
+                <p>
+                    This manual has been organised into sections that broadly represent
+                    the core concepts and the more advanced CMS features. We start off
+                    with the Display
+                    Management, Layouts, Library and Scheduling, and then move on to Users.
+                </p>
+                <p>
+                    Please continue reading the Tour using the menu, or jump into one of
+                    the core concepts!
+                </p>
+                <!-- <h2 id="further_reading">Further reading <a href="#further_reading" class="header-link"><span class="glyphicon glyphicon-link"></span></a></h2>
+<p>The <a href="http://xibo.org.uk">Xibo website</a> is an excellent resource for further reading, as is the <a href="PRODUCTSUPPORTURL">community support website</a> for the platform.</p> -->
+            </div>
+        </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+        <div class="container">
+            <div class="pull-right">
+                <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+            </div>
+
+            <p class="ss_back_to_top">Back to Top</p>
+        </div>
+    </footer>
+
+    <!-- <p>
+                Designed and built by
+                <a href="http://springsignage.com/">Spring Signage</a>
+                for the
+                <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+                .
+            </p> -->
+    <!-- <p>
+                Open Source Code licensed under
+                <a href="" target="_blank">
+                    GNU Affero General Public License v3 or later
+                </a>
+                , documentation under
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/uk/" target="_blank">
+                    Creative Commons Licence
+                </a>
+                .
+            </p>
+
+            <p class="ss_footer_links">Currently v1.8.4</p>
+
+            <p class="ss_languages">
+                <a href="../en/index.html">en</a>
+                |
+                <a href="../fr/index.html">fr</a>
+            </p> -->
+
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ss_body img').addClass('img-thumbnail')
+            $('.ss_body table').addClass('table')
+
+            // Set the selected page based on the TOC name
+            // Mark the appropriate top nav element as the selected page
+            $('#side-nav a').each(function () {
+                if ($(this).data().tocName == $('body').data().toc)
+                    $(this).parent().addClass('active')
+            })
+
+            $('.ss_back_to_top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800)
+            })
+
+            if (inIframe()) {
+                console.log('In Frame')
+                $('#top-nav').css('display', 'none')
+                $('.ss-sidebar').parent().css('display', 'none')
+            }
+        })
+
+        function inIframe() {
+            try {
+                return window.self !== window.top
+            } catch (e) {
+                return true
+            }
+        }
+    </script>
+</body>
+
+</html>

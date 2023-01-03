@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+
+  <body data-toc="scheduling">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling"
+                >Scheduling</a
+              >
+            </li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling.html">Introduction</a>
+                    <!-- <li><a href="scheduling_calendar.html">Calendar</a></li> -->
+                    <a class="list-group-item list-group-item-action px-3 border-0"
+                        href="scheduling_schedule.html">Schedule</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_events.html">Events</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_geoscheduling.html">Geo
+                        Scheduling</a>
+            
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="scheduling_dayparting.html">Dayparting</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0 active" href="scheduling_now.html">Schedule Now</a>
+                </ul>
+            </body>
+            </html>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li><a href="advanced.html" data-toc-name="advanced">Advanced</a></li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=scheduling-->
+            <h1 id="schedule_now">
+                Schedule Now
+                <a href="#schedule_now" class="header-link"><span class="glyphicon glyphicon-link"></span></a>
+            </h1>
+            <p>
+                Schedule Now provides a quick way to Schedule a <strong>Campaign</strong> or <strong>Layout</strong> for a specific
+                amount of time.
+            </p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                <div class="manual-notes-card-info">
+            
+                    This is useful for displaying temporary/important notices on Displays.
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <p></p>
+            <p>Schedule Now is available from the following pages:</p>
+            <ul>
+                <li>
+                    <strong>Campaign</strong> - row menu for selected Campaign
+                </li>
+                <li>
+                    <strong>Layout</strong> - row menu for selected Layout
+                </li>
+                <li>
+                    <strong>Layout Designer</strong> - on the Actions tab
+                </li>
+                <li>
+                    <strong>Display</strong> - row menu for selected Display
+                </li>
+            </ul>
+            <div class="position-relative">
+                <figure class="image-expand-modal p-10 mb-56"><img src="./img/v3_schedule_schedule_now.png"
+                        data-processed="1"></figure>
+            </div>
+            <p></p>
+            <ul>
+                <li>Complete the form fields as required.</li>
+                <li>The Event will be added to the <a>Schedule</a> to view/edit.</li>
+            </ul>
+
+
+            
+            <h2 id="timezones">
+                Timezones
+                <a href="#timezones" class="header-link"
+                ><span class="glyphicon glyphicon-link"></span
+                ></a>
+            </h2>
+            <p>
+                Events created using <strong>Schedule Now</strong> will always have the <strong>Run at CMS time</strong> option selected. This means that the event will
+                be adjusted for each Display time zone and forced to run from the time “Save” is pressed. Please see <a>Run at CMS time</a> for
+                further information. 
+            </p>
+            
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+          <div class="pull-right">
+              <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+          </div>
+
+          <p class="ss_back_to_top">Back to Top</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".ss_body img").addClass("img-thumbnail");
+        $(".ss_body table").addClass("table");
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $("#side-nav a").each(function () {
+          if ($(this).data().tocName == $("body").data().toc)
+            $(this).parent().addClass("active");
+        });
+
+        $(".ss_back_to_top").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 800);
+        });
+
+        if (inIframe()) {
+          console.log("In Frame");
+          $("#top-nav").css("display", "none");
+          $(".ss-sidebar").parent().css("display", "none");
+        }
+      });
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Captivad Manual</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- favicon -->
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Bootstrap -->
+    <link
+      href="../vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+
+    <!-- Stylesheets -->
+    <link href="../manual.css" rel="stylesheet" media="screen" />
+
+    <!-- META -->
+    <meta
+      name="keywords"
+      content="digital signage, signage, narrow-casting, xibo, open source, agpl, documentation"
+    />
+    <meta
+      name="description"
+      content="Xibo is an open source digital signage solution. It supports all main media types and can be interfaced to other sources of data using CSV, Databases or RSS."
+    />
+  </head>
+  <body data-toc="layouts">
+    <!-- Copyright 2006-2013 Daniel Garner. Part of the Xibo Open Source Digital Signage Solution. Released under the AGPLv3 or later. -->
+    <div class="top-nav">
+      <a href="index.html"><img src="../img/logo.png" alt=""></a>
+    </div>
+
+    <div class="ss_body container">
+      <div class="row">
+        <div class="col-md-3">
+          <ul id="side-nav" class="nav nav-pills nav-stacked">
+            <!-- <li><a href="index.html" data-toc-name="getting_started">Getting Started</a></li> -->
+            <li><a href="index.html" data-toc-name="tour">Tour</a></li>
+            <li>
+              <a href="displays.html" data-toc-name="displays">Displays</a>
+            </li>
+            <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
+            <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+            <html>
+              <body>
+                <ul class="list-group list-group-light">
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts.html">
+                        Introduction
+                    </a>
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_designer.html">Layout
+                        Designer</a><a class="list-group-item list-group-item-action px-3 border-0"
+                        href="layouts_regions.html">Regions</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_widgets.html">Widgets</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_librarysearch.html">Library
+                        Search</a>
+            
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_layouttimeline.html">Layout
+                        Timeline</a>
+            
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interactiveactions.html">
+                        Interactive Actions
+                    </a>
+                    <a class="list-group-item list-group-item-action px-3 border-0"
+                        href="layouts_templates.html">Templates</a><a class="list-group-item list-group-item-action px-3 border-0"
+                        href="layouts_campaigns.html">Campaigns</a>
+                    <a class="list-group-item list-group-item-action px-3 border-0 active" href="layouts_overlaylayout.html">Overlay
+                        Layouts</a>
+            
+                    <a class="list-group-item list-group-item-action px-3 border-0" href="layouts_interruptlayouts.html">
+                        Interrupt Layouts
+                    </a>
+                </ul>
+            </body>
+            </html>
+            <li><a href="media.html" data-toc-name="media">Library</a></li>
+            <li>
+              <a href="scheduling.html" data-toc-name="scheduling">
+                Scheduling
+              </a>
+            </li>
+            <li><a href="users.html" data-toc-name="users">Users</a></li>
+            <!-- <li>
+              <a href="advanced.html" data-toc-name="advanced">Advanced</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="col-md-9" role="main">
+          <!--toc=layouts-->
+          <h1 id="overlay_layouts"> 
+            Overlay Layouts
+            <a href="#overlay_layouts" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h1>
+          <p>
+            Schedule as an <strong>Overlay Layout</strong> to tell Captivad to display the Layout on top of normally <strong>Scheduled Layouts</strong>. Overlays remain
+            on top while your normal scheduled content changes underneath, particularly useful for logos, important information or
+            emergency notices.
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/layouts_overlay.png" data-processed="1">
+            </figure>
+          </div>
+          
+          <h2 id="create_an_overlay_layout">
+            Create an Overlay Layout
+            <a href="#create_an_overlay_layout" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Overlay Layouts are created in exactly the same way as all other <strong>Layouts</strong>. Add Regions to fit around your existing
+            content so that your Overlay Layout can “sit on top” of other Layouts that are <strong>Scheduled</strong> at the same time as the
+            Overlay. Your Overlay Layout will display its all important content whilst the Layouts “underneath” playout in rotation.
+          </p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+            
+              Captivad will not render the background on Players when a Layout is scheduled as an Overlay Layout.
+              <p><strong>Please note:</strong> Layouts that contain Widgets / Media that use the Edge browser cannot be used with
+                an Overlay Layout as content cannot sit on top of other content under these circumstances. This would include HLS
+                and Embedded Youtube.
+                If your content is not a video then the CEF browser can be used instead.
+            
+              </p>
+            </div>
+          </div>
+          <p></p>
+          <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+            <div class="manual-notes-card-info">
+              Overlay Layouts can also be used for Campaigns.
+            </div>
+          </div>
+
+          <h2 id="scheduling">
+            Scheduling
+            <a href="#scheduling?" class="header-link">
+              <span class="glyphicon glyphicon-link"></span>
+            </a>
+          </h2>
+          <p>
+            Overlay Layouts are selected as an <strong>Event type</strong> when <a>Scheduling an Event</a> and will behave differently to standard Layouts
+            when Scheduled as an Overlay.
+          </p>
+          <div class="position-relative">
+            <figure class="image-expand-modal p-10 mb-56"><img src="./img/layouts_overlay_event.png" data-processed="1">
+            </figure>
+          </div>
+          <p></p>
+          <ul>
+            <li><h4>Refreshing Content</h4></li>
+            <p>When an Overlay Layout is scheduled it will render the <strong>Media content</strong> once and will not show refreshed content.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                A workaround to this would be to add a second Media Item to the Overlay Layout so that it loads item 2 and then
+                reloads item 1 (with now refreshed content). This is particularly useful when creating an Overlay Layout which
+                includes the Calendar or Ticker Widgets for example.
+            
+              </div>
+            </div>
+          </ul> 
+          <p></p>
+          <ul>
+            <li><h4>Scheduling multiple Overlays</h4></li>
+            <p>Overlay Layouts do not appear one after the other in Scheduling but instead will <strong>stack</strong>.</p>
+            <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+              <div class="manual-notes-card-info">
+            
+                <strong>Scenario:</strong> 2 Media items are required to ‘Overlay’ other Scheduled Events in the same area of the
+                screen. Rather than creating 2 Overlay Layouts with the assigned Media, only 1 Overlay Layout should be created
+                which would then contain the 2 Media items within the Region.
+            
+              </div>
+            </div>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- container-->
+    <footer class="ss_footer" role="contentinfo">
+      <div class="container">
+        <div class="pull-right">
+          <img class="img-responsive logo" src="../img/logo.png" alt="Xibo" />
+        </div>
+
+        <p class="ss_back_to_top">Back to Top</p>
+
+        <p>
+          Designed and built by
+          <a href="http://springsignage.com/">Spring Signage</a>
+          for the
+          <a href="http://www.xibo.org.uk" target="_blank">Xibo Project</a>
+          .
+        </p>
+        <p>
+          Open Source Code licensed under
+          <a href="" target="_blank">
+            GNU Affero General Public License v3 or later
+          </a>
+          , documentation under
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-sa/2.0/uk/"
+            target="_blank"
+          >
+            Creative Commons Licence
+          </a>
+          .
+        </p>
+
+        <p class="ss_footer_links">Currently v1.8.4</p>
+
+        <p class="ss_languages">
+          <a href="../en/index.html">en</a>
+          |
+          <a href="../fr/index.html">fr</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../vendor/jquery/jquery-1.9.1.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.ss_body img').addClass('img-thumbnail')
+        $('.ss_body table').addClass('table')
+
+        // Set the selected page based on the TOC name
+        // Mark the appropriate top nav element as the selected page
+        $('#side-nav a').each(function () {
+          if ($(this).data().tocName == $('body').data().toc)
+            $(this).parent().addClass('active')
+        })
+
+        $('.ss_back_to_top').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800)
+        })
+
+        if (inIframe()) {
+          console.log('In Frame')
+          $('#top-nav').css('display', 'none')
+          $('.ss-sidebar').parent().css('display', 'none')
+        }
+      })
+
+      function inIframe() {
+        try {
+          return window.self !== window.top
+        } catch (e) {
+          return true
+        }
+      }
+    </script>
+  </body>
+</html>
