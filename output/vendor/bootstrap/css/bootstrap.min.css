@@ -1124,7 +1124,7 @@ pre code {
     width: 83.33333333333334%;
   }
   .col-md-9 {
-    width: 75%;
+    width: 75%;   
   }
   .col-md-8 {
     width: 66.66666666666666%;
@@ -1143,7 +1143,7 @@ pre code {
   }
   .col-md-3 {
     width: 25%;
-  }
+  }     
   .col-md-2 {
     width: 16.666666666666664%;
   }
@@ -1270,8 +1270,8 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
-  }
+    width: 1600px;  
+  }        
   .col-lg-1,
   .col-lg-2,
   .col-lg-3,
@@ -1295,8 +1295,8 @@ pre code {
     width: 83.33333333333334%;
   }
   .col-lg-9 {
-    width: 75%;
-  }
+    width: 70%;
+  } 
   .col-lg-8 {
     width: 66.66666666666666%;
   }
@@ -1313,7 +1313,7 @@ pre code {
     width: 33.33333333333333%;
   }
   .col-lg-3 {
-    width: 25%;
+    width: 30%; 
   }
   .col-lg-2 {
     width: 16.666666666666664%;
