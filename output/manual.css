@@ -1,8 +1,15 @@
-.user-manual-info a {
+a:not(.list-group-item, .sub-heading, [data-toc-name]),
+.user-manual-info {
   font-size: 20px;
   letter-spacing: .56px;
   text-decoration: underline;
   color: #0e70f6;
+} 
+
+.glyphicon-link {
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -181,6 +188,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 22px;
   font-weight: 400;
+  zoom: 110%;
 } 
 
 .img-thumbnail {

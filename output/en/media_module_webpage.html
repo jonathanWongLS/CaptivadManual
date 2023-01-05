@@ -35,7 +35,7 @@
                     <li><a href="index.html" data-toc-name="tour">Tour</a></li>
                     <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
                     <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
-                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <li><a href="media.html" data-toc-name="widgets"> Library <span class="glyphicon glyphicon-arrow-left"></span> </a></li>
                     <!DOCTYPE html
                         PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
                     <html>
@@ -85,118 +85,116 @@
                 </ul>
             </div>
             <div class="col-md-9" role="main">
+
                 <!--toc=widgets-->
-                <div class="user-manual-info">
+                <h1>Webpage<a id="content-webpage" href="#content-webpage" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display an entire webpage embedded inside a Region on Layouts.</p>
 
-                    <!--toc=widgets-->
-                    <h1>Webpage<a id="content-webpage" href="#content-webpage" class="heading-permalink"
-                            aria-hidden="true" title="Permalink"></a></h1>
-                    <p>Display an entire webpage embedded inside a Region on Layouts.</p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
 
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
+                        <strong>Please note:</strong> This Widget requires a valid internet connection in order to
+                        function, webpages are not cached by the Player.
+                        <p>There is support for <strong>scaling</strong> and <strong>offsetting</strong> the target
+                            webpage to allow for a particular section of a webpage to be defined to display.
 
-                            <strong>Please note:</strong> This Widget requires a valid internet connection in order to
-                            function, webpages are not cached by the Player.
-                            <p>There is support for <strong>scaling</strong> and <strong>offsetting</strong> the target
-                                webpage to allow for a particular section of a webpage to be defined to display.
-
-                            </p>
-                        </div>
+                        </p>
                     </div>
-                    <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
-                            aria-hidden="true" title="Permalink"></a></h2>
-                    <p>Locate <strong>Webpage</strong> from the <a class="user-manual-info" href="layouts_widgets.html">Widget</a> toolbar and
-                        click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
-
-                    <p>On adding, configuration options are shown in the properties panel:</p>
-                    <ul>
-                        <li>Provide a <strong>Name</strong> for ease of identification.</li>
-                        <li>Choose to override the default <strong>duration</strong> if required.</li>
-                    </ul>
-                    <h2>Configuration<a id="content-configuration" href="#content-configuration"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
-                    <p></p>
-                    <div class="position-relative">
-                        <figure class="image-expand-modal p-10 mb-56"><img
-                                src="./img/v3.1_media_webpage_configuration.png" data-processed="1"></figure>
-                    </div>
-                    <p></p>
-                    <ul>
-                        <li>Provide the <strong>URL</strong> (including <code>http://</code>) of the webpage.</li>
-                        <li>Use the checkbox to render the webpage with a transparent background. Captivad will try its
-                            best to do this when checked, however, it cannot
-                            be supported on some webpages.</li>
-                    </ul>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            After the page is rendered Captivad will scale to fit within the Region.
-
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <p>Tick to <strong>Preload</strong> the Widget off screen so that it is ready to be shown.
-                            </p>
-                        </li>
-                        <li>
-                            <p>Select from the available <strong>Options</strong> to choose how the webpage should be
-                                embedded:</p>
-                        </li>
-                    </ul>
-                    <h4><strong>Open Natively</strong><a id="content-open-natively" href="#content-open-natively"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
-                    <p>The Player will open the webpage without any alterations and will open and render in the browser
-                        as if the URL had been visited on the device outside Captivad.
-                        <strong>Please note:</strong> There is no preview available for this option.
-                    </p>
-                    <p><strong>Open Natively</strong> has an additional option to provide code to be
-                        triggered on page load error.</p>
-
-                    <h4><strong>Manual Position</strong><a id="content-manual-position" href="#content-manual-position"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
-                    <p>Embed the webpage by specifying dimensions which can be used to force the page to fit within
-                        certain pre-set dimensions.</p>
-                    <ul>
-                        <li>Specify the width of the page (leave empty to use the Region width)</li>
-                        <li>Specify the height of the page (leave empty to use the Region height)</li>
-                        <li>Starting point from the top for the page to start, in pixels</li>
-                        <li>Starting point from the left, in pixels</li>
-                        <li>Percentage (0-100) to scale this Webpage</li>
-                    </ul>
-                    <h4><strong>Best Fit</strong><a id="content-best-fit" href="#content-best-fit"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
-                    <ul>
-                        <li>Specify the width of the page (leave empty to use the Region width)</li>
-                        <li>Specify the height of the page (leave empty to use the Region height)</li>
-                    </ul>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            <strong>Manual Position</strong> and <strong>Best Fit</strong> options will not work with
-                            websites that set the <strong>X-Frame-Options header</strong>. If you are unable to see the
-                            webpage use the Open Natively option when using Android.
-                            <p>If X-Frame-Options is not set then the website should show in any of the Players, using
-                                any of the above options.</p>
-                            <p>Use the <a href="https://tools.geekflare.com/tools/x-frame-options-test">X-Frame-Options
-                                    Header Checker Tool</a> to see if the header has been set.
-
-                            </p>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>Enter a code identifier for a <strong>Navigate to Layout</strong> Action should the page
-                            return an error and not load. See Interactive Actions for further details!</li>
-                    </ul>
-                    <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink"
-                            aria-hidden="true" title="Permalink"></a></h2>
-                    <p>Interactive Actions can be attached to this Webpage Widget from the <strong>Actions</strong> tab
-                        in the properties panel. Please see the <a class="user-manual-info" href="layouts_interactiveactions.html">Interactive
-                            Actions</a> page for more information.</p>
                 </div>
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Webpage</strong> from the <a class="user-manual-info" href="layouts_widgets.html">Widget</a> toolbar and
+                    click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <ul>
+                    <li>Provide a <strong>Name</strong> for ease of identification.</li>
+                    <li>Choose to override the default <strong>duration</strong> if required.</li>
+                </ul>
+                <h2>Configuration<a id="content-configuration" href="#content-configuration"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h2>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_webpage_configuration.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Provide the <strong>URL</strong> (including <code>http://</code>) of the webpage.</li>
+                    <li>Use the checkbox to render the webpage with a transparent background. Captivad will try its
+                        best to do this when checked, however, it cannot
+                        be supported on some webpages.</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        After the page is rendered Captivad will scale to fit within the Region.
+
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <p>Tick to <strong>Preload</strong> the Widget off screen so that it is ready to be shown.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select from the available <strong>Options</strong> to choose how the webpage should be
+                            embedded:</p>
+                    </li>
+                </ul>
+                <h4><strong>Open Natively</strong><a id="content-open-natively" href="#content-open-natively"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
+                <p>The Player will open the webpage without any alterations and will open and render in the browser
+                    as if the URL had been visited on the device outside Captivad.
+                    <strong>Please note:</strong> There is no preview available for this option.
+                </p>
+                <p><strong>Open Natively</strong> has an additional option to provide code to be
+                    triggered on page load error.</p>
+
+                <h4><strong>Manual Position</strong><a id="content-manual-position" href="#content-manual-position"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
+                <p>Embed the webpage by specifying dimensions which can be used to force the page to fit within
+                    certain pre-set dimensions.</p>
+                <ul>
+                    <li>Specify the width of the page (leave empty to use the Region width)</li>
+                    <li>Specify the height of the page (leave empty to use the Region height)</li>
+                    <li>Starting point from the top for the page to start, in pixels</li>
+                    <li>Starting point from the left, in pixels</li>
+                    <li>Percentage (0-100) to scale this Webpage</li>
+                </ul>
+                <h4><strong>Best Fit</strong><a id="content-best-fit" href="#content-best-fit"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h4>
+                <ul>
+                    <li>Specify the width of the page (leave empty to use the Region width)</li>
+                    <li>Specify the height of the page (leave empty to use the Region height)</li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <strong>Manual Position</strong> and <strong>Best Fit</strong> options will not work with
+                        websites that set the <strong>X-Frame-Options header</strong>. If you are unable to see the
+                        webpage use the Open Natively option when using Android.
+                        <p>If X-Frame-Options is not set then the website should show in any of the Players, using
+                            any of the above options.</p>
+                        <p>Use the <a href="https://tools.geekflare.com/tools/x-frame-options-test">X-Frame-Options
+                                Header Checker Tool</a> to see if the header has been set.
+
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Enter a code identifier for a <strong>Navigate to Layout</strong> Action should the page
+                        return an error and not load. See Interactive Actions for further details!</li>
+                </ul>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Webpage Widget from the <strong>Actions</strong> tab
+                    in the properties panel. Please see the <a class="user-manual-info" href="layouts_interactiveactions.html">Interactive
+                        Actions</a> page for more information.</p>
+            
             </div>
         </div> <!-- container-->
         <footer class="ss_footer" role="contentinfo">

@@ -35,7 +35,7 @@
                     <li><a href="index.html" data-toc-name="tour">Tour</a></li>
                     <li><a href="displays.html" data-toc-name="displays">Displays</a></li>
                     <li><a href="layouts.html" data-toc-name="layouts">Layouts</a></li>
-                    <li><a href="media.html" data-toc-name="widgets">Library</a></li>
+                    <li><a href="media.html" data-toc-name="widgets"> Library <span class="glyphicon glyphicon-arrow-left"></span> </a></li>
                     <!DOCTYPE html
                         PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
                     <html>
@@ -86,200 +86,195 @@
             </div>
             <div class="col-md-9" role="main">
                 <!--toc=widgets-->
-                <div class="user-manual-info">
+            
+                <h1>Sub-Playlists<a id="content-sub-playlists" href="#content-sub-playlists"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h1>
+                <p>Display content added to Playlists on Layouts.</p>
+                
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
 
-                    <!--toc=widgets-->
-                    <h1>Sub-Playlists<a id="content-sub-playlists" href="#content-sub-playlists"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h1>
-                    <p>Display content added to Playlists on Layouts.</p>
-                    
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
+                        Ensure that you have created a <a class="user-manual-info" href="media_playlists.html">Playlist</a> prior to adding
+                        this Widget!
 
-                            Ensure that you have created a <a class="user-manual-info" href="media_playlists.html">Playlist</a> prior to adding
-                            this Widget!
-
-                        </div>
                     </div>
-                    <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
-                            aria-hidden="true" title="Permalink"></a></h2>
-                    <p>Locate <strong>Sub-Playlist</strong> from the <a class="user-manual-info" href="layouts_widgets.html">Widget</a> toolbar
-                        and click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
-                    <p>On adding, configuration options are shown in the properties panel:</p>
-                    <p></p>
-                    <div class="position-relative">
-                        <figure class="image-expand-modal p-10 mb-56"><img
-                                src="./img/v3.1_media_subplaylist_edit_form.png" data-processed="1"></figure>
-                    </div>
-                    <p></p>
-                    <ul>
-                        <li>Use the drop-down menu to select a <strong>Playlist</strong>.</li>
-                    </ul>
-                    <p>Included on this tab are optional <strong>Spot</strong> options which allow for the defining of
-                        advertising/promotional spots.</p>
-                    <p><strong>Spots</strong></p>
-                    <ul>
-                        <li>Specify the <strong>total number</strong> of Spots you would like to be available for that
-                            Playlist to expand or shrink the Playlist to a specified size/duration.</li>
-                        <li>Leave this field <strong>blank</strong> to use the count of Widgets assigned to the Playlist
-                            to maintain the size.</li>
-                        <li>Set to <strong>0</strong> to omit the <strong>first Playlist</strong> from the play order.
-                            This Playlist can be used as a spot filler from the Spot Fill options. <strong>Please
-                                note:</strong> If you wish to provide a Playlist to be used as a ‘Spot Fill’ you must
-                            ensure that it is the first Playlist selected.</li>
-                    </ul>
-                    <p><strong>Spot Length</strong></p>
-                    <ul>
-                        <li>Set the length in seconds that you would like to apply to all Widgets assigned to that
-                            Playlist.</li>
-                        <li>Leave this field blank to use the Widget duration.</li>
-                    </ul>
-                    <p><strong>Spot Fill</strong>
-                        Determine how remaining Spots should be filled in the event that there are not enough Widgets on
-                        the Playlist to fill the specified number of Spots.</p>
-                    <ul>
-                        <li>
-                            <strong>Repeat</strong> - Widgets are repeated in the Playlist until the number of Spots has
-                            been fulfilled.
-                        </li>
-                        <li>
-                            <strong>Fill</strong> - Widgets are taken from the first Playlist to fill any remaining
-                            Spots.
-                        </li>
-                        <li>
-                            <strong>Pad</strong> - Widgets are taken from the first Playlist and distributed evenly with
-                            the assigned Widgets on that Playlist.
-                        </li>
-                    </ul>
-                    <p>Use the <code>+</code> button to add multiple Playlists and complete the Spot options if
-                        required.</p>
-                    <p>With more than one Playlist added, click on the <strong>Configuration</strong> tab to define a
-                        play order.</p>
-                    <h3>Configuration<a id="content-configuration" href="#content-configuration"
-                            class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
-                    <p></p>
-                    <div class="position-relative">
-                        <figure class="image-expand-modal p-10 mb-56"><img
-                                src="./img/v3.1_media_subplaylist_configuration.png" data-processed="1">
-                        </figure>
-                    </div>
-                    <p></p>
-                    <p><strong>Playlist Ordering</strong></p>
-                    <ul>
-                        <li>
-                            <strong>Play all</strong> - Playlists will play in their entirety one after the other in the
-                            order they appear on the General tab.
-                        </li>
-                        <li>
-                            <strong>Round Robin</strong> - Takes one Widget from each Playlist in the order they appear
-                            on the General tab and repeats.
-                        </li>
-                        <li>
-                            <strong>Auto</strong> - Ensures that Widgets are played evenly from each Playlist. Auto uses
-                            the total count of Widgets in each list and divides by the smallest list. This determines
-                            how often it should take media items from each list to ensure an even play from each
-                            Playlist.
-                        </li>
-                    </ul>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            <h3>Example scenario:<a id="content-example-scenario" href="#content-example-scenario"
-                                    class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
-                            <p>I have three Playlists with images of Flowers, Sweets and Fruit which vary in Spot
-                                allocation. I would like an even spread of media items from each of these Playlists to
-                                be played:</p>
-                            <p></p>
-                            <div class="position-relative">
-                                <figure class="image-expand-modal p-10 mb-56"><img
-                                        src="./img/v3.1_media_subplaylist_configuration_scenario.png"
-                                        data-processed="1"></figure>
-                            </div>
-                            <p></p>
-                            <p>Set with as <strong>Auto</strong> for Playlist Ordering:</p>
-                            <p></p>
-                            <div class="position-relative">
-                                <figure class="image-expand-modal p-10 mb-56"><img
-                                        src="./img/v3.1_media_subplaylist_scenario.png" data-processed="1">
-                                </figure>
-                            </div>
-                            <p></p>
-                            <p>Media would be taken from each Playlist and play as follows:</p>
-                            <p>5 x Flowers, 1 x Sweet, 2 x Fruit and will then repeat until the specified Slots have
-                                been fulfilled, which in this scenario would be one more rotation.
-
-                            </p>
-                        </div>
-                    </div>
-                    <p>There are also options to decide what should be done with any Widgets that are left unordered at
-                        the end of a Playlist:</p>
-                    <p><strong>Remaining Widgets</strong></p>
-                    <ul>
-                        <li>
-                            <strong>Add</strong> - includes any remaining Widgets which are then added to the end of the
-                            Playlist.
-                        </li>
-                        <li>
-                            <strong>Discard</strong> - will use the Playlist with the least Widgets and ignore any
-                            remaining Widgets on the longer Playlists.
-                        </li>
-                        <li>
-                            <strong>Repeat</strong> - will use the Playlist with the most Widgets and repeat any
-                            remaining Widgets on the shorter Playlists.
-                        </li>
-                    </ul>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            The Sub-Playlist preview shows the number of Widgets and total duration after play order and
-                            Spot options are taken into consideration. Use the Layout preview to see each Widget in the
-                            list previewed in sequence.
-
-                        </div>
-                    </div>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            <strong>Please note:</strong> Setting Widget start dates may cause fewer Spots to be shown
-                            than the total Spots specified.
-
-                        </div>
-                    </div>
-                    <p>An option is available to <strong>Enable Cycle based playback</strong>:</p>
-                    <p></p>
-                    <div class="position-relative">
-                        <figure class="image-expand-modal p-10 mb-56"><img
-                                src="./img/v3.1_media_subplaylist_cycle_playback.png" data-processed="1">
-                        </figure>
-                    </div>
-                    <p></p>
-                    <p></p>
-                    <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
-                        <div class="manual-notes-card-info">
-
-                            <strong>Please note:</strong> If your Playlist includes ‘nested playlists’ this option
-                            cannot be used!
-
-                        </div>
-                    </div>
-                    <ul>
-                        <li>When enabled only 1 Widget will play from a playlist each time the Layout is shown</li>
-                        <li>Set a <strong>Play count</strong> to determine how many times each Widget will be shown
-                            before moving onto the next Widget in the playlist.</li>
-                        <li>Play a <strong>Random Widget</strong> from the playlist each time the Layout is shown by
-                            ticking the box to enable.</li>
-                    </ul>
-                    <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink"
-                            aria-hidden="true" title="Permalink"></a></h2>
-                    <p>Interactive Actions can be attached to this Sub-Playlist Widget from the <strong>Actions</strong>
-                        tab. Please see the <a class="user-manual-info" href="layouts_interactiveactions.html">Interactive Actions</a> page for
-                        more information.</p>
-
-
                 </div>
+                <h2>Add Widget<a id="content-add-widget" href="#content-add-widget" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Locate <strong>Sub-Playlist</strong> from the <a class="user-manual-info" href="layouts_widgets.html">Widget</a> toolbar
+                    and click to <strong>Add</strong> or <strong>Grab</strong> to drag and drop to a Region.</p>
+                <p>On adding, configuration options are shown in the properties panel:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_subplaylist_edit_form.png" data-processed="1"></figure>
+                </div>
+                <p></p>
+                <ul>
+                    <li>Use the drop-down menu to select a <strong>Playlist</strong>.</li>
+                </ul>
+                <p>Included on this tab are optional <strong>Spot</strong> options which allow for the defining of
+                    advertising/promotional spots.</p>
+                <p><strong>Spots</strong></p>
+                <ul>
+                    <li>Specify the <strong>total number</strong> of Spots you would like to be available for that
+                        Playlist to expand or shrink the Playlist to a specified size/duration.</li>
+                    <li>Leave this field <strong>blank</strong> to use the count of Widgets assigned to the Playlist
+                        to maintain the size.</li>
+                    <li>Set to <strong>0</strong> to omit the <strong>first Playlist</strong> from the play order.
+                        This Playlist can be used as a spot filler from the Spot Fill options. <strong>Please
+                            note:</strong> If you wish to provide a Playlist to be used as a ‘Spot Fill’ you must
+                        ensure that it is the first Playlist selected.</li>
+                </ul>
+                <p><strong>Spot Length</strong></p>
+                <ul>
+                    <li>Set the length in seconds that you would like to apply to all Widgets assigned to that
+                        Playlist.</li>
+                    <li>Leave this field blank to use the Widget duration.</li>
+                </ul>
+                <p><strong>Spot Fill</strong>
+                    Determine how remaining Spots should be filled in the event that there are not enough Widgets on
+                    the Playlist to fill the specified number of Spots.</p>
+                <ul>
+                    <li>
+                        <strong>Repeat</strong> - Widgets are repeated in the Playlist until the number of Spots has
+                        been fulfilled.
+                    </li>
+                    <li>
+                        <strong>Fill</strong> - Widgets are taken from the first Playlist to fill any remaining
+                        Spots.
+                    </li>
+                    <li>
+                        <strong>Pad</strong> - Widgets are taken from the first Playlist and distributed evenly with
+                        the assigned Widgets on that Playlist.
+                    </li>
+                </ul>
+                <p>Use the <code>+</code> button to add multiple Playlists and complete the Spot options if
+                    required.</p>
+                <p>With more than one Playlist added, click on the <strong>Configuration</strong> tab to define a
+                    play order.</p>
+                <h3>Configuration<a id="content-configuration" href="#content-configuration"
+                        class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_subplaylist_configuration.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p><strong>Playlist Ordering</strong></p>
+                <ul>
+                    <li>
+                        <strong>Play all</strong> - Playlists will play in their entirety one after the other in the
+                        order they appear on the General tab.
+                    </li>
+                    <li>
+                        <strong>Round Robin</strong> - Takes one Widget from each Playlist in the order they appear
+                        on the General tab and repeats.
+                    </li>
+                    <li>
+                        <strong>Auto</strong> - Ensures that Widgets are played evenly from each Playlist. Auto uses
+                        the total count of Widgets in each list and divides by the smallest list. This determines
+                        how often it should take media items from each list to ensure an even play from each
+                        Playlist.
+                    </li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <h3>Example scenario:<a id="content-example-scenario" href="#content-example-scenario"
+                                class="heading-permalink" aria-hidden="true" title="Permalink"></a></h3>
+                        <p>I have three Playlists with images of Flowers, Sweets and Fruit which vary in Spot
+                            allocation. I would like an even spread of media items from each of these Playlists to
+                            be played:</p>
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img
+                                    src="./img/v3.1_media_subplaylist_configuration_scenario.png"
+                                    data-processed="1"></figure>
+                        </div>
+                        <p></p>
+                        <p>Set with as <strong>Auto</strong> for Playlist Ordering:</p>
+                        <p></p>
+                        <div class="position-relative">
+                            <figure class="image-expand-modal p-10 mb-56"><img
+                                    src="./img/v3.1_media_subplaylist_scenario.png" data-processed="1">
+                            </figure>
+                        </div>
+                        <p></p>
+                        <p>Media would be taken from each Playlist and play as follows:</p>
+                        <p>5 x Flowers, 1 x Sweet, 2 x Fruit and will then repeat until the specified Slots have
+                            been fulfilled, which in this scenario would be one more rotation.
+
+                        </p>
+                    </div>
+                </div>
+                <p>There are also options to decide what should be done with any Widgets that are left unordered at
+                    the end of a Playlist:</p>
+                <p><strong>Remaining Widgets</strong></p>
+                <ul>
+                    <li>
+                        <strong>Add</strong> - includes any remaining Widgets which are then added to the end of the
+                        Playlist.
+                    </li>
+                    <li>
+                        <strong>Discard</strong> - will use the Playlist with the least Widgets and ignore any
+                        remaining Widgets on the longer Playlists.
+                    </li>
+                    <li>
+                        <strong>Repeat</strong> - will use the Playlist with the most Widgets and repeat any
+                        remaining Widgets on the shorter Playlists.
+                    </li>
+                </ul>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        The Sub-Playlist preview shows the number of Widgets and total duration after play order and
+                        Spot options are taken into consideration. Use the Layout preview to see each Widget in the
+                        list previewed in sequence.
+
+                    </div>
+                </div>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <strong>Please note:</strong> Setting Widget start dates may cause fewer Spots to be shown
+                        than the total Spots specified.
+
+                    </div>
+                </div>
+                <p>An option is available to <strong>Enable Cycle based playback</strong>:</p>
+                <p></p>
+                <div class="position-relative">
+                    <figure class="image-expand-modal p-10 mb-56"><img
+                            src="./img/v3.1_media_subplaylist_cycle_playback.png" data-processed="1">
+                    </figure>
+                </div>
+                <p></p>
+                <p></p>
+                <div class="manual-notes-card manual-notes-primary pr-26 pl-40 pt-24 pb-24 mb-66">
+                    <div class="manual-notes-card-info">
+
+                        <strong>Please note:</strong> If your Playlist includes ‘nested playlists’ this option
+                        cannot be used!
+
+                    </div>
+                </div>
+                <ul>
+                    <li>When enabled only 1 Widget will play from a playlist each time the Layout is shown</li>
+                    <li>Set a <strong>Play count</strong> to determine how many times each Widget will be shown
+                        before moving onto the next Widget in the playlist.</li>
+                    <li>Play a <strong>Random Widget</strong> from the playlist each time the Layout is shown by
+                        ticking the box to enable.</li>
+                </ul>
+                <h2>Actions<a id="content-actions" href="#content-actions" class="heading-permalink"
+                        aria-hidden="true" title="Permalink"></a></h2>
+                <p>Interactive Actions can be attached to this Sub-Playlist Widget from the <strong>Actions</strong>
+                    tab. Please see the <a class="user-manual-info" href="layouts_interactiveactions.html">Interactive Actions</a> page for
+                    more information.</p>
 
             </div>
         </div>
